@@ -309,6 +309,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const franchisee = franchiseeSelect.value;
         const search = searchInput.value.toLowerCase().trim();
         
+        // Atualiza os títulos das seções com o nome do consultor
+        const titleAdt = document.getElementById('title-adt');
+        const titleExceptions = document.getElementById('title-exceptions');
+        const consultantText = consultantSelect.options[consultantSelect.selectedIndex].text.toUpperCase();
+        
+        if (titleAdt) {
+            titleAdt.textContent = consultant === 'all' ? 'Tempos de Entrega (ADT & Extremes)' : `Tempos de Entrega (ADT & Extremes) - ${consultantText}`;
+        }
+        if (titleExceptions) {
+            titleExceptions.textContent = consultant === 'all' ? 'Service Exceptions' : `Service Exceptions - ${consultantText}`;
+        }
+        
         // IDs das lojas a serem excluídas (Blumenau, Joinville, Florianópolis Centro, Juiz de Fora 2, Itaipava, Pampulha)
         const excludedIds = ['19680', '19707', '19733', '19792', '19964', '19967'];
 
@@ -357,7 +369,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let headerHtml = `
             <tr>
                 <th>Loja</th>
-                <th>Consultor</th>
                 <th class="text-center" style="border-left: 2px solid var(--border-color)">Acumulado</th>
         `;
         weeks.forEach(w => {
@@ -448,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (rowsData.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="${5 + (weeks.length * 2)}" class="text-center">Nenhuma loja com dados de ADT encontrada</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="${4 + (weeks.length * 2)}" class="text-center">Nenhuma loja com dados de ADT encontrada</td></tr>`;
         } else {
             rowsData.forEach(item => {
                 const { storeId, store, orders, adtVal, extVal } = item;
@@ -459,7 +470,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cleanStoreName = store.name.replace(/domino[s]?'?\s*/gi, '').trim();
                 let html = `
                     <td>${cleanStoreName}</td>
-                    <td>${store.consultant || 'N/D'}</td>
                     <td class="text-center" style="border-left: 2px solid var(--border-color); font-weight: 700; ${adtStyle}">${adtVal > 0 ? adtVal.toFixed(2) : '--'}</td>
                 `;
 
@@ -590,7 +600,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let headerHtml = `
             <tr>
                 <th>Loja</th>
-                <th>Consultor</th>
                 <th class="text-center" style="border-left: 2px solid var(--border-color)">Except. Acum.</th>
         `;
         weeks.forEach(w => {
@@ -669,7 +678,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (rowsData.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="${6 + weeks.length}" class="text-center">Nenhuma loja com dados de Exceções encontrada</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="${5 + weeks.length}" class="text-center">Nenhuma loja com dados de Exceções encontrada</td></tr>`;
         } else {
             rowsData.forEach(item => {
                 const { storeId, store, delvOrders, excCount, excPct } = item;
@@ -681,7 +690,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cleanStoreName = store.name.replace(/domino[s]?'?\s*/gi, '').trim();
                 let html = `
                     <td>${cleanStoreName}</td>
-                    <td>${store.consultant || 'N/D'}</td>
                     <td class="text-center" style="border-left: 2px solid var(--border-color); font-weight: 700; ${excStyle}">${excPct > 0 ? pctVal.toFixed(2) + '%' : '--'}</td>
                 `;
 
