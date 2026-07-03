@@ -65,6 +65,172 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Função utilitária para desenhar sparkline no background das linhas das tabelas
+    function drawRowSparkline(tr, cells, values, canvasClass, maxValueDefault) {
+        const firstCell = cells[0];
+        const lastCell = cells[cells.length - 1];
+        if (!firstCell || !lastCell) return;
+
+        let canvas = tr.querySelector('.' + canvasClass);
+        if (!canvas) {
+            canvas = document.createElement('canvas');
+            canvas.className = canvasClass;
+            canvas.style.position = 'absolute';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.zIndex = '1';
+            tr.style.position = 'relative';
+            tr.appendChild(canvas);
+        }
+
+        const trRect = tr.getBoundingClientRect();
+        const firstRect = firstCell.getBoundingClientRect();
+        const lastRect = lastCell.getBoundingClientRect();
+
+        const left = firstRect.left - trRect.left;
+        const width = lastRect.right - firstRect.left;
+        const height = trRect.height;
+
+        canvas.style.left = left + 'px';
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        canvas.style.top = '0px';
+
+        canvas.width = width * 2;
+        canvas.height = height * 2;
+
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.save();
+        ctx.scale(2, 2);
+
+        const points = [];
+        const cellWidth = width / values.length;
+        const maxValue = Math.max(maxValueDefault, ...values);
+
+        values.forEach((val, i) => {
+            const x = cellWidth * (i + 0.5);
+            const padding = height * 0.15;
+            const y = height - padding - ((val / maxValue) * (height - 2 * padding));
+            points.push({ x, y });
+        });
+
+        let isImproving = true;
+        if (values.length > 1) {
+            isImproving = values[values.length - 1] <= values[0];
+        }
+
+        const lineColor = isImproving ? '#10b981' : '#ef4444';
+        const fillGradStart = isImproving ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)';
+        const fillGradEnd = isImproving ? 'rgba(16, 185, 129, 0.01)' : 'rgba(239, 68, 68, 0.01)';
+
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        for (let i = 1; i < points.length; i++) {
+            ctx.lineTo(points[i].x, points[i].y);
+        }
+        ctx.strokeStyle = lineColor;
+        ctx.lineWidth = 2.5;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        for (let i = 1; i < points.length; i++) {
+            ctx.lineTo(points[i].x, points[i].y);
+        }
+        ctx.lineTo(points[points.length - 1].x, height);
+        ctx.lineTo(points[0].x, height);
+        ctx.closePath();
+
+        const grad = ctx.createLinearGradient(0, 0, 0, height);
+        grad.addColorStop(0, fillGradStart);
+        grad.addColorStop(1, fillGradEnd);
+        ctx.fillStyle = grad;
+        ctx.fill();
+        ctx.restore();
+    }
+
+    // Função utilitária para desenhar sparkline no background dos cards de KPI
+    function drawCardSparkline(cardId, canvasClass, values, maxValueDefault) {
+        const card = document.getElementById(cardId);
+        if (!card || values.length === 0) return;
+
+        let canvas = card.querySelector('.' + canvasClass);
+        if (!canvas) {
+            canvas = document.createElement('canvas');
+            canvas.className = canvasClass;
+            canvas.style.position = 'absolute';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.zIndex = '1';
+            card.style.position = 'relative';
+            card.appendChild(canvas);
+        }
+
+        const width = card.clientWidth;
+        const height = card.clientHeight;
+        canvas.width = width * 2;
+        canvas.height = height * 2;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.save();
+        ctx.scale(2, 2);
+
+        const points = [];
+        const count = values.length;
+        const stepX = width / (count > 1 ? (count - 1) : 1);
+        const maxVal = Math.max(maxValueDefault, ...values);
+
+        values.forEach((val, i) => {
+            const x = stepX * i;
+            const paddingY = height * 0.2;
+            const y = height - paddingY - ((val / maxVal) * (height - 2 * paddingY));
+            points.push({ x, y });
+        });
+
+        const cardIsImproving = values.length > 1 ? 
+            values[values.length - 1] <= values[0] : 
+            true;
+
+        const lineColor = cardIsImproving ? '#10b981' : '#ef4444';
+        const gradStart = cardIsImproving ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)';
+        const gradEnd = cardIsImproving ? 'rgba(16, 185, 129, 0.00)' : 'rgba(239, 68, 68, 0.00)';
+
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        for (let i = 1; i < points.length; i++) {
+            ctx.lineTo(points[i].x, points[i].y);
+        }
+        ctx.strokeStyle = lineColor;
+        ctx.lineWidth = 3;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        for (let i = 1; i < points.length; i++) {
+            ctx.lineTo(points[i].x, points[i].y);
+        }
+        ctx.lineTo(width, height);
+        ctx.lineTo(0, height);
+        ctx.closePath();
+
+        const grad = ctx.createLinearGradient(0, 0, 0, height);
+        grad.addColorStop(0, gradStart);
+        grad.addColorStop(1, gradEnd);
+        ctx.fillStyle = grad;
+        ctx.fill();
+        ctx.restore();
+    }
+
     // Inicializar filtros e carregar opções
     function initializeDashboard() {
         // Data de atualização
@@ -258,6 +424,29 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ordena lojas por pior ADT acumulado no topo
         rowsData.sort((a, b) => b.adtVal - a.adtVal);
 
+        const groupAdtWeeklyAverages = [];
+        const groupExtWeeklyAverages = [];
+        weeks.forEach(w => {
+            let weekTotalOrders = 0;
+            let weekTotalAdtWeight = 0;
+            let weekTotalExtWeight = 0;
+            storeIds.forEach(storeId => {
+                const store = rawData.stores[storeId];
+                if (store) {
+                    const wData = adtWeeksMap[w][storeId];
+                    if (wData) {
+                        weekTotalOrders += wData.orders || 0;
+                        weekTotalAdtWeight += (wData.adt || 0) * (wData.orders || 0);
+                        weekTotalExtWeight += (wData.extreme || 0) * (wData.orders || 0);
+                    }
+                }
+            });
+            const weekAvgAdt = weekTotalOrders > 0 ? (weekTotalAdtWeight / weekTotalOrders) : 0;
+            const weekAvgExt = weekTotalOrders > 0 ? (weekTotalExtWeight / weekTotalOrders) : 0;
+            groupAdtWeeklyAverages.push(weekAvgAdt);
+            groupExtWeeklyAverages.push(weekAvgExt);
+        });
+
         if (rowsData.length === 0) {
             tbody.innerHTML = `<tr><td colspan="${5 + (weeks.length * 2)}" class="text-center">Nenhuma loja com dados de ADT encontrada</td></tr>`;
         } else {
@@ -275,11 +464,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
 
                 // Células ADT Semanais
+                const rowAdtVals = [];
                 weeks.forEach(w => {
                     const wData = adtWeeksMap[w][storeId];
                     const wAdt = wData ? wData.adt : 0;
                     const wAdtStyle = getAdtStyle(wAdt);
-                    html += `<td class="text-center" style="${wAdtStyle}">${wAdt > 0 ? wAdt.toFixed(2) : '--'}</td>`;
+                    rowAdtVals.push(wAdt);
+                    html += `<td class="text-center adt-week-cell" data-value="${wAdt}" style="position: relative; z-index: 2; background: transparent; ${wAdtStyle}">${wAdt > 0 ? wAdt.toFixed(2) : '--'}</td>`;
                 });
 
                 // Célula Extremes Acumulado
@@ -288,16 +479,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 html += `<td class="text-center" style="border-left: 2px solid var(--border-color); font-weight: 700; ${extStyle}">${extVal > 0 ? extPct.toFixed(2) + '%' : '--'}</td>`;
 
                 // Células Extremes Semanais
+                const rowExtVals = [];
                 weeks.forEach(w => {
                     const wData = adtWeeksMap[w][storeId];
                     const wExt = wData ? wData.extreme : 0;
                     const wExtPct = wExt * 100;
                     const wExtStyle = getExtremeStyle(wExt);
-                    html += `<td class="text-center" style="${wExtStyle}">${wExt > 0 ? wExtPct.toFixed(2) + '%' : '--'}</td>`;
+                    rowExtVals.push(wExt);
+                    html += `<td class="text-center ext-week-cell" data-value="${wExt}" style="position: relative; z-index: 2; background: transparent; ${wExtStyle}">${wExt > 0 ? wExtPct.toFixed(2) + '%' : '--'}</td>`;
                 });
 
+                tr.setAttribute('data-adt-values', JSON.stringify(rowAdtVals));
+                tr.setAttribute('data-ext-values', JSON.stringify(rowExtVals));
                 tr.innerHTML = html;
                 tbody.appendChild(tr);
+            });
+
+            // Renderizar Sparklines nas Linhas (ADT e Extremes independentes)
+            requestAnimationFrame(() => {
+                const rows = tbody.querySelectorAll('tr');
+                rows.forEach(tr => {
+                    // ADT Sparkline
+                    const adtValsAttr = tr.getAttribute('data-adt-values');
+                    if (adtValsAttr) {
+                        const adtValues = JSON.parse(adtValsAttr);
+                        const adtCells = Array.from(tr.querySelectorAll('.adt-week-cell'));
+                        if (adtValues.length > 0 && adtCells.length > 0) {
+                            drawRowSparkline(tr, adtCells, adtValues, 'row-sparkline-adt', 25.0);
+                        }
+                    }
+
+                    // Extremes Sparkline
+                    const extValsAttr = tr.getAttribute('data-ext-values');
+                    if (extValsAttr) {
+                        const extValues = JSON.parse(extValsAttr);
+                        const extCells = Array.from(tr.querySelectorAll('.ext-week-cell'));
+                        if (extValues.length > 0 && extCells.length > 0) {
+                            drawRowSparkline(tr, extCells, extValues, 'row-sparkline-ext', 0.02);
+                        }
+                    }
+                });
             });
         }
 
@@ -310,6 +531,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         kpiAdtCard.className = 'kpi-card ' + (avgAdt < 25 ? 'kpi-success' : (avgAdt < 30 ? 'kpi-warning' : 'kpi-danger'));
         kpiExtremesCard.className = 'kpi-card ' + (avgExt < 0.02 ? 'kpi-success' : (avgExt < 0.10 ? 'kpi-warning' : 'kpi-danger'));
+
+        // Renderizar Sparklines nos Cards de Destaque
+        requestAnimationFrame(() => {
+            drawCardSparkline('kpi-adt-avg', 'card-sparkline-adt', groupAdtWeeklyAverages, 25.0);
+            drawCardSparkline('kpi-extremes-avg', 'card-sparkline-ext', groupExtWeeklyAverages, 0.02);
+        });
 
         // Renderizar Lojas Críticas (ADT > 40 e Extremes > 20%)
         const criticalAdtList = document.getElementById('kpi-adt-critical');
@@ -423,6 +650,24 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ordena por pior % de exceção acumulada
         rowsData.sort((a, b) => b.excPct - a.excPct);
 
+        const groupWeeklyAverages = [];
+        weeks.forEach(w => {
+            let weekTotalDelv = 0;
+            let weekTotalExc = 0;
+            storeIds.forEach(storeId => {
+                const store = rawData.stores[storeId];
+                if (store) {
+                    const wData = excWeeksMap[w][storeId];
+                    if (wData) {
+                        weekTotalDelv += wData.delvOrders || 0;
+                        weekTotalExc += wData.exceptionsCount || 0;
+                    }
+                }
+            });
+            const weekAvg = weekTotalDelv > 0 ? (weekTotalExc / weekTotalDelv) : 0;
+            groupWeeklyAverages.push(weekAvg);
+        });
+
         if (rowsData.length === 0) {
             tbody.innerHTML = `<tr><td colspan="${6 + weeks.length}" class="text-center">Nenhuma loja com dados de Exceções encontrada</td></tr>`;
         } else {
@@ -440,17 +685,119 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td class="text-center" style="border-left: 2px solid var(--border-color); font-weight: 700; ${excStyle}">${excPct > 0 ? pctVal.toFixed(2) + '%' : '--'}</td>
                 `;
 
+                // Coleta valores semanais para o sparkline da linha
+                const weekVals = [];
+
                 // Células Exceptions Semanais
                 weeks.forEach(w => {
                     const wData = excWeeksMap[w][storeId];
                     const wExc = wData ? wData.exceptions : 0;
                     const wExcPct = wExc * 100;
                     const wExcStyle = getExceptionStyle(wExc);
-                    html += `<td class="text-center" style="${wExcStyle}">${wExc > 0 ? wExcPct.toFixed(2) + '%' : '--'}</td>`;
+                    weekVals.push(wExc);
+                    html += `<td class="text-center week-cell" data-value="${wExc}" style="position: relative; z-index: 2; background: transparent; ${wExcStyle}">${wExc > 0 ? wExcPct.toFixed(2) + '%' : '--'}</td>`;
                 });
 
+                tr.setAttribute('data-weeks-values', JSON.stringify(weekVals));
                 tr.innerHTML = html;
                 tbody.appendChild(tr);
+            });
+
+            // Renderizar Sparklines das linhas
+            requestAnimationFrame(() => {
+                const rows = tbody.querySelectorAll('tr');
+                rows.forEach(tr => {
+                    const weekValsAttr = tr.getAttribute('data-weeks-values');
+                    if (!weekValsAttr) return;
+                    const values = JSON.parse(weekValsAttr);
+                    if (values.length === 0) return;
+
+                    const weekCells = Array.from(tr.querySelectorAll('.week-cell'));
+                    if (weekCells.length === 0) return;
+
+                    const firstCell = weekCells[0];
+                    const lastCell = weekCells[weekCells.length - 1];
+
+                    let canvas = tr.querySelector('.row-sparkline');
+                    if (!canvas) {
+                        canvas = document.createElement('canvas');
+                        canvas.className = 'row-sparkline';
+                        canvas.style.position = 'absolute';
+                        canvas.style.pointerEvents = 'none';
+                        canvas.style.zIndex = '1';
+                        tr.style.position = 'relative';
+                        tr.appendChild(canvas);
+                    }
+
+                    const trRect = tr.getBoundingClientRect();
+                    const firstRect = firstCell.getBoundingClientRect();
+                    const lastRect = lastCell.getBoundingClientRect();
+
+                    const left = firstRect.left - trRect.left;
+                    const width = lastRect.right - firstRect.left;
+                    const height = trRect.height;
+
+                    canvas.style.left = left + 'px';
+                    canvas.style.width = width + 'px';
+                    canvas.style.height = height + 'px';
+                    canvas.style.top = '0px';
+
+                    canvas.width = width * 2;
+                    canvas.height = height * 2;
+
+                    const ctx = canvas.getContext('2d');
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.scale(2, 2);
+
+                    const points = [];
+                    const cellWidth = width / values.length;
+                    const maxValue = Math.max(0.40, ...values);
+
+                    values.forEach((val, i) => {
+                        const x = cellWidth * (i + 0.5);
+                        const padding = height * 0.15;
+                        const y = height - padding - ((val / maxValue) * (height - 2 * padding));
+                        points.push({ x, y });
+                    });
+
+                    let isImproving = true;
+                    if (values.length > 1) {
+                        isImproving = values[values.length - 1] <= values[0];
+                    } else {
+                        isImproving = values[0] < 0.10;
+                    }
+
+                    const lineColor = isImproving ? '#10b981' : '#ef4444';
+                    const fillGradStart = isImproving ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)';
+                    const fillGradEnd = isImproving ? 'rgba(16, 185, 129, 0.01)' : 'rgba(239, 68, 68, 0.01)';
+
+                    ctx.beginPath();
+                    ctx.moveTo(points[0].x, points[0].y);
+                    for (let i = 1; i < points.length; i++) {
+                        ctx.lineTo(points[i].x, points[i].y);
+                    }
+                    ctx.strokeStyle = lineColor;
+                    ctx.lineWidth = 2.5;
+                    ctx.lineCap = 'round';
+                    ctx.lineJoin = 'round';
+                    ctx.stroke();
+
+                    // Gradiente de fundo
+                    ctx.beginPath();
+                    ctx.moveTo(points[0].x, points[0].y);
+                    for (let i = 1; i < points.length; i++) {
+                        ctx.lineTo(points[i].x, points[i].y);
+                    }
+                    ctx.lineTo(points[points.length - 1].x, height);
+                    ctx.lineTo(points[0].x, height);
+                    ctx.closePath();
+
+                    const grad = ctx.createLinearGradient(0, 0, 0, height);
+                    grad.addColorStop(0, fillGradStart);
+                    grad.addColorStop(1, fillGradEnd);
+                    ctx.fillStyle = grad;
+                    ctx.fill();
+                });
             });
         }
 
@@ -460,6 +807,85 @@ document.addEventListener('DOMContentLoaded', () => {
         kpiExcVal.textContent = totalDelv > 0 ? `${(avgExc * 100).toFixed(2)}%` : '--';
 
         kpiExcCard.className = 'kpi-card ' + (avgExc < 0.10 ? 'kpi-success' : (avgExc < 0.25 ? 'kpi-warning' : 'kpi-danger'));
+
+        // Desenhar Sparkline no Card de Destaque
+        requestAnimationFrame(() => {
+            const card = document.getElementById('kpi-exceptions-avg');
+            if (!card || groupWeeklyAverages.length === 0) return;
+
+            let canvas = card.querySelector('.card-sparkline');
+            if (!canvas) {
+                canvas = document.createElement('canvas');
+                canvas.className = 'card-sparkline';
+                canvas.style.position = 'absolute';
+                canvas.style.top = '0';
+                canvas.style.left = '0';
+                canvas.style.width = '100%';
+                canvas.style.height = '100%';
+                canvas.style.pointerEvents = 'none';
+                canvas.style.zIndex = '1';
+                card.style.position = 'relative';
+                card.appendChild(canvas);
+            }
+
+            const width = card.clientWidth;
+            const height = card.clientHeight;
+            canvas.width = width * 2;
+            canvas.height = height * 2;
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.scale(2, 2);
+
+            const points = [];
+            const count = groupWeeklyAverages.length;
+            const stepX = width / (count > 1 ? (count - 1) : 1);
+            
+            const maxVal = Math.max(0.20, ...groupWeeklyAverages);
+
+            groupWeeklyAverages.forEach((val, i) => {
+                const x = stepX * i;
+                const paddingY = height * 0.2;
+                const y = height - paddingY - ((val / maxVal) * (height - 2 * paddingY));
+                points.push({ x, y });
+            });
+
+            const cardIsImproving = groupWeeklyAverages.length > 1 ? 
+                groupWeeklyAverages[groupWeeklyAverages.length - 1] <= groupWeeklyAverages[0] : 
+                (avgExc < 0.10);
+
+            const lineColor = cardIsImproving ? '#10b981' : '#ef4444';
+            const gradStart = cardIsImproving ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)';
+            const gradEnd = cardIsImproving ? 'rgba(16, 185, 129, 0.00)' : 'rgba(239, 68, 68, 0.00)';
+
+            ctx.beginPath();
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                ctx.lineTo(points[i].x, points[i].y);
+            }
+            ctx.strokeStyle = lineColor;
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                ctx.lineTo(points[i].x, points[i].y);
+            }
+            ctx.lineTo(width, height);
+            ctx.lineTo(0, height);
+            ctx.closePath();
+
+            const grad = ctx.createLinearGradient(0, 0, 0, height);
+            grad.addColorStop(0, gradStart);
+            grad.addColorStop(1, gradEnd);
+            ctx.fillStyle = grad;
+            ctx.fill();
+        });
 
         // Renderizar Lojas Críticas (Exceptions > 50%)
         const criticalExcList = document.getElementById('kpi-exceptions-critical');
