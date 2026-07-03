@@ -999,6 +999,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Carregar inicialmente
-    loadData();
+    // ==========================================
+    // CONTROLE DE ACESSO POR SENHA (GATEKEEPER)
+    // ==========================================
+    const CORRECT_HASH = '7ebd1663e4df7330f22f8c194f287da6f3bf388b55e54300205ce50540bf4cc0';
+
+    async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    const gate = document.getElementById('password-gate');
+    const input = document.getElementById('gate-password');
+    const toggleBtn = document.getElementById('btn-toggle-password');
+    const errorMsg = document.getElementById('password-error');
+    const enterBtn = document.getElementById('btn-enter');
+
+    function unlock() {
+        if (gate) gate.classList.add('hidden');
+        document.body.classList.remove('gate-locked');
+        loadData();
+    }
+
+    if (toggleBtn && input) {
+        toggleBtn.addEventListener('click', () => {
+            if (input.type === 'password') {
+                input.type = 'text';
+                toggleBtn.textContent = '🙈';
+            } else {
+                input.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        });
+    }
+
+    async function checkPassword() {
+        if (!input) return;
+        const password = input.value;
+        const hashed = await sha256(password);
+        if (hashed === CORRECT_HASH) {
+            localStorage.setItem('pwr_authenticated', 'true');
+            unlock();
+        } else {
+            if (errorMsg) errorMsg.style.display = 'block';
+            input.value = '';
+            input.focus();
+        }
+    }
+
+    if (enterBtn) {
+        enterBtn.addEventListener('click', checkPassword);
+    }
+    if (input) {
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    }
+
+    // Verificar se já está autenticado anteriormente
+    if (localStorage.getItem('pwr_authenticated') === 'true') {
+        unlock();
+    } else {
+        if (input) {
+            // Pequeno delay para garantir o foco após renderização
+            setTimeout(() => input.focus(), 100);
+        }
+    }
 });

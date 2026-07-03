@@ -10,7 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
-<body>
+<body class="gate-locked">
+    <!-- Tela de Senha (Gatekeeper) -->
+    <div id="password-gate" class="password-overlay">
+        <div class="password-card">
+            <div class="lock-icon">🔒</div>
+            <h2>Acesso Restrito</h2>
+            <p>Insira a senha do Dashboard PWR para visualizar as informações.</p>
+            <div class="input-wrapper">
+                <input type="password" id="gate-password" placeholder="Digite a senha...">
+                <button id="btn-toggle-password" type="button" tabindex="-1">👁️</button>
+            </div>
+            <div id="password-error" class="error-message">Senha incorreta. Tente novamente.</div>
+            <button id="btn-enter" class="btn-primary">Acessar Painel</button>
+        </div>
+    </div>
+
     <header class="app-header">
         <div class="header-container">
             <div class="brand">
