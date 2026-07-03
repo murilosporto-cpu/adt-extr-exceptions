@@ -1040,7 +1040,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = input.value;
         const hashed = await sha256(password);
         if (hashed === CORRECT_HASH) {
-            localStorage.setItem('pwr_authenticated', 'true');
             unlock();
         } else {
             if (errorMsg) errorMsg.style.display = 'block';
@@ -1060,13 +1059,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Verificar se já está autenticado anteriormente
-    if (localStorage.getItem('pwr_authenticated') === 'true') {
-        unlock();
-    } else {
-        if (input) {
-            // Pequeno delay para garantir o foco após renderização
-            setTimeout(() => input.focus(), 100);
-        }
+    // Sempre exige senha ao carregar ou recarregar a página
+    if (input) {
+        // Pequeno delay para garantir o foco após renderização
+        setTimeout(() => input.focus(), 100);
     }
 });
