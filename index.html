@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domino's Pizza - Performance PWR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand">
+                <img src="logo.svg" alt="Domino's Pizza" class="logo">
+                <div class="brand-text">
+                    <h1>Performance PWR</h1>
+                    <p>Franquias Domino's Brasil</p>
+                </div>
+            </div>
+            <div class="sync-status">
+                <span class="status-dot"></span>
+                <span id="sync-time">Carregando dados...</span>
+                <button id="btn-export" class="btn-export">Exportar PNG</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Filtros -->
+        <section class="filters-card">
+            <div class="filters-grid">
+
+                <div class="filter-group">
+                    <label for="filter-consultant">Consultor</label>
+                    <select id="filter-consultant">
+                        <option value="all">Todos os Consultores</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-franchisee">Franqueado</label>
+                    <select id="filter-franchisee">
+                        <option value="all">Todos os Franqueados</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="search-store">Buscar Loja</label>
+                    <input type="text" id="search-store" placeholder="Nome ou ID da loja...">
+                </div>
+            </div>
+        </section>
+
+        <!-- Area de Captura para exportação do PNG -->
+        <div id="capture-area" style="display: flex; flex-direction: column; gap: 2rem;">
+            <!-- Campo 1: ADT & Extremes -->
+            <section id="section-adt" class="dashboard-section card">
+                <div class="section-header blue-accent">
+                    <h2>1. Tempos de Entrega (ADT & Extremes)</h2>
+                    <span class="goal-badge">Metas: ADT < 25 min | Extremes < 2%</span>
+                </div>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-card" id="kpi-adt-avg">
+                        <div class="kpi-info">
+                            <h3>Média ADT</h3>
+                            <div class="kpi-value">--</div>
+                            <p class="kpi-subtitle">Meta: < 25 min</p>
+                        </div>
+                        <div class="kpi-critical-list" id="kpi-adt-critical"></div>
+                    </div>
+                    <div class="kpi-card" id="kpi-extremes-avg">
+                        <div class="kpi-info">
+                            <h3>Extremes %</h3>
+                            <div class="kpi-value">--</div>
+                            <p class="kpi-subtitle">Meta: < 2%</p>
+                        </div>
+                        <div class="kpi-critical-list" id="kpi-extremes-critical"></div>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table id="table-adt">
+                        <thead>
+                            <!-- Gerado Dinamicamente -->
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">Carregando dados...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Campo 2: Service Exceptions -->
+            <section id="section-exceptions" class="dashboard-section card">
+                <div class="section-header red-accent">
+                    <h2>2. Service Exceptions</h2>
+                    <span class="goal-badge">Meta: < 10% (Tolerância inicial) | Ideal < 2%</span>
+                </div>
+
+                <div class="kpi-grid">
+                    <div class="kpi-card" id="kpi-exceptions-avg">
+                        <div class="kpi-info">
+                            <h3>Service Exceptions %</h3>
+                            <div class="kpi-value">--</div>
+                            <p class="kpi-subtitle">Meta: < 10%</p>
+                        </div>
+                        <div class="kpi-critical-list" id="kpi-exceptions-critical"></div>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table id="table-exceptions">
+                        <thead>
+                            <!-- Gerado Dinamicamente -->
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">Carregando dados...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <p>Desenvolvido para análise de franqueados Domino's Pizza Brasil. Dados originados de pwr.dominos.com</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
