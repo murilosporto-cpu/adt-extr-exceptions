@@ -693,3 +693,99 @@ body.gate-locked {
 #btn-enter:active {
     transform: translateY(0);
 }
+
+/* ==========================================
+   NAVEGAÇÃO POR ABAS (SEMANAL / MENSAL)
+   ========================================== */
+
+.tab-nav {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--card-bg);
+    padding: 0.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-secondary);
+    background: transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    background: var(--bg-color);
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    background: var(--dominos-blue);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 100, 145, 0.25);
+}
+
+.tab-btn.active:hover {
+    background: var(--dominos-blue-hover);
+}
+
+.tab-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* Controle de visibilidade das abas */
+.tab-content {
+    display: none !important;
+}
+
+.tab-content.active {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estado vazio da aba mensal */
+.monthly-empty {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--text-secondary);
+}
+
+.monthly-empty .empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.monthly-empty h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.monthly-empty p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.monthly-empty code {
+    background: var(--bg-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
+}

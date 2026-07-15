@@ -1,6 +1,7 @@
-// Domino's Pizza Performance PWR Dashboard Logic - Evolução de Períodos
+﻿// Domino's Pizza Performance PWR Dashboard Logic - Evolução de Períodos
 document.addEventListener('DOMContentLoaded', () => {
     let rawData = null;
+    let activeTab = 'semanal';
 
     // Elementos DOM
     const syncTimeEl = document.getElementById('sync-time');
@@ -299,6 +300,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Renderização Inicial
         render();
+
+        // Configura as abas
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.getAttribute('data-tab');
+                activeTab = tab;
+
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                document.querySelectorAll(`.tab-content[data-view="${tab}"]`).forEach(c => c.classList.add('active'));
+
+                render();
+            });
+        });
     }
 
     // Filtra e Renderiza tudo
@@ -360,6 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Renderizar cabeçalhos e linhas
         renderAdtTable(storesToShow);
         renderExceptionsTable(storesToShow);
+        renderMonthly(storesToShow);
     }
 
     function renderAdtTable(storeIds) {
@@ -919,7 +937,347 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Configurar exportação para PNG em dois arquivos separados contemplando todas as lojas
+    // ==========================================
+    // RENDERIZAÇÃO MENSAL — 3 TABELAS INDEPENDENTES
+    // ==========================================
+
+    function renderMonthly(storeIds) {
+        const monthly = rawData.monthly || { adt: {}, exceptions: {}, months: [] };
+        const months  = monthly.months || [];
+        renderMonthlyAdtTable(storeIds, monthly, months);
+        renderMonthlyExtremesTable(storeIds, monthly, months);
+        renderMonthlyExceptionsTable(storeIds, monthly, months);
+    }
+
+    const MONTH_LABELS = {
+        jan: 'Jan', fev: 'Fev', mar: 'Mar', abr: 'Abr',
+        mai: 'Mai', jun: 'Jun', jul: 'Jul', ago: 'Ago',
+        set: 'Set', out: 'Out', nov: 'Nov', dez: 'Dez'
+    };
+
+    const MONTHLY_EMPTY_HTML = `
+        <tr><td>
+            <div class="monthly-empty">
+                <div class="empty-icon">📂</div>
+                <h3>Nenhum dado mensal encontrado</h3>
+                <p>Coloque os arquivos consolidados mensais na pasta<br>
+                <code>pwr_reports_mensal/</code> e reinicie o script.</p>
+            </div>
+        </td></tr>`;
+
+    function buildMonthlyMaps(dataArray, months) {
+        const maps = {};
+        months.forEach(m => {
+            maps[m] = {};
+            (dataArray[m] || []).forEach(r => { maps[m][r.storeId] = r; });
+        });
+        return maps;
+    }
+
+    function buildMonthlyHeader(months, extraCols = []) {
+        let h = '<tr><th>Loja</th>';
+        months.forEach(m => { h += `<th class="text-center">${MONTH_LABELS[m] || m}</th>`; });
+        extraCols.forEach(c => { h += `<th class="text-center">${c}</th>`; });
+        return h + '</tr>';
+    }
+
+    // ── TABELA 1: ADT ──────────────────────────────────────────────
+    function renderMonthlyAdtTable(storeIds, monthly, months) {
+        const table    = document.getElementById('table-adt-mensal');
+        const kpiVal   = document.querySelector('#kpi-adt-avg-mensal .kpi-value');
+        const kpiCard  = document.getElementById('kpi-adt-avg-mensal');
+        const titleEl  = document.getElementById('title-adt-mensal');
+        const consultant = consultantSelect.value;
+        const consultantText = consultantSelect.options[consultantSelect.selectedIndex].text.toUpperCase();
+
+        if (titleEl) titleEl.textContent = consultant === 'all'
+            ? 'ADT Mensal (Tempo de Entrega)'
+            : 'ADT Mensal — ' + consultantText;
+
+        if (months.length === 0) {
+            table.querySelector('thead').innerHTML = '';
+            table.querySelector('tbody').innerHTML = MONTHLY_EMPTY_HTML;
+            if (kpiVal) kpiVal.textContent = '--';
+            return;
+        }
+
+        table.querySelector('thead').innerHTML = buildMonthlyHeader(months);
+
+        const maps = buildMonthlyMaps(monthly.adt || {}, months);
+        const rowsData = [];
+        let totalOrders = 0, sumAdtW = 0;
+
+        storeIds.forEach(storeId => {
+            const store = rawData.stores[storeId] || { name: 'Loja ' + storeId };
+            if (!months.some(m => maps[m][storeId])) return;
+            let lastAdt = 0, lastOrders = 0;
+            for (let i = months.length - 1; i >= 0; i--) {
+                const d = maps[months[i]][storeId];
+                if (d) { lastAdt = d.adt || 0; lastOrders = d.orders || 0; break; }
+            }
+            totalOrders += lastOrders;
+            sumAdtW     += lastAdt * lastOrders;
+            rowsData.push({ storeId, store, lastAdt, lastOrders });
+        });
+
+        rowsData.sort((a, b) => b.lastAdt - a.lastAdt);
+
+        const groupAvgs = months.map(m => {
+            let mo = 0, sa = 0;
+            storeIds.forEach(sid => {
+                const d = maps[m][sid];
+                if (d) { mo += d.orders || 0; sa += (d.adt || 0) * (d.orders || 0); }
+            });
+            return mo > 0 ? sa / mo : 0;
+        });
+
+        const tbody = table.querySelector('tbody');
+        tbody.innerHTML = '';
+
+        if (rowsData.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="${1 + months.length}" class="text-center">Nenhuma loja com dados de ADT encontrada</td></tr>`;
+        } else {
+            rowsData.forEach(({ storeId, store }) => {
+                const tr = document.createElement('tr');
+                const cleanName = store.name.replace(/domino[s]?'?\s*/gi, '').trim();
+                const rowVals = [];
+                let html = `<td>${cleanName}</td>`;
+
+                months.forEach(m => {
+                    const d = maps[m][storeId];
+                    const v = d ? (d.adt || 0) : 0;
+                    rowVals.push(v);
+                    html += `<td class="text-center month-adt-cell" style="position:relative;z-index:2;background:transparent;${getAdtStyle(v)}">${v > 0 ? v.toFixed(2) : '--'}</td>`;
+                });
+
+                tr.setAttribute('data-vals', JSON.stringify(rowVals));
+                tr.innerHTML = html;
+                tbody.appendChild(tr);
+            });
+
+            requestAnimationFrame(() => {
+                tbody.querySelectorAll('tr').forEach(tr => {
+                    const vals = JSON.parse(tr.getAttribute('data-vals') || '[]');
+                    const cells = Array.from(tr.querySelectorAll('.month-adt-cell'));
+                    if (vals.length && cells.length) drawRowSparkline(tr, cells, vals, 'row-sparkline-madt', 25.0);
+                });
+                drawCardSparkline('kpi-adt-avg-mensal', 'card-sparkline-madt', groupAvgs, 25.0);
+            });
+
+            const avgAdt = totalOrders > 0 ? sumAdtW / totalOrders : 0;
+            if (kpiVal)  kpiVal.textContent  = totalOrders > 0 ? avgAdt.toFixed(2) + ' min' : '--';
+            if (kpiCard) kpiCard.className   = 'kpi-card ' + (avgAdt < 25 ? 'kpi-success' : avgAdt < 30 ? 'kpi-warning' : 'kpi-danger');
+
+            const critListEl = document.getElementById('kpi-adt-critical-mensal');
+            const crit = rowsData.filter(r => r.lastAdt > 40).sort((a, b) => b.lastAdt - a.lastAdt);
+            if (critListEl) {
+                critListEl.innerHTML = crit.map(r => {
+                    const n = r.store.name.replace(/domino[s]?'?\s*/gi, '').trim();
+                    return `<div class="kpi-critical-item"><span>${n}</span><span>${r.lastAdt.toFixed(1)}m</span></div>`;
+                }).join('');
+                critListEl.style.display = crit.length ? 'flex' : 'none';
+            }
+        }
+    }
+
+    // ── TABELA 2: EXTREMES % ───────────────────────────────────────
+    function renderMonthlyExtremesTable(storeIds, monthly, months) {
+        const table    = document.getElementById('table-extremes-mensal');
+        const kpiVal   = document.querySelector('#kpi-extremes-avg-mensal .kpi-value');
+        const kpiCard  = document.getElementById('kpi-extremes-avg-mensal');
+        const titleEl  = document.getElementById('title-extremes-mensal');
+        const consultant = consultantSelect.value;
+        const consultantText = consultantSelect.options[consultantSelect.selectedIndex].text.toUpperCase();
+
+        if (titleEl) titleEl.textContent = consultant === 'all'
+            ? 'Extremes % Mensal'
+            : 'Extremes % Mensal — ' + consultantText;
+
+        if (months.length === 0) {
+            table.querySelector('thead').innerHTML = '';
+            table.querySelector('tbody').innerHTML = MONTHLY_EMPTY_HTML;
+            if (kpiVal) kpiVal.textContent = '--';
+            return;
+        }
+
+        table.querySelector('thead').innerHTML = buildMonthlyHeader(months);
+
+        const maps = buildMonthlyMaps(monthly.adt || {}, months);
+        const rowsData = [];
+        let totalOrders = 0, sumExtW = 0;
+
+        storeIds.forEach(storeId => {
+            const store = rawData.stores[storeId] || { name: 'Loja ' + storeId };
+            if (!months.some(m => maps[m][storeId])) return;
+            let lastExt = 0, lastOrders = 0;
+            for (let i = months.length - 1; i >= 0; i--) {
+                const d = maps[months[i]][storeId];
+                if (d) { lastExt = d.extreme || 0; lastOrders = d.orders || 0; break; }
+            }
+            totalOrders += lastOrders;
+            sumExtW     += lastExt * lastOrders;
+            rowsData.push({ storeId, store, lastExt, lastOrders });
+        });
+
+        rowsData.sort((a, b) => b.lastExt - a.lastExt);
+
+        const groupAvgs = months.map(m => {
+            let mo = 0, se = 0;
+            storeIds.forEach(sid => {
+                const d = maps[m][sid];
+                if (d) { mo += d.orders || 0; se += (d.extreme || 0) * (d.orders || 0); }
+            });
+            return mo > 0 ? se / mo : 0;
+        });
+
+        const tbody = table.querySelector('tbody');
+        tbody.innerHTML = '';
+
+        if (rowsData.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="${1 + months.length}" class="text-center">Nenhuma loja com dados de Extremes encontrada</td></tr>`;
+        } else {
+            rowsData.forEach(({ storeId, store }) => {
+                const tr = document.createElement('tr');
+                const cleanName = store.name.replace(/domino[s]?'?\s*/gi, '').trim();
+                const rowVals = [];
+                let html = `<td>${cleanName}</td>`;
+
+                months.forEach(m => {
+                    const d = maps[m][storeId];
+                    const v = d ? (d.extreme || 0) : 0;
+                    rowVals.push(v);
+                    html += `<td class="text-center month-ext-cell" style="position:relative;z-index:2;background:transparent;${getExtremeStyle(v)}">${v > 0 ? (v * 100).toFixed(2) + '%' : '--'}</td>`;
+                });
+
+                tr.setAttribute('data-vals', JSON.stringify(rowVals));
+                tr.innerHTML = html;
+                tbody.appendChild(tr);
+            });
+
+            requestAnimationFrame(() => {
+                tbody.querySelectorAll('tr').forEach(tr => {
+                    const vals = JSON.parse(tr.getAttribute('data-vals') || '[]');
+                    const cells = Array.from(tr.querySelectorAll('.month-ext-cell'));
+                    if (vals.length && cells.length) drawRowSparkline(tr, cells, vals, 'row-sparkline-mext', 0.02);
+                });
+                drawCardSparkline('kpi-extremes-avg-mensal', 'card-sparkline-mext', groupAvgs, 0.02);
+            });
+
+            const avgExt = totalOrders > 0 ? sumExtW / totalOrders : 0;
+            if (kpiVal)  kpiVal.textContent  = totalOrders > 0 ? (avgExt * 100).toFixed(2) + '%' : '--';
+            if (kpiCard) kpiCard.className   = 'kpi-card ' + (avgExt < 0.02 ? 'kpi-success' : avgExt < 0.10 ? 'kpi-warning' : 'kpi-danger');
+
+            const critListEl = document.getElementById('kpi-extremes-critical-mensal');
+            const crit = rowsData.filter(r => r.lastExt > 0.20).sort((a, b) => b.lastExt - a.lastExt);
+            if (critListEl) {
+                critListEl.innerHTML = crit.map(r => {
+                    const n = r.store.name.replace(/domino[s]?'?\s*/gi, '').trim();
+                    return `<div class="kpi-critical-item"><span>${n}</span><span>${(r.lastExt * 100).toFixed(1)}%</span></div>`;
+                }).join('');
+                critListEl.style.display = crit.length ? 'flex' : 'none';
+            }
+        }
+    }
+
+    // ── TABELA 3: SERVICE EXCEPTIONS ───────────────────────────────
+    function renderMonthlyExceptionsTable(storeIds, monthly, months) {
+        const table    = document.getElementById('table-exceptions-mensal');
+        const kpiVal   = document.querySelector('#kpi-exceptions-avg-mensal .kpi-value');
+        const kpiCard  = document.getElementById('kpi-exceptions-avg-mensal');
+        const titleEl  = document.getElementById('title-exceptions-mensal');
+        const consultant = consultantSelect.value;
+        const consultantText = consultantSelect.options[consultantSelect.selectedIndex].text.toUpperCase();
+
+        if (titleEl) titleEl.textContent = consultant === 'all'
+            ? 'Service Exceptions Mensal'
+            : 'Service Exceptions Mensal — ' + consultantText;
+
+        if (months.length === 0) {
+            table.querySelector('thead').innerHTML = '';
+            table.querySelector('tbody').innerHTML = MONTHLY_EMPTY_HTML;
+            if (kpiVal) kpiVal.textContent = '--';
+            return;
+        }
+
+        table.querySelector('thead').innerHTML = buildMonthlyHeader(months);
+
+        const maps = buildMonthlyMaps(monthly.exceptions || {}, months);
+        const rowsData = [];
+        let totalDelv = 0, totalExcCount = 0;
+
+        storeIds.forEach(storeId => {
+            const store = rawData.stores[storeId] || { name: 'Loja ' + storeId };
+            if (!months.some(m => maps[m][storeId])) return;
+            let lastExcPct = 0, lastDelv = 0, lastExcCnt = 0;
+            for (let i = months.length - 1; i >= 0; i--) {
+                const d = maps[months[i]][storeId];
+                if (d) { lastExcPct = d.exceptions || 0; lastDelv = d.delvOrders || 0; lastExcCnt = d.exceptionsCount || 0; break; }
+            }
+            totalDelv     += lastDelv;
+            totalExcCount += lastExcCnt;
+            rowsData.push({ storeId, store, lastExcPct });
+        });
+
+        rowsData.sort((a, b) => b.lastExcPct - a.lastExcPct);
+
+        const groupAvgs = months.map(m => {
+            let md = 0, me = 0;
+            storeIds.forEach(sid => {
+                const d = maps[m][sid];
+                if (d) { md += d.delvOrders || 0; me += d.exceptionsCount || 0; }
+            });
+            return md > 0 ? me / md : 0;
+        });
+
+        const tbody = table.querySelector('tbody');
+        tbody.innerHTML = '';
+
+        if (rowsData.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="${1 + months.length}" class="text-center">Nenhuma loja com dados de Exceções encontrada</td></tr>`;
+        } else {
+            rowsData.forEach(({ storeId, store }) => {
+                const tr = document.createElement('tr');
+                const cleanName = store.name.replace(/domino[s]?'?\s*/gi, '').trim();
+                const rowVals = [];
+                let html = `<td>${cleanName}</td>`;
+
+                months.forEach(m => {
+                    const d = maps[m][storeId];
+                    const v = d ? (d.exceptions || 0) : 0;
+                    rowVals.push(v);
+                    html += `<td class="text-center month-exc-cell" style="position:relative;z-index:2;background:transparent;${getExceptionStyle(v)}">${v > 0 ? (v * 100).toFixed(2) + '%' : '--'}</td>`;
+                });
+
+                tr.setAttribute('data-vals', JSON.stringify(rowVals));
+                tr.innerHTML = html;
+                tbody.appendChild(tr);
+            });
+
+            requestAnimationFrame(() => {
+                tbody.querySelectorAll('tr').forEach(tr => {
+                    const vals = JSON.parse(tr.getAttribute('data-vals') || '[]');
+                    const cells = Array.from(tr.querySelectorAll('.month-exc-cell'));
+                    if (vals.length && cells.length) drawRowSparkline(tr, cells, vals, 'row-sparkline-mexc', 0.40);
+                });
+                drawCardSparkline('kpi-exceptions-avg-mensal', 'card-sparkline-mexc', groupAvgs, 0.20);
+            });
+
+            const avgExc = totalDelv > 0 ? totalExcCount / totalDelv : 0;
+            if (kpiVal)  kpiVal.textContent  = totalDelv > 0 ? (avgExc * 100).toFixed(2) + '%' : '--';
+            if (kpiCard) kpiCard.className   = 'kpi-card ' + (avgExc < 0.10 ? 'kpi-success' : avgExc < 0.25 ? 'kpi-warning' : 'kpi-danger');
+
+            const critListEl = document.getElementById('kpi-exceptions-critical-mensal');
+            const crit = rowsData.filter(r => r.lastExcPct > 0.50).sort((a, b) => b.lastExcPct - a.lastExcPct);
+            if (critListEl) {
+                critListEl.innerHTML = crit.map(r => {
+                    const n = r.store.name.replace(/domino[s]?'?\s*/gi, '').trim();
+                    return `<div class="kpi-critical-item"><span>${n}</span><span>${(r.lastExcPct * 100).toFixed(1)}%</span></div>`;
+                }).join('');
+                critListEl.style.display = crit.length ? 'flex' : 'none';
+            }
+        }
+    }
+
     const btnExport = document.getElementById('btn-export');
     if (btnExport) {
         function exportSection(sectionId, filename) {

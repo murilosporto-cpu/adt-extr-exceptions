@@ -3,12 +3,14 @@
 
 $BASE_DIR = Resolve-Path "C:\Users\Murilo Porto\.gemini\antigravity\scratch\cafe com pwr"
 $REPORTS_DIR = Join-Path $BASE_DIR "pwr_reports"
+$REPORTS_MENSAL_DIR = Join-Path $BASE_DIR "pwr_reports_mensal"
 $APP_DIR = Join-Path $BASE_DIR "app"
 $DATA_JSON = Join-Path $APP_DIR "data.json"
 $STORES_JSON = Join-Path $APP_DIR "stores_mapping.json"
 
 # Garante a existência dos diretórios
 if (-not (Test-Path $REPORTS_DIR)) { New-Item -ItemType Directory -Path $REPORTS_DIR -Force }
+if (-not (Test-Path $REPORTS_MENSAL_DIR)) { New-Item -ItemType Directory -Path $REPORTS_MENSAL_DIR -Force }
 if (-not (Test-Path $APP_DIR)) { New-Item -ItemType Directory -Path $APP_DIR -Force }
 
 # Funções de conversão seguras
@@ -131,7 +133,7 @@ function Process-ExcelFiles {
                     $endDay = $endDate.ToString("dd")
                     $diffDays = ($endDate - $startDate).TotalDays
                     
-                    if ($startDay -eq "01" -and $diffDays -ge 27) {
+                    if ($file.Name -like "*acumulado*" -or ($startDay -eq "01" -and $diffDays -ge 27)) {
                         $periodName = "acumulado"
                     } else {
                         $periodName = "$startDay a $endDay"
@@ -284,15 +286,18 @@ function Process-ExcelFiles {
         }
 
         # Cria JSON estruturado
+        $monthlyData = Process-MonthlyFiles -Excel $excel -StoresRef $stores
+
         $payload = @{
             "stores" = $stores
             "weeks" = $weekStartDates.Keys | Sort-Object { $weekStartDates[$_] }
             "adt" = $adtData
             "exceptions" = $exceptionData
+            "monthly" = $monthlyData
             "updatedAt" = (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
         }
 
-        $jsonString = ConvertTo-Json -InputObject $payload -Depth 5
+        $jsonString = ConvertTo-Json -InputObject $payload -Depth 6
         [System.IO.File]::WriteAllText($DATA_JSON, $jsonString, [System.Text.Encoding]::UTF8)
         Write-Host "data.json gerado com sucesso!" -ForegroundColor Green
 
@@ -304,6 +309,109 @@ function Process-ExcelFiles {
         [System.GC]::Collect()
         [System.GC]::WaitForPendingFinalizers()
     }
+}
+
+# Função para processar arquivos mensais
+function Process-MonthlyFiles {
+    param($Excel, $StoresRef)
+
+    $monthlyResult = @{
+        "adt"        = @{}
+        "exceptions" = @{}
+        "months"     = @()
+    }
+
+    if (-not (Test-Path $REPORTS_MENSAL_DIR)) { return $monthlyResult }
+
+    $monthNames = @('jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez')
+    $monthsFound = @{}
+
+    $files = Get-ChildItem -Path $REPORTS_MENSAL_DIR -Filter "*.xlsx" -File
+    if ($files.Count -eq 0) { return $monthlyResult }
+
+    foreach ($file in $files) {
+        $filePath = $file.FullName
+        Write-Host "[Mensal] Lendo arquivo: $($file.Name)"
+
+        $monthKey = $null
+        if ($file.Name -match "(\d{4})-(\d{2})-\d{2}\s*-\s*\d{4}-(\d{2})-\d{2}") {
+            $year  = $Matches[1]
+            $month = [int]$Matches[2]
+            $monthKey = $monthNames[$month - 1]
+            $monthsFound[$monthKey] = $month
+            Write-Host "  -> Mês identificado: $monthKey ($year)"
+        } else {
+            Write-Warning "  -> Nao foi possivel identificar o mes em: $($file.Name)"
+            continue
+        }
+
+        try {
+            $wb = $Excel.Workbooks.Open($filePath, [Type]::Missing, $true)
+            $ws = $wb.Worksheets.Item(1)
+
+            # Mapeia cabeçalhos
+            $wsHeaders = @{}
+            for ($c = 1; $c -le 60; $c++) {
+                $val = $ws.Cells.Item(1, $c).Value2
+                if ($val) { $wsHeaders[[string]$val] = $c }
+            }
+
+            $isADT        = $wsHeaders.ContainsKey("eADT")
+            $isExceptions = $wsHeaders.ContainsKey("Service Exceptions")
+            $storeCol     = if ($wsHeaders.ContainsKey("Store")) { $wsHeaders["Store"] } else { 1 }
+
+            $rows = @()
+            $r = 2
+            while ($true) {
+                $id = $ws.Cells.Item($r, $storeCol).Value2
+                if (-not $id) { break }
+                $storeId = [string](Get-SafeInt $id)
+
+                if ($isADT) {
+                    $adtCol = $wsHeaders["eADT"]
+                    $extCol = $wsHeaders["% of Est Extreme Deliveries"]
+                    $cntCol = $wsHeaders["Order Count"]
+                    $rows += @{
+                        "storeId" = $storeId
+                        "adt"     = Get-SafeDouble $ws.Cells.Item($r, $adtCol).Value2
+                        "extreme" = Get-SafeDouble $ws.Cells.Item($r, $extCol).Value2
+                        "orders"  = Get-SafeInt   $ws.Cells.Item($r, $cntCol).Value2
+                    }
+                } elseif ($isExceptions) {
+                    $excCol    = $wsHeaders["Service Exceptions"]
+                    $totCol    = $wsHeaders["Total Order Count"]
+                    $delCol    = $wsHeaders["Delv Order Count"]
+                    $excCntCol = $wsHeaders["Service Exceptions Count"]
+                    $rows += @{
+                        "storeId"         = $storeId
+                        "exceptions"      = Get-SafeDouble $ws.Cells.Item($r, $excCol).Value2
+                        "totalOrders"     = Get-SafeInt   $ws.Cells.Item($r, $totCol).Value2
+                        "delvOrders"      = Get-SafeInt   $ws.Cells.Item($r, $delCol).Value2
+                        "exceptionsCount" = Get-SafeInt   $ws.Cells.Item($r, $excCntCol).Value2
+                    }
+                }
+                $r++
+            }
+
+            if ($isADT) {
+                if (-not $monthlyResult["adt"].ContainsKey($monthKey)) { $monthlyResult["adt"][$monthKey] = @() }
+                $monthlyResult["adt"][$monthKey] += $rows
+            } elseif ($isExceptions) {
+                if (-not $monthlyResult["exceptions"].ContainsKey($monthKey)) { $monthlyResult["exceptions"][$monthKey] = @() }
+                $monthlyResult["exceptions"][$monthKey] += $rows
+            }
+
+            $wb.Close($false)
+        } catch {
+            Write-Warning "  -> Erro ao processar arquivo mensal: $_"
+        }
+    }
+
+    # Ordena meses cronologicamente
+    $sortedMonths = $monthsFound.Keys | Sort-Object { $monthsFound[$_] }
+    $monthlyResult["months"] = @($sortedMonths)
+
+    return $monthlyResult
 }
 
 # Processa inicialmente
@@ -322,6 +430,22 @@ $onChanged = Register-ObjectEvent $watcher "Changed" -Action {
 }
 $onCreated = Register-ObjectEvent $watcher "Created" -Action {
     Write-Host "Novo arquivo detectado: $($Event.SourceEventArgs.FullPath). Processando..." -ForegroundColor Yellow
+    Process-ExcelFiles
+}
+
+# Watcher para a pasta mensal
+$watcherMensal = New-Object System.IO.FileSystemWatcher
+$watcherMensal.Path = $REPORTS_MENSAL_DIR
+$watcherMensal.Filter = "*.xlsx"
+$watcherMensal.IncludeSubdirectories = $false
+$watcherMensal.EnableRaisingEvents = $true
+
+$onMensalChanged = Register-ObjectEvent $watcherMensal "Changed" -Action {
+    Write-Host "[Mensal] Alteração detectada. Atualizando dados..." -ForegroundColor Cyan
+    Process-ExcelFiles
+}
+$onMensalCreated = Register-ObjectEvent $watcherMensal "Created" -Action {
+    Write-Host "[Mensal] Novo arquivo mensal detectado. Processando..." -ForegroundColor Cyan
     Process-ExcelFiles
 }
 
@@ -377,6 +501,9 @@ try {
 } finally {
     $listener.Stop()
     $watcher.Dispose()
+    $watcherMensal.Dispose()
     Unregister-Event -SourceIdentifier $onChanged.Name -ErrorAction SilentlyContinue
     Unregister-Event -SourceIdentifier $onCreated.Name -ErrorAction SilentlyContinue
+    Unregister-Event -SourceIdentifier $onMensalChanged.Name -ErrorAction SilentlyContinue
+    Unregister-Event -SourceIdentifier $onMensalCreated.Name -ErrorAction SilentlyContinue
 }

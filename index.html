@@ -44,6 +44,15 @@
     </header>
 
     <main class="dashboard-container">
+        <!-- Navegação por Abas -->
+        <nav class="tab-nav">
+            <button id="tab-semanal" class="tab-btn active" data-tab="semanal">
+                <span class="tab-icon">📈</span> Semanal
+            </button>
+            <button id="tab-mensal" class="tab-btn" data-tab="mensal">
+                <span class="tab-icon">📅</span> Mensal
+            </button>
+        </nav>
         <!-- Filtros -->
         <section class="filters-card">
             <div class="filters-grid">
@@ -68,7 +77,7 @@
         </section>
 
         <!-- Area de Captura para exportação do PNG -->
-        <div id="capture-area" style="display: flex; flex-direction: column; gap: 2rem;">
+        <div id="capture-area" class="tab-content active" data-view="semanal" style="display: flex; flex-direction: column; gap: 2rem;">
             <!-- Campo 1: ADT & Extremes -->
             <section id="section-adt" class="dashboard-section card">
                 <div class="section-header blue-accent">
@@ -140,6 +149,83 @@
                     </table>
                 </div>
             </section>
+        </div>
+
+        <!-- Visão Mensal -->
+        <div id="monthly-view" class="tab-content" data-view="mensal" style="display: flex; flex-direction: column; gap: 2rem;">
+
+            <!-- ADT Mensal -->
+            <section id="section-adt-mensal" class="dashboard-section card">
+                <div class="section-header blue-accent">
+                    <h2 id="title-adt-mensal">ADT Mensal (Tempo de Entrega)</h2>
+                    <span class="goal-badge">Meta: ADT &lt; 25 min &mdash; 2026</span>
+                </div>
+                <div class="kpi-grid">
+                    <div class="kpi-card" id="kpi-adt-avg-mensal">
+                        <div class="kpi-info">
+                            <h3>Média ADT</h3>
+                            <div class="kpi-value">--</div>
+                            <p class="kpi-subtitle">Meta: &lt; 25 min</p>
+                        </div>
+                        <div class="kpi-critical-list" id="kpi-adt-critical-mensal"></div>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table id="table-adt-mensal">
+                        <thead></thead>
+                        <tbody><tr><td class="text-center">Aguardando dados mensais...</td></tr></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Extremes Mensal -->
+            <section id="section-extremes-mensal" class="dashboard-section card">
+                <div class="section-header blue-accent">
+                    <h2 id="title-extremes-mensal">Extremes % Mensal</h2>
+                    <span class="goal-badge">Meta: Extremes &lt; 2% &mdash; 2026</span>
+                </div>
+                <div class="kpi-grid">
+                    <div class="kpi-card" id="kpi-extremes-avg-mensal">
+                        <div class="kpi-info">
+                            <h3>Extremes %</h3>
+                            <div class="kpi-value">--</div>
+                            <p class="kpi-subtitle">Meta: &lt; 2%</p>
+                        </div>
+                        <div class="kpi-critical-list" id="kpi-extremes-critical-mensal"></div>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table id="table-extremes-mensal">
+                        <thead></thead>
+                        <tbody><tr><td class="text-center">Aguardando dados mensais...</td></tr></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Service Exceptions Mensal -->
+            <section id="section-exceptions-mensal" class="dashboard-section card">
+                <div class="section-header red-accent">
+                    <h2 id="title-exceptions-mensal">Service Exceptions Mensal</h2>
+                    <span class="goal-badge">Meta: &lt; 10% | Ideal &lt; 2% &mdash; 2026</span>
+                </div>
+                <div class="kpi-grid">
+                    <div class="kpi-card" id="kpi-exceptions-avg-mensal">
+                        <div class="kpi-info">
+                            <h3>Service Exceptions %</h3>
+                            <div class="kpi-value">--</div>
+                            <p class="kpi-subtitle">Meta: &lt; 10%</p>
+                        </div>
+                        <div class="kpi-critical-list" id="kpi-exceptions-critical-mensal"></div>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table id="table-exceptions-mensal">
+                        <thead></thead>
+                        <tbody><tr><td class="text-center">Aguardando dados mensais...</td></tr></tbody>
+                    </table>
+                </div>
+            </section>
+
         </div>
     </main>
 
