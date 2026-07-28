@@ -53,6 +53,9 @@
             <button id="tab-mensal" class="tab-btn" data-tab="mensal">
                 <span class="tab-icon">📅</span> Mensal
             </button>
+            <button id="tab-risco" class="tab-btn" data-tab="risco">
+                <span class="tab-icon">⚠️</span> Análise de Risco
+            </button>
         </nav>
         <!-- Filtros -->
         <section class="filters-card">
@@ -223,6 +226,64 @@
                     <table id="table-exceptions-mensal">
                         <thead></thead>
                         <tbody><tr><td class="text-center">Aguardando dados mensais...</td></tr></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Visão Análise de Risco (Segunda-feira) -->
+        <div id="risk-view" class="tab-content" data-view="risco" style="display: flex; flex-direction: column; gap: 2rem;">
+
+            <div id="risk-weeks-info" class="risk-weeks-info">Carregando comparação de semanas...</div>
+
+            <!-- Lojas que fechariam o iFood -->
+            <section id="section-fechariam" class="dashboard-section card">
+                <div class="section-header red-accent">
+                    <h2>🔴 Lojas que fechariam o iFood <span id="count-fechariam" class="risk-count">0</span></h2>
+                    <span class="goal-badge">Críticas 2 semanas seguidas — já avisadas</span>
+                </div>
+                <p class="risk-message risk-message-danger">
+                    Estavam acima do limite na <strong>semana anterior</strong> (já foram avisadas de que perderiam o iFood) e <strong>continuam acima</strong> nesta semana. Ação: <strong>fechamento do iFood</strong>.
+                </p>
+                <div class="table-wrapper">
+                    <table id="table-fechariam">
+                        <thead></thead>
+                        <tbody><tr><td class="text-center">Aguardando dados...</td></tr></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Lojas em aviso -->
+            <section id="section-aviso" class="dashboard-section card">
+                <div class="section-header orange-accent">
+                    <h2>🟡 Lojas em aviso <span id="count-aviso" class="risk-count">0</span></h2>
+                    <span class="goal-badge">Estouraram o limite nesta semana</span>
+                </div>
+                <p class="risk-message risk-message-warning">
+                    Ficaram acima do limite <strong>nesta semana</strong> (não estavam na semana anterior). Aviso: <strong>se na próxima semana não ficarem abaixo, perdem o iFood</strong>.
+                </p>
+                <div class="table-wrapper">
+                    <table id="table-aviso">
+                        <thead></thead>
+                        <tbody><tr><td class="text-center">Aguardando dados...</td></tr></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Lojas recuperadas -->
+            <section id="section-recuperadas" class="dashboard-section card">
+                <div class="section-header green-accent">
+                    <h2>🟢 Lojas recuperadas <span id="count-recuperadas" class="risk-count">0</span></h2>
+                    <span class="goal-badge">Saíram do risco</span>
+                </div>
+                <p class="risk-message risk-message-success">
+                    Estavam acima do limite na <strong>semana anterior</strong>, mas ficaram <strong>abaixo nesta semana</strong>. Seguem vida normal.
+                </p>
+                <div class="table-wrapper">
+                    <table id="table-recuperadas">
+                        <thead></thead>
+                        <tbody><tr><td class="text-center">Aguardando dados...</td></tr></tbody>
                     </table>
                 </div>
             </section>

@@ -378,6 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderAdtTable(storesToShow);
         renderExceptionsTable(storesToShow);
         renderMonthly(storesToShow);
+        renderRiskAnalysis(storesToShow);
     }
 
     function renderAdtTable(storeIds) {
@@ -1276,6 +1277,152 @@ document.addEventListener('DOMContentLoaded', () => {
                 critListEl.style.display = crit.length ? 'flex' : 'none';
             }
         }
+    }
+
+    // ==========================================
+    // ANÁLISE DE RISCO (SEGUNDA-FEIRA)
+    // Compara as 2 semanas mais recentes.
+    // Crítica = ADT > 40 min OU Exceptions > 45%
+    // ==========================================
+
+    const RISK_ADT_LIMIT = 40;      // minutos
+    const RISK_EXC_LIMIT = 0.45;    // 45% (fração)
+
+    function renderRiskAnalysis(storeIds) {
+        const weeks = rawData.weeks || [];
+        const infoEl = document.getElementById('risk-weeks-info');
+
+        const tables = {
+            fechariam: document.getElementById('table-fechariam'),
+            aviso: document.getElementById('table-aviso'),
+            recuperadas: document.getElementById('table-recuperadas')
+        };
+        const counts = {
+            fechariam: document.getElementById('count-fechariam'),
+            aviso: document.getElementById('count-aviso'),
+            recuperadas: document.getElementById('count-recuperadas')
+        };
+
+        // Precisa de pelo menos 2 semanas para comparar
+        if (weeks.length < 2) {
+            if (infoEl) infoEl.innerHTML = '⚠️ São necessárias pelo menos <strong>2 semanas</strong> de dados para a análise de risco. Atualmente há ' + weeks.length + '.';
+            Object.keys(tables).forEach(k => {
+                if (tables[k]) {
+                    tables[k].querySelector('thead').innerHTML = '';
+                    tables[k].querySelector('tbody').innerHTML = '<tr><td class="risk-empty">Dados insuficientes</td></tr>';
+                }
+                if (counts[k]) counts[k].textContent = '0';
+            });
+            return;
+        }
+
+        const prevWeek = weeks[weeks.length - 2];
+        const curWeek  = weeks[weeks.length - 1];
+
+        if (infoEl) {
+            infoEl.innerHTML = 'Comparando &nbsp;<strong>Semana ' + prevWeek + '</strong> (anterior) &nbsp;→&nbsp; <strong>Semana ' + curWeek + '</strong> (atual). &nbsp; Critério de risco: ADT &gt; ' + RISK_ADT_LIMIT + ' min &nbsp;<strong>ou</strong>&nbsp; Exceptions &gt; ' + (RISK_EXC_LIMIT * 100) + '%.';
+        }
+
+        // Mapas de consulta rápida por loja
+        const adtPrev = {}, adtCur = {}, excPrev = {}, excCur = {};
+        (rawData.adt.weeks[prevWeek] || []).forEach(r => { adtPrev[r.storeId] = r; });
+        (rawData.adt.weeks[curWeek]  || []).forEach(r => { adtCur[r.storeId]  = r; });
+        (rawData.exceptions.weeks[prevWeek] || []).forEach(r => { excPrev[r.storeId] = r; });
+        (rawData.exceptions.weeks[curWeek]  || []).forEach(r => { excCur[r.storeId]  = r; });
+
+        function getMetrics(storeId, adtMap, excMap) {
+            const adt = adtMap[storeId] ? (adtMap[storeId].adt || 0) : 0;
+            const exc = excMap[storeId] ? (excMap[storeId].exceptions || 0) : 0;
+            const hasData = !!(adtMap[storeId] || excMap[storeId]);
+            return { adt, exc, hasData };
+        }
+        function isCritical(m) {
+            return (m.adt > RISK_ADT_LIMIT) || (m.exc > RISK_EXC_LIMIT);
+        }
+        function triggerLabel(m) {
+            const t = [];
+            if (m.adt > RISK_ADT_LIMIT) t.push('ADT');
+            if (m.exc > RISK_EXC_LIMIT) t.push('EXC');
+            return t.join(' + ');
+        }
+
+        const fechariam = [], aviso = [], recuperadas = [];
+
+        storeIds.forEach(storeId => {
+            const store = rawData.stores[storeId] || { name: 'Loja ' + storeId };
+            const mp = getMetrics(storeId, adtPrev, excPrev);
+            const mc = getMetrics(storeId, adtCur, excCur);
+            const critPrev = isCritical(mp);
+            const critCur  = isCritical(mc);
+
+            const item = { storeId, store, mp, mc };
+
+            if (critCur && critPrev)       fechariam.push(item);
+            else if (critCur && !critPrev) aviso.push(item);
+            else if (!critCur && critPrev) recuperadas.push(item);
+        });
+
+        // Severidade (pior primeiro): quão longe está do limite
+        const severity = (m) => Math.max(m.adt / RISK_ADT_LIMIT, m.exc / RISK_EXC_LIMIT);
+        fechariam.sort((a, b) => severity(b.mc) - severity(a.mc));
+        aviso.sort((a, b) => severity(b.mc) - severity(a.mc));
+        recuperadas.sort((a, b) => severity(b.mp) - severity(a.mp));
+
+        renderRiskTable(tables.fechariam, fechariam, prevWeek, curWeek, 'cur', 'Nenhuma loja fecharia o iFood 🎉');
+        renderRiskTable(tables.aviso, aviso, prevWeek, curWeek, 'cur', 'Nenhuma loja em aviso nesta semana 🎉');
+        renderRiskTable(tables.recuperadas, recuperadas, prevWeek, curWeek, 'prev', 'Nenhuma loja recuperada nesta semana');
+
+        if (counts.fechariam)  counts.fechariam.textContent  = fechariam.length;
+        if (counts.aviso)      counts.aviso.textContent      = aviso.length;
+        if (counts.recuperadas) counts.recuperadas.textContent = recuperadas.length;
+    }
+
+    // Monta uma tabela de risco (Loja | ADT ant | ADT atual | Exc ant | Exc atual)
+    // highlightWeek: 'cur' destaca a tag na semana atual, 'prev' na anterior
+    function renderRiskTable(table, items, prevWeek, curWeek, highlightWeek, emptyMsg) {
+        if (!table) return;
+        const thead = table.querySelector('thead');
+        const tbody = table.querySelector('tbody');
+
+        thead.innerHTML =
+            '<tr>' +
+            '<th>Loja</th>' +
+            '<th class="text-center" style="border-left: 2px solid var(--border-color)">ADT ' + prevWeek + '</th>' +
+            '<th class="text-center">ADT ' + curWeek + '</th>' +
+            '<th class="text-center" style="border-left: 2px solid var(--border-color)">Exc. ' + prevWeek + '</th>' +
+            '<th class="text-center">Exc. ' + curWeek + '</th>' +
+            '</tr>';
+
+        if (items.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="5" class="risk-empty">' + emptyMsg + '</td></tr>';
+            return;
+        }
+
+        let html = '';
+        items.forEach(({ store, mp, mc }) => {
+            const cleanName = store.name.replace(/domino[s]?'?\s*/gi, '').trim();
+
+            // Tag do motivo, na semana destacada
+            const trigM = highlightWeek === 'cur' ? mc : mp;
+            const trig = (highlightWeek !== null && (trigM.adt > RISK_ADT_LIMIT || trigM.exc > RISK_EXC_LIMIT))
+                ? '<span class="risk-trigger">' + (function(m){const t=[];if(m.adt>RISK_ADT_LIMIT)t.push('ADT');if(m.exc>RISK_EXC_LIMIT)t.push('EXC');return t.join(' + ');})(trigM) + '</span>'
+                : '';
+
+            const adtPrevTxt = mp.adt > 0 ? mp.adt.toFixed(1) : '--';
+            const adtCurTxt  = mc.adt > 0 ? mc.adt.toFixed(1) : '--';
+            const excPrevTxt = mp.exc > 0 ? (mp.exc * 100).toFixed(1) + '%' : '--';
+            const excCurTxt  = mc.exc > 0 ? (mc.exc * 100).toFixed(1) + '%' : '--';
+
+            html +=
+                '<tr>' +
+                '<td>' + cleanName + trig + '</td>' +
+                '<td class="text-center" style="border-left: 2px solid var(--border-color); ' + getAdtStyle(mp.adt) + '">' + adtPrevTxt + '</td>' +
+                '<td class="text-center" style="font-weight: 700; ' + getAdtStyle(mc.adt) + '">' + adtCurTxt + '</td>' +
+                '<td class="text-center" style="border-left: 2px solid var(--border-color); ' + getExceptionStyle(mp.exc) + '">' + excPrevTxt + '</td>' +
+                '<td class="text-center" style="font-weight: 700; ' + getExceptionStyle(mc.exc) + '">' + excCurTxt + '</td>' +
+                '</tr>';
+        });
+        tbody.innerHTML = html;
     }
 
     const btnExport = document.getElementById('btn-export');
