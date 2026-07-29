@@ -1,4 +1,4 @@
-﻿// Domino's Pizza Performance PWR Dashboard Logic - Evolução de Períodos
+// Domino's Pizza Performance PWR Dashboard Logic - Evolução de Períodos
 document.addEventListener('DOMContentLoaded', () => {
     let rawData = null;
     let activeTab = 'semanal';
@@ -1479,28 +1479,64 @@ document.addEventListener('DOMContentLoaded', () => {
             const consultantName = consultantSelect.value;
             const suffix = consultantName === 'all' ? 'geral' : consultantName.toLowerCase().replace(/\s+/g, '_');
 
-            exportSection('section-adt', `pwr_adt_e_extremos_${suffix}.png`)
-                .then(() => {
-                    // Aguarda 800ms para iniciar a segunda exportação e evitar bloqueio do navegador
-                    setTimeout(() => {
-                        exportSection('section-exceptions', `pwr_service_exceptions_${suffix}.png`)
-                            .then(() => {
-                                btnExport.disabled = false;
-                                btnExport.textContent = 'Exportar PNG';
-                            })
-                            .catch(err => {
-                                console.error('Erro ao exportar exceptions:', err);
-                                btnExport.disabled = false;
-                                btnExport.textContent = 'Exportar PNG';
-                            });
-                    }, 800);
-                })
-                .catch(err => {
-                    console.error('Erro ao exportar ADT:', err);
-                    alert('Erro ao gerar as imagens. Tente novamente.');
-                    btnExport.disabled = false;
-                    btnExport.textContent = 'Exportar PNG';
-                });
+            if (activeTab === 'risco') {
+                // Exportação da aba Análise de Risco em 3 imagens separadas
+                exportSection('section-fechariam', `pwr_risco_fechariam_ifood_${suffix}.png`)
+                    .then(() => {
+                        setTimeout(() => {
+                            exportSection('section-aviso', `pwr_risco_aviso_${suffix}.png`)
+                                .then(() => {
+                                    setTimeout(() => {
+                                        exportSection('section-recuperadas', `pwr_risco_recuperadas_${suffix}.png`)
+                                            .then(() => {
+                                                btnExport.disabled = false;
+                                                btnExport.textContent = 'Exportar PNG';
+                                            })
+                                            .catch(err => {
+                                                console.error('Erro ao exportar lojas recuperadas:', err);
+                                                btnExport.disabled = false;
+                                                btnExport.textContent = 'Exportar PNG';
+                                            });
+                                    }, 800);
+                                })
+                                .catch(err => {
+                                    console.error('Erro ao exportar lojas em aviso:', err);
+                                    btnExport.disabled = false;
+                                    btnExport.textContent = 'Exportar PNG';
+                                });
+                        }, 800);
+                    })
+                    .catch(err => {
+                        console.error('Erro ao exportar lojas que fechariam:', err);
+                        alert('Erro ao gerar as imagens. Tente novamente.');
+                        btnExport.disabled = false;
+                        btnExport.textContent = 'Exportar PNG';
+                    });
+            } else {
+                // Exportação padrão (semanal / mensal)
+                exportSection('section-adt', `pwr_adt_e_extremos_${suffix}.png`)
+                    .then(() => {
+                        // Aguarda 800ms para iniciar a segunda exportação e evitar bloqueio do navegador
+                        setTimeout(() => {
+                            exportSection('section-exceptions', `pwr_service_exceptions_${suffix}.png`)
+                                .then(() => {
+                                    btnExport.disabled = false;
+                                    btnExport.textContent = 'Exportar PNG';
+                                })
+                                .catch(err => {
+                                    console.error('Erro ao exportar exceptions:', err);
+                                    btnExport.disabled = false;
+                                    btnExport.textContent = 'Exportar PNG';
+                                });
+                        }, 800);
+                    })
+                    .catch(err => {
+                        console.error('Erro ao exportar ADT:', err);
+                        alert('Erro ao gerar as imagens. Tente novamente.');
+                        btnExport.disabled = false;
+                        btnExport.textContent = 'Exportar PNG';
+                    });
+            }
         });
     }
 
