@@ -1352,14 +1352,32 @@ document.addEventListener('DOMContentLoaded', () => {
             const store = rawData.stores[storeId] || { name: 'Loja ' + storeId };
             const mp = getMetrics(storeId, adtPrev, excPrev);
             const mc = getMetrics(storeId, adtCur, excCur);
-            const critPrev = isCritical(mp);
-            const critCur  = isCritical(mc);
+            
+            const critAdtPrev = mp.adt > RISK_ADT_LIMIT;
+            const critExcPrev = mp.exc > RISK_EXC_LIMIT;
+            const critAdtCur  = mc.adt > RISK_ADT_LIMIT;
+            const critExcCur  = mc.exc > RISK_EXC_LIMIT;
+
+            const critPrev = critAdtPrev || critExcPrev;
+            const critCur  = critAdtCur || critExcCur;
 
             const item = { storeId, store, mp, mc };
 
-            if (critCur && critPrev)       fechariam.push(item);
-            else if (critCur && !critPrev) aviso.push(item);
-            else if (!critCur && critPrev) recuperadas.push(item);
+            if (critCur) {
+                // Para fechar o iFood, o MESMO indicador que estourou na semana passada precisa continuar estourado nesta semana.
+                const persistAdt = critAdtPrev && critAdtCur;
+                const persistExc = critExcPrev && critExcCur;
+                
+                if (persistAdt || persistExc) {
+                    fechariam.push(item);
+                } else {
+                    // Se mudou de indicador crítico (ex: saiu do Exceptions mas estourou o ADT), ela ganha um novo aviso.
+                    aviso.push(item);
+                }
+            } else if (critPrev) {
+                // Era crítica e deixou de ser em ambos os critérios
+                recuperadas.push(item);
+            }
         });
 
         // Severidade (pior primeiro): quão longe está do limite
