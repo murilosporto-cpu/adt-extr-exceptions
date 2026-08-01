@@ -1,7 +1,7 @@
 # Script de Automação para Relatórios PWR Domino's
 # Inicia um servidor Web local e monitora a pasta 'pwr_reports' para reprocessar planilhas Excel.
 
-$BASE_DIR = Resolve-Path "C:\Users\Murilo Porto\.gemini\antigravity\scratch\cafe com pwr"
+$BASE_DIR = $PSScriptRoot
 $REPORTS_DIR = Join-Path $BASE_DIR "pwr_reports"
 $REPORTS_MENSAL_DIR = Join-Path $BASE_DIR "pwr_reports_mensal"
 $APP_DIR = Join-Path $BASE_DIR "app"
