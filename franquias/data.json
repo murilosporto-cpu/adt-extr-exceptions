@@ -9727,6 +9727,1338 @@
                                                        "exceptionsCount":  0
                                                    }
                                                ],
+                                       "ago":  [
+                                                   {
+                                                       "totalOrders":  119,
+                                                       "delvOrders":  89,
+                                                       "exceptions":  0.123595505617978,
+                                                       "storeId":  "19506",
+                                                       "exceptionsCount":  12
+                                                   },
+                                                   {
+                                                       "totalOrders":  140,
+                                                       "delvOrders":  98,
+                                                       "exceptions":  0.36734693877551,
+                                                       "storeId":  "19513",
+                                                       "exceptionsCount":  38
+                                                   },
+                                                   {
+                                                       "totalOrders":  128,
+                                                       "delvOrders":  108,
+                                                       "exceptions":  0.416666666666667,
+                                                       "storeId":  "19514",
+                                                       "exceptionsCount":  47
+                                                   },
+                                                   {
+                                                       "totalOrders":  65,
+                                                       "delvOrders":  27,
+                                                       "exceptions":  0.62962962962963,
+                                                       "storeId":  "19520",
+                                                       "exceptionsCount":  19
+                                                   },
+                                                   {
+                                                       "totalOrders":  126,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19521",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  133,
+                                                       "delvOrders":  97,
+                                                       "exceptions":  0.0824742268041237,
+                                                       "storeId":  "19523",
+                                                       "exceptionsCount":  8
+                                                   },
+                                                   {
+                                                       "totalOrders":  87,
+                                                       "delvOrders":  48,
+                                                       "exceptions":  0.166666666666667,
+                                                       "storeId":  "19524",
+                                                       "exceptionsCount":  9
+                                                   },
+                                                   {
+                                                       "totalOrders":  163,
+                                                       "delvOrders":  124,
+                                                       "exceptions":  0.032258064516129,
+                                                       "storeId":  "19525",
+                                                       "exceptionsCount":  4
+                                                   },
+                                                   {
+                                                       "totalOrders":  129,
+                                                       "delvOrders":  92,
+                                                       "exceptions":  0.0543478260869565,
+                                                       "storeId":  "19528",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  200,
+                                                       "delvOrders":  140,
+                                                       "exceptions":  0.121428571428571,
+                                                       "storeId":  "19529",
+                                                       "exceptionsCount":  18
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19536",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  147,
+                                                       "delvOrders":  95,
+                                                       "exceptions":  0.0631578947368421,
+                                                       "storeId":  "19538",
+                                                       "exceptionsCount":  9
+                                                   },
+                                                   {
+                                                       "totalOrders":  206,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19540",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  53,
+                                                       "delvOrders":  34,
+                                                       "exceptions":  0.294117647058824,
+                                                       "storeId":  "19545",
+                                                       "exceptionsCount":  11
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19546",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19547",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  68,
+                                                       "delvOrders":  28,
+                                                       "exceptions":  0.0357142857142857,
+                                                       "storeId":  "19550",
+                                                       "exceptionsCount":  1
+                                                   },
+                                                   {
+                                                       "totalOrders":  112,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19551",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  190,
+                                                       "delvOrders":  153,
+                                                       "exceptions":  0.0130718954248366,
+                                                       "storeId":  "19552",
+                                                       "exceptionsCount":  2
+                                                   },
+                                                   {
+                                                       "totalOrders":  105,
+                                                       "delvOrders":  66,
+                                                       "exceptions":  0.151515151515152,
+                                                       "storeId":  "19553",
+                                                       "exceptionsCount":  10
+                                                   },
+                                                   {
+                                                       "totalOrders":  137,
+                                                       "delvOrders":  90,
+                                                       "exceptions":  0.2,
+                                                       "storeId":  "19563",
+                                                       "exceptionsCount":  22
+                                                   },
+                                                   {
+                                                       "totalOrders":  86,
+                                                       "delvOrders":  51,
+                                                       "exceptions":  0.176470588235294,
+                                                       "storeId":  "19564",
+                                                       "exceptionsCount":  11
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19565",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  201,
+                                                       "delvOrders":  177,
+                                                       "exceptions":  0.175141242937853,
+                                                       "storeId":  "19572",
+                                                       "exceptionsCount":  45
+                                                   },
+                                                   {
+                                                       "totalOrders":  85,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19578",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19579",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19580",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  103,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19581",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  152,
+                                                       "delvOrders":  91,
+                                                       "exceptions":  0.241758241758242,
+                                                       "storeId":  "19595",
+                                                       "exceptionsCount":  24
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19596",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  151,
+                                                       "delvOrders":  102,
+                                                       "exceptions":  0.0588235294117647,
+                                                       "storeId":  "19597",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  114,
+                                                       "delvOrders":  59,
+                                                       "exceptions":  0.0847457627118644,
+                                                       "storeId":  "19599",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  114,
+                                                       "delvOrders":  90,
+                                                       "exceptions":  0.155555555555556,
+                                                       "storeId":  "19600",
+                                                       "exceptionsCount":  14
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19601",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19602",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  76,
+                                                       "delvOrders":  34,
+                                                       "exceptions":  0.0882352941176471,
+                                                       "storeId":  "19606",
+                                                       "exceptionsCount":  3
+                                                   },
+                                                   {
+                                                       "totalOrders":  102,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19607",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  94,
+                                                       "delvOrders":  64,
+                                                       "exceptions":  0.09375,
+                                                       "storeId":  "19609",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19615",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  121,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19616",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  172,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19617",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19618",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  114,
+                                                       "delvOrders":  48,
+                                                       "exceptions":  0.0833333333333333,
+                                                       "storeId":  "19622",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  80,
+                                                       "delvOrders":  43,
+                                                       "exceptions":  0.13953488372093,
+                                                       "storeId":  "19623",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  86,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19624",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  117,
+                                                       "delvOrders":  63,
+                                                       "exceptions":  0.111111111111111,
+                                                       "storeId":  "19625",
+                                                       "exceptionsCount":  7
+                                                   },
+                                                   {
+                                                       "totalOrders":  127,
+                                                       "delvOrders":  90,
+                                                       "exceptions":  0.144444444444444,
+                                                       "storeId":  "19632",
+                                                       "exceptionsCount":  15
+                                                   },
+                                                   {
+                                                       "totalOrders":  84,
+                                                       "delvOrders":  37,
+                                                       "exceptions":  0.189189189189189,
+                                                       "storeId":  "19633",
+                                                       "exceptionsCount":  8
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19634",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  115,
+                                                       "delvOrders":  60,
+                                                       "exceptions":  0.0333333333333333,
+                                                       "storeId":  "19636",
+                                                       "exceptionsCount":  2
+                                                   },
+                                                   {
+                                                       "totalOrders":  52,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19642",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  88,
+                                                       "delvOrders":  50,
+                                                       "exceptions":  0.12,
+                                                       "storeId":  "19647",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  103,
+                                                       "delvOrders":  41,
+                                                       "exceptions":  0.0487804878048781,
+                                                       "storeId":  "19648",
+                                                       "exceptionsCount":  4
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19649",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  202,
+                                                       "delvOrders":  148,
+                                                       "exceptions":  0.425675675675676,
+                                                       "storeId":  "19652",
+                                                       "exceptionsCount":  69
+                                                   },
+                                                   {
+                                                       "totalOrders":  80,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19654",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19656",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19657",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  102,
+                                                       "delvOrders":  60,
+                                                       "exceptions":  0.266666666666667,
+                                                       "storeId":  "19661",
+                                                       "exceptionsCount":  18
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19666",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  130,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19671",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  111,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19674",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  41,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19675",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  91,
+                                                       "delvOrders":  48,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19679",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19680",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  68,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19685",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  119,
+                                                       "delvOrders":  22,
+                                                       "exceptions":  0.409090909090909,
+                                                       "storeId":  "19687",
+                                                       "exceptionsCount":  9
+                                                   },
+                                                   {
+                                                       "totalOrders":  81,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19688",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  89,
+                                                       "delvOrders":  53,
+                                                       "exceptions":  0.283018867924528,
+                                                       "storeId":  "19689",
+                                                       "exceptionsCount":  15
+                                                   },
+                                                   {
+                                                       "totalOrders":  98,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19691",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19693",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19694",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19696",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19697",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  128,
+                                                       "delvOrders":  78,
+                                                       "exceptions":  0.102564102564103,
+                                                       "storeId":  "19698",
+                                                       "exceptionsCount":  8
+                                                   },
+                                                   {
+                                                       "totalOrders":  78,
+                                                       "delvOrders":  36,
+                                                       "exceptions":  0.0833333333333333,
+                                                       "storeId":  "19700",
+                                                       "exceptionsCount":  3
+                                                   },
+                                                   {
+                                                       "totalOrders":  104,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19706",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19707",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  115,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19708",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  71,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19710",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  92,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19711",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  98,
+                                                       "delvOrders":  59,
+                                                       "exceptions":  0.152542372881356,
+                                                       "storeId":  "19715",
+                                                       "exceptionsCount":  9
+                                                   },
+                                                   {
+                                                       "totalOrders":  47,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19716",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19719",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  69,
+                                                       "delvOrders":  50,
+                                                       "exceptions":  0.08,
+                                                       "storeId":  "19720",
+                                                       "exceptionsCount":  4
+                                                   },
+                                                   {
+                                                       "totalOrders":  101,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19721",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  86,
+                                                       "delvOrders":  63,
+                                                       "exceptions":  0.253968253968254,
+                                                       "storeId":  "19722",
+                                                       "exceptionsCount":  23
+                                                   },
+                                                   {
+                                                       "totalOrders":  56,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19725",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  89,
+                                                       "delvOrders":  67,
+                                                       "exceptions":  0.238805970149254,
+                                                       "storeId":  "19727",
+                                                       "exceptionsCount":  17
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19728",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  143,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19730",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19733",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  30,
+                                                       "delvOrders":  28,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19735",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  130,
+                                                       "delvOrders":  78,
+                                                       "exceptions":  0.961538461538462,
+                                                       "storeId":  "19736",
+                                                       "exceptionsCount":  111
+                                                   },
+                                                   {
+                                                       "totalOrders":  176,
+                                                       "delvOrders":  59,
+                                                       "exceptions":  0.474576271186441,
+                                                       "storeId":  "19738",
+                                                       "exceptionsCount":  31
+                                                   },
+                                                   {
+                                                       "totalOrders":  113,
+                                                       "delvOrders":  81,
+                                                       "exceptions":  0.185185185185185,
+                                                       "storeId":  "19740",
+                                                       "exceptionsCount":  16
+                                                   },
+                                                   {
+                                                       "totalOrders":  87,
+                                                       "delvOrders":  55,
+                                                       "exceptions":  0.127272727272727,
+                                                       "storeId":  "19741",
+                                                       "exceptionsCount":  12
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19742",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  69,
+                                                       "delvOrders":  50,
+                                                       "exceptions":  0.12,
+                                                       "storeId":  "19745",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  136,
+                                                       "delvOrders":  61,
+                                                       "exceptions":  0.360655737704918,
+                                                       "storeId":  "19746",
+                                                       "exceptionsCount":  35
+                                                   },
+                                                   {
+                                                       "totalOrders":  68,
+                                                       "delvOrders":  34,
+                                                       "exceptions":  0.0882352941176471,
+                                                       "storeId":  "19749",
+                                                       "exceptionsCount":  3
+                                                   },
+                                                   {
+                                                       "totalOrders":  40,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19752",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  124,
+                                                       "delvOrders":  68,
+                                                       "exceptions":  0.161764705882353,
+                                                       "storeId":  "19753",
+                                                       "exceptionsCount":  11
+                                                   },
+                                                   {
+                                                       "totalOrders":  186,
+                                                       "delvOrders":  101,
+                                                       "exceptions":  0.0792079207920792,
+                                                       "storeId":  "19754",
+                                                       "exceptionsCount":  9
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19755",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  59,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19756",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  63,
+                                                       "delvOrders":  39,
+                                                       "exceptions":  0.307692307692308,
+                                                       "storeId":  "19759",
+                                                       "exceptionsCount":  13
+                                                   },
+                                                   {
+                                                       "totalOrders":  78,
+                                                       "delvOrders":  35,
+                                                       "exceptions":  0.142857142857143,
+                                                       "storeId":  "19761",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  65,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19762",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  53,
+                                                       "delvOrders":  34,
+                                                       "exceptions":  0.0882352941176471,
+                                                       "storeId":  "19763",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  70,
+                                                       "delvOrders":  42,
+                                                       "exceptions":  0.238095238095238,
+                                                       "storeId":  "19771",
+                                                       "exceptionsCount":  12
+                                                   },
+                                                   {
+                                                       "totalOrders":  64,
+                                                       "delvOrders":  23,
+                                                       "exceptions":  0.0434782608695652,
+                                                       "storeId":  "19772",
+                                                       "exceptionsCount":  1
+                                                   },
+                                                   {
+                                                       "totalOrders":  147,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19774",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  76,
+                                                       "delvOrders":  38,
+                                                       "exceptions":  0.421052631578947,
+                                                       "storeId":  "19775",
+                                                       "exceptionsCount":  18
+                                                   },
+                                                   {
+                                                       "totalOrders":  70,
+                                                       "delvOrders":  42,
+                                                       "exceptions":  0.214285714285714,
+                                                       "storeId":  "19778",
+                                                       "exceptionsCount":  9
+                                                   },
+                                                   {
+                                                       "totalOrders":  94,
+                                                       "delvOrders":  43,
+                                                       "exceptions":  0.116279069767442,
+                                                       "storeId":  "19780",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  66,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19785",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  44,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19787",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  192,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19788",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  114,
+                                                       "delvOrders":  46,
+                                                       "exceptions":  0.391304347826087,
+                                                       "storeId":  "19790",
+                                                       "exceptionsCount":  33
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19792",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  139,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19794",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  139,
+                                                       "delvOrders":  86,
+                                                       "exceptions":  0.104651162790698,
+                                                       "storeId":  "19796",
+                                                       "exceptionsCount":  18
+                                                   },
+                                                   {
+                                                       "totalOrders":  143,
+                                                       "delvOrders":  94,
+                                                       "exceptions":  0.297872340425532,
+                                                       "storeId":  "19798",
+                                                       "exceptionsCount":  29
+                                                   },
+                                                   {
+                                                       "totalOrders":  60,
+                                                       "delvOrders":  56,
+                                                       "exceptions":  0.428571428571429,
+                                                       "storeId":  "19804",
+                                                       "exceptionsCount":  31
+                                                   },
+                                                   {
+                                                       "totalOrders":  98,
+                                                       "delvOrders":  73,
+                                                       "exceptions":  0.150684931506849,
+                                                       "storeId":  "19805",
+                                                       "exceptionsCount":  18
+                                                   },
+                                                   {
+                                                       "totalOrders":  90,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19808",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  88,
+                                                       "delvOrders":  53,
+                                                       "exceptions":  0.150943396226415,
+                                                       "storeId":  "19809",
+                                                       "exceptionsCount":  10
+                                                   },
+                                                   {
+                                                       "totalOrders":  62,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19817",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  73,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19820",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  89,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19821",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  63,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19825",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  67,
+                                                       "delvOrders":  48,
+                                                       "exceptions":  0.333333333333333,
+                                                       "storeId":  "19832",
+                                                       "exceptionsCount":  19
+                                                   },
+                                                   {
+                                                       "totalOrders":  136,
+                                                       "delvOrders":  90,
+                                                       "exceptions":  0.0777777777777778,
+                                                       "storeId":  "19842",
+                                                       "exceptionsCount":  9
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19843",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  92,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19847",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  76,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19855",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19859",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  93,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19863",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  61,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19866",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  109,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19868",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  100,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19872",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  157,
+                                                       "delvOrders":  114,
+                                                       "exceptions":  0.12280701754386,
+                                                       "storeId":  "19874",
+                                                       "exceptionsCount":  27
+                                                   },
+                                                   {
+                                                       "totalOrders":  115,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19876",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  81,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19877",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  72,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19879",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19881",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  91,
+                                                       "delvOrders":  35,
+                                                       "exceptions":  0.0857142857142857,
+                                                       "storeId":  "19883",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  60,
+                                                       "delvOrders":  51,
+                                                       "exceptions":  0.156862745098039,
+                                                       "storeId":  "19884",
+                                                       "exceptionsCount":  10
+                                                   },
+                                                   {
+                                                       "totalOrders":  66,
+                                                       "delvOrders":  56,
+                                                       "exceptions":  0.0714285714285714,
+                                                       "storeId":  "19888",
+                                                       "exceptionsCount":  4
+                                                   },
+                                                   {
+                                                       "totalOrders":  89,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19889",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19890",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19891",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19897",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19898",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  55,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19899",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19901",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  121,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19902",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  158,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19903",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  59,
+                                                       "delvOrders":  34,
+                                                       "exceptions":  0.176470588235294,
+                                                       "storeId":  "19905",
+                                                       "exceptionsCount":  9
+                                                   },
+                                                   {
+                                                       "totalOrders":  69,
+                                                       "delvOrders":  15,
+                                                       "exceptions":  0.133333333333333,
+                                                       "storeId":  "19908",
+                                                       "exceptionsCount":  2
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19910",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  93,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19911",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19912",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  92,
+                                                       "delvOrders":  64,
+                                                       "exceptions":  0.375,
+                                                       "storeId":  "19914",
+                                                       "exceptionsCount":  30
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19923",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  51,
+                                                       "delvOrders":  27,
+                                                       "exceptions":  0.222222222222222,
+                                                       "storeId":  "19926",
+                                                       "exceptionsCount":  7
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19927",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  80,
+                                                       "delvOrders":  55,
+                                                       "exceptions":  0.363636363636364,
+                                                       "storeId":  "19928",
+                                                       "exceptionsCount":  21
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19930",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19931",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  48,
+                                                       "delvOrders":  28,
+                                                       "exceptions":  0.178571428571429,
+                                                       "storeId":  "19933",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  36,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19936",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  81,
+                                                       "delvOrders":  57,
+                                                       "exceptions":  0.263157894736842,
+                                                       "storeId":  "19940",
+                                                       "exceptionsCount":  17
+                                                   },
+                                                   {
+                                                       "totalOrders":  52,
+                                                       "delvOrders":  31,
+                                                       "exceptions":  0.225806451612903,
+                                                       "storeId":  "19943",
+                                                       "exceptionsCount":  10
+                                                   },
+                                                   {
+                                                       "totalOrders":  106,
+                                                       "delvOrders":  75,
+                                                       "exceptions":  0.32,
+                                                       "storeId":  "19944",
+                                                       "exceptionsCount":  25
+                                                   },
+                                                   {
+                                                       "totalOrders":  105,
+                                                       "delvOrders":  13,
+                                                       "exceptions":  0.153846153846154,
+                                                       "storeId":  "19945",
+                                                       "exceptionsCount":  2
+                                                   },
+                                                   {
+                                                       "totalOrders":  120,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19947",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  50,
+                                                       "delvOrders":  26,
+                                                       "exceptions":  0.423076923076923,
+                                                       "storeId":  "19948",
+                                                       "exceptionsCount":  13
+                                                   },
+                                                   {
+                                                       "totalOrders":  80,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19951",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19954",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  40,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19956",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  89,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19958",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  53,
+                                                       "delvOrders":  24,
+                                                       "exceptions":  0.25,
+                                                       "storeId":  "19959",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19961",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  56,
+                                                       "delvOrders":  26,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19962",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  61,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19963",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19964",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  78,
+                                                       "delvOrders":  46,
+                                                       "exceptions":  0.108695652173913,
+                                                       "storeId":  "19966",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19967",
+                                                       "exceptionsCount":  0
+                                                   }
+                                               ],
                                        "mar":  [
                                                    {
                                                        "totalOrders":  2708,
@@ -30867,6 +32199,13 @@
                                  "id":  "19523",
                                  "franchisee":  "RICARDO FIANI"
                              },
+                   "19898":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "MURILO",
+                                 "name":  "DOMINOS TAGUATINGA NORTE",
+                                 "id":  "19898",
+                                 "franchisee":  "Guilherme"
+                             },
                    "19694":  {
                                  "status":  "ATIVA",
                                  "consultant":  "ALAN",
@@ -30893,13 +32232,6 @@
                                  "consultant":  "PRISCILA",
                                  "name":  "BARUERI CENTRO",
                                  "id":  "19805",
-                                 "franchisee":  "Rodrigo Rokkon"
-                             },
-                   "19877":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "PRISCILA",
-                                 "name":  "GUARUJA ENSEADA",
-                                 "id":  "19877",
                                  "franchisee":  "Rodrigo Rokkon"
                              },
                    "19796":  {
@@ -30930,6 +32262,13 @@
                                  "id":  "19905",
                                  "franchisee":  "GABRIEL GODOY"
                              },
+                   "19899":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "LEANDRO",
+                                 "name":  "DOMINOS JARDIM PALMEIRAS",
+                                 "id":  "19899",
+                                 "franchisee":  "Rodrigo montes"
+                             },
                    "19553":  {
                                  "status":  "ATIVA",
                                  "consultant":  "MURILO",
@@ -30950,6 +32289,13 @@
                                  "name":  "DOMINOS RIO MAR FORTALEZA",
                                  "id":  "19923",
                                  "franchisee":  "TYCIANE"
+                             },
+                   "19529":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "MUNIZ",
+                                 "name":  "DOMINOS RIO 2",
+                                 "id":  "19529",
+                                 "franchisee":  "RICARDO FIANI"
                              },
                    "19727":  {
                                  "status":  "ATIVA",
@@ -30972,19 +32318,12 @@
                                  "id":  "19872",
                                  "franchisee":  "Hugo"
                              },
-                   "19735":  {
+                   "19716":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "MARÍLIA",
-                                 "name":  "DOMINOS EXPEDICIONÁRIO",
-                                 "id":  "19735",
-                                 "franchisee":  "Rodrigo Rokkon"
-                             },
-                   "19720":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "LEANDRO",
-                                 "name":  "LUXEMBURGO",
-                                 "id":  "19720",
-                                 "franchisee":  "Rodrigo Rokkon"
+                                 "consultant":  "ERICK APARECIDO",
+                                 "name":  "DOMINOS LED BARRA FUNDA",
+                                 "id":  "19716",
+                                 "franchisee":  "Renato Daroz astolphi"
                              },
                    "19966":  {
                                  "status":  "ATIVA",
@@ -31007,13 +32346,6 @@
                                  "id":  "19657",
                                  "franchisee":  "Raffaello"
                              },
-                   "19716":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "ERICK APARECIDO",
-                                 "name":  "DOMINOS LED BARRA FUNDA",
-                                 "id":  "19716",
-                                 "franchisee":  "Renato Daroz astolphi"
-                             },
                    "19551":  {
                                  "status":  "ATIVA",
                                  "consultant":  "MURILO",
@@ -31027,13 +32359,6 @@
                                  "name":  "DOMINOS SP AMERICANA",
                                  "id":  "19928",
                                  "franchisee":  "Simone Moraes"
-                             },
-                   "19926":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "ALAN",
-                                 "name":  "DOMINOS PONTA GROSSA CENTRO",
-                                 "id":  "19926",
-                                 "franchisee":  "Gabriela e Thiago"
                              },
                    "19763":  {
                                  "status":  "ATIVA",
@@ -31070,6 +32395,13 @@
                                  "id":  "19728",
                                  "franchisee":  "Marcos Victor"
                              },
+                   "19961":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "LEANDRO",
+                                 "name":  "DOMINOS CORONEL FABRICIANO",
+                                 "id":  "19961",
+                                 "franchisee":  "Hugo IPATINGA"
+                             },
                    "19633":  {
                                  "status":  "ATIVA",
                                  "consultant":  "FERNANDO NETO",
@@ -31105,13 +32437,6 @@
                                  "id":  "19595",
                                  "franchisee":  "Aurea/André"
                              },
-                   "19525":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "ALAN",
-                                 "name":  "DOMINOS AVENIDA SETE",
-                                 "id":  "19525",
-                                 "franchisee":  "WAGNER JEVAUX"
-                             },
                    "19524":  {
                                  "status":  "ATIVA",
                                  "consultant":  "ALAN",
@@ -31140,6 +32465,13 @@
                                  "id":  "19936",
                                  "franchisee":  "Gabriela"
                              },
+                   "19691":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "MURILO",
+                                 "name":  "DOMINOS GOIANIA",
+                                 "id":  "19691",
+                                 "franchisee":  "Victor"
+                             },
                    "19931":  {
                                  "status":  "ATIVA",
                                  "consultant":  "FERNANDO NETO",
@@ -31161,13 +32493,6 @@
                                  "id":  "19874",
                                  "franchisee":  "Rodrigo Freitas"
                              },
-                   "19649":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "FERNANDO NETO",
-                                 "name":  "DOMINOS SETUBAL",
-                                 "id":  "19649",
-                                 "franchisee":  "Carol/Paula"
-                             },
                    "19715":  {
                                  "status":  "ATIVA",
                                  "consultant":  "ERICK APARECIDO",
@@ -31182,12 +32507,12 @@
                                  "id":  "19647",
                                  "franchisee":  "Guilherme"
                              },
-                   "19622":  {
+                   "19897":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "MARÍLIA",
-                                 "name":  "DOMINOS BELEM 2",
-                                 "id":  "19622",
-                                 "franchisee":  "Clóvis"
+                                 "consultant":  "FERNANDO NETO",
+                                 "name":  "DOMINOS PETROLINA",
+                                 "id":  "19897",
+                                 "franchisee":  "Caio"
                              },
                    "19902":  {
                                  "status":  "ATIVA",
@@ -31224,19 +32549,19 @@
                                  "id":  "19798",
                                  "franchisee":  "Marcos Victor"
                              },
-                   "19550":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "MURILO",
-                                 "name":  "DOMINOS VICENTE PIRES",
-                                 "id":  "19550",
-                                 "franchisee":  "Victor"
-                             },
                    "19617":  {
                                  "status":  "ATIVA",
                                  "consultant":  "MURILO",
                                  "name":  "DOMINOS SAO LUIS 2",
                                  "id":  "19617",
                                  "franchisee":  "Aurea/André"
+                             },
+                   "19720":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "LEANDRO",
+                                 "name":  "LUXEMBURGO",
+                                 "id":  "19720",
+                                 "franchisee":  "Rodrigo Rokkon"
                              },
                    "19876":  {
                                  "status":  "ATIVA",
@@ -31272,6 +32597,13 @@
                                  "name":  "DOMINOS CUIABA",
                                  "id":  "19730",
                                  "franchisee":  "Cinara e Jorge"
+                             },
+                   "19642":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "MARÍLIA",
+                                 "name":  "DOMINOS COCO",
+                                 "id":  "19642",
+                                 "franchisee":  "Rodrigo Rokkon"
                              },
                    "19889":  {
                                  "status":  "ATIVA",
@@ -31329,13 +32661,6 @@
                                  "id":  "19881",
                                  "franchisee":  "Victor"
                              },
-                   "19808":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "PRISCILA",
-                                 "name":  "SANTA PAULA",
-                                 "id":  "19808",
-                                 "franchisee":  "Rodrigo Rokkon"
-                             },
                    "19736":  {
                                  "status":  "ATIVA",
                                  "consultant":  "FERNANDO NETO",
@@ -31378,13 +32703,6 @@
                                  "id":  "19908",
                                  "franchisee":  "Matheus Almeida"
                              },
-                   "19859":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "ERICK APARECIDO",
-                                 "name":  "DOMINOS SP SAO PAULO PARQUE MANDAQUI",
-                                 "id":  "19859",
-                                 "franchisee":  "DEX"
-                             },
                    "19636":  {
                                  "status":  "ATIVA",
                                  "consultant":  "ALAN",
@@ -31413,13 +32731,6 @@
                                  "id":  "19725",
                                  "franchisee":  "Rodrigo Rokkon"
                              },
-                   "19654":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "FERNANDO NETO",
-                                 "name":  "DOMINOS CASA FORTE",
-                                 "id":  "19654",
-                                 "franchisee":  "Carol/Paula"
-                             },
                    "19687":  {
                                  "status":  "ATIVA",
                                  "consultant":  "MUNIZ",
@@ -31447,6 +32758,13 @@
                                  "name":  "CAMPO BELO",
                                  "id":  "19866",
                                  "franchisee":  "DEX"
+                             },
+                   "19733":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "LEANDRO",
+                                 "name":  "DOMINOS FLORIANOPOLIS CENTRO",
+                                 "id":  "19733",
+                                 "franchisee":  "ALEXANDRE MUSSATO"
                              },
                    "19675":  {
                                  "status":  "ATIVA",
@@ -31532,12 +32850,19 @@
                                  "id":  "19842",
                                  "franchisee":  "Rodrigo Freitas"
                              },
-                   "19642":  {
+                   "19528":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "LEANDRO",
+                                 "name":  "DOMINOS TIJUCA 2",
+                                 "id":  "19528",
+                                 "franchisee":  "Adriana Copello"
+                             },
+                   "19622":  {
                                  "status":  "ATIVA",
                                  "consultant":  "MARÍLIA",
-                                 "name":  "DOMINOS COCO",
-                                 "id":  "19642",
-                                 "franchisee":  "Rodrigo Rokkon"
+                                 "name":  "DOMINOS BELEM 2",
+                                 "id":  "19622",
+                                 "franchisee":  "Clóvis"
                              },
                    "19956":  {
                                  "status":  "ATIVA",
@@ -31553,6 +32878,13 @@
                                  "id":  "19901",
                                  "franchisee":  "Rafael e Mari"
                              },
+                   "19506":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "LEANDRO",
+                                 "name":  "DOMINOS TIJUCA",
+                                 "id":  "19506",
+                                 "franchisee":  "Adriana Copello"
+                             },
                    "19648":  {
                                  "status":  "ATIVA",
                                  "consultant":  "MUNIZ",
@@ -31566,13 +32898,6 @@
                                  "name":  "DOMINOS CHACARA SANTO ANTONIO",
                                  "id":  "19674",
                                  "franchisee":  "Furjala Pedro"
-                             },
-                   "19696":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "ERICK APARECIDO",
-                                 "name":  "DOMINOS BARAO GERALDO",
-                                 "id":  "19696",
-                                 "franchisee":  "Fabio"
                              },
                    "19914":  {
                                  "status":  "ATIVA",
@@ -31588,12 +32913,26 @@
                                  "id":  "19745",
                                  "franchisee":  "Rodrigo Rokkon"
                              },
+                   "19771":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "FERNANDO NETO",
+                                 "name":  "DOMINOS IMBUI",
+                                 "id":  "19771",
+                                 "franchisee":  "Harisson"
+                             },
                    "19545":  {
                                  "status":  "ATIVA",
                                  "consultant":  "ALAN",
                                  "name":  "DOMINOS CURITIBA",
                                  "id":  "19545",
                                  "franchisee":  "Gabriela"
+                             },
+                   "19749":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "MUNIZ",
+                                 "name":  "DOMINOS MARINGA",
+                                 "id":  "19749",
+                                 "franchisee":  "Raphael"
                              },
                    "19740":  {
                                  "status":  "ATIVA",
@@ -31637,6 +32976,13 @@
                                  "id":  "19809",
                                  "franchisee":  "Furjala Pedro"
                              },
+                   "19911":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "FERNANDO NETO",
+                                 "name":  "DOMINOS GARANHUNS HELIOPOLIS",
+                                 "id":  "19911",
+                                 "franchisee":  "Marcos Victor"
+                             },
                    "19968":  {
                                  "status":  "ATIVA",
                                  "consultant":  "PRISCILA",
@@ -31650,13 +32996,6 @@
                                  "name":  "SANTOS 2",
                                  "id":  "19708",
                                  "franchisee":  "Rodrigo Rokkon"
-                             },
-                   "19552":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "MURILO",
-                                 "name":  "DOMINOS 109 NORTE",
-                                 "id":  "19552",
-                                 "franchisee":  "Igor e Bernardo"
                              },
                    "19572":  {
                                  "status":  "ATIVA",
@@ -31679,12 +33018,12 @@
                                  "id":  "19944",
                                  "franchisee":  "Hugo"
                              },
-                   "19691":  {
+                   "19735":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "MURILO",
-                                 "name":  "DOMINOS GOIANIA",
-                                 "id":  "19691",
-                                 "franchisee":  "Victor"
+                                 "consultant":  "MARÍLIA",
+                                 "name":  "DOMINOS EXPEDICIONÁRIO",
+                                 "id":  "19735",
+                                 "franchisee":  "Rodrigo Rokkon"
                              },
                    "19578":  {
                                  "status":  "ATIVA",
@@ -31700,26 +33039,12 @@
                                  "id":  "19618",
                                  "franchisee":  "Adriana Copello"
                              },
-                   "19792":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "LEANDRO",
-                                 "name":  "DOMINOS JUIZ DE FORA 2",
-                                 "id":  "19792",
-                                 "franchisee":  "Pedro Ivo"
-                             },
                    "19661":  {
                                  "status":  "ATIVA",
                                  "consultant":  "MUNIZ",
                                  "name":  "DOMINOS LONDRINA",
                                  "id":  "19661",
                                  "franchisee":  "Henrique"
-                             },
-                   "19879":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "MARÍLIA",
-                                 "name":  "DOMINOS MANAUS ALEIXO",
-                                 "id":  "19879",
-                                 "franchisee":  "Mike"
                              },
                    "19785":  {
                                  "status":  "ATIVA",
@@ -31734,13 +33059,6 @@
                                  "name":  "DOMINOS CAMPO GRANDE",
                                  "id":  "19602",
                                  "franchisee":  "Adriano"
-                             },
-                   "19679":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "ALAN",
-                                 "name":  "DOMINOS MACAE",
-                                 "id":  "19679",
-                                 "franchisee":  "WAGNER JEVAUX"
                              },
                    "19884":  {
                                  "status":  "ATIVA",
@@ -31769,6 +33087,13 @@
                                  "name":  "DOMINOS UBERABA ",
                                  "id":  "19912",
                                  "franchisee":  "FERNANDO SEIXLACK SILVA"
+                             },
+                   "19967":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "LEANDRO",
+                                 "name":  "PAMPULHA",
+                                 "id":  "19967",
+                                 "franchisee":  "Rodrigo Rokkon"
                              },
                    "19520":  {
                                  "status":  "ATIVA",
@@ -31840,6 +33165,13 @@
                                  "id":  "19759",
                                  "franchisee":  "DENIS PACIELLO"
                              },
+                   "19965":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "ALAN",
+                                 "name":  "DOMINOS BENTO GONÇALVES",
+                                 "id":  "19965",
+                                 "franchisee":  "Ramiro"
+                             },
                    "19599":  {
                                  "status":  "ATIVA",
                                  "consultant":  "LEANDRO",
@@ -31847,19 +33179,19 @@
                                  "id":  "19599",
                                  "franchisee":  "Pedro Ivo"
                              },
-                   "19528":  {
+                   "19877":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "LEANDRO",
-                                 "name":  "DOMINOS TIJUCA 2",
-                                 "id":  "19528",
-                                 "franchisee":  "Adriana Copello"
+                                 "consultant":  "PRISCILA",
+                                 "name":  "GUARUJA ENSEADA",
+                                 "id":  "19877",
+                                 "franchisee":  "Rodrigo Rokkon"
                              },
-                   "19961":  {
+                   "19926":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "LEANDRO",
-                                 "name":  "DOMINOS CORONEL FABRICIANO",
-                                 "id":  "19961",
-                                 "franchisee":  "Hugo IPATINGA"
+                                 "consultant":  "ALAN",
+                                 "name":  "DOMINOS PONTA GROSSA CENTRO",
+                                 "id":  "19926",
+                                 "franchisee":  "Gabriela e Thiago"
                              },
                    "19755":  {
                                  "status":  "ATIVA",
@@ -31896,19 +33228,19 @@
                                  "id":  "19955",
                                  "franchisee":  "Ana Paula"
                              },
-                   "19506":  {
+                   "19550":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "LEANDRO",
-                                 "name":  "DOMINOS TIJUCA",
-                                 "id":  "19506",
-                                 "franchisee":  "Adriana Copello"
+                                 "consultant":  "MURILO",
+                                 "name":  "DOMINOS VICENTE PIRES",
+                                 "id":  "19550",
+                                 "franchisee":  "Victor"
                              },
-                   "19899":  {
+                   "19808":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "LEANDRO",
-                                 "name":  "DOMINOS JARDIM PALMEIRAS",
-                                 "id":  "19899",
-                                 "franchisee":  "Rodrigo montes"
+                                 "consultant":  "PRISCILA",
+                                 "name":  "SANTA PAULA",
+                                 "id":  "19808",
+                                 "franchisee":  "Rodrigo Rokkon"
                              },
                    "19601":  {
                                  "status":  "ATIVA",
@@ -31952,12 +33284,12 @@
                                  "id":  "19634",
                                  "franchisee":  "Claudia"
                              },
-                   "19733":  {
+                   "19649":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "LEANDRO",
-                                 "name":  "DOMINOS FLORIANOPOLIS CENTRO",
-                                 "id":  "19733",
-                                 "franchisee":  "ALEXANDRE MUSSATO"
+                                 "consultant":  "FERNANDO NETO",
+                                 "name":  "DOMINOS SETUBAL",
+                                 "id":  "19649",
+                                 "franchisee":  "Carol/Paula"
                              },
                    "19671":  {
                                  "status":  "ATIVA",
@@ -31966,13 +33298,6 @@
                                  "id":  "19671",
                                  "franchisee":  "MONICA e RAFAEL"
                              },
-                   "19721":  {
-                                 "status":  "ATIVA",
-                                 "consultant":  "ERICK APARECIDO",
-                                 "name":  "SOROCABA 2",
-                                 "id":  "19721",
-                                 "franchisee":  "Odilon Freire"
-                             },
                    "19565":  {
                                  "status":  "ATIVA",
                                  "consultant":  "FERNANDO NETO",
@@ -31980,12 +33305,19 @@
                                  "id":  "19565",
                                  "franchisee":  "Carol/Paula"
                              },
-                   "19771":  {
+                   "19792":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "FERNANDO NETO",
-                                 "name":  "DOMINOS IMBUI",
-                                 "id":  "19771",
-                                 "franchisee":  "Harisson"
+                                 "consultant":  "LEANDRO",
+                                 "name":  "DOMINOS JUIZ DE FORA 2",
+                                 "id":  "19792",
+                                 "franchisee":  "Pedro Ivo"
+                             },
+                   "19698":  {
+                                 "status":  "ATIVA",
+                                 "consultant":  "MUNIZ",
+                                 "name":  "DOMINOS UBERLANDIA 2",
+                                 "id":  "19698",
+                                 "franchisee":  "MARIOZAN FERREIRA"
                              },
                    "19722":  {
                                  "status":  "ATIVA",
@@ -31994,12 +33326,12 @@
                                  "id":  "19722",
                                  "franchisee":  "Matheus Cortez"
                              },
-                   "19965":  {
+                   "19859":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "ALAN",
-                                 "name":  "DOMINOS BENTO GONÇALVES",
-                                 "id":  "19965",
-                                 "franchisee":  "Ramiro"
+                                 "consultant":  "ERICK APARECIDO",
+                                 "name":  "DOMINOS SP SAO PAULO PARQUE MANDAQUI",
+                                 "id":  "19859",
+                                 "franchisee":  "DEX"
                              },
                    "19685":  {
                                  "status":  "ATIVA",
@@ -32015,12 +33347,12 @@
                                  "id":  "19711",
                                  "franchisee":  "DEX"
                              },
-                   "19529":  {
+                   "19552":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "MUNIZ",
-                                 "name":  "DOMINOS RIO 2",
-                                 "id":  "19529",
-                                 "franchisee":  "RICARDO FIANI"
+                                 "consultant":  "MURILO",
+                                 "name":  "DOMINOS 109 NORTE",
+                                 "id":  "19552",
+                                 "franchisee":  "Igor e Bernardo"
                              },
                    "19927":  {
                                  "status":  "ATIVA",
@@ -32071,12 +33403,12 @@
                                  "id":  "19847",
                                  "franchisee":  "Rodrigo Rokkon"
                              },
-                   "19698":  {
+                   "19679":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "MUNIZ",
-                                 "name":  "DOMINOS UBERLANDIA 2",
-                                 "id":  "19698",
-                                 "franchisee":  "MARIOZAN FERREIRA"
+                                 "consultant":  "ALAN",
+                                 "name":  "DOMINOS MACAE",
+                                 "id":  "19679",
+                                 "franchisee":  "WAGNER JEVAUX"
                              },
                    "19804":  {
                                  "status":  "ATIVA",
@@ -32092,12 +33424,12 @@
                                  "id":  "19689",
                                  "franchisee":  "Harisson"
                              },
-                   "19967":  {
+                   "19879":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "LEANDRO",
-                                 "name":  "PAMPULHA",
-                                 "id":  "19967",
-                                 "franchisee":  "Rodrigo Rokkon"
+                                 "consultant":  "MARÍLIA",
+                                 "name":  "DOMINOS MANAUS ALEIXO",
+                                 "id":  "19879",
+                                 "franchisee":  "Mike"
                              },
                    "19741":  {
                                  "status":  "ATIVA",
@@ -32113,12 +33445,12 @@
                                  "id":  "19868",
                                  "franchisee":  "Matheus Boa Vista"
                              },
-                   "19897":  {
+                   "19654":  {
                                  "status":  "ATIVA",
                                  "consultant":  "FERNANDO NETO",
-                                 "name":  "DOMINOS PETROLINA",
-                                 "id":  "19897",
-                                 "franchisee":  "Caio"
+                                 "name":  "DOMINOS CASA FORTE",
+                                 "id":  "19654",
+                                 "franchisee":  "Carol/Paula"
                              },
                    "19596":  {
                                  "status":  "ATIVA",
@@ -32134,12 +33466,12 @@
                                  "id":  "19959",
                                  "franchisee":  "Bruno e Sinara"
                              },
-                   "19911":  {
+                   "19721":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "FERNANDO NETO",
-                                 "name":  "DOMINOS GARANHUNS HELIOPOLIS",
-                                 "id":  "19911",
-                                 "franchisee":  "Marcos Victor"
+                                 "consultant":  "ERICK APARECIDO",
+                                 "name":  "SOROCABA 2",
+                                 "id":  "19721",
+                                 "franchisee":  "Odilon Freire"
                              },
                    "19756":  {
                                  "status":  "ATIVA",
@@ -32176,12 +33508,12 @@
                                  "id":  "19943",
                                  "franchisee":  "MARCELA MARQUEZ"
                              },
-                   "19898":  {
+                   "19696":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "MURILO",
-                                 "name":  "DOMINOS TAGUATINGA NORTE",
-                                 "id":  "19898",
-                                 "franchisee":  "Guilherme"
+                                 "consultant":  "ERICK APARECIDO",
+                                 "name":  "DOMINOS BARAO GERALDO",
+                                 "id":  "19696",
+                                 "franchisee":  "Fabio"
                              },
                    "19794":  {
                                  "status":  "ATIVA",
@@ -32211,12 +33543,12 @@
                                  "id":  "19957",
                                  "franchisee":  "DEX"
                              },
-                   "19749":  {
+                   "19525":  {
                                  "status":  "ATIVA",
-                                 "consultant":  "MUNIZ",
-                                 "name":  "DOMINOS MARINGA",
-                                 "id":  "19749",
-                                 "franchisee":  "Raphael"
+                                 "consultant":  "ALAN",
+                                 "name":  "DOMINOS AVENIDA SETE",
+                                 "id":  "19525",
+                                 "franchisee":  "WAGNER JEVAUX"
                              },
                    "19947":  {
                                  "status":  "ATIVA",
@@ -32226,5 +33558,5 @@
                                  "franchisee":  "Rodrigo Freitas"
                              }
                },
-    "updatedAt":  "2026-08-02 17:53:16"
+    "updatedAt":  "2026-08-02 18:04:36"
 }
