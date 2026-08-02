@@ -74,10 +74,12 @@ foreach ($d in $dashboards) {
         $volatilNames  = @($here | Where-Object { $_.Volatil } | ForEach-Object Nome)
         $atual         = @(Get-ChildItem $dir -Filter *.xlsx -ErrorAction SilentlyContinue | Where-Object { $_.Name -notlike '*consultor*' } | ForEach-Object Name)
 
-        # baixar: todo volatil (sempre) + estavel que esteja faltando
-        $toDownload = $here | Where-Object { $_.Volatil -or ($atual -notcontains $_.Nome) }
-        # remover: presente que nao e alvo  OU  presente que e volatil (versao velha, sera rebaixado)
-        $toRemove   = $atual | Where-Object { ($targetNames -notcontains $_) -or ($volatilNames -contains $_) }
+        # baixar: tudo que esta faltando (nome do alvo nao presente na pasta)
+        # (a frescura diaria vem de graca: a data-fim esta no nome, entao a semana
+        #  atual / acumulado / mes corrente ganham nome novo a cada dia = "faltando")
+        $toDownload = $here | Where-Object { $atual -notcontains $_.Nome }
+        # remover: presente que nao e alvo (sobra). O CONTEUDO errado quem pega e o validar_extracao.ps1
+        $toRemove   = $atual | Where-Object { $targetNames -notcontains $_ }
 
         Write-Host "  [$($grp.Lbl)] baixar: $(@($toDownload).Count)  |  remover/limpar: $(@($toRemove).Count)"
         foreach ($f in $toDownload) { [void]$downloadQueue.Add($f) }

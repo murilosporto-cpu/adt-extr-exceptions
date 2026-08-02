@@ -7,6 +7,20 @@
 
 ---
 
+## ⭐ REGRA DE OURO (leia antes de tudo)
+
+**Uma extração NÃO está concluída até a TRAVA confirmar.**
+
+Depois de baixar QUALQUER coisa do PWR, rode `validar_extracao.ps1`. Só considere o
+trabalho terminado quando ele disser **"OK! ... todos com o conteudo certo"**.
+
+Baixar um arquivo NÃO é garantia de que veio o relatório certo — o PWR tem relatórios
+parecidos (Summary vs Service Exceptions) e é fácil pegar o errado. **Só a trava garante.**
+Nunca gere o `data.json` nem dê `git push` antes do "OK" da trava. Se a trava acusar erro,
+o trabalho ainda não acabou: corrija (rebaixe o relatório certo) e rode a trava de novo.
+
+---
+
 ## 1. Estrutura do projeto
 
 Raiz: `cafe-com-pwr` (é um repo git → GitHub `adt-extr-exceptions`). Contém:
@@ -35,6 +49,23 @@ e (b) gera `downloads_pendentes.json` com a lista EXATA do que baixar.
 - relatório = campo `relatorio` ("summary" ou "exceptions")
 - período = de `data_inicio` até `data_fim`
 - salve em `pasta` com o nome EXATO de `nome_arquivo`
+
+> 🚨 **ERRO JÁ COMETIDO — NÃO REPETIR (02/08/2026):** ao baixar os itens de `exceptions`,
+> o robô baixou por engano o relatório **Summary** e salvou com o nome de Exceptions.
+> Resultado: a coluna Service Exceptions ficou vazia e o ADT dobrou.
+> **Quando `relatorio` = "exceptions", selecione no PWR o relatório de SERVICE EXCEPTIONS,
+> não o Summary.** Como conferir: abrir o .xlsx baixado e olhar o nome da aba —
+> Exceptions correto tem a aba **"KEYS Service Exceptions"**. Se a aba for
+> "KEYS Keys Summary", VOCÊ BAIXOU O RELATÓRIO ERRADO — refaça.
+
+**Passo 2.5 — VALIDAR (obrigatório):** rode na raiz:
+```
+powershell -ExecutionPolicy Bypass -File .\validar_extracao.ps1
+```
+Ele confere o CONTEÚDO de cada arquivo baixado. Se algum Exceptions vier com dado de
+Summary (erro do dia 02/08), ele move pra lixeira e acusa. Se acusar erro (sai com "ATENCAO"),
+volte ao Passo 1 e rebaixe SÓ os itens acusados — com o relatório CERTO. Só siga para o
+Passo 3 quando o validador disser "OK! ... todos com o conteudo certo".
 
 **Passo 3 — Gerar os dados:** rode o `watch_pwr.ps1` de CADA painel para gerar o `data.json`.
 ⚠️ Atenção: o `watch_pwr.ps1` gera o `data.json` e DEPOIS sobe um servidor local (fica travado).
