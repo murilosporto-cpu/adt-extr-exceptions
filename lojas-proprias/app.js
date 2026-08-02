@@ -1642,6 +1642,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // CONTROLE DE ACESSO POR SENHA (GATEKEEPER)
     // ==========================================
     const CORRECT_HASH = '0aa8f8c610025637a5ce377cecdb9c0ee045a5d6a95da3d81a1d0865f4e0459c';
+    const MASTER_HASH = '2353138e4c62f0fe72918bf785298709eaae8890d265fbe73df678954773b9f7';
 
     async function sha256(message) {
         const msgBuffer = new TextEncoder().encode(message);
@@ -1678,7 +1679,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!input) return;
         const password = input.value;
         const hashed = await sha256(password);
-        if (hashed === CORRECT_HASH) {
+        if (hashed === CORRECT_HASH || hashed === MASTER_HASH) {
             unlock();
         } else {
             if (errorMsg) errorMsg.style.display = 'block';
