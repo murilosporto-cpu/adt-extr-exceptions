@@ -1,0 +1,15 @@
+{
+    "adt": {
+        "acumulado": [],
+        "weeks": {}
+    },
+    "exceptions": {
+        "acumulado": [],
+        "weeks": {}
+    },
+    "mensal": {
+        "months": [],
+        "adt": {},
+        "exceptions": {}
+    }
+}

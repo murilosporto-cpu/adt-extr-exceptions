@@ -224,6 +224,7 @@ function Process-ExcelFiles {
                     $id = $ws.Cells.Item($r, $storeCol).Value2
                     if (-not $id) { break }
                     $storeId = [string](Get-SafeInt $id)
+                    if ($storeId.Length -ne 5) { $r++; continue }
 
                     if ($isADT) {
                         $adtCol = $wsHeaders["eADT"]
@@ -366,6 +367,7 @@ function Process-MonthlyFiles {
                 $id = $ws.Cells.Item($r, $storeCol).Value2
                 if (-not $id) { break }
                 $storeId = [string](Get-SafeInt $id)
+                if ($storeId.Length -ne 5) { $r++; continue }
 
                 if ($isADT) {
                     $adtCol = $wsHeaders["eADT"]
@@ -450,7 +452,7 @@ $onMensalCreated = Register-ObjectEvent $watcherMensal "Created" -Action {
 }
 
 # Inicia o Servidor HTTP local simples usando HttpListener
-$port = 8080
+$port = 8081
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add("http://localhost:$port/")
 

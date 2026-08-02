@@ -1,0 +1,1367 @@
+﻿{
+    "19523":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS BARRA MALL",
+                  "id":  "19523",
+                  "franchisee":  "RICARDO FIANI"
+              },
+    "19898":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS TAGUATINGA NORTE",
+                  "id":  "19898",
+                  "franchisee":  "Guilherme"
+              },
+    "19694":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS BARRA MANSA",
+                  "id":  "19694",
+                  "franchisee":  "Roberta"
+              },
+    "19564":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS TERESINA",
+                  "id":  "19564",
+                  "franchisee":  "Rodrigo"
+              },
+    "19787":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS BOA VISTA",
+                  "id":  "19787",
+                  "franchisee":  "Mauricio"
+              },
+    "19805":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "BARUERI CENTRO",
+                  "id":  "19805",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19666":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS AGUAS CLARAS",
+                  "id":  "19666",
+                  "franchisee":  "Igor e Bernardo"
+              },
+    "19796":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS MONTES CLAROS",
+                  "id":  "19796",
+                  "franchisee":  "Rodrigo Montes"
+              },
+    "19964":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINO\u0027S ITAIPAVA",
+                  "id":  "19964",
+                  "franchisee":  "LILIANE/LUCCA"
+              },
+    "19514":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS FREGUESIA",
+                  "id":  "19514",
+                  "franchisee":  "Nikolas"
+              },
+    "19905":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS VARGINHA",
+                  "id":  "19905",
+                  "franchisee":  "GABRIEL GODOY"
+              },
+    "19899":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS JARDIM PALMEIRAS",
+                  "id":  "19899",
+                  "franchisee":  "Rodrigo montes"
+              },
+    "19553":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS GUARA",
+                  "id":  "19553",
+                  "franchisee":  "Victor"
+              },
+    "19607":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS BUENA VISTA",
+                  "id":  "19607",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19923":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS RIO MAR FORTALEZA",
+                  "id":  "19923",
+                  "franchisee":  "TYCIANE"
+              },
+    "19529":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS RIO 2",
+                  "id":  "19529",
+                  "franchisee":  "RICARDO FIANI"
+              },
+    "19727":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS CASCADURA",
+                  "id":  "19727",
+                  "franchisee":  "Adriana Copello"
+              },
+    "19707":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS JOINVILLE",
+                  "id":  "19707",
+                  "franchisee":  "Nikolas"
+              },
+    "19872":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS GUARAPARI CENTRO",
+                  "id":  "19872",
+                  "franchisee":  "Hugo"
+              },
+    "19716":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS LED BARRA FUNDA",
+                  "id":  "19716",
+                  "franchisee":  "Renato Daroz astolphi"
+              },
+    "19966":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS SAO JOSE DOS CAMPOS",
+                  "id":  "19966",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19888":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS MOOCA",
+                  "id":  "19888",
+                  "franchisee":  "André Rynaldo"
+              },
+    "19657":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS CABO FRIO",
+                  "id":  "19657",
+                  "franchisee":  "Raffaello"
+              },
+    "19551":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS SUDOESTE",
+                  "id":  "19551",
+                  "franchisee":  "Victor"
+              },
+    "19928":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS SP AMERICANA",
+                  "id":  "19928",
+                  "franchisee":  "Simone Moraes"
+              },
+    "19763":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS ACLIMACAO",
+                  "id":  "19763",
+                  "franchisee":  "DEX"
+              },
+    "19625":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS SALVADOR",
+                  "id":  "19625",
+                  "franchisee":  "Harisson"
+              },
+    "19616":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "CAMPINAS CAMBUI",
+                  "id":  "19616",
+                  "franchisee":  "Odilon Freire"
+              },
+    "19547":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS CURITIBA PORTAO",
+                  "id":  "19547",
+                  "franchisee":  "Pedro"
+              },
+    "19728":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS AEROPORTO RECIFE",
+                  "id":  "19728",
+                  "franchisee":  "Marcos Victor"
+              },
+    "19961":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS CORONEL FABRICIANO",
+                  "id":  "19961",
+                  "franchisee":  "Hugo IPATINGA"
+              },
+    "19633":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS CAMPINA GRANDE",
+                  "id":  "19633",
+                  "franchisee":  "MARCUS VICTOR"
+              },
+    "19883":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS MARECHAL RONDON",
+                  "id":  "19883",
+                  "franchisee":  "Rodrigo Freitas"
+              },
+    "19742":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS MANAUS",
+                  "id":  "19742",
+                  "franchisee":  "Mike"
+              },
+    "19753":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS CHACARA FLORA",
+                  "id":  "19753",
+                  "franchisee":  "Marcelo Onoda"
+              },
+    "19595":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS SAO LUIS",
+                  "id":  "19595",
+                  "franchisee":  "Aurea/André"
+              },
+    "19524":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS VOLTA REDONDA",
+                  "id":  "19524",
+                  "franchisee":  "Agostinho"
+              },
+    "19790":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS PIATA",
+                  "id":  "19790",
+                  "franchisee":  "Harisson"
+              },
+    "19825":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "CAPITAO CASA",
+                  "id":  "19825",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19936":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS CURITIBA SANTA FELICIDADE",
+                  "id":  "19936",
+                  "franchisee":  "Gabriela"
+              },
+    "19691":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS GOIANIA",
+                  "id":  "19691",
+                  "franchisee":  "Victor"
+              },
+    "19931":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS STELLA MARIS",
+                  "id":  "19931",
+                  "franchisee":  "Marcílio/João"
+              },
+    "19706":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS BESSA",
+                  "id":  "19706",
+                  "franchisee":  "Marcos Victor"
+              },
+    "19874":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS VENANCIO AIRES",
+                  "id":  "19874",
+                  "franchisee":  "Rodrigo Freitas"
+              },
+    "19715":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS ATIBAIA",
+                  "id":  "19715",
+                  "franchisee":  "Rodrigo Vila Real"
+              },
+    "19647":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS TAGUATINGA",
+                  "id":  "19647",
+                  "franchisee":  "Guilherme"
+              },
+    "19897":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS PETROLINA",
+                  "id":  "19897",
+                  "franchisee":  "Caio"
+              },
+    "19902":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS PRAIA DE IRACEMA",
+                  "id":  "19902",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19774":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS REPUBLICA",
+                  "id":  "19774",
+                  "franchisee":  "Marcelo Romi"
+              },
+    "19606":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS SANTAREM",
+                  "id":  "19606",
+                  "franchisee":  "Larissa"
+              },
+    "19563":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS UBERLANDIA",
+                  "id":  "19563",
+                  "franchisee":  "MARIOZAN FERREIRA"
+              },
+    "19798":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS CARUARU 2",
+                  "id":  "19798",
+                  "franchisee":  "Marcos Victor"
+              },
+    "19617":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS SAO LUIS 2",
+                  "id":  "19617",
+                  "franchisee":  "Aurea/André"
+              },
+    "19720":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "LUXEMBURGO",
+                  "id":  "19720",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19876":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS ITAPARICA",
+                  "id":  "19876",
+                  "franchisee":  "Durante"
+              },
+    "19761":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS PAULINIA",
+                  "id":  "19761",
+                  "franchisee":  "Tiago Bortolo"
+              },
+    "19962":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS ARARUAMA",
+                  "id":  "19962",
+                  "franchisee":  "Matheus Almeida"
+              },
+    "19948":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS ARARAQUARA",
+                  "id":  "19948",
+                  "franchisee":  "Ailton"
+              },
+    "19730":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS CUIABA",
+                  "id":  "19730",
+                  "franchisee":  "Cinara e Jorge"
+              },
+    "19642":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS COCO",
+                  "id":  "19642",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19889":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS TATUAPE",
+                  "id":  "19889",
+                  "franchisee":  "André Rynaldo"
+              },
+    "19752":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS PORTO VELHO",
+                  "id":  "19752",
+                  "franchisee":  "Valdir"
+              },
+    "19817":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS JABAQUARA",
+                  "id":  "19817",
+                  "franchisee":  "DEX"
+              },
+    "19738":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS LAURO DE FREITAS",
+                  "id":  "19738",
+                  "franchisee":  "Harisson"
+              },
+    "19700":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS ANAPOLIS",
+                  "id":  "19700",
+                  "franchisee":  "Mirella"
+              },
+    "19890":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "INTERLAGOS",
+                  "id":  "19890",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19546":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS JUVEVE",
+                  "id":  "19546",
+                  "franchisee":  "Leopoldo"
+              },
+    "19881":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS BRASILIA 211 SUL",
+                  "id":  "19881",
+                  "franchisee":  "Victor"
+              },
+    "19736":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS VITORIA DA CONQUISTA",
+                  "id":  "19736",
+                  "franchisee":  "Gustavo"
+              },
+    "19600":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS TAQUARA",
+                  "id":  "19600",
+                  "franchisee":  "Nikolas"
+              },
+    "19788":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS PROTASIO ALVES",
+                  "id":  "19788",
+                  "franchisee":  "Rodrigo Freitas"
+              },
+    "19680":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS BLUMENAU",
+                  "id":  "19680",
+                  "franchisee":  "DENIS PACIELLO"
+              },
+    "19536":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS CACHAMBI",
+                  "id":  "19536",
+                  "franchisee":  "Adriana Copello"
+              },
+    "19908":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS BUZIOS CENTRO",
+                  "id":  "19908",
+                  "franchisee":  "Matheus Almeida"
+              },
+    "19636":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS RESENDE",
+                  "id":  "19636",
+                  "franchisee":  "Agostinho"
+              },
+    "19910":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS LUIZ EDUARDO MAGALHAES CENTRO",
+                  "id":  "19910",
+                  "franchisee":  "Eduardo"
+              },
+    "19632":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS VILA VALQUEIRE",
+                  "id":  "19632",
+                  "franchisee":  "Bruno Faria"
+              },
+    "19725":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS BAIRRO DE FATIMA",
+                  "id":  "19725",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19687":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS SHOPPING OUTLET PREMIUM",
+                  "id":  "19687",
+                  "franchisee":  "LUIZ FERNANDO"
+              },
+    "19863":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "VILA CLEMENTINO",
+                  "id":  "19863",
+                  "franchisee":  "DEX"
+              },
+    "19762":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS RIO BRANCO",
+                  "id":  "19762",
+                  "franchisee":  "Rafael"
+              },
+    "19866":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "CAMPO BELO",
+                  "id":  "19866",
+                  "franchisee":  "DEX"
+              },
+    "19733":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS FLORIANOPOLIS CENTRO",
+                  "id":  "19733",
+                  "franchisee":  "ALEXANDRE MUSSATO"
+              },
+    "19675":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS LIMEIRA",
+                  "id":  "19675",
+                  "franchisee":  "Gilberto"
+              },
+    "19581":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS PRAIA DA COSTA",
+                  "id":  "19581",
+                  "franchisee":  "Durante"
+              },
+    "19958":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS TANGARÁ DA SERRA",
+                  "id":  "19958",
+                  "franchisee":  "ELISANDRO"
+              },
+    "19903":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS MEIRELES",
+                  "id":  "19903",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19775":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS SERRA",
+                  "id":  "19775",
+                  "franchisee":  "DEX"
+              },
+    "19832":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS RIBEIRÃO PRETO",
+                  "id":  "19832",
+                  "franchisee":  "Taimara e João"
+              },
+    "19609":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS VILA DA PENHA",
+                  "id":  "19609",
+                  "franchisee":  "Adriana Copello"
+              },
+    "19951":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS IPATINGA - CASA",
+                  "id":  "19951",
+                  "franchisee":  "Hugo IPATINGA"
+              },
+    "19652":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS RECREIO AMERICAS",
+                  "id":  "19652",
+                  "franchisee":  "RICARDO FIANI"
+              },
+    "19513":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS ICARAI",
+                  "id":  "19513",
+                  "franchisee":  "WAGNER JEVAUX"
+              },
+    "19579":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS VILA ANDRADE",
+                  "id":  "19579",
+                  "franchisee":  "Furjala Pedro"
+              },
+    "19842":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS AVENIDA DO FORTE",
+                  "id":  "19842",
+                  "franchisee":  "Rodrigo Freitas"
+              },
+    "19528":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS TIJUCA 2",
+                  "id":  "19528",
+                  "franchisee":  "Adriana Copello"
+              },
+    "19622":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS BELEM 2",
+                  "id":  "19622",
+                  "franchisee":  "Clóvis"
+              },
+    "19956":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS LAJEADO",
+                  "id":  "19956",
+                  "franchisee":  "Ivan"
+              },
+    "19901":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS SP ARARAS CENTRO",
+                  "id":  "19901",
+                  "franchisee":  "Rafael e Mari"
+              },
+    "19648":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS NILOPOLIS",
+                  "id":  "19648",
+                  "franchisee":  "Marcos RJ"
+              },
+    "19674":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS CHACARA SANTO ANTONIO",
+                  "id":  "19674",
+                  "franchisee":  "Furjala Pedro"
+              },
+    "19914":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS PARAUAPEBAS",
+                  "id":  "19914",
+                  "franchisee":  "Patrícia"
+              },
+    "19745":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "AUTONOMISTAS",
+                  "id":  "19745",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19771":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS IMBUI",
+                  "id":  "19771",
+                  "franchisee":  "Harisson"
+              },
+    "19545":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS CURITIBA",
+                  "id":  "19545",
+                  "franchisee":  "Gabriela"
+              },
+    "19749":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS MARINGA",
+                  "id":  "19749",
+                  "franchisee":  "Raphael"
+              },
+    "19740":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS HORTO FLORESTAL",
+                  "id":  "19740",
+                  "franchisee":  "Sérgio/Luciana"
+              },
+    "19945":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS AP MACAPA SHOPPING",
+                  "id":  "19945",
+                  "franchisee":  "Breno"
+              },
+    "19540":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS PORTO ALEGRE",
+                  "id":  "19540",
+                  "franchisee":  "Rodrigo Freitas"
+              },
+    "19954":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS PARNAÍBA",
+                  "id":  "19954",
+                  "franchisee":  "Iana"
+              },
+    "19772":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS FOZ DO IGUACU",
+                  "id":  "19772",
+                  "franchisee":  "Jaqueline"
+              },
+    "19809":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS PERI PERI",
+                  "id":  "19809",
+                  "franchisee":  "Furjala Pedro"
+              },
+    "19911":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS GARANHUNS HELIOPOLIS",
+                  "id":  "19911",
+                  "franchisee":  "Marcos Victor"
+              },
+    "19968":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS QUIOSQUE CHÁCARA STO.ANTÔNIO EVENTOS",
+                  "id":  "19968",
+                  "franchisee":  "Furjala Pedro"
+              },
+    "19708":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "SANTOS 2",
+                  "id":  "19708",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19572":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS JARDIM PAULISTA",
+                  "id":  "19572",
+                  "franchisee":  "Marcelo Romi"
+              },
+    "19933":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS PASSO FUNDO CENTRO",
+                  "id":  "19933",
+                  "franchisee":  "Vagner"
+              },
+    "19944":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS CACHOEIRO DE ITAPEMIRIM",
+                  "id":  "19944",
+                  "franchisee":  "Hugo"
+              },
+    "19735":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS EXPEDICIONÁRIO",
+                  "id":  "19735",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19578":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS PERDIZES",
+                  "id":  "19578",
+                  "franchisee":  "Marcelo Romi"
+              },
+    "19618":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS MEIER",
+                  "id":  "19618",
+                  "franchisee":  "Adriana Copello"
+              },
+    "19661":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS LONDRINA",
+                  "id":  "19661",
+                  "franchisee":  "Henrique"
+              },
+    "19785":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS MANAUS 2",
+                  "id":  "19785",
+                  "franchisee":  "Mike"
+              },
+    "19602":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS CAMPO GRANDE",
+                  "id":  "19602",
+                  "franchisee":  "Adriano"
+              },
+    "19884":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS SP GUARULHOS VILA GOPOUVA",
+                  "id":  "19884",
+                  "franchisee":  "DEX"
+              },
+    "19780":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "SHOP. BARREIRO",
+                  "id":  "19780",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19580":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS VITORIA",
+                  "id":  "19580",
+                  "franchisee":  "DEX"
+              },
+    "19912":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS UBERABA ",
+                  "id":  "19912",
+                  "franchisee":  "FERNANDO SEIXLACK SILVA"
+              },
+    "19967":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "PAMPULHA",
+                  "id":  "19967",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19520":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS PETROPOLIS",
+                  "id":  "19520",
+                  "franchisee":  "Pedro Ivo"
+              },
+    "19693":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS JARDIM BOTANICO",
+                  "id":  "19693",
+                  "franchisee":  "Matheus Cortez"
+              },
+    "19843":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS MANAUS 3",
+                  "id":  "19843",
+                  "franchisee":  "Mike"
+              },
+    "19891":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "09 DE JULHO",
+                  "id":  "19891",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19623":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS MACEIO",
+                  "id":  "19623",
+                  "franchisee":  "Thiago"
+              },
+    "19963":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS POUSO ALEGRE",
+                  "id":  "19963",
+                  "franchisee":  "Ciro m Junior"
+              },
+    "19972":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS LAGARTO",
+                  "id":  "19972",
+                  "franchisee":  "Guilherme / Riclécio"
+              },
+    "19688":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "CAMPINAS 3",
+                  "id":  "19688",
+                  "franchisee":  "Odilon Freire"
+              },
+    "19778":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS PORTO SEGURO",
+                  "id":  "19778",
+                  "franchisee":  "Marcelo"
+              },
+    "19759":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS JARAGUA BH",
+                  "id":  "19759",
+                  "franchisee":  "DENIS PACIELLO"
+              },
+    "19965":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS BENTO GONÇALVES",
+                  "id":  "19965",
+                  "franchisee":  "Ramiro"
+              },
+    "19599":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS CAXIAS",
+                  "id":  "19599",
+                  "franchisee":  "Pedro Ivo"
+              },
+    "19877":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "GUARUJA ENSEADA",
+                  "id":  "19877",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19926":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS PONTA GROSSA CENTRO",
+                  "id":  "19926",
+                  "franchisee":  "Gabriela e Thiago"
+              },
+    "19755":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS GILBERTO SALOMAO",
+                  "id":  "19755",
+                  "franchisee":  "Guilherme"
+              },
+    "19821":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS VILA SÃO MIGUEL",
+                  "id":  "19821",
+                  "franchisee":  "André Rynaldo"
+              },
+    "19855":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS VILA CARRÃO",
+                  "id":  "19855",
+                  "franchisee":  "André Rynaldo"
+              },
+    "19710":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "ALPHAVILLE",
+                  "id":  "19710",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19955":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS QUIOSQUE NOVO RIO",
+                  "id":  "19955",
+                  "franchisee":  "Ana Paula"
+              },
+    "19506":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS TIJUCA",
+                  "id":  "19506",
+                  "franchisee":  "Adriana Copello"
+              },
+    "19808":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "SANTA PAULA",
+                  "id":  "19808",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19601":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS BOA VIAGEM",
+                  "id":  "19601",
+                  "franchisee":  "Carol/Paula"
+              },
+    "19719":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS JARDIM CAMBURI (VITORIA 2)",
+                  "id":  "19719",
+                  "franchisee":  "DEX"
+              },
+    "19940":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS RN NATAL TIROL",
+                  "id":  "19940",
+                  "franchisee":  "Marcos Victor"
+              },
+    "19597":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS NAZARE",
+                  "id":  "19597",
+                  "franchisee":  "Clóvis"
+              },
+    "19746":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS NOVA FRIBURGO",
+                  "id":  "19746",
+                  "franchisee":  "WAGNER JEVAUX"
+              },
+    "19634":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS SHOPPING DOM PEDRO",
+                  "id":  "19634",
+                  "franchisee":  "Claudia"
+              },
+    "19649":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS SETUBAL",
+                  "id":  "19649",
+                  "franchisee":  "Carol/Paula"
+              },
+    "19671":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS TERESOPOLIS",
+                  "id":  "19671",
+                  "franchisee":  "MONICA e RAFAEL"
+              },
+    "19565":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS GRACAS",
+                  "id":  "19565",
+                  "franchisee":  "Carol/Paula"
+              },
+    "19792":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS JUIZ DE FORA 2",
+                  "id":  "19792",
+                  "franchisee":  "Pedro Ivo"
+              },
+    "19698":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS UBERLANDIA 2",
+                  "id":  "19698",
+                  "franchisee":  "MARIOZAN FERREIRA"
+              },
+    "19722":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS LAGO NORTE",
+                  "id":  "19722",
+                  "franchisee":  "Matheus Cortez"
+              },
+    "19859":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS SP SAO PAULO PARQUE MANDAQUI",
+                  "id":  "19859",
+                  "franchisee":  "DEX"
+              },
+    "19685":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS BONSUCESSO",
+                  "id":  "19685",
+                  "franchisee":  "Anderson"
+              },
+    "19711":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS PINHEIROS",
+                  "id":  "19711",
+                  "franchisee":  "DEX"
+              },
+    "19552":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS 109 NORTE",
+                  "id":  "19552",
+                  "franchisee":  "Igor e Bernardo"
+              },
+    "19927":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS GUARAPUAVA",
+                  "id":  "19927",
+                  "franchisee":  "Bruno"
+              },
+    "19538":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS ITAIPU",
+                  "id":  "19538",
+                  "franchisee":  "WAGNER JEVAUX"
+              },
+    "19896":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS SORRISO CENTRO",
+                  "id":  "19896",
+                  "franchisee":  "Daniel CO"
+              },
+    "19820":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "VILA KENNEDY",
+                  "id":  "19820",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19754":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS GOIANIA 2",
+                  "id":  "19754",
+                  "franchisee":  "Victor"
+              },
+    "19615":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS JUIZ DE FORA",
+                  "id":  "19615",
+                  "franchisee":  "Pedro Ivo"
+              },
+    "19847":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "ANTONINA",
+                  "id":  "19847",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19679":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS MACAE",
+                  "id":  "19679",
+                  "franchisee":  "WAGNER JEVAUX"
+              },
+    "19804":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "CAPAO REDONDO",
+                  "id":  "19804",
+                  "franchisee":  "Rodrigo Rokkon"
+              },
+    "19689":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS SALVADOR 2",
+                  "id":  "19689",
+                  "franchisee":  "Harisson"
+              },
+    "19879":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS MANAUS ALEIXO",
+                  "id":  "19879",
+                  "franchisee":  "Mike"
+              },
+    "19741":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS BARREIRAS",
+                  "id":  "19741",
+                  "franchisee":  "Eduardo"
+              },
+    "19868":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS SHOPPING PATIO RORAIMA",
+                  "id":  "19868",
+                  "franchisee":  "Matheus Boa Vista"
+              },
+    "19654":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS CASA FORTE",
+                  "id":  "19654",
+                  "franchisee":  "Carol/Paula"
+              },
+    "19596":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS NOVA IGUACU",
+                  "id":  "19596",
+                  "franchisee":  "Marcos RJ"
+              },
+    "19959":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS ICOARACI BELEM",
+                  "id":  "19959",
+                  "franchisee":  "Bruno e Sinara"
+              },
+    "19721":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "SOROCABA 2",
+                  "id":  "19721",
+                  "franchisee":  "Odilon Freire"
+              },
+    "19756":  {
+                  "status":  "ATIVA",
+                  "consultant":  "PRISCILA",
+                  "name":  "DOMINOS BROOKLIN",
+                  "id":  "19756",
+                  "franchisee":  "Furjala Pedro"
+              },
+    "19624":  {
+                  "status":  "ATIVA",
+                  "consultant":  "FERNANDO NETO",
+                  "name":  "DOMINOS PIEDADE",
+                  "id":  "19624",
+                  "franchisee":  "Carol/Paula"
+              },
+    "19521":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS CENTRO",
+                  "id":  "19521",
+                  "franchisee":  "Cristiano"
+              },
+    "19930":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS SP BOTUCATU CENTRO",
+                  "id":  "19930",
+                  "franchisee":  "Diego"
+              },
+    "19943":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MUNIZ",
+                  "name":  "DOMINOS ITUIUTABA",
+                  "id":  "19943",
+                  "franchisee":  "MARCELA MARQUEZ"
+              },
+    "19696":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS BARAO GERALDO",
+                  "id":  "19696",
+                  "franchisee":  "Fabio"
+              },
+    "19794":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS CUIABA GOIABEIRAS",
+                  "id":  "19794",
+                  "franchisee":  "Cinara e Jorge"
+              },
+    "19550":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS VICENTE PIRES",
+                  "id":  "19550",
+                  "franchisee":  "Victor"
+              },
+    "19656":  {
+                  "status":  "ATIVA",
+                  "consultant":  "MARÍLIA",
+                  "name":  "DOMINOS RIO TAPAJÓS",
+                  "id":  "19656",
+                  "franchisee":  "Larissa"
+              },
+    "19957":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ERICK APARECIDO",
+                  "name":  "DOMINOS AEROPORTO GUARULHOS",
+                  "id":  "19957",
+                  "franchisee":  "DEX"
+              },
+    "19525":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS AVENIDA SETE",
+                  "id":  "19525",
+                  "franchisee":  "WAGNER JEVAUX"
+              },
+    "19947":  {
+                  "status":  "ATIVA",
+                  "consultant":  "ALAN",
+                  "name":  "DOMINOS CAVALHADA",
+                  "id":  "19947",
+                  "franchisee":  "Rodrigo Freitas"
+              }
+}
