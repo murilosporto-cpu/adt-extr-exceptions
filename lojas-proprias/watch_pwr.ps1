@@ -4,14 +4,13 @@
 $BASE_DIR = $PSScriptRoot
 $REPORTS_DIR = Join-Path $BASE_DIR "pwr_reports"
 $REPORTS_MENSAL_DIR = Join-Path $BASE_DIR "pwr_reports_mensal"
-$APP_DIR = Join-Path $BASE_DIR "app"
+$APP_DIR = $BASE_DIR
 $DATA_JSON = Join-Path $APP_DIR "data.json"
 $STORES_JSON = Join-Path $APP_DIR "stores_mapping.json"
 
 # Garante a existência dos diretórios
 if (-not (Test-Path $REPORTS_DIR)) { New-Item -ItemType Directory -Path $REPORTS_DIR -Force }
 if (-not (Test-Path $REPORTS_MENSAL_DIR)) { New-Item -ItemType Directory -Path $REPORTS_MENSAL_DIR -Force }
-if (-not (Test-Path $APP_DIR)) { New-Item -ItemType Directory -Path $APP_DIR -Force }
 
 # Funções de conversão seguras
 function Get-SafeDouble {
