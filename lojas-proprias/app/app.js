@@ -1641,7 +1641,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // CONTROLE DE ACESSO POR SENHA (GATEKEEPER)
     // ==========================================
-    const CORRECT_HASH = '7ebd1663e4df7330f22f8c194f287da6f3bf388b55e54300205ce50540bf4cc0';
+    const CORRECT_HASH = '0aa8f8c610025637a5ce377cecdb9c0ee045a5d6a95da3d81a1d0865f4e0459c';
 
     async function sha256(message) {
         const msgBuffer = new TextEncoder().encode(message);
