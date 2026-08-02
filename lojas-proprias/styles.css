@@ -536,7 +536,7 @@ tr:hover td {
 }
 
 .export-mode th, .export-mode td {
-    padding: 0.65rem 0.5rem !important;
+    padding: 0.9rem 0.8rem !important;
 }
 
 .export-mode .badge {

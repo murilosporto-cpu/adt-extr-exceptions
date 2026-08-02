@@ -72,26 +72,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const lastCell = cells[cells.length - 1];
         if (!firstCell || !lastCell) return;
 
-        let canvas = tr.querySelector('.' + canvasClass);
+        let canvas = firstCell.querySelector('.' + canvasClass);
         if (!canvas) {
             canvas = document.createElement('canvas');
             canvas.className = canvasClass;
             canvas.style.position = 'absolute';
             canvas.style.pointerEvents = 'none';
             canvas.style.zIndex = '1';
-            tr.style.position = 'relative';
-            tr.appendChild(canvas);
+            firstCell.style.position = 'relative';
+            firstCell.appendChild(canvas);
         }
 
-        const trRect = tr.getBoundingClientRect();
         const firstRect = firstCell.getBoundingClientRect();
         const lastRect = lastCell.getBoundingClientRect();
 
-        const left = firstRect.left - trRect.left;
         const width = lastRect.right - firstRect.left;
-        const height = trRect.height;
+        const height = firstRect.height;
 
-        canvas.style.left = left + 'px';
+        canvas.style.left = '0px';
         canvas.style.width = width + 'px';
         canvas.style.height = height + 'px';
         canvas.style.top = '0px';
@@ -745,26 +743,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     const firstCell = weekCells[0];
                     const lastCell = weekCells[weekCells.length - 1];
 
-                    let canvas = tr.querySelector('.row-sparkline');
+                    let canvas = firstCell.querySelector('.row-sparkline');
                     if (!canvas) {
                         canvas = document.createElement('canvas');
                         canvas.className = 'row-sparkline';
                         canvas.style.position = 'absolute';
                         canvas.style.pointerEvents = 'none';
                         canvas.style.zIndex = '1';
-                        tr.style.position = 'relative';
-                        tr.appendChild(canvas);
+                        firstCell.style.position = 'relative';
+                        firstCell.appendChild(canvas);
                     }
 
-                    const trRect = tr.getBoundingClientRect();
                     const firstRect = firstCell.getBoundingClientRect();
                     const lastRect = lastCell.getBoundingClientRect();
 
-                    const left = firstRect.left - trRect.left;
                     const width = lastRect.right - firstRect.left;
-                    const height = trRect.height;
+                    const height = firstRect.height;
 
-                    canvas.style.left = left + 'px';
+                    canvas.style.left = '0px';
                     canvas.style.width = width + 'px';
                     canvas.style.height = height + 'px';
                     canvas.style.top = '0px';
@@ -1445,6 +1441,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnExport = document.getElementById('btn-export');
     if (btnExport) {
+        function redrawSparklinesInElement(element) {
+            // Redesenha sparklines da tabela de Exceções
+            const excRows = element.querySelectorAll('#table-exceptions tbody tr');
+            excRows.forEach(tr => {
+                const weekValsAttr = tr.getAttribute('data-weeks-values');
+                if (weekValsAttr) {
+                    const values = JSON.parse(weekValsAttr);
+                    const weekCells = Array.from(tr.querySelectorAll('.week-cell'));
+                    if (values.length > 0 && weekCells.length > 0) {
+                        const firstCell = weekCells[0];
+                        const lastCell = weekCells[weekCells.length - 1];
+                        let canvas = firstCell.querySelector('.row-sparkline');
+                        if (canvas) {
+                            const firstRect = firstCell.getBoundingClientRect();
+                            const lastRect = lastCell.getBoundingClientRect();
+                            const width = lastRect.right - firstRect.left;
+                            const height = firstRect.height;
+                            canvas.style.width = width + 'px';
+                            canvas.style.height = height + 'px';
+                            canvas.width = width * 2;
+                            canvas.height = height * 2;
+                            const ctx = canvas.getContext('2d');
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                            ctx.scale(2, 2);
+                            const points = [];
+                            const cellWidth = width / values.length;
+                            const maxValue = Math.max(0.40, ...values);
+                            values.forEach((val, i) => {
+                                const x = cellWidth * (i + 0.5);
+                                const padding = height * 0.15;
+                                const y = height - padding - ((val / maxValue) * (height - 2 * padding));
+                                points.push({ x, y });
+                            });
+                            let isImproving = values.length > 1 ? (values[values.length - 1] <= values[0]) : (values[0] < 0.10);
+                            const lineColor = isImproving ? '#10b981' : '#ef4444';
+                            const fillGradStart = isImproving ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)';
+                            const fillGradEnd = isImproving ? 'rgba(16, 185, 129, 0.01)' : 'rgba(239, 68, 68, 0.01)';
+                            ctx.beginPath();
+                            ctx.moveTo(points[0].x, points[0].y);
+                            for (let i = 1; i < points.length; i++) ctx.lineTo(points[i].x, points[i].y);
+                            ctx.strokeStyle = lineColor;
+                            ctx.lineWidth = 2.5;
+                            ctx.lineCap = 'round';
+                            ctx.lineJoin = 'round';
+                            ctx.stroke();
+                            ctx.beginPath();
+                            ctx.moveTo(points[0].x, points[0].y);
+                            for (let i = 1; i < points.length; i++) ctx.lineTo(points[i].x, points[i].y);
+                            ctx.lineTo(points[points.length - 1].x, height);
+                            ctx.lineTo(points[0].x, height);
+                            ctx.closePath();
+                            const grad = ctx.createLinearGradient(0, 0, 0, height);
+                            grad.addColorStop(0, fillGradStart);
+                            grad.addColorStop(1, fillGradEnd);
+                            ctx.fillStyle = grad;
+                            ctx.fill();
+                        }
+                    }
+                }
+            });
+
+            // Redesenha sparklines de ADT e Extremes
+            const adtRows = element.querySelectorAll('#table-adt tbody tr');
+            adtRows.forEach(tr => {
+                const adtValsAttr = tr.getAttribute('data-adt-values');
+                const adtCells = Array.from(tr.querySelectorAll('.adt-week-cell'));
+                if (adtValsAttr && adtCells.length > 0) {
+                    drawRowSparkline(tr, adtCells, JSON.parse(adtValsAttr), 'row-sparkline-adt', 25.0);
+                }
+                const extValsAttr = tr.getAttribute('data-ext-values');
+                const extCells = Array.from(tr.querySelectorAll('.ext-week-cell'));
+                if (extValsAttr && extCells.length > 0) {
+                    drawRowSparkline(tr, extCells, JSON.parse(extValsAttr), 'row-sparkline-ext', 0.02);
+                }
+            });
+        }
+
         function exportSection(sectionId, filename) {
             return new Promise((resolve, reject) => {
                 const element = document.getElementById(sectionId);
@@ -1463,6 +1536,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Aplica classe de exportação (tamanho otimizado, fonte maior para celular)
                 element.classList.add('export-mode');
+                
+                // Redesenha as sparklines com a geometria correta do modo exportação
+                redrawSparklinesInElement(element);
 
                 html2canvas(element, {
                     useCORS: true,
@@ -1473,6 +1549,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     wrapper.style.maxHeight = originalMaxHeight;
                     wrapper.style.overflowY = originalOverflowY;
                     element.classList.remove('export-mode');
+                    
+                    // Restaura as sparklines para o tamanho da tela
+                    redrawSparklinesInElement(element);
 
                     // Gatilho de download
                     const link = document.createElement('a');
@@ -1485,6 +1564,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     wrapper.style.maxHeight = originalMaxHeight;
                     wrapper.style.overflowY = originalOverflowY;
                     element.classList.remove('export-mode');
+                    redrawSparklinesInElement(element);
                     reject(err);
                 });
             });
