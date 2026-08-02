@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domino's Pizza - Portal de Dashboards</title>
+    <link rel="icon" type="image/svg+xml" href="franquias/app/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dominos-blue: #006491;
+            --dominos-red: #e31b23;
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portal-container {
+            width: 100%;
+            max-width: 900px;
+            padding: 2rem;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 0 0 0.5rem 0;
+            color: var(--dominos-blue);
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .portal-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .portal-card.card-franquias:hover {
+            border-color: var(--dominos-red);
+        }
+
+        .portal-card.card-proprias:hover {
+            border-color: var(--dominos-blue);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .portal-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .portal-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0 0 1.5rem 0;
+            line-height: 1.4;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+        }
+
+        .card-franquias .btn {
+            background-color: var(--dominos-red);
+            color: #ffffff;
+        }
+
+        .card-franquias:hover .btn {
+            background-color: #c1121c;
+        }
+
+        .card-proprias .btn {
+            background-color: var(--dominos-blue);
+            color: #ffffff;
+        }
+
+        .card-proprias:hover .btn {
+            background-color: #005175;
+        }
+
+        footer {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portal-container">
+        <header>
+            <img src="franquias/app/logo.svg" alt="Domino's Pizza" class="logo">
+            <h1>Portal Performance PWR</h1>
+            <p class="subtitle">Selecione o painel que deseja visualizar</p>
+        </header>
+
+        <div class="cards-grid">
+            <a href="/franquias/" class="portal-card card-franquias">
+                <div class="card-icon">📈</div>
+                <h2>Franquias</h2>
+                <p>Acompanhamento de tempos de entrega, extremos e exceções das lojas franqueadas do Brasil.</p>
+                <span class="btn">Acessar Painel</span>
+            </a>
+
+            <a href="/lojas-proprias/" class="portal-card card-proprias">
+                <div class="card-icon">🏢</div>
+                <h2>Lojas Próprias</h2>
+                <p>Acompanhamento de tempos de entrega, extremos e exceções das lojas corporativas da Domino's Brasil.</p>
+                <span class="btn">Acessar Painel</span>
+            </a>
+        </div>
+
+        <footer>
+            Domino's Pizza Brasil &copy; 2026
+        </footer>
+    </div>
+
+</body>
+</html>
