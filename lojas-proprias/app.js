@@ -1058,6 +1058,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cells = Array.from(tr.querySelectorAll('.month-adt-cell'));
                     if (vals.length && cells.length) drawRowSparkline(tr, cells, vals, 'row-sparkline-madt', 25.0);
                 });
+                const _kpiAdtCard = document.getElementById('kpi-adt-avg-mensal');
+                if (_kpiAdtCard) _kpiAdtCard.setAttribute('data-sparkline-vals', JSON.stringify(groupAvgs));
                 drawCardSparkline('kpi-adt-avg-mensal', 'card-sparkline-madt', groupAvgs, 25.0);
             });
 
@@ -1157,6 +1159,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cells = Array.from(tr.querySelectorAll('.month-ext-cell'));
                     if (vals.length && cells.length) drawRowSparkline(tr, cells, vals, 'row-sparkline-mext', 0.02);
                 });
+                const _kpiExtCard = document.getElementById('kpi-extremes-avg-mensal');
+                if (_kpiExtCard) _kpiExtCard.setAttribute('data-sparkline-vals', JSON.stringify(groupAvgs));
                 drawCardSparkline('kpi-extremes-avg-mensal', 'card-sparkline-mext', groupAvgs, 0.02);
             });
 
@@ -1256,6 +1260,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cells = Array.from(tr.querySelectorAll('.month-exc-cell'));
                     if (vals.length && cells.length) drawRowSparkline(tr, cells, vals, 'row-sparkline-mexc', 0.40);
                 });
+                const _kpiExcCard = document.getElementById('kpi-exceptions-avg-mensal');
+                if (_kpiExcCard) _kpiExcCard.setAttribute('data-sparkline-vals', JSON.stringify(groupAvgs));
                 drawCardSparkline('kpi-exceptions-avg-mensal', 'card-sparkline-mexc', groupAvgs, 0.20);
             });
 
@@ -1516,6 +1522,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     drawRowSparkline(tr, extCells, JSON.parse(extValsAttr), 'row-sparkline-ext', 0.02);
                 }
             });
+
+            // Redesenha sparklines das tabelas mensais (ADT, Extremes, Exceptions)
+            [
+                { rowSel: '#table-adt-mensal tbody tr', cellClass: 'month-adt-cell', canvasClass: 'row-sparkline-madt', maxDefault: 25.0 },
+                { rowSel: '#table-extremes-mensal tbody tr', cellClass: 'month-ext-cell', canvasClass: 'row-sparkline-mext', maxDefault: 0.02 },
+                { rowSel: '#table-exceptions-mensal tbody tr', cellClass: 'month-exc-cell', canvasClass: 'row-sparkline-mexc', maxDefault: 0.40 }
+            ].forEach(cfg => {
+                element.querySelectorAll(cfg.rowSel).forEach(tr => {
+                    const valsAttr = tr.getAttribute('data-vals');
+                    if (!valsAttr) return;
+                    const vals = JSON.parse(valsAttr);
+                    const cells = Array.from(tr.querySelectorAll('.' + cfg.cellClass));
+                    if (vals.length && cells.length) drawRowSparkline(tr, cells, vals, cfg.canvasClass, cfg.maxDefault);
+                });
+            });
+            // Redesenha card-sparklines dos KPIs mensais
+            [
+                { cardId: 'kpi-adt-avg-mensal',        cls: 'card-sparkline-madt', attr: 'data-sparkline-vals', max: 25.0 },
+                { cardId: 'kpi-extremes-avg-mensal',   cls: 'card-sparkline-mext', attr: 'data-sparkline-vals', max: 0.02 },
+                { cardId: 'kpi-exceptions-avg-mensal', cls: 'card-sparkline-mexc', attr: 'data-sparkline-vals', max: 0.20 }
+            ].forEach(cfg => {
+                const card = element.querySelector ? element.querySelector('#' + cfg.cardId) : document.getElementById(cfg.cardId);
+                if (!card) return;
+                const valsAttr = card.getAttribute(cfg.attr);
+                if (!valsAttr) return;
+                drawCardSparkline(cfg.cardId, cfg.cls, JSON.parse(valsAttr), cfg.max);
+            });
         }
 
         function exportSection(sectionId, filename) {
@@ -1539,6 +1572,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Redesenha as sparklines com a geometria correta do modo exportação
                 redrawSparklinesInElement(element);
+
+                // Aguarda 2 frames para o browser aplicar o layout antes de capturar
+                await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
 
                 html2canvas(element, {
                     useCORS: true,
@@ -1570,70 +1606,46 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        btnExport.addEventListener('click', () => {
+        btnExport.addEventListener('click', async () => {
             btnExport.disabled = true;
             btnExport.textContent = 'Gerando...';
 
             const consultantName = consultantSelect.value;
             const suffix = consultantName === 'all' ? 'geral' : consultantName.toLowerCase().replace(/\s+/g, '_');
 
+            let sections;
             if (activeTab === 'risco') {
-                // Exportação da aba Análise de Risco em 3 imagens separadas
-                exportSection('section-fechariam', `pwr_risco_fechariam_ifood_${suffix}.png`)
-                    .then(() => {
-                        setTimeout(() => {
-                            exportSection('section-aviso', `pwr_risco_aviso_${suffix}.png`)
-                                .then(() => {
-                                    setTimeout(() => {
-                                        exportSection('section-recuperadas', `pwr_risco_recuperadas_${suffix}.png`)
-                                            .then(() => {
-                                                btnExport.disabled = false;
-                                                btnExport.textContent = 'Exportar PNG';
-                                            })
-                                            .catch(err => {
-                                                console.error('Erro ao exportar lojas recuperadas:', err);
-                                                btnExport.disabled = false;
-                                                btnExport.textContent = 'Exportar PNG';
-                                            });
-                                    }, 800);
-                                })
-                                .catch(err => {
-                                    console.error('Erro ao exportar lojas em aviso:', err);
-                                    btnExport.disabled = false;
-                                    btnExport.textContent = 'Exportar PNG';
-                                });
-                        }, 800);
-                    })
-                    .catch(err => {
-                        console.error('Erro ao exportar lojas que fechariam:', err);
-                        alert('Erro ao gerar as imagens. Tente novamente.');
-                        btnExport.disabled = false;
-                        btnExport.textContent = 'Exportar PNG';
-                    });
+                sections = [
+                    ['section-fechariam', `pwr_risco_fechariam_ifood_${suffix}.png`],
+                    ['section-aviso', `pwr_risco_aviso_${suffix}.png`],
+                    ['section-recuperadas', `pwr_risco_recuperadas_${suffix}.png`]
+                ];
+            } else if (activeTab === 'mensal') {
+                sections = [
+                    ['section-adt-mensal', `pwr_adt_mensal_${suffix}.png`],
+                    ['section-extremes-mensal', `pwr_extremes_mensal_${suffix}.png`],
+                    ['section-exceptions-mensal', `pwr_service_exceptions_mensal_${suffix}.png`]
+                ];
             } else {
-                // Exportação padrão (semanal / mensal)
-                exportSection('section-adt', `pwr_adt_e_extremos_${suffix}.png`)
-                    .then(() => {
-                        // Aguarda 800ms para iniciar a segunda exportação e evitar bloqueio do navegador
-                        setTimeout(() => {
-                            exportSection('section-exceptions', `pwr_service_exceptions_${suffix}.png`)
-                                .then(() => {
-                                    btnExport.disabled = false;
-                                    btnExport.textContent = 'Exportar PNG';
-                                })
-                                .catch(err => {
-                                    console.error('Erro ao exportar exceptions:', err);
-                                    btnExport.disabled = false;
-                                    btnExport.textContent = 'Exportar PNG';
-                                });
-                        }, 800);
-                    })
-                    .catch(err => {
-                        console.error('Erro ao exportar ADT:', err);
-                        alert('Erro ao gerar as imagens. Tente novamente.');
-                        btnExport.disabled = false;
-                        btnExport.textContent = 'Exportar PNG';
-                    });
+                sections = [
+                    ['section-adt', `pwr_adt_e_extremos_${suffix}.png`],
+                    ['section-exceptions', `pwr_service_exceptions_${suffix}.png`]
+                ];
+            }
+
+            try {
+                for (let i = 0; i < sections.length; i++) {
+                    const [sectionId, filename] = sections[i];
+                    await exportSection(sectionId, filename);
+                    // Aguarda 800ms entre exportações para evitar bloqueio do navegador
+                    if (i < sections.length - 1) await new Promise(r => setTimeout(r, 800));
+                }
+            } catch (err) {
+                console.error('Erro ao exportar seção:', err);
+                alert('Erro ao gerar as imagens. Tente novamente.');
+            } finally {
+                btnExport.disabled = false;
+                btnExport.textContent = 'Exportar PNG';
             }
         });
     }
