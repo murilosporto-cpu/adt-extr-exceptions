@@ -1552,7 +1552,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function exportSection(sectionId, filename) {
-            return new Promise((resolve, reject) => {
+            return new Promise(async (resolve, reject) => {
                 const element = document.getElementById(sectionId);
                 if (!element) {
                     reject(`Elemento ${sectionId} não encontrado`);
