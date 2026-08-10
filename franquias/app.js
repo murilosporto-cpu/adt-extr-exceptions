@@ -1560,32 +1560,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 const wrapper = element.querySelector('.table-wrapper');
-                const originalMaxHeight = wrapper.style.maxHeight;
-                const originalOverflowY = wrapper.style.overflowY;
 
-                // Remove limite de altura e rolagem temporariamente para renderizar todas as linhas
-                wrapper.style.maxHeight = 'none';
-                wrapper.style.overflowY = 'visible';
-
-                // Aplica classe de exportação (tamanho otimizado, fonte maior para celular)
+                // Aplica classe de exportação (tamanho otimizado, fonte maior para celular;
+                // .table-wrapper fica sem limite de altura/rolagem via CSS)
                 element.classList.add('export-mode');
-                
+
                 // Redesenha as sparklines com a geometria correta do modo exportação
                 redrawSparklinesInElement(element);
 
-                // Aguarda 2 frames para o browser aplicar o layout antes de capturar
+                // Aguarda 2 frames para o browser aplicar o layout antes de medir/capturar
+                await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+                // Garante que a imagem fique larga o suficiente para caber TODAS as colunas
+                // da tabela (evita cortar informação quando há muitas semanas/meses)
+                const neededWidth = Math.max(900, wrapper.scrollWidth + 56);
+                element.style.width = neededWidth + 'px';
+                redrawSparklinesInElement(element);
                 await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
 
                 html2canvas(element, {
                     useCORS: true,
                     scale: 2, // Resolução de alta fidelidade
-                    backgroundColor: '#ffffff'
+                    backgroundColor: '#ffffff',
+                    windowWidth: Math.max(window.innerWidth, neededWidth + 100)
                 }).then(canvas => {
                     // Restaura estilos originais
-                    wrapper.style.maxHeight = originalMaxHeight;
-                    wrapper.style.overflowY = originalOverflowY;
                     element.classList.remove('export-mode');
-                    
+                    element.style.width = '';
+
                     // Restaura as sparklines para o tamanho da tela
                     redrawSparklinesInElement(element);
 
@@ -1597,9 +1599,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     resolve();
                 }).catch(err => {
                     // Garante que os estilos serão restaurados em caso de falha
-                    wrapper.style.maxHeight = originalMaxHeight;
-                    wrapper.style.overflowY = originalOverflowY;
                     element.classList.remove('export-mode');
+                    element.style.width = '';
                     redrawSparklinesInElement(element);
                     reject(err);
                 });

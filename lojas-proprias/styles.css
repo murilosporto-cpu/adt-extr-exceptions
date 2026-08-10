@@ -495,18 +495,23 @@ tr:hover td {
 
 /* Otimizações do PNG para visualização no Celular (Modo Exportação) */
 .export-mode {
-    width: 900px !important;
-    max-width: 900px !important;
     min-width: 900px !important;
     margin: 0 auto !important;
     background-color: #ffffff !important;
     padding: 24px !important;
     border-radius: 12px !important;
+    overflow: visible !important;
+}
+
+.export-mode .table-wrapper {
+    max-height: none !important;
+    overflow: visible !important;
 }
 
 .export-mode .kpi-card {
     padding: 1.25rem 1.5rem !important;
     gap: 1.5rem !important;
+    overflow: visible !important;
 }
 
 .export-mode .kpi-value {
@@ -515,6 +520,8 @@ tr:hover td {
 
 .export-mode .kpi-critical-list {
     min-width: 220px !important;
+    max-height: none !important;
+    overflow-y: visible !important;
 }
 
 .export-mode .kpi-critical-item {
