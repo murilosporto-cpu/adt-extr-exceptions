@@ -1,6 +1,11 @@
 # Script de Automação para Relatórios PWR Domino's
 # Inicia um servidor Web local e monitora a pasta 'pwr_reports' para reprocessar planilhas Excel.
 
+[CmdletBinding()]
+param (
+    [switch]$ProcessOnly
+)
+
 $BASE_DIR = $PSScriptRoot
 $REPORTS_DIR = Join-Path $BASE_DIR "pwr_reports"
 $REPORTS_MENSAL_DIR = Join-Path $BASE_DIR "pwr_reports_mensal"
@@ -401,10 +406,12 @@ function Process-MonthlyFiles {
                 if (-not $monthlyResult["exceptions"].ContainsKey($monthKey)) { $monthlyResult["exceptions"][$monthKey] = @() }
                 $monthlyResult["exceptions"][$monthKey] += $rows
             }
-
-            $wb.Close($false)
         } catch {
             Write-Warning "  -> Erro ao processar arquivo mensal: $_"
+        } finally {
+            if ($wb -ne $null) {
+                $wb.Close($false)
+            }
         }
     }
 
@@ -417,6 +424,11 @@ function Process-MonthlyFiles {
 
 # Processa inicialmente
 Process-ExcelFiles
+
+if ($ProcessOnly) {
+    Write-Host "Execução finalizada (ProcessOnly). Servidor e Watcher não iniciados."
+    exit 0
+}
 
 # Configura o FileSystemWatcher para atualizar quando houver alterações em pwr_reports
 $watcher = New-Object System.IO.FileSystemWatcher
