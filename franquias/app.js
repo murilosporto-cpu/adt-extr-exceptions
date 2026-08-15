@@ -1624,15 +1624,20 @@ document.addEventListener('DOMContentLoaded', () => {
             let sections;
             if (activeTab === 'risco') {
                 sections = [
-                    ['risk-view', `pwr_analise_risco_${suffix}.png`]
+                    ['section-fechariam', `pwr_risco_fechariam_ifood_${suffix}.png`],
+                    ['section-aviso', `pwr_risco_aviso_${suffix}.png`],
+                    ['section-recuperadas', `pwr_risco_recuperadas_${suffix}.png`]
                 ];
             } else if (activeTab === 'mensal') {
                 sections = [
-                    ['monthly-view', `pwr_mensal_completo_${suffix}.png`]
+                    ['section-adt-mensal', `pwr_adt_mensal_${suffix}.png`],
+                    ['section-extremes-mensal', `pwr_extremes_mensal_${suffix}.png`],
+                    ['section-exceptions-mensal', `pwr_service_exceptions_mensal_${suffix}.png`]
                 ];
             } else {
                 sections = [
-                    ['capture-area', `pwr_semanal_completo_${suffix}.png`]
+                    ['section-adt', `pwr_adt_e_extremos_${suffix}.png`],
+                    ['section-exceptions', `pwr_service_exceptions_${suffix}.png`]
                 ];
             }
 
@@ -1640,8 +1645,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (let i = 0; i < sections.length; i++) {
                     const [sectionId, filename] = sections[i];
                     await exportSection(sectionId, filename);
-                    // Aguarda 800ms entre exportações para evitar bloqueio do navegador
-                    if (i < sections.length - 1) await new Promise(r => setTimeout(r, 800));
+                    // Aguarda 1500ms entre exportações para evitar bloqueio do navegador
+                    if (i < sections.length - 1) await new Promise(r => setTimeout(r, 1500));
                 }
             } catch (err) {
                 console.error('Erro ao exportar seção:', err);
