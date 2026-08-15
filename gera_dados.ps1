@@ -4,7 +4,7 @@
 #   o servidor local, entao nao trava)
 # ============================================================
 param(
-    [string]$ProjectRoot = $(if ($PSScriptRoot) { $PSScriptRoot } else { "C:\Users\Murilo Porto\OneDrive\FRANQUIAS\master mind\cafe-com-pwr" })
+    [string]$ProjectRoot = $(if ($PSScriptRoot) { $PSScriptRoot } else { "C:\Users\muril\OneDrive\FRANQUIAS\master mind\cafe-com-pwr" })
 )
 
 foreach ($panel in 'franquias','lojas-proprias') {

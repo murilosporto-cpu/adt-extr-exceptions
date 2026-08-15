@@ -14,7 +14,7 @@
 # ============================================================
 param(
     [datetime]$Today       = (Get-Date).Date,
-    [string]  $ProjectRoot = $(if ($PSScriptRoot) { $PSScriptRoot } else { "C:\Users\Murilo Porto\OneDrive\FRANQUIAS\master mind\cafe-com-pwr" }),
+    [string]  $ProjectRoot = $(if ($PSScriptRoot) { $PSScriptRoot } else { "C:\Users\muril\OneDrive\FRANQUIAS\master mind\cafe-com-pwr" }),
     [switch]  $Apply        # sem isto = so mostra (nao mexe em nada)
 )
 

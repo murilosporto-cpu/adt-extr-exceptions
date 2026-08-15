@@ -41,13 +41,6 @@
                   "id":  "19805",
                   "franchisee":  "Rodrigo Rokkon"
               },
-    "19666":  {
-                  "status":  "ATIVA",
-                  "consultant":  "MURILO",
-                  "name":  "DOMINOS AGUAS CLARAS",
-                  "id":  "19666",
-                  "franchisee":  "Igor e Bernardo"
-              },
     "19796":  {
                   "status":  "ATIVA",
                   "consultant":  "LEANDRO",
@@ -496,12 +489,12 @@
                   "id":  "19788",
                   "franchisee":  "Rodrigo Freitas"
               },
-    "19680":  {
+    "19666":  {
                   "status":  "ATIVA",
-                  "consultant":  "LEANDRO",
-                  "name":  "DOMINOS BLUMENAU",
-                  "id":  "19680",
-                  "franchisee":  "DENIS PACIELLO"
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS AGUAS CLARAS",
+                  "id":  "19666",
+                  "franchisee":  "Igor e Bernardo"
               },
     "19536":  {
                   "status":  "ATIVA",
@@ -691,6 +684,13 @@
                   "name":  "DOMINOS SP ARARAS CENTRO",
                   "id":  "19901",
                   "franchisee":  "Rafael e Mari"
+              },
+    "19506":  {
+                  "status":  "ATIVA",
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS TIJUCA",
+                  "id":  "19506",
+                  "franchisee":  "Adriana Copello"
               },
     "19648":  {
                   "status":  "ATIVA",
@@ -1035,12 +1035,12 @@
                   "id":  "19955",
                   "franchisee":  "Ana Paula"
               },
-    "19506":  {
+    "19550":  {
                   "status":  "ATIVA",
-                  "consultant":  "LEANDRO",
-                  "name":  "DOMINOS TIJUCA",
-                  "id":  "19506",
-                  "franchisee":  "Adriana Copello"
+                  "consultant":  "MURILO",
+                  "name":  "DOMINOS VICENTE PIRES",
+                  "id":  "19550",
+                  "franchisee":  "Victor"
               },
     "19808":  {
                   "status":  "ATIVA",
@@ -1329,12 +1329,12 @@
                   "id":  "19794",
                   "franchisee":  "Cinara e Jorge"
               },
-    "19550":  {
+    "19680":  {
                   "status":  "ATIVA",
-                  "consultant":  "MURILO",
-                  "name":  "DOMINOS VICENTE PIRES",
-                  "id":  "19550",
-                  "franchisee":  "Victor"
+                  "consultant":  "LEANDRO",
+                  "name":  "DOMINOS BLUMENAU",
+                  "id":  "19680",
+                  "franchisee":  "DENIS PACIELLO"
               },
     "19656":  {
                   "status":  "ATIVA",

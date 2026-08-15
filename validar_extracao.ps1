@@ -12,7 +12,7 @@
 #  Se acusar erro, rode 'plano_extracao.ps1 -Apply' de novo e rebaixe.
 # ============================================================
 param(
-    [string]$ProjectRoot = $(if ($PSScriptRoot) { $PSScriptRoot } else { "C:\Users\Murilo Porto\OneDrive\FRANQUIAS\master mind\cafe-com-pwr" })
+    [string]$ProjectRoot = $(if ($PSScriptRoot) { $PSScriptRoot } else { "C:\Users\muril\OneDrive\FRANQUIAS\master mind\cafe-com-pwr" })
 )
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
