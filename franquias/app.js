@@ -1559,7 +1559,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                const wrapper = element.querySelector('.table-wrapper');
+                const wrappers = Array.from(element.querySelectorAll('.table-wrapper'));
 
                 // Aplica classe de exportação (tamanho otimizado, fonte maior para celular;
                 // .table-wrapper fica sem limite de altura/rolagem via CSS)
@@ -1573,7 +1573,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Garante que a imagem fique larga o suficiente para caber TODAS as colunas
                 // da tabela (evita cortar informação quando há muitas semanas/meses)
-                const neededWidth = Math.max(900, wrapper.scrollWidth + 56);
+                let neededWidth = 900;
+                wrappers.forEach(w => {
+                    if (w.scrollWidth + 56 > neededWidth) {
+                        neededWidth = w.scrollWidth + 56;
+                    }
+                });
+                if (wrappers.length === 0) neededWidth = 900;
+
                 element.style.width = neededWidth + 'px';
                 redrawSparklinesInElement(element);
                 await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
@@ -1617,20 +1624,15 @@ document.addEventListener('DOMContentLoaded', () => {
             let sections;
             if (activeTab === 'risco') {
                 sections = [
-                    ['section-fechariam', `pwr_risco_fechariam_ifood_${suffix}.png`],
-                    ['section-aviso', `pwr_risco_aviso_${suffix}.png`],
-                    ['section-recuperadas', `pwr_risco_recuperadas_${suffix}.png`]
+                    ['risk-view', `pwr_analise_risco_${suffix}.png`]
                 ];
             } else if (activeTab === 'mensal') {
                 sections = [
-                    ['section-adt-mensal', `pwr_adt_mensal_${suffix}.png`],
-                    ['section-extremes-mensal', `pwr_extremes_mensal_${suffix}.png`],
-                    ['section-exceptions-mensal', `pwr_service_exceptions_mensal_${suffix}.png`]
+                    ['monthly-view', `pwr_mensal_completo_${suffix}.png`]
                 ];
             } else {
                 sections = [
-                    ['section-adt', `pwr_adt_e_extremos_${suffix}.png`],
-                    ['section-exceptions', `pwr_service_exceptions_${suffix}.png`]
+                    ['capture-area', `pwr_semanal_completo_${suffix}.png`]
                 ];
             }
 

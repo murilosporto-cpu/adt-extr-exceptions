@@ -14,6 +14,7 @@ echo.
 echo [3 de 3] Publicando no GitHub (a Vercel atualiza sozinha)...
 git add -A
 git commit -m "data: atualizacao do painel (via botao)"
+timeout /t 3 /nobreak >nul
 git push origin main
 if errorlevel 1 goto erro_push
 echo.
