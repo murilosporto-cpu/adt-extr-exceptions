@@ -1,4 +1,5 @@
 @echo off
+set GIT_ASK_YESNO=false
 cd /d "%~dp0"
 echo ==========================================
 echo    ATUALIZAR PAINEL PWR (franquias e lojas)
