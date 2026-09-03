@@ -2,136 +2,136 @@
     "adt":  {
                 "acumulado":  [
                                   {
-                                      "extreme":  0.00256673511293634,
-                                      "orders":  621,
+                                      "extreme":  0.0833333333333333,
+                                      "orders":  146,
                                       "storeId":  "19504",
-                                      "adt":  19.5641342402464
+                                      "adt":  24.6742287037037
                                   },
                                   {
-                                      "extreme":  0.00851305334846765,
-                                      "orders":  545,
+                                      "extreme":  0,
+                                      "orders":  144,
                                       "storeId":  "19505",
-                                      "adt":  22.3654181044268
+                                      "adt":  23.3074836734694
                                   },
                                   {
-                                      "extreme":  0.0263279445727483,
-                                      "orders":  754,
+                                      "extreme":  0,
+                                      "orders":  0,
                                       "storeId":  "19507",
-                                      "adt":  22.8375596766744
+                                      "adt":  0
                                   },
                                   {
-                                      "extreme":  0.028898254063817,
-                                      "orders":  646,
+                                      "extreme":  0,
+                                      "orders":  86,
                                       "storeId":  "19508",
-                                      "adt":  25.4972405177604
+                                      "adt":  23.7704545454545
                                   },
                                   {
-                                      "extreme":  0.0814549180327869,
-                                      "orders":  601,
+                                      "extreme":  0.347457627118644,
+                                      "orders":  151,
                                       "storeId":  "19509",
-                                      "adt":  25.9187243852459
+                                      "adt":  35.5025423728814
                                   },
                                   {
-                                      "extreme":  0.0296875,
-                                      "orders":  619,
+                                      "extreme":  0,
+                                      "orders":  143,
                                       "storeId":  "19511",
-                                      "adt":  23.3980382291667
+                                      "adt":  23.2745314606742
                                   },
                                   {
-                                      "extreme":  0.0483749055177627,
-                                      "orders":  458,
+                                      "extreme":  0.015625,
+                                      "orders":  96,
                                       "storeId":  "19512",
-                                      "adt":  24.4973542705971
+                                      "adt":  22.6109375
                                   },
                                   {
-                                      "extreme":  0.0688575899843505,
-                                      "orders":  675,
+                                      "extreme":  0.160493827160494,
+                                      "orders":  109,
                                       "storeId":  "19515",
-                                      "adt":  25.2907929577465
+                                      "adt":  28.9796296296296
                                   },
                                   {
-                                      "extreme":  0.0317327766179541,
-                                      "orders":  951,
+                                      "extreme":  0.0132450331125828,
+                                      "orders":  245,
                                       "storeId":  "19518",
-                                      "adt":  24.1711342797495
+                                      "adt":  23.6186536423841
                                   },
                                   {
-                                      "extreme":  0.0266871165644172,
-                                      "orders":  1324,
+                                      "extreme":  0.0168539325842697,
+                                      "orders":  324,
                                       "storeId":  "19519",
-                                      "adt":  23.3912883742331
+                                      "adt":  23.6437269662921
                                   },
                                   {
-                                      "extreme":  0.020259319286872,
-                                      "orders":  387,
+                                      "extreme":  0.0487804878048781,
+                                      "orders":  60,
                                       "storeId":  "19526",
-                                      "adt":  23.8417206645057
+                                      "adt":  23.6825195121951
                                   },
                                   {
-                                      "extreme":  0.0891472868217054,
-                                      "orders":  965,
+                                      "extreme":  0.0143884892086331,
+                                      "orders":  205,
                                       "storeId":  "19560",
-                                      "adt":  24.087419250646
-                                  },
-                                  {
-                                      "extreme":  0.108433734939759,
-                                      "orders":  358,
-                                      "storeId":  "19561",
-                                      "adt":  27.8008031841652
+                                      "adt":  22.2574338129496
                                   },
                                   {
                                       "extreme":  0.1,
-                                      "orders":  464,
+                                      "orders":  84,
+                                      "storeId":  "19561",
+                                      "adt":  29.185
+                                  },
+                                  {
+                                      "extreme":  0,
+                                      "orders":  0,
                                       "storeId":  "19562",
-                                      "adt":  28.2669608823529
+                                      "adt":  0
                                   },
                                   {
-                                      "extreme":  0.0421686746987952,
-                                      "orders":  413,
+                                      "extreme":  0.134615384615385,
+                                      "orders":  79,
                                       "storeId":  "19635",
-                                      "adt":  23.9069610441767
+                                      "adt":  30.0830134615385
                                   },
                                   {
-                                      "extreme":  0.0363036303630363,
-                                      "orders":  401,
+                                      "extreme":  0,
+                                      "orders":  92,
                                       "storeId":  "19665",
-                                      "adt":  23.4655801155116
+                                      "adt":  23.108193220339
                                   },
                                   {
-                                      "extreme":  0.0153150017403411,
-                                      "orders":  792,
+                                      "extreme":  0.00709219858156028,
+                                      "orders":  175,
                                       "storeId":  "19704",
-                                      "adt":  23.2663649843369
+                                      "adt":  22.1444446808511
                                   },
                                   {
-                                      "extreme":  0.0340964442279591,
-                                      "orders":  590,
+                                      "extreme":  0,
+                                      "orders":  149,
                                       "storeId":  "19714",
-                                      "adt":  23.9300048222114
+                                      "adt":  20.246833
                                   },
                                   {
-                                      "extreme":  0.0352459016393443,
-                                      "orders":  485,
+                                      "extreme":  0,
+                                      "orders":  96,
                                       "storeId":  "19748",
-                                      "adt":  22.2986885245902
+                                      "adt":  21.28465
                                   },
                                   {
-                                      "extreme":  0.0167539267015707,
-                                      "orders":  338,
+                                      "extreme":  0,
+                                      "orders":  87,
                                       "storeId":  "19793",
-                                      "adt":  20.9533334031414
+                                      "adt":  20.0571954545455
                                   },
                                   {
-                                      "extreme":  0.00428396572827417,
-                                      "orders":  475,
+                                      "extreme":  0.0217391304347826,
+                                      "orders":  116,
                                       "storeId":  "19844",
-                                      "adt":  20.8895348837209
+                                      "adt":  25.0865945652174
                                   },
                                   {
-                                      "extreme":  0.0343324250681199,
-                                      "orders":  554,
+                                      "extreme":  0.11,
+                                      "orders":  146,
                                       "storeId":  "19894",
-                                      "adt":  24.0451498637602
+                                      "adt":  27.877166
                                   }
                               ],
                 "weeks":  {
@@ -269,18 +269,18 @@
                                                   "adt":  26.3657028915663
                                               }
                                           ],
-                              "03 a 09":  [
+                              "31 a 02":  [
                                               {
-                                                  "extreme":  0.00419287211740042,
-                                                  "orders":  648,
+                                                  "extreme":  0.0775193798449612,
+                                                  "orders":  180,
                                                   "storeId":  "19504",
-                                                  "adt":  19.0195320754717
+                                                  "adt":  24.5524550387597
                                               },
                                               {
-                                                  "extreme":  0.0103092783505155,
-                                                  "orders":  540,
+                                                  "extreme":  0,
+                                                  "orders":  186,
                                                   "storeId":  "19505",
-                                                  "adt":  22.260825
+                                                  "adt":  22.5188177419355
                                               },
                                               {
                                                   "extreme":  0,
@@ -289,118 +289,118 @@
                                                   "adt":  0
                                               },
                                               {
-                                                  "extreme":  0.0119617224880383,
-                                                  "orders":  708,
+                                                  "extreme":  0.0253164556962025,
+                                                  "orders":  150,
                                                   "storeId":  "19508",
-                                                  "adt":  25.5663074162679
+                                                  "adt":  25.4082278481013
                                               },
                                               {
-                                                  "extreme":  0.162946428571429,
-                                                  "orders":  608,
+                                                  "extreme":  0.277027027027027,
+                                                  "orders":  190,
                                                   "storeId":  "19509",
-                                                  "adt":  28.5399180803571
+                                                  "adt":  32.3674547297297
                                               },
                                               {
-                                                  "extreme":  0.00240963855421687,
-                                                  "orders":  600,
+                                                  "extreme":  0.0158730158730159,
+                                                  "orders":  193,
                                                   "storeId":  "19511",
-                                                  "adt":  21.2210843373494
+                                                  "adt":  24.2080682539683
                                               },
                                               {
-                                                  "extreme":  0.0168067226890756,
-                                                  "orders":  404,
+                                                  "extreme":  0.01,
+                                                  "orders":  142,
                                                   "storeId":  "19512",
-                                                  "adt":  24.4137949579832
+                                                  "adt":  22.024833
                                               },
                                               {
-                                                  "extreme":  0.0835030549898167,
-                                                  "orders":  671,
+                                                  "extreme":  0.112781954887218,
+                                                  "orders":  171,
                                                   "storeId":  "19515",
-                                                  "adt":  27.0603869653768
+                                                  "adt":  26.8657894736842
                                               },
                                               {
-                                                  "extreme":  0.0202578268876611,
-                                                  "orders":  928,
+                                                  "extreme":  0.01,
+                                                  "orders":  325,
                                                   "storeId":  "19518",
-                                                  "adt":  23.7427561694291
+                                                  "adt":  23.611167
                                               },
                                               {
-                                                  "extreme":  0.0544692737430168,
-                                                  "orders":  1219,
+                                                  "extreme":  0.0128755364806867,
+                                                  "orders":  411,
                                                   "storeId":  "19519",
-                                                  "adt":  24.1272347765363
+                                                  "adt":  23.130543776824
                                               },
                                               {
-                                                  "extreme":  0,
-                                                  "orders":  356,
+                                                  "extreme":  0.0317460317460317,
+                                                  "orders":  93,
                                                   "storeId":  "19526",
-                                                  "adt":  22.7333976833977
+                                                  "adt":  23.1153428571429
                                               },
                                               {
-                                                  "extreme":  0.125461254612546,
-                                                  "orders":  1045,
+                                                  "extreme":  0.03125,
+                                                  "orders":  320,
                                                   "storeId":  "19560",
-                                                  "adt":  26.9742313653137
+                                                  "adt":  22.4578125
                                               },
                                               {
-                                                  "extreme":  0.109215017064846,
-                                                  "orders":  382,
+                                                  "extreme":  0.0933333333333333,
+                                                  "orders":  115,
                                                   "storeId":  "19561",
-                                                  "adt":  27.4923778156997
+                                                  "adt":  27.4186666666667
                                               },
                                               {
-                                                  "extreme":  0.0984455958549223,
-                                                  "orders":  403,
+                                                  "extreme":  0,
+                                                  "orders":  0,
                                                   "storeId":  "19562",
-                                                  "adt":  27.1474958549223
+                                                  "adt":  0
                                               },
                                               {
-                                                  "extreme":  0.0307017543859649,
-                                                  "orders":  415,
+                                                  "extreme":  0.104477611940299,
+                                                  "orders":  104,
                                                   "storeId":  "19635",
-                                                  "adt":  21.9483184210526
+                                                  "adt":  27.9621895522388
                                               },
                                               {
-                                                  "extreme":  0.0271084337349398,
-                                                  "orders":  470,
+                                                  "extreme":  0,
+                                                  "orders":  126,
                                                   "storeId":  "19665",
-                                                  "adt":  22.5994978915663
+                                                  "adt":  22.3525653846154
                                               },
                                               {
-                                                  "extreme":  0.0275103163686382,
-                                                  "orders":  853,
+                                                  "extreme":  0.00985221674876847,
+                                                  "orders":  254,
                                                   "storeId":  "19704",
-                                                  "adt":  23.9447500687758
+                                                  "adt":  22.6190477832512
                                               },
                                               {
-                                                  "extreme":  0.0352422907488987,
-                                                  "orders":  591,
+                                                  "extreme":  0,
+                                                  "orders":  196,
                                                   "storeId":  "19714",
-                                                  "adt":  23.9121145374449
+                                                  "adt":  20.3558748201439
                                               },
                                               {
-                                                  "extreme":  0.138157894736842,
-                                                  "orders":  546,
+                                                  "extreme":  0,
+                                                  "orders":  131,
                                                   "storeId":  "19748",
-                                                  "adt":  25.9915023026316
+                                                  "adt":  21.2909090909091
                                               },
                                               {
                                                   "extreme":  0,
-                                                  "orders":  333,
+                                                  "orders":  119,
                                                   "storeId":  "19793",
-                                                  "adt":  21.9927086538462
+                                                  "adt":  20.35505
                                               },
                                               {
-                                                  "extreme":  0,
-                                                  "orders":  479,
+                                                  "extreme":  0.0173913043478261,
+                                                  "orders":  147,
                                                   "storeId":  "19844",
-                                                  "adt":  18.5747708791209
+                                                  "adt":  25.0430434782609
                                               },
                                               {
-                                                  "extreme":  0.029925187032419,
-                                                  "orders":  534,
+                                                  "extreme":  0.0983606557377049,
+                                                  "orders":  179,
                                                   "storeId":  "19894",
-                                                  "adt":  23.8315047381546
+                                                  "adt":  26.2472672131148
                                               }
                                           ],
                               "17 a 23":  [
@@ -674,10 +674,10 @@
                           }
             },
     "weeks":  [
-                  "03 a 09",
                   "10 a 16",
                   "17 a 23",
-                  "24 a 30"
+                  "24 a 30",
+                  "31 a 02"
               ],
     "monthly":  {
                     "months":  [
@@ -688,7 +688,8 @@
                                    "mai",
                                    "jun",
                                    "jul",
-                                   "ago"
+                                   "ago",
+                                   "set"
                                ],
                     "exceptions":  {
                                        "jul":  [
@@ -1938,6 +1939,162 @@
                                                        "storeId":  "19894",
                                                        "exceptionsCount":  319
                                                    }
+                                               ],
+                                       "set":  [
+                                                   {
+                                                       "totalOrders":  146,
+                                                       "delvOrders":  108,
+                                                       "exceptions":  0.203703703703704,
+                                                       "storeId":  "19504",
+                                                       "exceptionsCount":  22
+                                                   },
+                                                   {
+                                                       "totalOrders":  144,
+                                                       "delvOrders":  98,
+                                                       "exceptions":  0.0204081632653061,
+                                                       "storeId":  "19505",
+                                                       "exceptionsCount":  2
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19507",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  86,
+                                                       "delvOrders":  44,
+                                                       "exceptions":  0.113636363636364,
+                                                       "storeId":  "19508",
+                                                       "exceptionsCount":  7
+                                                   },
+                                                   {
+                                                       "totalOrders":  151,
+                                                       "delvOrders":  118,
+                                                       "exceptions":  0.23728813559322,
+                                                       "storeId":  "19509",
+                                                       "exceptionsCount":  29
+                                                   },
+                                                   {
+                                                       "totalOrders":  143,
+                                                       "delvOrders":  89,
+                                                       "exceptions":  0.146067415730337,
+                                                       "storeId":  "19511",
+                                                       "exceptionsCount":  13
+                                                   },
+                                                   {
+                                                       "totalOrders":  96,
+                                                       "delvOrders":  64,
+                                                       "exceptions":  0.078125,
+                                                       "storeId":  "19512",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  109,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19515",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  245,
+                                                       "delvOrders":  151,
+                                                       "exceptions":  0.0860927152317881,
+                                                       "storeId":  "19518",
+                                                       "exceptionsCount":  14
+                                                   },
+                                                   {
+                                                       "totalOrders":  324,
+                                                       "delvOrders":  95,
+                                                       "exceptions":  0.0421052631578947,
+                                                       "storeId":  "19519",
+                                                       "exceptionsCount":  4
+                                                   },
+                                                   {
+                                                       "totalOrders":  60,
+                                                       "delvOrders":  41,
+                                                       "exceptions":  0.121951219512195,
+                                                       "storeId":  "19526",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  205,
+                                                       "delvOrders":  60,
+                                                       "exceptions":  0.166666666666667,
+                                                       "storeId":  "19560",
+                                                       "exceptionsCount":  14
+                                                   },
+                                                   {
+                                                       "totalOrders":  84,
+                                                       "delvOrders":  50,
+                                                       "exceptions":  0.1,
+                                                       "storeId":  "19561",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  0,
+                                                       "delvOrders":  0,
+                                                       "exceptions":  0,
+                                                       "storeId":  "19562",
+                                                       "exceptionsCount":  0
+                                                   },
+                                                   {
+                                                       "totalOrders":  79,
+                                                       "delvOrders":  52,
+                                                       "exceptions":  0.134615384615385,
+                                                       "storeId":  "19635",
+                                                       "exceptionsCount":  11
+                                                   },
+                                                   {
+                                                       "totalOrders":  92,
+                                                       "delvOrders":  59,
+                                                       "exceptions":  0.0677966101694915,
+                                                       "storeId":  "19665",
+                                                       "exceptionsCount":  6
+                                                   },
+                                                   {
+                                                       "totalOrders":  175,
+                                                       "delvOrders":  141,
+                                                       "exceptions":  0.0283687943262411,
+                                                       "storeId":  "19704",
+                                                       "exceptionsCount":  5
+                                                   },
+                                                   {
+                                                       "totalOrders":  149,
+                                                       "delvOrders":  101,
+                                                       "exceptions":  0.118811881188119,
+                                                       "storeId":  "19714",
+                                                       "exceptionsCount":  13
+                                                   },
+                                                   {
+                                                       "totalOrders":  96,
+                                                       "delvOrders":  38,
+                                                       "exceptions":  0.0526315789473684,
+                                                       "storeId":  "19748",
+                                                       "exceptionsCount":  2
+                                                   },
+                                                   {
+                                                       "totalOrders":  87,
+                                                       "delvOrders":  44,
+                                                       "exceptions":  0.0681818181818182,
+                                                       "storeId":  "19793",
+                                                       "exceptionsCount":  3
+                                                   },
+                                                   {
+                                                       "totalOrders":  116,
+                                                       "delvOrders":  92,
+                                                       "exceptions":  0.0869565217391304,
+                                                       "storeId":  "19844",
+                                                       "exceptionsCount":  8
+                                                   },
+                                                   {
+                                                       "totalOrders":  146,
+                                                       "delvOrders":  100,
+                                                       "exceptions":  0.06,
+                                                       "storeId":  "19894",
+                                                       "exceptionsCount":  10
+                                                   }
                                                ]
                                    },
                     "adt":  {
@@ -3012,164 +3169,298 @@
                                                 "storeId":  "19894",
                                                 "adt":  26.9418179637215
                                             }
+                                        ],
+                                "set":  [
+                                            {
+                                                "extreme":  0.0833333333333333,
+                                                "orders":  146,
+                                                "storeId":  "19504",
+                                                "adt":  24.6742287037037
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  144,
+                                                "storeId":  "19505",
+                                                "adt":  23.3074836734694
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  0,
+                                                "storeId":  "19507",
+                                                "adt":  0
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  86,
+                                                "storeId":  "19508",
+                                                "adt":  23.7704545454545
+                                            },
+                                            {
+                                                "extreme":  0.347457627118644,
+                                                "orders":  151,
+                                                "storeId":  "19509",
+                                                "adt":  35.5025423728814
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  143,
+                                                "storeId":  "19511",
+                                                "adt":  23.2745314606742
+                                            },
+                                            {
+                                                "extreme":  0.015625,
+                                                "orders":  96,
+                                                "storeId":  "19512",
+                                                "adt":  22.6109375
+                                            },
+                                            {
+                                                "extreme":  0.160493827160494,
+                                                "orders":  109,
+                                                "storeId":  "19515",
+                                                "adt":  28.9796296296296
+                                            },
+                                            {
+                                                "extreme":  0.0132450331125828,
+                                                "orders":  245,
+                                                "storeId":  "19518",
+                                                "adt":  23.6186536423841
+                                            },
+                                            {
+                                                "extreme":  0.0168539325842697,
+                                                "orders":  324,
+                                                "storeId":  "19519",
+                                                "adt":  23.6437269662921
+                                            },
+                                            {
+                                                "extreme":  0.0487804878048781,
+                                                "orders":  60,
+                                                "storeId":  "19526",
+                                                "adt":  23.6825195121951
+                                            },
+                                            {
+                                                "extreme":  0.0143884892086331,
+                                                "orders":  205,
+                                                "storeId":  "19560",
+                                                "adt":  22.2574338129496
+                                            },
+                                            {
+                                                "extreme":  0.1,
+                                                "orders":  84,
+                                                "storeId":  "19561",
+                                                "adt":  29.185
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  0,
+                                                "storeId":  "19562",
+                                                "adt":  0
+                                            },
+                                            {
+                                                "extreme":  0.134615384615385,
+                                                "orders":  79,
+                                                "storeId":  "19635",
+                                                "adt":  30.0830134615385
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  92,
+                                                "storeId":  "19665",
+                                                "adt":  23.108193220339
+                                            },
+                                            {
+                                                "extreme":  0.00709219858156028,
+                                                "orders":  175,
+                                                "storeId":  "19704",
+                                                "adt":  22.1444446808511
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  149,
+                                                "storeId":  "19714",
+                                                "adt":  20.246833
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  96,
+                                                "storeId":  "19748",
+                                                "adt":  21.28465
+                                            },
+                                            {
+                                                "extreme":  0,
+                                                "orders":  87,
+                                                "storeId":  "19793",
+                                                "adt":  20.0571954545455
+                                            },
+                                            {
+                                                "extreme":  0.0217391304347826,
+                                                "orders":  116,
+                                                "storeId":  "19844",
+                                                "adt":  25.0865945652174
+                                            },
+                                            {
+                                                "extreme":  0.11,
+                                                "orders":  146,
+                                                "storeId":  "19894",
+                                                "adt":  27.877166
+                                            }
                                         ]
                             }
                 },
     "exceptions":  {
                        "acumulado":  [
                                          {
-                                             "totalOrders":  2751,
-                                             "delvOrders":  1895,
-                                             "exceptions":  0.0865435356200528,
+                                             "totalOrders":  146,
+                                             "delvOrders":  108,
+                                             "exceptions":  0.203703703703704,
                                              "storeId":  "19504",
-                                             "exceptionsCount":  177
-                                         },
-                                         {
-                                             "totalOrders":  2412,
-                                             "delvOrders":  1762,
-                                             "exceptions":  0.0380249716231555,
-                                             "storeId":  "19505",
-                                             "exceptionsCount":  68
-                                         },
-                                         {
-                                             "totalOrders":  2799,
-                                             "delvOrders":  2165,
-                                             "exceptions":  0.0960739030023095,
-                                             "storeId":  "19507",
-                                             "exceptionsCount":  242
-                                         },
-                                         {
-                                             "totalOrders":  2863,
-                                             "delvOrders":  1662,
-                                             "exceptions":  0.125150421179302,
-                                             "storeId":  "19508",
-                                             "exceptionsCount":  228
-                                         },
-                                         {
-                                             "totalOrders":  2661,
-                                             "delvOrders":  1952,
-                                             "exceptions":  0.163422131147541,
-                                             "storeId":  "19509",
-                                             "exceptionsCount":  327
-                                         },
-                                         {
-                                             "totalOrders":  2740,
-                                             "delvOrders":  1921,
-                                             "exceptions":  0.155648099947944,
-                                             "storeId":  "19511",
-                                             "exceptionsCount":  333
-                                         },
-                                         {
-                                             "totalOrders":  2029,
-                                             "delvOrders":  1323,
-                                             "exceptions":  0.0846560846560847,
-                                             "storeId":  "19512",
-                                             "exceptionsCount":  117
-                                         },
-                                         {
-                                             "totalOrders":  2602,
-                                             "delvOrders":  1917,
-                                             "exceptions":  0.23943661971831,
-                                             "storeId":  "19515",
-                                             "exceptionsCount":  496
-                                         },
-                                         {
-                                             "totalOrders":  4212,
-                                             "delvOrders":  2395,
-                                             "exceptions":  0.0872651356993737,
-                                             "storeId":  "19518",
-                                             "exceptionsCount":  238
-                                         },
-                                         {
-                                             "totalOrders":  5863,
-                                             "delvOrders":  3263,
-                                             "exceptions":  0.199203187250996,
-                                             "storeId":  "19519",
-                                             "exceptionsCount":  682
-                                         },
-                                         {
-                                             "totalOrders":  1713,
-                                             "delvOrders":  1234,
-                                             "exceptions":  0.0842787682333874,
-                                             "storeId":  "19526",
-                                             "exceptionsCount":  108
-                                         },
-                                         {
-                                             "totalOrders":  4135,
-                                             "delvOrders":  3096,
-                                             "exceptions":  0.45671834625323,
-                                             "storeId":  "19560",
-                                             "exceptionsCount":  1863
-                                         },
-                                         {
-                                             "totalOrders":  1587,
-                                             "delvOrders":  1163,
-                                             "exceptions":  0.0885640584694755,
-                                             "storeId":  "19561",
-                                             "exceptionsCount":  110
-                                         },
-                                         {
-                                             "totalOrders":  464,
-                                             "delvOrders":  340,
-                                             "exceptions":  0.0852941176470588,
-                                             "storeId":  "19562",
-                                             "exceptionsCount":  35
-                                         },
-                                         {
-                                             "totalOrders":  1827,
-                                             "delvOrders":  997,
-                                             "exceptions":  0.176529588766299,
-                                             "storeId":  "19635",
-                                             "exceptionsCount":  195
-                                         },
-                                         {
-                                             "totalOrders":  1778,
-                                             "delvOrders":  1212,
-                                             "exceptions":  0.0651815181518152,
-                                             "storeId":  "19665",
-                                             "exceptionsCount":  102
-                                         },
-                                         {
-                                             "totalOrders":  3509,
-                                             "delvOrders":  2874,
-                                             "exceptions":  0.058455114822547,
-                                             "storeId":  "19704",
-                                             "exceptionsCount":  177
-                                         },
-                                         {
-                                             "totalOrders":  2615,
-                                             "delvOrders":  2056,
-                                             "exceptions":  0.0948443579766537,
-                                             "storeId":  "19714",
-                                             "exceptionsCount":  237
-                                         },
-                                         {
-                                             "totalOrders":  2150,
-                                             "delvOrders":  1220,
-                                             "exceptions":  0.0188524590163934,
-                                             "storeId":  "19748",
                                              "exceptionsCount":  22
                                          },
                                          {
-                                             "totalOrders":  1496,
-                                             "delvOrders":  955,
-                                             "exceptions":  0.17696335078534,
+                                             "totalOrders":  144,
+                                             "delvOrders":  98,
+                                             "exceptions":  0.0204081632653061,
+                                             "storeId":  "19505",
+                                             "exceptionsCount":  2
+                                         },
+                                         {
+                                             "totalOrders":  0,
+                                             "delvOrders":  0,
+                                             "exceptions":  0,
+                                             "storeId":  "19507",
+                                             "exceptionsCount":  0
+                                         },
+                                         {
+                                             "totalOrders":  86,
+                                             "delvOrders":  44,
+                                             "exceptions":  0.113636363636364,
+                                             "storeId":  "19508",
+                                             "exceptionsCount":  7
+                                         },
+                                         {
+                                             "totalOrders":  151,
+                                             "delvOrders":  118,
+                                             "exceptions":  0.23728813559322,
+                                             "storeId":  "19509",
+                                             "exceptionsCount":  29
+                                         },
+                                         {
+                                             "totalOrders":  143,
+                                             "delvOrders":  89,
+                                             "exceptions":  0.146067415730337,
+                                             "storeId":  "19511",
+                                             "exceptionsCount":  13
+                                         },
+                                         {
+                                             "totalOrders":  96,
+                                             "delvOrders":  64,
+                                             "exceptions":  0.078125,
+                                             "storeId":  "19512",
+                                             "exceptionsCount":  5
+                                         },
+                                         {
+                                             "totalOrders":  109,
+                                             "delvOrders":  0,
+                                             "exceptions":  0,
+                                             "storeId":  "19515",
+                                             "exceptionsCount":  0
+                                         },
+                                         {
+                                             "totalOrders":  245,
+                                             "delvOrders":  151,
+                                             "exceptions":  0.0860927152317881,
+                                             "storeId":  "19518",
+                                             "exceptionsCount":  14
+                                         },
+                                         {
+                                             "totalOrders":  324,
+                                             "delvOrders":  95,
+                                             "exceptions":  0.0421052631578947,
+                                             "storeId":  "19519",
+                                             "exceptionsCount":  4
+                                         },
+                                         {
+                                             "totalOrders":  60,
+                                             "delvOrders":  41,
+                                             "exceptions":  0.121951219512195,
+                                             "storeId":  "19526",
+                                             "exceptionsCount":  5
+                                         },
+                                         {
+                                             "totalOrders":  205,
+                                             "delvOrders":  60,
+                                             "exceptions":  0.166666666666667,
+                                             "storeId":  "19560",
+                                             "exceptionsCount":  14
+                                         },
+                                         {
+                                             "totalOrders":  84,
+                                             "delvOrders":  50,
+                                             "exceptions":  0.1,
+                                             "storeId":  "19561",
+                                             "exceptionsCount":  5
+                                         },
+                                         {
+                                             "totalOrders":  0,
+                                             "delvOrders":  0,
+                                             "exceptions":  0,
+                                             "storeId":  "19562",
+                                             "exceptionsCount":  0
+                                         },
+                                         {
+                                             "totalOrders":  79,
+                                             "delvOrders":  52,
+                                             "exceptions":  0.134615384615385,
+                                             "storeId":  "19635",
+                                             "exceptionsCount":  11
+                                         },
+                                         {
+                                             "totalOrders":  92,
+                                             "delvOrders":  59,
+                                             "exceptions":  0.0677966101694915,
+                                             "storeId":  "19665",
+                                             "exceptionsCount":  6
+                                         },
+                                         {
+                                             "totalOrders":  175,
+                                             "delvOrders":  141,
+                                             "exceptions":  0.0283687943262411,
+                                             "storeId":  "19704",
+                                             "exceptionsCount":  5
+                                         },
+                                         {
+                                             "totalOrders":  149,
+                                             "delvOrders":  101,
+                                             "exceptions":  0.118811881188119,
+                                             "storeId":  "19714",
+                                             "exceptionsCount":  13
+                                         },
+                                         {
+                                             "totalOrders":  96,
+                                             "delvOrders":  38,
+                                             "exceptions":  0.0526315789473684,
+                                             "storeId":  "19748",
+                                             "exceptionsCount":  2
+                                         },
+                                         {
+                                             "totalOrders":  87,
+                                             "delvOrders":  44,
+                                             "exceptions":  0.0681818181818182,
                                              "storeId":  "19793",
-                                             "exceptionsCount":  191
+                                             "exceptionsCount":  3
                                          },
                                          {
-                                             "totalOrders":  2105,
-                                             "delvOrders":  1634,
-                                             "exceptions":  0.132802937576499,
+                                             "totalOrders":  116,
+                                             "delvOrders":  92,
+                                             "exceptions":  0.0869565217391304,
                                              "storeId":  "19844",
-                                             "exceptionsCount":  234
+                                             "exceptionsCount":  8
                                          },
                                          {
-                                             "totalOrders":  2455,
-                                             "delvOrders":  1836,
-                                             "exceptions":  0.213507625272331,
+                                             "totalOrders":  146,
+                                             "delvOrders":  100,
+                                             "exceptions":  0.06,
                                              "storeId":  "19894",
-                                             "exceptionsCount":  456
+                                             "exceptionsCount":  10
                                          }
                                      ],
                        "weeks":  {
@@ -3329,20 +3620,20 @@
                                                          "exceptionsCount":  90
                                                      }
                                                  ],
-                                     "03 a 09":  [
+                                     "31 a 02":  [
                                                      {
-                                                         "totalOrders":  648,
-                                                         "delvOrders":  477,
-                                                         "exceptions":  0.0754716981132075,
+                                                         "totalOrders":  180,
+                                                         "delvOrders":  129,
+                                                         "exceptions":  0.170542635658915,
                                                          "storeId":  "19504",
-                                                         "exceptionsCount":  36
+                                                         "exceptionsCount":  22
                                                      },
                                                      {
-                                                         "totalOrders":  540,
-                                                         "delvOrders":  388,
-                                                         "exceptions":  0.0618556701030928,
+                                                         "totalOrders":  186,
+                                                         "delvOrders":  124,
+                                                         "exceptions":  0.032258064516129,
                                                          "storeId":  "19505",
-                                                         "exceptionsCount":  26
+                                                         "exceptionsCount":  4
                                                      },
                                                      {
                                                          "totalOrders":  0,
@@ -3352,137 +3643,137 @@
                                                          "exceptionsCount":  0
                                                      },
                                                      {
-                                                         "totalOrders":  708,
-                                                         "delvOrders":  418,
-                                                         "exceptions":  0.138755980861244,
+                                                         "totalOrders":  150,
+                                                         "delvOrders":  79,
+                                                         "exceptions":  0.10126582278481,
                                                          "storeId":  "19508",
-                                                         "exceptionsCount":  60
+                                                         "exceptionsCount":  11
                                                      },
                                                      {
-                                                         "totalOrders":  608,
-                                                         "delvOrders":  448,
-                                                         "exceptions":  0.183035714285714,
+                                                         "totalOrders":  190,
+                                                         "delvOrders":  148,
+                                                         "exceptions":  0.25,
                                                          "storeId":  "19509",
-                                                         "exceptionsCount":  84
+                                                         "exceptionsCount":  38
                                                      },
                                                      {
-                                                         "totalOrders":  600,
-                                                         "delvOrders":  415,
-                                                         "exceptions":  0.149397590361446,
+                                                         "totalOrders":  193,
+                                                         "delvOrders":  126,
+                                                         "exceptions":  0.158730158730159,
                                                          "storeId":  "19511",
-                                                         "exceptionsCount":  70
+                                                         "exceptionsCount":  20
                                                      },
                                                      {
-                                                         "totalOrders":  404,
-                                                         "delvOrders":  238,
-                                                         "exceptions":  0.0714285714285714,
+                                                         "totalOrders":  142,
+                                                         "delvOrders":  100,
+                                                         "exceptions":  0.09,
                                                          "storeId":  "19512",
+                                                         "exceptionsCount":  9
+                                                     },
+                                                     {
+                                                         "totalOrders":  171,
+                                                         "delvOrders":  52,
+                                                         "exceptions":  0.134615384615385,
+                                                         "storeId":  "19515",
+                                                         "exceptionsCount":  7
+                                                     },
+                                                     {
+                                                         "totalOrders":  325,
+                                                         "delvOrders":  200,
+                                                         "exceptions":  0.075,
+                                                         "storeId":  "19518",
+                                                         "exceptionsCount":  16
+                                                     },
+                                                     {
+                                                         "totalOrders":  411,
+                                                         "delvOrders":  150,
+                                                         "exceptions":  0.0533333333333333,
+                                                         "storeId":  "19519",
+                                                         "exceptionsCount":  8
+                                                     },
+                                                     {
+                                                         "totalOrders":  93,
+                                                         "delvOrders":  63,
+                                                         "exceptions":  0.0952380952380952,
+                                                         "storeId":  "19526",
+                                                         "exceptionsCount":  6
+                                                     },
+                                                     {
+                                                         "totalOrders":  320,
+                                                         "delvOrders":  145,
+                                                         "exceptions":  0.324137931034483,
+                                                         "storeId":  "19560",
+                                                         "exceptionsCount":  55
+                                                     },
+                                                     {
+                                                         "totalOrders":  115,
+                                                         "delvOrders":  75,
+                                                         "exceptions":  0.146666666666667,
+                                                         "storeId":  "19561",
+                                                         "exceptionsCount":  11
+                                                     },
+                                                     {
+                                                         "totalOrders":  0,
+                                                         "delvOrders":  0,
+                                                         "exceptions":  0,
+                                                         "storeId":  "19562",
+                                                         "exceptionsCount":  0
+                                                     },
+                                                     {
+                                                         "totalOrders":  104,
+                                                         "delvOrders":  67,
+                                                         "exceptions":  0.119402985074627,
+                                                         "storeId":  "19635",
+                                                         "exceptionsCount":  12
+                                                     },
+                                                     {
+                                                         "totalOrders":  126,
+                                                         "delvOrders":  78,
+                                                         "exceptions":  0.0641025641025641,
+                                                         "storeId":  "19665",
+                                                         "exceptionsCount":  6
+                                                     },
+                                                     {
+                                                         "totalOrders":  254,
+                                                         "delvOrders":  203,
+                                                         "exceptions":  0.0295566502463054,
+                                                         "storeId":  "19704",
+                                                         "exceptionsCount":  7
+                                                     },
+                                                     {
+                                                         "totalOrders":  196,
+                                                         "delvOrders":  140,
+                                                         "exceptions":  0.114285714285714,
+                                                         "storeId":  "19714",
                                                          "exceptionsCount":  17
                                                      },
                                                      {
-                                                         "totalOrders":  671,
-                                                         "delvOrders":  111,
-                                                         "exceptions":  0.261261261261261,
-                                                         "storeId":  "19515",
-                                                         "exceptionsCount":  31
-                                                     },
-                                                     {
-                                                         "totalOrders":  928,
-                                                         "delvOrders":  543,
-                                                         "exceptions":  0.101289134438306,
-                                                         "storeId":  "19518",
-                                                         "exceptionsCount":  66
-                                                     },
-                                                     {
-                                                         "totalOrders":  1219,
-                                                         "delvOrders":  718,
-                                                         "exceptions":  0.229805013927577,
-                                                         "storeId":  "19519",
-                                                         "exceptionsCount":  176
-                                                     },
-                                                     {
-                                                         "totalOrders":  356,
-                                                         "delvOrders":  188,
-                                                         "exceptions":  0.122340425531915,
-                                                         "storeId":  "19526",
-                                                         "exceptionsCount":  23
-                                                     },
-                                                     {
-                                                         "totalOrders":  1045,
-                                                         "delvOrders":  637,
-                                                         "exceptions":  0.47723704866562,
-                                                         "storeId":  "19560",
-                                                         "exceptionsCount":  392
-                                                     },
-                                                     {
-                                                         "totalOrders":  382,
-                                                         "delvOrders":  293,
-                                                         "exceptions":  0.0750853242320819,
-                                                         "storeId":  "19561",
-                                                         "exceptionsCount":  24
-                                                     },
-                                                     {
-                                                         "totalOrders":  288,
-                                                         "delvOrders":  193,
-                                                         "exceptions":  0.124352331606218,
-                                                         "storeId":  "19562",
-                                                         "exceptionsCount":  29
-                                                     },
-                                                     {
-                                                         "totalOrders":  415,
-                                                         "delvOrders":  228,
-                                                         "exceptions":  0.166666666666667,
-                                                         "storeId":  "19635",
-                                                         "exceptionsCount":  40
-                                                     },
-                                                     {
-                                                         "totalOrders":  470,
-                                                         "delvOrders":  332,
-                                                         "exceptions":  0.0933734939759036,
-                                                         "storeId":  "19665",
-                                                         "exceptionsCount":  53
-                                                     },
-                                                     {
-                                                         "totalOrders":  853,
-                                                         "delvOrders":  727,
-                                                         "exceptions":  0.10041265474553,
-                                                         "storeId":  "19704",
-                                                         "exceptionsCount":  76
-                                                     },
-                                                     {
-                                                         "totalOrders":  591,
-                                                         "delvOrders":  454,
-                                                         "exceptions":  0.0947136563876652,
-                                                         "storeId":  "19714",
-                                                         "exceptionsCount":  50
-                                                     },
-                                                     {
-                                                         "totalOrders":  546,
-                                                         "delvOrders":  304,
-                                                         "exceptions":  0.0164473684210526,
+                                                         "totalOrders":  131,
+                                                         "delvOrders":  55,
+                                                         "exceptions":  0.0363636363636364,
                                                          "storeId":  "19748",
-                                                         "exceptionsCount":  5
+                                                         "exceptionsCount":  2
                                                      },
                                                      {
-                                                         "totalOrders":  333,
-                                                         "delvOrders":  208,
-                                                         "exceptions":  0.110576923076923,
+                                                         "totalOrders":  119,
+                                                         "delvOrders":  66,
+                                                         "exceptions":  0.106060606060606,
                                                          "storeId":  "19793",
-                                                         "exceptionsCount":  27
+                                                         "exceptionsCount":  7
                                                      },
                                                      {
-                                                         "totalOrders":  479,
-                                                         "delvOrders":  364,
-                                                         "exceptions":  0.200549450549451,
+                                                         "totalOrders":  147,
+                                                         "delvOrders":  115,
+                                                         "exceptions":  0.0956521739130435,
                                                          "storeId":  "19844",
-                                                         "exceptionsCount":  81
+                                                         "exceptionsCount":  11
                                                      },
                                                      {
-                                                         "totalOrders":  534,
-                                                         "delvOrders":  401,
-                                                         "exceptions":  0.234413965087282,
+                                                         "totalOrders":  179,
+                                                         "delvOrders":  122,
+                                                         "exceptions":  0.0901639344262295,
                                                          "storeId":  "19894",
-                                                         "exceptionsCount":  110
+                                                         "exceptionsCount":  15
                                                      }
                                                  ],
                                      "17 a 23":  [
@@ -3955,5 +4246,5 @@
                                  "franchisee":  "Domino\u0027s"
                              }
                },
-    "updatedAt":  "2026-09-02 10:04:12"
+    "updatedAt":  "2026-09-03 12:38:31"
 }
