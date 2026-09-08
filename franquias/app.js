@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Popular Consultores
         const consultants = new Set();
         Object.values(rawData.stores).forEach(store => {
-            const excludedIds = ['19680', '19707', '19733', '19792', '19964', '19967'];
+            const excludedIds = ['19680', '19707', '19733', '19792', '19964', '19967', '19736'];
             if (excludedIds.includes(store.id)) return;
             if (store.consultant) consultants.add(store.consultant.trim().toUpperCase());
         });
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const franchisees = new Set();
             Object.values(rawData.stores).forEach(store => {
                 if (!store.franchisee) return;
-                const excludedIds = ['19680', '19707', '19733', '19792', '19964', '19967'];
+                const excludedIds = ['19680', '19707', '19733', '19792', '19964', '19967', '19736'];
                 if (excludedIds.includes(store.id)) return;
                 
                 const matchesConsultant = selectedConsultant === 'all' || 
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // IDs das lojas a serem excluídas (Blumenau, Joinville, Florianópolis Centro, Juiz de Fora 2, Itaipava, Pampulha)
-        const excludedIds = ['19680', '19707', '19733', '19792', '19964', '19967'];
+        const excludedIds = ['19680', '19707', '19733', '19792', '19964', '19967', '19736'];
 
         // 1. Filtrar as lojas com base nos critérios de busca/filtros
         const filteredStoreIds = Object.keys(rawData.stores).filter(storeId => {
