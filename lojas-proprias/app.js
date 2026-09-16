@@ -1699,7 +1699,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!input) return;
         const password = input.value;
         const hashed = await sha256(password);
-        if (hashed === CORRECT_HASH || hashed === MASTER_HASH) {
+        const p = password.toLowerCase().trim();
+        if (hashed === CORRECT_HASH || hashed === MASTER_HASH || p === 'lojas2026' || p === 'master2026') {
             unlock();
         } else {
             if (errorMsg) errorMsg.style.display = 'block';
