@@ -1661,8 +1661,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // CONTROLE DE ACESSO POR SENHA (GATEKEEPER)
     // ==========================================
-    const CORRECT_HASH = '044d2fbbc4fbcaca46de0a7a579f2b5ef48e568b9c1df960f1479f883826f485'; // senha: pwr2026
-    const MASTER_HASH = '2353138e4c62f0fe72918bf785298709eaae8890d265fbe73df678954773b9f7';
+    const CORRECT_HASH = 'a7d9e3b69c2fd4189a23cb808a9482be74f23634b9bc7a7ddceba60cbda9139c'; // lojas2026
+    const MASTER_HASH = 'd4d5d4a69da1f83ec07d3e3ccb84a680177d9076f89f1ab5138be675fd73cfbd'; // master2026
 
     async function sha256(message) {
         const msgBuffer = new TextEncoder().encode(message);
