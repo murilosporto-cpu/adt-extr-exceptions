@@ -12,7 +12,7 @@ echo.
 echo [2 de 3] Gerando os dados do painel...
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0gera_dados.ps1"
 echo.
-echo [3 de 3] Publicando no GitHub (a Vercel atualiza sozinha)...
+echo [3 de 3] Publicando no GitHub (o Cloudflare atualiza sozinho)...
 git add -A
 git commit -m "data: atualizacao do painel (via botao)"
 timeout /t 3 /nobreak >nul
@@ -21,7 +21,7 @@ if errorlevel 1 goto erro_push
 echo.
 echo ==========================================
 echo    PRONTO! O link atualiza em 1-2 minutos:
-echo    https://adt-extr-exceptions-v1ok.vercel.app/
+echo    https://adt-extr-except.pages.dev/
 echo ==========================================
 echo.
 pause
