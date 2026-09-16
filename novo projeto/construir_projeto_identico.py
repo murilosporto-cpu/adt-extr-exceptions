@@ -115,41 +115,45 @@ def build_panel_data(target_corp=False):
     
     for p_name, p_days in periodos.items():
         for sid in target_ids:
-            tot_delv = 0
+            tot_total_orders = 0
+            tot_delv_orders = 0
             sum_adt_weight = 0.0
             sum_ext_weight = 0.0
             tot_exc_count = 0
-            tot_all_orders = 0
             tot_delv_exc = 0
             
             has_data = False
             for d in p_days:
                 if d in daily_store_data and sid in daily_store_data[d]:
                     row = daily_store_data[d][sid]
-                    o = row['orders']
-                    if o > 0 or row['total_orders'] > 0:
+                    tot_ord = row.get('total_orders') or row.get('orders', 0)
+                    delv_ord = row.get('delv_orders', 0)
+                    
+                    if tot_ord > 0 or delv_ord > 0:
                         has_data = True
-                    tot_delv += o
-                    sum_adt_weight += row['adt'] * o
-                    sum_ext_weight += row['extreme'] * o
+                        
+                    tot_total_orders += tot_ord
+                    tot_delv_orders += delv_ord
+                    
+                    sum_adt_weight += row['adt'] * delv_ord
+                    sum_ext_weight += row['extreme'] * delv_ord
                     tot_exc_count += row['exceptions_count']
-                    tot_all_orders += row['total_orders']
                     tot_delv_exc += row['delv_orders']
                     
             if not has_data:
                 continue
                 
-            adt_avg = (sum_adt_weight / tot_delv) if tot_delv > 0 else 0.0
-            ext_avg = (sum_ext_weight / tot_delv) if tot_delv > 0 else 0.0
+            adt_avg = (sum_adt_weight / tot_delv_orders) if tot_delv_orders > 0 else 0.0
+            ext_avg = (sum_ext_weight / tot_delv_orders) if tot_delv_orders > 0 else 0.0
             
-            exc_base = tot_delv_exc if tot_delv_exc > 0 else tot_delv
+            exc_base = tot_delv_exc if tot_delv_exc > 0 else tot_delv_orders
             exc_pct = (tot_exc_count / exc_base) if exc_base > 0 else 0.0
             
             adt_entry = {
                 'storeId': sid,
                 'adt': round(adt_avg, 2),
                 'extreme': round(ext_avg, 4),
-                'orders': tot_delv
+                'orders': tot_total_orders
             }
             
             exc_entry = {
@@ -157,7 +161,7 @@ def build_panel_data(target_corp=False):
                 'exceptions': round(exc_pct, 4),
                 'exceptionsCount': tot_exc_count,
                 'delvOrders': exc_base,
-                'totalOrders': tot_all_orders
+                'totalOrders': tot_total_orders
             }
             
             if p_name == 'acumulado':
