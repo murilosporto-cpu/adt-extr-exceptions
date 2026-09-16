@@ -21,7 +21,7 @@ if errorlevel 1 goto erro_push
 echo.
 echo ==========================================
 echo    PRONTO! O link atualiza em 1-2 minutos:
-echo    https://adt-extr-except.pages.dev/
+echo    https://adt-extr-exceptions.pages.dev/
 echo ==========================================
 echo.
 pause
