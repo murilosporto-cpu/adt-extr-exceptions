@@ -18,23 +18,46 @@ USERNAME = cfg['PWR_USER']
 PASSWORD = '!!dominos@2026!!'
 PWR_URL = cfg['PWR_URL']
 
-# Datas prioritárias para varredura de subida tardia
-SWEEP_DATES = [
-    "2026-09-13",  # 46 lojas faltando domingo
-    "2026-09-12",  # 12 lojas
-    "2026-09-11",  # 9 lojas
-    "2026-09-10",  # 7 lojas
-    "2026-09-09",  # 6 lojas
-    "2026-09-08",  # 4 lojas
-    "2026-09-07",  # 5 lojas
-    "2026-09-06",  # 4 lojas
-    "2026-09-03",  # 4 lojas
-    "2026-09-02",  # 5 lojas
-    "2026-09-01",  # 4 lojas
-    "2026-08-30",  # 6 lojas
-    "2026-08-29",  # 4 lojas
-    "2026-08-23",  # 3 lojas
-]
+def get_dynamic_sweep_dates(min_date="2026-08-24"):
+    """
+    Identifica dinamicamente quais datas do painel possuem lojas ativas sem vendas
+    (pendências de subida tardia no PWR).
+    Retorna as datas ordenadas da mais recente para a mais antiga.
+    """
+    try:
+        from atualizar_painel import carregar_mapeamentos, carregar_dados_diarios, calcular_backfill
+        fran_map, corp_map = carregar_mapeamentos()
+        daily_data, _ = carregar_dados_diarios()
+        bf_fran = calcular_backfill(daily_data, fran_map)
+        bf_corp = calcular_backfill(daily_data, corp_map)
+        
+        from collections import Counter
+        date_counts = Counter()
+        for b in bf_fran + bf_corp:
+            for d in b['missingDays']:
+                if d >= min_date:
+                    date_counts[d] += 1
+                    
+        # Sempre incluir os últimos 3 dias existentes na base, pois são os mais propensos a atraso
+        all_existing_dates = sorted([d for d in daily_data.keys() if d >= min_date], reverse=True)
+        recent_days = all_existing_dates[:3]
+        
+        # Datas com pendência ordenadas da mais recente para a mais antiga
+        dates_with_missing = [d for d, cnt in sorted(date_counts.items(), key=lambda x: x[0], reverse=True) if cnt > 0]
+        
+        final_dates = []
+        for d in recent_days + dates_with_missing:
+            if d not in final_dates:
+                final_dates.append(d)
+                
+        return final_dates
+    except Exception as e:
+        print(f"[AVISO] Não foi possível calcular datas dinamicamente ({e}). Usando datas padrão.")
+        return [
+            "2026-09-17", "2026-09-16", "2026-09-15", "2026-09-14", "2026-09-13",
+            "2026-09-12", "2026-09-11", "2026-09-10", "2026-09-09", "2026-09-08"
+        ]
+
 
 def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
@@ -155,9 +178,12 @@ def go_to_service_exceptions(page):
     page.click("text='Service Exceptions'")
     time.sleep(6)
 
-def run_backfill():
+def run_backfill(target_dates=None):
+    if not target_dates:
+        target_dates = get_dynamic_sweep_dates()
+        
     log("=== INICIANDO VARREDURA DE SUBIDA TARDIA NO PWR ===")
-    log(f"Datas alvo: {len(SWEEP_DATES)} datas ({', '.join(SWEEP_DATES)})")
+    log(f"Datas alvo: {len(target_dates)} datas ({', '.join(target_dates)})")
 
     all_recovered_overall = {}
 
@@ -188,8 +214,8 @@ def run_backfill():
         log("\n--- VERIFICANDO KEYS SUMMARY ---")
         go_to_keys_summary(page)
 
-        for idx, dt_str in enumerate(SWEEP_DATES, 1):
-            log(f"[{idx}/{len(SWEEP_DATES)}] Verificando Keys Summary para {dt_str}...")
+        for idx, dt_str in enumerate(target_dates, 1):
+            log(f"[{idx}/{len(target_dates)}] Verificando Keys Summary para {dt_str}...")
             apply_custom_date(page, dt_str)
             new_file = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).new.xlsx")
             ok = export_excel(page, new_file)
@@ -202,8 +228,8 @@ def run_backfill():
         log("\n--- VERIFICANDO KEYS SERVICE EXCEPTIONS ---")
         go_to_service_exceptions(page)
 
-        for idx, dt_str in enumerate(SWEEP_DATES, 1):
-            log(f"[{idx}/{len(SWEEP_DATES)}] Verificando Service Exceptions para {dt_str}...")
+        for idx, dt_str in enumerate(target_dates, 1):
+            log(f"[{idx}/{len(target_dates)}] Verificando Service Exceptions para {dt_str}...")
             apply_custom_date(page, dt_str)
             new_file = os.path.join(OUTPUT_DIR, f"KEYS Service Exceptions - All Stores (Stores) ({dt_str}).new.xlsx")
             ok = export_excel(page, new_file)
@@ -221,7 +247,7 @@ def run_backfill():
     total_recovered_stores_count = 0
     total_recovered_orders_count = 0
 
-    for dt_str in SWEEP_DATES:
+    for dt_str in target_dates:
         old_sum_path = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).xlsx")
         new_sum_path = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).new.xlsx")
         old_exc_path = os.path.join(OUTPUT_DIR, f"KEYS Service Exceptions - All Stores (Stores) ({dt_str}).xlsx")
@@ -274,11 +300,13 @@ def run_backfill():
     if total_recovered_stores_count > 0:
         log("\nReconstruindo data.json e data.js com os novos dados...")
         import subprocess
-        subprocess.run(["python", os.path.join(BASE_DIR, "construir_projeto_identico.py")], check=True)
-        subprocess.run(["python", os.path.join(BASE_DIR, "adicionar_aba_auditoria.py")], check=True)
+        subprocess.run(["python", os.path.join(BASE_DIR, "atualizar_painel.py")], check=True)
         log("Painéis Franquias e Lojas Próprias atualizados com sucesso!")
     else:
         log("Histórico já estava atualizado com os últimos dados disponíveis.")
 
 if __name__ == '__main__':
-    run_backfill()
+    # Permite passar datas específicas como argumento: python varredura_backfill_pwr.py 2026-09-15 2026-09-16
+    args = sys.argv[1:]
+    target = args if len(args) > 0 else None
+    run_backfill(target)
