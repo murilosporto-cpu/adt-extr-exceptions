@@ -1,3 +1,6 @@
 # Artefatos locais da automacao (nao vao para o site)
 _lixeira_pwr/
+_legado_backup/
+__pycache__/
+*.new.xlsx
 downloads_pendentes.json

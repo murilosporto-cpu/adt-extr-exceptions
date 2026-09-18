@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
-<body class="gate-locked">
+<body>
     <!-- Tela de Senha (Gatekeeper) -->
     <div id="password-gate" class="password-overlay">
         <div class="password-card">
@@ -39,7 +39,7 @@
             <div class="sync-status">
                 <span class="status-dot"></span>
                 <span id="sync-time">Carregando dados...</span>
-                <a href="/" class="btn-export" style="background-color: #475569; text-decoration: none; margin-right: 0.5rem; display: inline-flex; align-items: center;">Outro Painel</a>
+                <a href="../index.html" class="btn-export" style="background-color: #475569; text-decoration: none; margin-right: 0.5rem; display: inline-flex; align-items: center;">Outro Painel</a>
                 <button id="btn-export" class="btn-export">Exportar PNG</button>
             </div>
         </div>
@@ -56,6 +56,9 @@
             </button>
             <button id="tab-risco" class="tab-btn" data-tab="risco">
                 <span class="tab-icon">⚠️</span> Análise de Risco
+            </button>
+            <button id="tab-backfill" class="tab-btn" data-tab="backfill">
+                <span class="tab-icon">🔄</span> Auditoria de Subida (Dias Faltantes)
             </button>
         </nav>
         <!-- Filtros -->
@@ -290,12 +293,59 @@
             </section>
 
         </div>
+            <!-- Visão Auditoria de Subida (Dias Faltantes) -->
+        <div id="backfill-view" class="tab-content" data-view="backfill">
+            <section id="section-backfill" class="dashboard-section card">
+                <div class="section-header blue-accent">
+                    <h2>Auditoria de Subida de Vendas (Detecção de Dias Faltantes)</h2>
+                    <span class="goal-badge">28 Dias Analisados (17/08 a 13/09)</span>
+                </div>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-card" id="kpi-backfill-stores">
+                        <div class="kpi-info">
+                            <h3>Lojas com Dias Faltantes</h3>
+                            <div class="kpi-value" id="kpi-backfill-stores-val">0</div>
+                            <p class="kpi-subtitle">Vendas zeradas ou subida pendente no PWR</p>
+                        </div>
+                    </div>
+                    <div class="kpi-card" id="kpi-backfill-days">
+                        <div class="kpi-info">
+                            <h3>Total de Dias Ausentes</h3>
+                            <div class="kpi-value" id="kpi-backfill-days-val">0</div>
+                            <p class="kpi-subtitle">Dias para re-extração automática (backfill)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table id="table-backfill">
+                        <thead>
+                            <tr>
+                                <th>Loja</th>
+                                <th>Consultor / Coordenador</th>
+                                <th>Franqueado</th>
+                                <th class="text-center">Dias sem Vendas</th>
+                                <th>Datas Faltantes Detectadas</th>
+                                <th class="text-center">Ação Recomendada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6" class="text-center">Carregando dados de auditoria...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="app-footer">
         <p>Desenvolvido para análise de franqueados Domino's Pizza Brasil. Dados originados de pwr.dominos.com</p>
     </footer>
 
-    <script src="app.js?v=20260916b"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
