@@ -1787,4 +1787,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         tbody.innerHTML = html;
     }
+
+    // ==========================================
+    // CONTROLE DE ACESSO POR SENHA (GATEKEEPER)
+    // ==========================================
+    const CORRECT_HASH = 'a7d9e3b69c2fd4189a23cb808a9482be74f23634b9bc7a7ddceba60cbda9139c'; // lojas2026
+    const MASTER_HASH = 'd4d5d4a69da1f83ec07d3e3ccb84a680177d9076f89f1ab5138be675fd73cfbd'; // master2026
+
+    async function sha256(message) {
+        try {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        } catch (e) {
+            return '';
+        }
+    }
+
+    const gate = document.getElementById('password-gate');
+    const input = document.getElementById('gate-password');
+    const toggleBtn = document.getElementById('btn-toggle-password');
+    const errorMsg = document.getElementById('password-error');
+    const enterBtn = document.getElementById('btn-enter');
+
+    function unlock() {
+        if (gate) gate.classList.add('hidden');
+        document.body.classList.remove('gate-locked');
+        loadData();
+    }
+
+    if (toggleBtn && input) {
+        toggleBtn.addEventListener('click', () => {
+            if (input.type === 'password') {
+                input.type = 'text';
+                toggleBtn.textContent = '🙈';
+            } else {
+                input.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        });
+    }
+
+    async function checkPassword() {
+        if (!input) return;
+        const password = input.value;
+        const hashed = await sha256(password);
+        const p = password.toLowerCase().trim();
+        if (hashed === CORRECT_HASH || hashed === MASTER_HASH || p === 'lojas2026' || p === 'master2026') {
+            unlock();
+        } else {
+            if (errorMsg) errorMsg.style.display = 'block';
+            input.value = '';
+            input.focus();
+        }
+    }
+
+    if (enterBtn) {
+        enterBtn.addEventListener('click', checkPassword);
+    }
+    if (input) {
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+        setTimeout(() => input.focus(), 100);
+    }
 });
