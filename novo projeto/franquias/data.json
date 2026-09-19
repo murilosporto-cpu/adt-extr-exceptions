@@ -915,7 +915,7 @@
       "consultant": "MURILO",
       "name": "DOMINOS JARDIM BOTANICO",
       "id": "19693",
-      "franchisee": "Matheus Cortez"
+      "franchisee": "Ruth e Lucio"
     },
     "19843": {
       "status": "ATIVA",
@@ -1132,7 +1132,7 @@
       "consultant": "MURILO",
       "name": "DOMINOS LAGO NORTE",
       "id": "19722",
-      "franchisee": "Matheus Cortez"
+      "franchisee": "Ruth e Lucio"
     },
     "19859": {
       "status": "ATIVA",
@@ -34434,7 +34434,7 @@
       "storeId": "19693",
       "name": "DOMINOS JARDIM BOTANICO",
       "consultant": "MURILO",
-      "franchisee": "Matheus Cortez",
+      "franchisee": "Ruth e Lucio",
       "type": "F",
       "missingCount": 24,
       "missingDays": [
