@@ -1665,75 +1665,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // CONTROLE DE ACESSO POR SENHA (GATEKEEPER)
-    // ==========================================
-    const CORRECT_HASH = '7ebd1663e4df7330f22f8c194f287da6f3bf388b55e54300205ce50540bf4cc0';
-    const MASTER_HASH = '2353138e4c62f0fe72918bf785298709eaae8890d265fbe73df678954773b9f7';
-
-    async function sha256(message) {
-        const msgBuffer = new TextEncoder().encode(message);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    }
-
-    const gate = document.getElementById('password-gate');
-    const input = document.getElementById('gate-password');
-    const toggleBtn = document.getElementById('btn-toggle-password');
-    const errorMsg = document.getElementById('password-error');
-    const enterBtn = document.getElementById('btn-enter');
-
-    function unlock() {
-        if (gate) gate.classList.add('hidden');
-        document.body.classList.remove('gate-locked');
-        loadData();
-    }
-
-    if (toggleBtn && input) {
-        toggleBtn.addEventListener('click', () => {
-            if (input.type === 'password') {
-                input.type = 'text';
-                toggleBtn.textContent = '🙈';
-            } else {
-                input.type = 'password';
-                toggleBtn.textContent = '👁️';
-            }
-        });
-    }
-
-    async function checkPassword() {
-        if (!input) return;
-        const password = input.value;
-        const hashed = await sha256(password);
-        if (true || hashed === CORRECT_HASH || hashed === MASTER_HASH) {
-            unlock();
-        } else {
-            if (errorMsg) errorMsg.style.display = 'block';
-            input.value = '';
-            input.focus();
-        }
-    }
-
-    if (enterBtn) {
-        enterBtn.addEventListener('click', checkPassword);
-    }
-    if (input) {
-        input.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                checkPassword();
-            }
-        });
-    }
-
-    // Sempre exige senha ao carregar ou recarregar a página
-    if (input) {
-        // Pequeno delay para garantir o foco após renderização
-        unlock();
-        setTimeout(() => input.focus(), 100);
-    }
-
-
     // =============================================================
     // RENDERIZAÇÃO DA ABA AUDITORIA DE SUBIDA (DIAS FALTANTES)
     // =============================================================
@@ -1786,5 +1717,72 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         });
         tbody.innerHTML = html;
+    }
+
+    // ==========================================
+    // CONTROLE DE ACESSO POR SENHA (GATEKEEPER)
+    // ==========================================
+    const CORRECT_HASH = '25bdc5ac6a2864c9d0d739212fb889887744930e977d733029399ea5546b5f39'; // franquias2026
+    const MASTER_HASH = 'd4d5d4a69da1f83ec07d3e3ccb84a680177d9076f89f1ab5138be675fd73cfbd'; // master2026
+
+    async function sha256(message) {
+        try {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        } catch (e) {
+            return '';
+        }
+    }
+
+    const gate = document.getElementById('password-gate');
+    const input = document.getElementById('gate-password');
+    const toggleBtn = document.getElementById('btn-toggle-password');
+    const errorMsg = document.getElementById('password-error');
+    const enterBtn = document.getElementById('btn-enter');
+
+    function unlock() {
+        if (gate) gate.classList.add('hidden');
+        document.body.classList.remove('gate-locked');
+        loadData();
+    }
+
+    if (toggleBtn && input) {
+        toggleBtn.addEventListener('click', () => {
+            if (input.type === 'password') {
+                input.type = 'text';
+                toggleBtn.textContent = '🙈';
+            } else {
+                input.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        });
+    }
+
+    async function checkPassword() {
+        if (!input) return;
+        const password = input.value;
+        const hashed = await sha256(password);
+        const p = password.toLowerCase().trim();
+        if (hashed === CORRECT_HASH || hashed === MASTER_HASH || p === 'franquias2026' || p === 'master2026') {
+            unlock();
+        } else {
+            if (errorMsg) errorMsg.style.display = 'block';
+            input.value = '';
+            input.focus();
+        }
+    }
+
+    if (enterBtn) {
+        enterBtn.addEventListener('click', checkPassword);
+    }
+    if (input) {
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+        setTimeout(() => input.focus(), 100);
     }
 });
