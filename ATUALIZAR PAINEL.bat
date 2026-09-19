@@ -38,5 +38,13 @@ echo    PRONTO! O link atualiza no ar em 1-2 minutos:
 echo    https://adt-extr-exceptions.pages.dev/
 echo ============================================================
 echo.
+set /p ENVIAR_WPP="Deseja exportar tabelas MURILO e preparar rascunho no WhatsApp? (S/N) [padrao: S]: "
+if /i "%ENVIAR_WPP%"=="N" goto fim
+
+echo.
+python enviar_rascunho_whatsapp.py
+
+:fim
+echo.
 pause
 exit /b 0
