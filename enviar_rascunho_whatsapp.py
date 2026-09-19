@@ -259,23 +259,29 @@ def focus_whatsapp():
     u = ctypes.windll.user32
     k32 = ctypes.windll.kernel32
     
+    # Alt key trick to bypass Windows SetForegroundWindow restrictions
+    u.keybd_event(0x12, 0, 0, 0)
     u.ShowWindow(hwnd, win32con.SW_RESTORE)
-    time.sleep(0.3)
-    
-    cur_thread = k32.GetCurrentThreadId()
-    fore_hwnd = u.GetForegroundWindow()
-    fore_thread = u.GetWindowThreadProcessId(fore_hwnd, None)
-    target_thread = u.GetWindowThreadProcessId(hwnd, None)
-    
-    u.AttachThreadInput(cur_thread, fore_thread, True)
-    u.AttachThreadInput(cur_thread, target_thread, True)
-    
     u.BringWindowToTop(hwnd)
     u.SetForegroundWindow(hwnd)
-    
-    u.AttachThreadInput(cur_thread, fore_thread, False)
-    u.AttachThreadInput(cur_thread, target_thread, False)
+    u.keybd_event(0x12, 0, 2, 0)
     time.sleep(0.4)
+    
+    # Se ainda não for o foreground, tenta via AttachThreadInput
+    if u.GetForegroundWindow() != hwnd:
+        cur_thread = k32.GetCurrentThreadId()
+        fore_hwnd = u.GetForegroundWindow()
+        fore_thread = u.GetWindowThreadProcessId(fore_hwnd, None)
+        target_thread = u.GetWindowThreadProcessId(hwnd, None)
+        
+        u.AttachThreadInput(cur_thread, fore_thread, True)
+        u.AttachThreadInput(cur_thread, target_thread, True)
+        u.BringWindowToTop(hwnd)
+        u.SetForegroundWindow(hwnd)
+        u.AttachThreadInput(cur_thread, fore_thread, False)
+        u.AttachThreadInput(cur_thread, target_thread, False)
+        time.sleep(0.4)
+        
     return hwnd
 
 def open_chat_by_search(hwnd, search_term: str):
@@ -339,16 +345,7 @@ def draft_in_whatsapp(files):
         set_clipboard_text(caption)
         press_hotkey(VK_CONTROL, VK_V)
         time.sleep(0.8)
-        print(f"   ✅ Texto colado no rascunho de '{gname}'!")
-
-    # Por fim, deixamos os 2 PNGs copiados no Clipboard do Windows (CF_HDROP)
-    if files:
-        print("\n" + "=" * 60)
-        print(" [3/3] Colocando as 2 imagens PNG no Clipboard (Área de Transferência)...")
-        print("=" * 60)
-        set_clipboard_files(files)
-        print("✅ Os 2 arquivos PNG estão copiados no Clipboard!")
-        print("💡 DICA: Nos grupos do WhatsApp, basta dar 'Ctrl + V' para anexar os dois relatórios.")
+        print(f"   ✅ Texto puro colado no rascunho de '{gname}'!")
 
     return True
 
