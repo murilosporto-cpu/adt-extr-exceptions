@@ -41,12 +41,18 @@ def get_dynamic_sweep_dates(min_date="2026-08-24"):
         # Sempre incluir os últimos 3 dias existentes na base, pois são os mais propensos a atraso
         all_existing_dates = sorted([d for d in daily_data.keys() if d >= min_date], reverse=True)
         recent_days = all_existing_dates[:3]
+
+        # Verificar se dias recentes do calendário (até ontem) estão faltando na base e incluí-los
+        from datetime import date, timedelta
+        today = date.today()
+        calendar_recent = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(1, 4)]
+        missing_calendar_days = [d for d in calendar_recent if d >= min_date and d not in daily_data]
         
         # Datas com pendência ordenadas da mais recente para a mais antiga
         dates_with_missing = [d for d, cnt in sorted(date_counts.items(), key=lambda x: x[0], reverse=True) if cnt > 0]
         
         final_dates = []
-        for d in recent_days + dates_with_missing:
+        for d in missing_calendar_days + recent_days + dates_with_missing:
             if d not in final_dates:
                 final_dates.append(d)
                 
