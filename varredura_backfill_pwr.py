@@ -262,6 +262,14 @@ def run_backfill(target_dates=None):
         if not os.path.exists(new_sum_path):
             continue
 
+        if not os.path.exists(old_sum_path):
+            os.replace(new_sum_path, old_sum_path)
+            if os.path.exists(new_exc_path):
+                os.replace(new_exc_path, old_exc_path)
+            log(f"[{dt_str}] NOVO DIA adicionado à base histórica com sucesso!")
+            total_recovered_stores_count += 1
+            continue
+
         df_old = pd.read_excel(old_sum_path)
         df_new = pd.read_excel(new_sum_path)
 
