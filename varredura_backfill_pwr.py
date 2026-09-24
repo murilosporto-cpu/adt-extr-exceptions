@@ -3,6 +3,7 @@ import sys
 import time
 import json
 import re
+import glob
 from datetime import datetime
 import pandas as pd
 from playwright.sync_api import sync_playwright
@@ -184,143 +185,196 @@ def go_to_service_exceptions(page):
     page.click("text='Service Exceptions'")
     time.sleep(6)
 
+def reconciliar_arquivos_novos():
+    """
+    Varre todos os arquivos .new.xlsx em OUTPUT_DIR e os compara com os oficiais (.xlsx).
+    Se trouxer pedidos novos/lojas recuperadas ou se for um dia novo valido, substitui o oficial.
+    Se nao trouxer nada novo (ou se o dia tiver 0 pedidos no total), descarta o .new.xlsx.
+    Retorna a contagem de lojas recuperadas e pedidos recuperados.
+    """
+    log("\n--- RECONCILIANDO ARQUIVOS (.new.xlsx) ---")
+    files_new = glob.glob(os.path.join(OUTPUT_DIR, "* (*).new.xlsx"))
+    if not files_new:
+        log("Nenhum arquivo .new.xlsx pendente de reconciliacao.")
+        return 0, 0
+        
+    dates_found = set()
+    for f in files_new:
+        m = re.search(r'\((\d{4}-\d{2}-\d{2})\)\.new\.xlsx$', f)
+        if m:
+            dates_found.add(m.group(1))
+            
+    dates_sorted = sorted(list(dates_found))
+    log(f"Encontradas {len(dates_sorted)} datas com arquivos temporarios: {', '.join(dates_sorted)}")
+    
+    total_recovered_stores_count = 0
+    total_recovered_orders_count = 0
+    
+    for dt_str in dates_sorted:
+        old_sum_path = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).xlsx")
+        new_sum_path = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).new.xlsx")
+        old_exc_path = os.path.join(OUTPUT_DIR, f"KEYS Service Exceptions - All Stores (Stores) ({dt_str}).xlsx")
+        new_exc_path = os.path.join(OUTPUT_DIR, f"KEYS Service Exceptions - All Stores (Stores) ({dt_str}).new.xlsx")
+        
+        if not os.path.exists(new_sum_path):
+            continue
+            
+        try:
+            df_new = pd.read_excel(new_sum_path)
+            if 'Store' not in df_new.columns or 'Order Count' not in df_new.columns:
+                log(f"[{dt_str}] Arquivo .new.xlsx invalido ou incompleto. Descartando...")
+                if os.path.exists(new_sum_path): os.remove(new_sum_path)
+                if os.path.exists(new_exc_path): os.remove(new_exc_path)
+                continue
+                
+            tot_new_orders = df_new['Order Count'].fillna(0).sum()
+            if tot_new_orders == 0:
+                log(f"[{dt_str}] O relatorio contem 0 pedidos no total (dia ainda nao fechado no PWR). Descartando...")
+                if os.path.exists(new_sum_path): os.remove(new_sum_path)
+                if os.path.exists(new_exc_path): os.remove(new_exc_path)
+                continue
+        except Exception as e:
+            log(f"[{dt_str}] Erro ao ler .new.xlsx ({e}). Descartando...")
+            if os.path.exists(new_sum_path): os.remove(new_sum_path)
+            if os.path.exists(new_exc_path): os.remove(new_exc_path)
+            continue
+            
+        if not os.path.exists(old_sum_path):
+            os.replace(new_sum_path, old_sum_path)
+            if os.path.exists(new_exc_path):
+                os.replace(new_exc_path, old_exc_path)
+            log(f"[{dt_str}] NOVO DIA adicionado a base com sucesso ({int(tot_new_orders):,} pedidos)!")
+            total_recovered_stores_count += 1
+            continue
+            
+        try:
+            df_old = pd.read_excel(old_sum_path)
+            df_old['Store'] = df_old['Store'].astype(str).str.strip().str.zfill(5)
+            df_new['Store'] = df_new['Store'].astype(str).str.strip().str.zfill(5)
+            
+            old_orders = df_old.set_index('Store')['Order Count'].fillna(0).to_dict()
+            new_orders = df_new.set_index('Store')['Order Count'].fillna(0).to_dict()
+            
+            date_recovered = []
+            for sid, n_ord in new_orders.items():
+                if sid == '19499': continue
+                o_ord = old_orders.get(sid, 0)
+                if o_ord == 0 and n_ord > 0:
+                    date_recovered.append((sid, int(n_ord)))
+                    
+            if len(date_recovered) > 0:
+                log(f"[{dt_str}] RECUPERADAS {len(date_recovered)} LOJAS que subiram vendas:")
+                for sid, n_ord in date_recovered:
+                    log(f"   -> Loja {sid}: {n_ord} pedidos recuperados!")
+                    total_recovered_orders_count += n_ord
+                total_recovered_stores_count += len(date_recovered)
+                
+                os.replace(new_sum_path, old_sum_path)
+                if os.path.exists(new_exc_path):
+                    os.replace(new_exc_path, old_exc_path)
+                log(f"  -> Arquivos de {dt_str} atualizados na base!")
+            else:
+                log(f"[{dt_str}] Nenhuma alteracao (mesmos dados). Descartando temporario.")
+                if os.path.exists(new_sum_path): os.remove(new_sum_path)
+                if os.path.exists(new_exc_path): os.remove(new_exc_path)
+        except Exception as e:
+            log(f"[{dt_str}] Erro ao comparar ({e}). Mantendo original.")
+            if os.path.exists(new_sum_path): os.remove(new_sum_path)
+            if os.path.exists(new_exc_path): os.remove(new_exc_path)
+            
+    return total_recovered_stores_count, total_recovered_orders_count
+
 def run_backfill(target_dates=None):
+    # Reconciliar arquivos que possam ter sobrado de execucoes anteriores
+    rec_pre_stores, rec_pre_orders = reconciliar_arquivos_novos()
+    
     if not target_dates:
         target_dates = get_dynamic_sweep_dates()
         
     log("=== INICIANDO VARREDURA DE SUBIDA TARDIA NO PWR ===")
     log(f"Datas alvo: {len(target_dates)} datas ({', '.join(target_dates)})")
 
-    all_recovered_overall = {}
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(accept_downloads=True)
+            page = context.new_page()
+            page.set_viewport_size({'width': 1400, 'height': 900})
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(accept_downloads=True)
-        page = context.new_page()
-        page.set_viewport_size({'width': 1400, 'height': 900})
+            log("1. Acessando portal PWR e autenticando...")
+            page.goto(PWR_URL, timeout=60000)
+            page.fill('#txtUsername', USERNAME)
+            page.fill('#txtPassword', PASSWORD)
+            with page.expect_navigation(timeout=45000):
+                page.evaluate("""() => {
+                    const d = new Date();
+                    document.querySelector('#txtTZOffSet').value = d.getTimezoneOffset();
+                    __doPostBack('btnLogin', '');
+                }""")
+            time.sleep(4)
+            log("Login realizado com sucesso!")
 
-        log("1. Acessando portal PWR e autenticando...")
-        page.goto(PWR_URL, timeout=60000)
-        page.fill('#txtUsername', USERNAME)
-        page.fill('#txtPassword', PASSWORD)
-        with page.expect_navigation(timeout=45000):
-            page.evaluate("""() => {
-                const d = new Date();
-                document.querySelector('#txtTZOffSet').value = d.getTimezoneOffset();
-                __doPostBack('btnLogin', '');
-            }""")
-        time.sleep(4)
-        log("Login realizado com sucesso!")
+            select_scope(page, "All Stores (Stores)")
 
-        select_scope(page, "All Stores (Stores)")
+            # ---------------------------------------------------------
+            # FASE 1: KEYS SUMMARY DAS DATAS ALVO
+            # ---------------------------------------------------------
+            log("\n--- VERIFICANDO KEYS SUMMARY ---")
+            go_to_keys_summary(page)
 
-        # ---------------------------------------------------------
-        # FASE 1: KEYS SUMMARY DAS DATAS ALVO
-        # ---------------------------------------------------------
-        log("\n--- VERIFICANDO KEYS SUMMARY ---")
-        go_to_keys_summary(page)
+            for idx, dt_str in enumerate(target_dates, 1):
+                log(f"[{idx}/{len(target_dates)}] Verificando Keys Summary para {dt_str}...")
+                try:
+                    apply_custom_date(page, dt_str)
+                    new_file = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).new.xlsx")
+                    ok = export_excel(page, new_file)
+                    if not ok:
+                        log(f"  [AVISO] Falha ao exportar Keys Summary de {dt_str}")
+                except Exception as e:
+                    log(f"  [AVISO] Erro durante Keys Summary ({dt_str}): {e}")
 
-        for idx, dt_str in enumerate(target_dates, 1):
-            log(f"[{idx}/{len(target_dates)}] Verificando Keys Summary para {dt_str}...")
-            apply_custom_date(page, dt_str)
-            new_file = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).new.xlsx")
-            ok = export_excel(page, new_file)
-            if not ok:
-                log(f"  [ERRO] Falha ao exportar Keys Summary de {dt_str}")
+            # ---------------------------------------------------------
+            # FASE 2: KEYS SERVICE EXCEPTIONS DAS DATAS ALVO
+            # ---------------------------------------------------------
+            log("\n--- VERIFICANDO KEYS SERVICE EXCEPTIONS ---")
+            go_to_service_exceptions(page)
 
-        # ---------------------------------------------------------
-        # FASE 2: KEYS SERVICE EXCEPTIONS DAS DATAS ALVO
-        # ---------------------------------------------------------
-        log("\n--- VERIFICANDO KEYS SERVICE EXCEPTIONS ---")
-        go_to_service_exceptions(page)
+            for idx, dt_str in enumerate(target_dates, 1):
+                log(f"[{idx}/{len(target_dates)}] Verificando Service Exceptions para {dt_str}...")
+                try:
+                    apply_custom_date(page, dt_str)
+                    new_file = os.path.join(OUTPUT_DIR, f"KEYS Service Exceptions - All Stores (Stores) ({dt_str}).new.xlsx")
+                    ok = export_excel(page, new_file)
+                    if not ok:
+                        log(f"  [AVISO] Falha ao exportar Service Exceptions de {dt_str}")
+                except Exception as e:
+                    log(f"  [AVISO] Erro durante Service Exceptions ({dt_str}): {e}")
 
-        for idx, dt_str in enumerate(target_dates, 1):
-            log(f"[{idx}/{len(target_dates)}] Verificando Service Exceptions para {dt_str}...")
-            apply_custom_date(page, dt_str)
-            new_file = os.path.join(OUTPUT_DIR, f"KEYS Service Exceptions - All Stores (Stores) ({dt_str}).new.xlsx")
-            ok = export_excel(page, new_file)
-            if not ok:
-                log(f"  [ERRO] Falha ao exportar Service Exceptions de {dt_str}")
+            browser.close()
+            log("Navegador finalizado com sucesso.")
+    except Exception as e:
+        log(f"[AVISO BROWSER] Ocorreu uma interrupcao na navegacao web: {e}")
+    finally:
+        # FASE 3: COMPARAÇÃO E ATUALIZAÇÃO SEMPRE EXECUTA
+        rec_stores, rec_orders = reconciliar_arquivos_novos()
+        total_rec_stores = rec_pre_stores + rec_stores
+        total_rec_orders = rec_pre_orders + rec_orders
 
-        browser.close()
-        log("Navegador finalizado com sucesso.")
+        log("\n=== RESUMO GERAL DA VARREDURA ===")
+        log(f"Total de lojas que subiram vendas tardiamente: {total_rec_stores}")
+        log(f"Total de pedidos adicionais recuperados: {total_rec_orders}")
 
-    # ---------------------------------------------------------
-    # FASE 3: COMPARAÇÃO E ATUALIZAÇÃO DOS ARQUIVOS
-    # ---------------------------------------------------------
-    log("\n--- COMPARANDO DADOS E ATUALIZANDO HISTÓRICO ---")
-    
-    total_recovered_stores_count = 0
-    total_recovered_orders_count = 0
-
-    for dt_str in target_dates:
-        old_sum_path = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).xlsx")
-        new_sum_path = os.path.join(OUTPUT_DIR, f"Keys Summary - All Stores (Stores) ({dt_str}).new.xlsx")
-        old_exc_path = os.path.join(OUTPUT_DIR, f"KEYS Service Exceptions - All Stores (Stores) ({dt_str}).xlsx")
-        new_exc_path = os.path.join(OUTPUT_DIR, f"KEYS Service Exceptions - All Stores (Stores) ({dt_str}).new.xlsx")
-
-        if not os.path.exists(new_sum_path):
-            continue
-
-        if not os.path.exists(old_sum_path):
-            os.replace(new_sum_path, old_sum_path)
-            if os.path.exists(new_exc_path):
-                os.replace(new_exc_path, old_exc_path)
-            log(f"[{dt_str}] NOVO DIA adicionado à base histórica com sucesso!")
-            total_recovered_stores_count += 1
-            continue
-
-        df_old = pd.read_excel(old_sum_path)
-        df_new = pd.read_excel(new_sum_path)
-
-        df_old['Store'] = df_old['Store'].astype(str).str.strip().str.zfill(5)
-        df_new['Store'] = df_new['Store'].astype(str).str.strip().str.zfill(5)
-
-        old_orders = df_old.set_index('Store')['Order Count'].fillna(0).to_dict()
-        new_orders = df_new.set_index('Store')['Order Count'].fillna(0).to_dict()
-
-        date_recovered = []
-        for sid, n_ord in new_orders.items():
-            if sid == '19499': continue
-            o_ord = old_orders.get(sid, 0)
-            if o_ord == 0 and n_ord > 0:
-                date_recovered.append((sid, int(n_ord)))
-
-        if len(date_recovered) > 0:
-            log(f"[{dt_str}] RECUPERADAS {len(date_recovered)} LOJAS que subiram vendas:")
-            for sid, n_ord in date_recovered:
-                log(f"   -> Loja {sid}: {n_ord} pedidos recuperados!")
-                total_recovered_orders_count += n_ord
-            total_recovered_stores_count += len(date_recovered)
-            all_recovered_overall[dt_str] = date_recovered
-
-            # Substitui arquivo antigo pelo novo
-            os.replace(new_sum_path, old_sum_path)
-            if os.path.exists(new_exc_path):
-                os.replace(new_exc_path, old_exc_path)
-            log(f"  -> Arquivos de {dt_str} atualizados na base!")
+        # FASE 4: RECONSTRUÇÃO DOS PAINÉIS
+        if total_rec_stores > 0:
+            log("\nReconstruindo data.json e data.js com os novos dados...")
+            import subprocess
+            subprocess.run(["python", os.path.join(BASE_DIR, "atualizar_painel.py")], check=True)
+            log("Paineis Franquias e Lojas Proprias atualizados com sucesso!")
         else:
-            log(f"[{dt_str}] Nenhuma alteração (mesmos dados de vendas).")
-            if os.path.exists(new_sum_path): os.remove(new_sum_path)
-            if os.path.exists(new_exc_path): os.remove(new_exc_path)
-
-    log("\n=== RESUMO GERAL DA VARREDURA ===")
-    log(f"Total de lojas que subiram vendas tardiamente: {total_recovered_stores_count}")
-    log(f"Total de pedidos adicionais recuperados: {total_recovered_orders_count}")
-
-    # ---------------------------------------------------------
-    # FASE 4: RECONSTRUÇÃO DOS PAINÉIS
-    # ---------------------------------------------------------
-    if total_recovered_stores_count > 0:
-        log("\nReconstruindo data.json e data.js com os novos dados...")
-        import subprocess
-        subprocess.run(["python", os.path.join(BASE_DIR, "atualizar_painel.py")], check=True)
-        log("Painéis Franquias e Lojas Próprias atualizados com sucesso!")
-    else:
-        log("Histórico já estava atualizado com os últimos dados disponíveis.")
+            log("Historico ja estava atualizado com os ultimos dados disponiveis.")
 
 if __name__ == '__main__':
-    # Permite passar datas específicas como argumento: python varredura_backfill_pwr.py 2026-09-15 2026-09-16
+    # Permite passar datas especificas como argumento: python varredura_backfill_pwr.py 2026-09-15 2026-09-16
     args = sys.argv[1:]
     target = args if len(args) > 0 else None
     run_backfill(target)

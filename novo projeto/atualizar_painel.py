@@ -30,27 +30,52 @@ def obter_todos_os_dias():
 
 ALL_DAYS = obter_todos_os_dias()
 
-# Identificar dinamicamente os dias da semana atual (a partir de 14/09)
-current_week_days = [d for d in ALL_DAYS if '2026-09-14' <= d <= '2026-09-20']
-if current_week_days:
-    end_day_str = current_week_days[-1].split('-')[-1]
-    current_week_name = f"14 a {end_day_str}"
-else:
-    current_week_name = "14 a 20"
-    current_week_days = [f'2026-09-{d:02d}' for d in range(14, 21)]
+def calcular_periodos_e_semanas(all_days):
+    from datetime import datetime, timedelta
+    
+    # Agrupar dias por semana ISO (segunda a domingo)
+    weeks_dict = {}
+    for d_str in all_days:
+        dt = datetime.strptime(d_str, '%Y-%m-%d')
+        mon = dt - timedelta(days=dt.weekday())
+        sun = mon + timedelta(days=6)
+        mon_str = mon.strftime('%Y-%m-%d')
+        sun_str = sun.strftime('%Y-%m-%d')
+        w_key = (mon_str, sun_str)
+        weeks_dict.setdefault(w_key, []).append(d_str)
+        
+    sorted_week_keys = sorted(weeks_dict.keys())
+    # Pegar as ultimas 4 semanas
+    target_week_keys = sorted_week_keys[-4:]
+    
+    periods = {}
+    weeks_list = []
+    
+    for i, (mon_str, sun_str) in enumerate(target_week_keys):
+        days_in_week = sorted(weeks_dict[(mon_str, sun_str)])
+        mon_day = mon_str.split('-')[-1]
+        sun_day = sun_str.split('-')[-1]
+        
+        # Se for a ultima semana e ainda nao tiver 7 dias
+        is_latest = (i == len(target_week_keys) - 1)
+        if is_latest and len(days_in_week) < 7:
+            last_day = days_in_week[-1].split('-')[-1]
+            week_name = f"{mon_day} a {last_day}"
+        else:
+            week_name = f"{mon_day} a {sun_day}"
+            
+        periods[week_name] = days_in_week
+        weeks_list.append(week_name)
+        
+    # Acumulado do mes atual (ou mes mais recente na base)
+    latest_day = all_days[-1]
+    latest_month_prefix = latest_day[:7] # ex: '2026-09'
+    month_days = [d for d in all_days if d.startswith(latest_month_prefix)]
+    periods['acumulado'] = month_days
+    
+    return periods, weeks_list
 
-# Acumulado de Setembro dinamico (do dia 01 ate o dia mais recente de setembro)
-september_days = [d for d in ALL_DAYS if d.startswith('2026-09-')]
-
-PERIODS = {
-    '24 a 30': [f'2026-08-{d:02d}' for d in range(24, 31)],
-    '31 a 06': ['2026-08-31'] + [f'2026-09-{d:02d}' for d in range(1, 7)],
-    '07 a 13': [f'2026-09-{d:02d}' for d in range(7, 14)],
-    current_week_name: current_week_days,
-    'acumulado': september_days
-}
-
-WEEKS_LIST = ['24 a 30', '31 a 06', '07 a 13', current_week_name]
+PERIODS, WEEKS_LIST = calcular_periodos_e_semanas(ALL_DAYS)
 
 def carregar_mapeamentos():
     f_map_path = os.path.join(FRAN_DIR, 'stores_mapping.json')
