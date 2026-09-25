@@ -11,13 +11,25 @@ from playwright.sync_api import sync_playwright
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(BASE_DIR, 'dados_all_stores')
 
-CFG_PATH = r'c:\Users\muril\OneDrive\FRANQUIAS\master mind\pwr-automation\config.json'
-with open(CFG_PATH, 'r', encoding='utf-8') as f:
-    cfg = json.load(f)
+possible_paths = [
+    os.path.join(BASE_DIR, '..', 'pwr-automation', 'config.json'),
+    os.path.join(BASE_DIR, '..', '..', 'pwr-automation', 'config.json'),
+    os.path.join(os.path.expanduser('~'), 'Library/CloudStorage/OneDrive-Pessoal/FRANQUIAS/master mind/pwr-automation/config.json'),
+    r'c:\Users\muril\OneDrive\FRANQUIAS\master mind\pwr-automation\config.json',
+    r'c:\Users\Murilo Porto\OneDrive\FRANQUIAS\master mind\pwr-automation\config.json'
+]
+cfg = None
+for p in possible_paths:
+    if os.path.exists(p):
+        with open(p, 'r', encoding='utf-8') as f:
+            cfg = json.load(f)
+            break
+if not cfg:
+    cfg = {'PWR_USER': 'portom', 'PWR_URL': 'https://pwr.dominos.com'}
 
-USERNAME = cfg['PWR_USER']
+USERNAME = cfg.get('PWR_USER', 'portom')
 PASSWORD = '!!dominos@2026!!'
-PWR_URL = cfg['PWR_URL']
+PWR_URL = cfg.get('PWR_URL', 'https://pwr.dominos.com')
 
 def get_dynamic_sweep_dates(min_date="2026-08-24"):
     """
@@ -368,7 +380,7 @@ def run_backfill(target_dates=None):
         if total_rec_stores > 0:
             log("\nReconstruindo data.json e data.js com os novos dados...")
             import subprocess
-            subprocess.run(["python", os.path.join(BASE_DIR, "atualizar_painel.py")], check=True)
+            subprocess.run([sys.executable, os.path.join(BASE_DIR, "atualizar_painel.py")], check=True)
             log("Paineis Franquias e Lojas Proprias atualizados com sucesso!")
         else:
             log("Historico ja estava atualizado com os ultimos dados disponiveis.")
