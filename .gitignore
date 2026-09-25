@@ -1,7 +1,20 @@
-# Artefatos locais da automacao (nao vao para o site)
+﻿# Artefatos locais da automacao (nao vao para o site)
 _lixeira_pwr/
 _legado_backup/
 __pycache__/
 *.new.xlsx
 downloads_pendentes.json
+
+# Arquivos de sistema Mac
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Arquivos de sistema Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

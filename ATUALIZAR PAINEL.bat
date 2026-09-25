@@ -7,6 +7,8 @@ cd /d "%~dp0"
 echo ============================================================
 echo      ATUALIZAR PAINEL PWR (Franquias e Lojas Proprias)
 echo ============================================================
+echo Sincronizando com a nuvem (git pull)...
+git pull --rebase origin main
 echo.
 echo [1 de 2] Consolidando metricas e gerando dados dos paineis...
 python atualizar_painel.py

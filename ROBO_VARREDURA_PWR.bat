@@ -9,8 +9,9 @@ echo ============================================================
 echo.
 echo O robo ira conectar no PWR, consultar os dias pendentes
 echo e re-extrair as lojas que subiram vendas com atraso.
+echo Sincronizando com a nuvem (git pull)...
+git pull --rebase origin main
 echo.
-
 python varredura_backfill_pwr.py
 
 if %ERRORLEVEL% NEQ 0 (

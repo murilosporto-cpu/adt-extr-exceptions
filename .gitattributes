@@ -1,0 +1,20 @@
+﻿# Normalizacao de quebras de linha entre Windows e Mac
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sh text eol=lf
+*.command text eol=lf
+
+# Binarios
+*.xlsx binary
+*.xls binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+*.json text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.py text eol=lf
