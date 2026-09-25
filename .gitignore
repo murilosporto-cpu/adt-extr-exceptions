@@ -4,3 +4,4 @@ _legado_backup/
 __pycache__/
 *.new.xlsx
 downloads_pendentes.json
+.DS_Store

@@ -118,7 +118,12 @@ def carregar_dados_diarios():
         
         df_exc['tot_orders'] = df_exc['Total Order Count'].apply(to_num)
         df_exc['delv_orders'] = df_exc['Delv Order Count'].apply(to_num)
-        df_exc['exc_count'] = df_exc['Service Exceptions Count'].apply(to_num)
+        # No PWR, a métrica oficial Service Exceptions % é calculada como:
+        # (Orders with 1+ Service Exceptions) / (Delv Order Count)
+        if 'Orders with 1+ Service Exceptions' in df_exc.columns:
+            df_exc['exc_count'] = df_exc['Orders with 1+ Service Exceptions'].apply(to_num)
+        else:
+            df_exc['exc_count'] = df_exc['Service Exceptions Count'].apply(to_num)
         
         sum_dict = df_sum.set_index('sid')[['order_count', 'adt_val', 'ext_pct']].to_dict('index')
         exc_dict = df_exc.set_index('sid')[['tot_orders', 'delv_orders', 'exc_count']].to_dict('index')
