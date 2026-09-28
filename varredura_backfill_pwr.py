@@ -252,9 +252,11 @@ def reconciliar_arquivos_novos():
             continue
             
         if not os.path.exists(old_sum_path):
+            if not os.path.exists(new_exc_path):
+                log(f"[{dt_str}] Aguardando download de Service Exceptions para concluir novo dia...")
+                continue
             os.replace(new_sum_path, old_sum_path)
-            if os.path.exists(new_exc_path):
-                os.replace(new_exc_path, old_exc_path)
+            os.replace(new_exc_path, old_exc_path)
             log(f"[{dt_str}] NOVO DIA adicionado a base com sucesso ({int(tot_new_orders):,} pedidos)!")
             total_recovered_stores_count += 1
             continue
