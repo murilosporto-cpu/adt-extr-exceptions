@@ -28,7 +28,7 @@ if not cfg:
     cfg = {'PWR_USER': 'portom', 'PWR_URL': 'https://pwr.dominos.com'}
 
 USERNAME = cfg.get('PWR_USER', 'portom')
-PASSWORD = '!!dominos@2026!!'
+PASSWORD = cfg.get('PWR_PASSWORD', 'dominos@2026')
 PWR_URL = cfg.get('PWR_URL', 'https://pwr.dominos.com')
 
 def get_dynamic_sweep_dates(min_date="2026-08-24"):
@@ -58,7 +58,7 @@ def get_dynamic_sweep_dates(min_date="2026-08-24"):
         # Verificar se dias recentes do calendário (até ontem) estão faltando na base e incluí-los
         from datetime import date, timedelta
         today = date.today()
-        calendar_recent = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(1, 4)]
+        calendar_recent = [(today - timedelta(days=i)).strftime("%Y-%m-%d") for i in range(1, 8)]
         missing_calendar_days = [d for d in calendar_recent if d >= min_date and d not in daily_data]
         
         # Datas com pendência ordenadas da mais recente para a mais antiga
@@ -82,6 +82,7 @@ def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
 def select_scope(page, scope_name="All Stores (Stores)"):
+    page.wait_for_selector("#scope-selection", timeout=45000)
     current = page.locator("#scope-selection").inner_text().strip()
     if current == scope_name:
         log(f"Escopo já ativo: {scope_name}")
@@ -319,13 +320,13 @@ def run_backfill(target_dates=None):
             page.goto(PWR_URL, timeout=60000)
             page.fill('#txtUsername', USERNAME)
             page.fill('#txtPassword', PASSWORD)
-            with page.expect_navigation(timeout=45000):
-                page.evaluate("""() => {
-                    const d = new Date();
-                    document.querySelector('#txtTZOffSet').value = d.getTimezoneOffset();
-                    __doPostBack('btnLogin', '');
-                }""")
-            time.sleep(4)
+            page.evaluate("""() => {
+                const d = new Date();
+                document.querySelector('#txtTZOffSet').value = d.getTimezoneOffset();
+                __doPostBack('btnLogin', '');
+            }""")
+            page.wait_for_selector('#scope-selection', timeout=45000)
+            time.sleep(2)
             log("Login realizado com sucesso!")
 
             select_scope(page, "All Stores (Stores)")

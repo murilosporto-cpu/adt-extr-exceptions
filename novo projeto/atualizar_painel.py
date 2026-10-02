@@ -177,68 +177,66 @@ def calcular_backfill(daily_data, mapping, is_corp=False):
     missing_list.sort(key=lambda x: x['missingCount'], reverse=True)
     return missing_list
 
+def calcular_metricas_dias(target_ids, daily_data, days_list):
+    adt_entries = []
+    exc_entries = []
+    for sid in target_ids:
+        tot_total_orders = 0
+        tot_delv_orders = 0
+        sum_adt_weight = 0.0
+        sum_ext_weight = 0.0
+        tot_exc_count = 0
+        
+        has_data = False
+        for d in days_list:
+            if d in daily_data and sid in daily_data[d]:
+                row = daily_data[d][sid]
+                tot_ord = row['orders']
+                delv_ord = row['delv_orders']
+                
+                if tot_ord > 0 or delv_ord > 0:
+                    has_data = True
+                    
+                tot_total_orders += tot_ord
+                tot_delv_orders += delv_ord
+                sum_adt_weight += row['adt'] * delv_ord
+                sum_ext_weight += row['extreme'] * delv_ord
+                tot_exc_count += row['exceptions_count']
+                
+        if not has_data:
+            continue
+            
+        adt_avg = (sum_adt_weight / tot_delv_orders) if tot_delv_orders > 0 else 0.0
+        ext_avg = (sum_ext_weight / tot_delv_orders) if tot_delv_orders > 0 else 0.0
+        exc_pct = (tot_exc_count / tot_delv_orders) if tot_delv_orders > 0 else 0.0
+        
+        adt_entries.append({
+            'storeId': sid,
+            'adt': round(adt_avg, 2),
+            'extreme': round(ext_avg, 4),
+            'orders': tot_total_orders
+        })
+        exc_entries.append({
+            'storeId': sid,
+            'exceptions': round(exc_pct, 4),
+            'exceptionsCount': tot_exc_count,
+            'delvOrders': tot_delv_orders,
+            'totalOrders': tot_total_orders
+        })
+    return adt_entries, exc_entries
+
 def gerar_painel(mapping, daily_data, backfill_list, is_corp=False):
     target_ids = set(mapping.keys())
     weeks_list = WEEKS_LIST
     
-    adt_weeks = {w: [] for w in weeks_list}
-    adt_acum = []
-    exc_weeks = {w: [] for w in weeks_list}
-    exc_acum = []
-    
-    for p_name, p_days in PERIODS.items():
-        for sid in target_ids:
-            tot_total_orders = 0
-            tot_delv_orders = 0
-            sum_adt_weight = 0.0
-            sum_ext_weight = 0.0
-            tot_exc_count = 0
-            
-            has_data = False
-            for d in p_days:
-                if d in daily_data and sid in daily_data[d]:
-                    row = daily_data[d][sid]
-                    tot_ord = row['orders']
-                    delv_ord = row['delv_orders']
-                    
-                    if tot_ord > 0 or delv_ord > 0:
-                        has_data = True
-                        
-                    tot_total_orders += tot_ord
-                    tot_delv_orders += delv_ord
-                    sum_adt_weight += row['adt'] * delv_ord
-                    sum_ext_weight += row['extreme'] * delv_ord
-                    tot_exc_count += row['exceptions_count']
-                    
-            if not has_data:
-                continue
+    adt_weeks = {}
+    exc_weeks = {}
+    for w in weeks_list:
+        adt_weeks[w], exc_weeks[w] = calcular_metricas_dias(target_ids, daily_data, PERIODS.get(w, []))
+        
+    adt_acum, exc_acum = calcular_metricas_dias(target_ids, daily_data, PERIODS.get('acumulado', []))
                 
-            adt_avg = (sum_adt_weight / tot_delv_orders) if tot_delv_orders > 0 else 0.0
-            ext_avg = (sum_ext_weight / tot_delv_orders) if tot_delv_orders > 0 else 0.0
-            exc_pct = (tot_exc_count / tot_delv_orders) if tot_delv_orders > 0 else 0.0
-            
-            adt_entry = {
-                'storeId': sid,
-                'adt': round(adt_avg, 2),
-                'extreme': round(ext_avg, 4),
-                'orders': tot_total_orders
-            }
-            exc_entry = {
-                'storeId': sid,
-                'exceptions': round(exc_pct, 4),
-                'exceptionsCount': tot_exc_count,
-                'delvOrders': tot_delv_orders,
-                'totalOrders': tot_total_orders
-            }
-            
-            if p_name == 'acumulado':
-                adt_acum.append(adt_entry)
-                exc_acum.append(exc_entry)
-            else:
-                adt_weeks[p_name].append(adt_entry)
-                exc_weeks[p_name].append(exc_entry)
-                
-    # Carregar historico mensal existente (jan a ago) e atualizar com o acumulado de setembro
+    # Carregar historico mensal existente (jan a ago) e atualizar com setembro e outubro
     p_dir = CORP_DIR if is_corp else FRAN_DIR
     hist_file = os.path.join(p_dir, 'monthly_history.json')
     monthly_data = {}
@@ -248,17 +246,35 @@ def gerar_painel(mapping, daily_data, backfill_list, is_corp=False):
             
     if not monthly_data or 'months' not in monthly_data:
         monthly_data = {
-            'months': ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set'],
+            'months': ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago'],
             'adt': {},
             'exceptions': {}
         }
         
     if 'adt' not in monthly_data: monthly_data['adt'] = {}
     if 'exceptions' not in monthly_data: monthly_data['exceptions'] = {}
-    monthly_data['adt']['set'] = adt_acum
-    monthly_data['exceptions']['set'] = exc_acum
-    if 'set' not in monthly_data.get('months', []):
-        monthly_data['months'].append('set')
+    
+    # 1. Consolidar Setembro completo (01 a 30 de Setembro)
+    set_days = [d for d in ALL_DAYS if d.startswith('2026-09-')]
+    if set_days:
+        adt_set, exc_set = calcular_metricas_dias(target_ids, daily_data, set_days)
+        monthly_data['adt']['set'] = adt_set
+        monthly_data['exceptions']['set'] = exc_set
+        if 'set' not in monthly_data['months']:
+            monthly_data['months'].append('set')
+            
+    # 2. Consolidar Outubro em andamento (a partir do dia 01 de Outubro)
+    out_days = [d for d in ALL_DAYS if d.startswith('2026-10-')]
+    if out_days:
+        adt_out, exc_out = calcular_metricas_dias(target_ids, daily_data, out_days)
+        monthly_data['adt']['out'] = adt_out
+        monthly_data['exceptions']['out'] = exc_out
+        if 'out' not in monthly_data['months']:
+            monthly_data['months'].append('out')
+            
+    # Salvar historico mensal atualizado
+    with open(hist_file, 'w', encoding='utf-8') as f:
+        json.dump(monthly_data, f, ensure_ascii=False, indent=2)
     
     payload = {
         'stores': mapping,
@@ -279,7 +295,7 @@ def gerar_painel(mapping, daily_data, backfill_list, is_corp=False):
 
 def main():
     print('===========================================================')
-    print('       ATUALIZACAO DE PAINEIS - NOVO PROJETO')
+    print('       ATUALIZACAO DE PAINEIS PWR - DOMINOS PIZZA')
     print('===========================================================')
     
     print('1. Carregando mapeamentos de lojas...')
@@ -314,9 +330,9 @@ def main():
     print('')
     print('===========================================================')
     print('  [SUCESSO] PAINEIS ATUALIZADOS COM SUCESSO!')
-    print('  - Franquias:    novo projeto/franquias/index.html')
-    print('  - Lojas Proprias: novo projeto/lojas-proprias/index.html')
-    print('  - Portal Geral:  novo projeto/index.html')
+    print('  - Franquias:      franquias/index.html')
+    print('  - Lojas Proprias: lojas-proprias/index.html')
+    print('  - Portal Geral:   index.html')
     print('===========================================================')
 
 if __name__ == '__main__':

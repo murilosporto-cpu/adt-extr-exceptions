@@ -28,7 +28,7 @@ if not cfg:
     cfg = {'PWR_USER': 'portom', 'PWR_URL': 'https://pwr.dominos.com'}
 
 USERNAME = cfg.get('PWR_USER', 'portom')
-PASSWORD = '!!dominos@2026!!'
+PASSWORD = cfg.get('PWR_PASSWORD', 'dominos@2026')
 PWR_URL = cfg.get('PWR_URL', 'https://pwr.dominos.com')
 
 def get_dynamic_sweep_dates(min_date="2026-08-24"):
@@ -82,6 +82,7 @@ def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
 def select_scope(page, scope_name="All Stores (Stores)"):
+    page.wait_for_selector("#scope-selection", timeout=45000)
     current = page.locator("#scope-selection").inner_text().strip()
     if current == scope_name:
         log(f"Escopo já ativo: {scope_name}")
@@ -319,13 +320,13 @@ def run_backfill(target_dates=None):
             page.goto(PWR_URL, timeout=60000)
             page.fill('#txtUsername', USERNAME)
             page.fill('#txtPassword', PASSWORD)
-            with page.expect_navigation(timeout=45000):
-                page.evaluate("""() => {
-                    const d = new Date();
-                    document.querySelector('#txtTZOffSet').value = d.getTimezoneOffset();
-                    __doPostBack('btnLogin', '');
-                }""")
-            time.sleep(4)
+            page.evaluate("""() => {
+                const d = new Date();
+                document.querySelector('#txtTZOffSet').value = d.getTimezoneOffset();
+                __doPostBack('btnLogin', '');
+            }""")
+            page.wait_for_selector('#scope-selection', timeout=45000)
+            time.sleep(2)
             log("Login realizado com sucesso!")
 
             select_scope(page, "All Stores (Stores)")

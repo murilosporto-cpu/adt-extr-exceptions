@@ -73,20 +73,31 @@ def ensure_desktop_access():
     except Exception:
         pass
 
+MONTH_NAMES_PT = {
+    '01': 'Janeiro', '02': 'Fevereiro', '03': 'Março', '04': 'Abril',
+    '05': 'Maio', '06': 'Junho', '07': 'Julho', '08': 'Agosto',
+    '09': 'Setembro', '10': 'Outubro', '11': 'Novembro', '12': 'Dezembro'
+}
+
 def get_dynamic_period_text() -> str:
-    """Detecta o período acumulado de setembro dos dados locais para o cabeçalho do texto."""
+    """Detecta o período acumulado do mês mais recente para o cabeçalho do texto."""
     files = glob.glob(str(DADOS_DIR / "Keys Summary - All Stores (Stores) (*).xlsx"))
-    dias = []
-    for f in files:
-        part = f.split("(") [-1].split(")")[0]
-        if part.startswith("2026-09-"):
-            dias.append(part)
-    dias.sort()
-    if dias:
-        start_day = dias[0].split("-")[-1]
-        end_day = dias[-1].split("-")[-1]
-        return f"01 e {end_day} de Setembro"
-    return "01 e 18 de Setembro"
+    dias = sorted(list(set([f.split("(") [-1].split(")")[0] for f in files if "(" in f])))
+    if not dias:
+        return "01 de Outubro"
+    latest_day = dias[-1]
+    latest_month_prefix = latest_day[:7]
+    month_code = latest_day.split("-")[1]
+    month_name = MONTH_NAMES_PT.get(month_code, "Outubro")
+    
+    month_days = [d for d in dias if d.startswith(latest_month_prefix)]
+    if month_days:
+        start_day = month_days[0].split("-")[-1]
+        end_day = month_days[-1].split("-")[-1]
+        if start_day == end_day:
+            return f"Dia {start_day} de {month_name}"
+        return f"{start_day} a {end_day} de {month_name}"
+    return f"Dia 01 de {month_name}"
 
 def build_message_text() -> str:
     period = get_dynamic_period_text()
