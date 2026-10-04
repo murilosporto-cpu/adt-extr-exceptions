@@ -28,7 +28,7 @@ if not cfg:
     cfg = {'PWR_USER': 'portom', 'PWR_URL': 'https://pwr.dominos.com'}
 
 USERNAME = cfg.get('PWR_USER', 'portom')
-PASSWORD = cfg.get('PWR_PASSWORD', 'dominos@2026')
+PASSWORD = cfg.get('PWR_PASSWORD', 'Dominos@2026')
 PWR_URL = cfg.get('PWR_URL', 'https://pwr.dominos.com')
 
 def get_dynamic_sweep_dates(min_date="2026-08-24"):
