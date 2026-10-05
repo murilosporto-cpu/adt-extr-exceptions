@@ -382,7 +382,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderExceptionsTable(storesToShow);
         renderMonthly(storesToShow);
         renderRiskAnalysis(storesToShow);
-        renderBackfillTable(storesToShow);;
         renderBackfillTable(storesToShow);
     }
 
@@ -1672,16 +1671,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const tbody = document.querySelector('#table-backfill tbody');
         const kpiStoresVal = document.getElementById('kpi-backfill-stores-val');
         const kpiDaysVal = document.getElementById('kpi-backfill-days-val');
+        const kpiLatestVal = document.getElementById('kpi-backfill-latest-val');
+        const kpiLatestSub = document.getElementById('kpi-backfill-latest-sub');
+        const periodBadge = document.getElementById('backfill-period-badge');
         if (!tbody) return;
+
+        if (periodBadge && rawData.backfillPeriod) {
+            periodBadge.textContent = `${rawData.backfillPeriod.totalDays} Dias Analisados (${rawData.backfillPeriod.startFormatted} a ${rawData.backfillPeriod.endFormatted})`;
+        }
 
         const backfillList = rawData.backfill || [];
         const filtered = backfillList.filter(item => storeIds.includes(item.storeId));
 
         let totalMissingDays = 0;
-        filtered.forEach(item => { totalMissingDays += item.missingCount; });
+        let latestPendingCount = 0;
+        const latestDate = rawData.backfillPeriod ? rawData.backfillPeriod.latestDate : null;
+        const latestDateFormatted = rawData.backfillPeriod ? rawData.backfillPeriod.endFormatted : null;
+
+        filtered.forEach(item => { 
+            totalMissingDays += item.missingCount; 
+            if (latestDate && item.missingDays && item.missingDays.includes(latestDate)) {
+                latestPendingCount++;
+            }
+        });
 
         if (kpiStoresVal) kpiStoresVal.textContent = filtered.length;
         if (kpiDaysVal) kpiDaysVal.textContent = totalMissingDays;
+        if (kpiLatestVal) kpiLatestVal.textContent = latestPendingCount;
+        if (kpiLatestSub && latestDateFormatted) kpiLatestSub.textContent = `Pendências em ${latestDateFormatted}`;
 
         if (filtered.length === 0) {
             tbody.innerHTML = '<tr><td colspan="6" class="text-center" style="padding: 2rem; color: var(--success-color); font-weight: 700;">Nenhuma loja encontrada com dias faltantes nos filtros selecionados!</td></tr>';
@@ -1690,15 +1707,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let html = '';
         filtered.forEach(item => {
+            const hasLatest = latestDate && item.missingDays && item.missingDays.includes(latestDate);
             const badgeBg = item.missingCount >= 10 ? '#fee2e2' : (item.missingCount >= 5 ? '#ffedd5' : '#fef3c7');
             const badgeColor = item.missingCount >= 10 ? '#dc2626' : (item.missingCount >= 5 ? '#c2410c' : '#b45309');
             
-            const datePills = item.formattedDays.map(d => 
-                `<span style="background: #f1f5f9; color: #1e293b; padding: 2px 7px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; margin: 2px; display: inline-block; border: 1px solid #e2e8f0;">${d}</span>`
-            ).join('');
+            const datePills = item.formattedDays.map(d => {
+                const isLatest = latestDateFormatted && d === latestDateFormatted;
+                if (isLatest) {
+                    return `<span style="background: #fee2e2; color: #b91c1c; border: 1.5px solid #ef4444; padding: 2px 8px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; margin: 2px; display: inline-block;">⚠️ ${d} (Ontem)</span>`;
+                }
+                return `<span style="background: #f1f5f9; color: #1e293b; padding: 2px 7px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; margin: 2px; display: inline-block; border: 1px solid #e2e8f0;">${d}</span>`;
+            }).join('');
 
             html += `
-                <tr>
+                <tr style="${hasLatest ? 'background-color: #fffaf0;' : ''}">
                     <td><strong>${item.storeId}</strong> - ${item.name}</td>
                     <td>${item.consultant || 'N/D'}</td>
                     <td>${item.franchisee || 'N/D'}</td>
@@ -1709,8 +1731,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </td>
                     <td><div style="display: flex; flex-wrap: wrap; gap: 4px; max-width: 650px;">${datePills}</div></td>
                     <td class="text-center">
-                        <span class="badge" style="background-color: #dbeafe; color: #1e40af; font-weight: 700; padding: 5px 12px; border-radius: 8px; font-size: 0.82rem; white-space: nowrap;">
-                            🔄 Subida Pendente (Backfill)
+                        <span class="badge" style="background-color: ${hasLatest ? '#fee2e2' : '#dbeafe'}; color: ${hasLatest ? '#dc2626' : '#1e40af'}; font-weight: 700; padding: 5px 12px; border-radius: 8px; font-size: 0.82rem; white-space: nowrap;">
+                            ${hasLatest ? '🚨 Falta Ontem' : '🔄 Subida Pendente'}
                         </span>
                     </td>
                 </tr>

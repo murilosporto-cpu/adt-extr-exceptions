@@ -13,6 +13,7 @@ import os
 import glob
 import json
 import pandas as pd
+import re
 from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -289,9 +290,32 @@ def gerar_painel(mapping, daily_data, backfill_list, is_corp=False):
         },
         'monthly': monthly_data,
         'updatedAt': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        'backfill': backfill_list
+        'backfill': backfill_list,
+        'backfillPeriod': {
+            'startDate': ALL_DAYS[0],
+            'endDate': ALL_DAYS[-1],
+            'startFormatted': ALL_DAYS[0][8:10] + '/' + ALL_DAYS[0][5:7],
+            'endFormatted': ALL_DAYS[-1][8:10] + '/' + ALL_DAYS[-1][5:7],
+            'totalDays': len(ALL_DAYS),
+            'latestDate': ALL_DAYS[-1]
+        }
     }
     return payload
+
+def aplicar_cache_busting():
+    timestamp = datetime.now().strftime('%Y%m%d%H%M')
+    for html_rel in ['franquias/index.html', 'lojas-proprias/index.html', 'novo projeto/franquias/index.html', 'novo projeto/lojas-proprias/index.html']:
+        path = os.path.join(BASE_DIR, html_rel)
+        if os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                content = re.sub(r'data\.js(\?v=[^"]*)?', f'data.js?v={timestamp}', content)
+                content = re.sub(r'app\.js(\?v=[^"]*)?', f'app.js?v={timestamp}', content)
+                with open(path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+            except Exception as e:
+                print(f"Aviso ao aplicar cache busting em {html_rel}: {e}")
 
 def main():
     print('===========================================================')
@@ -326,6 +350,9 @@ def main():
         json.dump(payload_corp, f, ensure_ascii=False, indent=2)
     with open(os.path.join(CORP_DIR, 'data.js'), 'w', encoding='utf-8') as f:
         f.write('window.PWR_DATA = ' + json.dumps(payload_corp, ensure_ascii=False) + ';')
+
+    # Aplicar Cache Busting nos arquivos HTML
+    aplicar_cache_busting()
         
     print('')
     print('===========================================================')
