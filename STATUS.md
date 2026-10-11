@@ -1,22 +1,22 @@
 # STATUS DO PROJETO - DOMINO'S PIZZA (CAFÉ COM PWR)
 
 ## 📌 Último Status / Onde Parou
-- **Data/Hora**: 2026-10-10 15:50
+- **Data/Hora**: 2026-10-11 12:05
 - **O que foi feito**:
-  - Varredura de subida tardia (backfill) executada cobrindo 10 datas (30/09 a 09/10).
-  - 50 lojas que haviam subido vendas tardiamente foram recuperadas, somando 2.800 pedidos adicionais.
-  - Novos relatórios oficiais dos dias 08/10 (quinta) e 09/10 (sexta) baixados do PWR (9.224 e 15.041 pedidos).
-  - Total da base ampliado para 54 dias analisados (17/08 a 09/10).
-  - Semanas atualizadas para: 14 a 20, 21 a 27, 28 a 04 e 05 a 09 (segunda a sexta de Outubro).
-  - Mês de Outubro consolidado com os primeiros 9 dias do mês.
-  - Cache-busting automático renovado em todos os arquivos HTML.
+  - Varredura de subida tardia (backfill) executada cobrindo 10 datas (01/10 a 10/10).
+  - 30 lojas que haviam subido vendas tardiamente foram recuperadas, somando 2.030 pedidos adicionais (destaque para a sexta-feira 09/10, onde 27 lojas recuperaram subidas, incluindo Cuiabá, Jaraguá BH e Taguatinga Norte de Murilo Porto).
+  - Novo relatório oficial do dia 10/10 (sábado) baixado do portal PWR (13.346 pedidos).
+  - Total da base ampliado para 55 dias analisados (17/08 a 10/10).
+  - Semanas atualizadas para: 14 a 20, 21 a 27, 28 a 04 e 05 a 10 (segunda a sábado de Outubro).
+  - Mês de Outubro consolidado com os primeiros 10 dias do mês.
+  - Cache-busting automático atualizado para v=202610111201 em todos os arquivos HTML.
   - Arquivos sincronizados em franquias/, lojas-proprias/ e novo projeto/.
 - **Estado atual do código**:
-  - Base de dados 100% atualizada e consistente até 09/10/2026.
-  - Painéis de Franquias e Lojas Próprias prontos para visualização online.
+  - Base de dados 100% consistente e atualizada até 10/10/2026.
+  - Painéis de Franquias e Lojas Próprias prontos e validados.
 - **Qual é o próximo passo exato**:
   - Fazer commit e push para o repositório GitHub para publicação automática no Cloudflare Pages.
-  - Aguardar fechamento do final de semana (10 e 11/10) na próxima segunda-feira para fechar a semana 05 a 11.
+  - Na segunda-feira (12/10), rodar varredura para extrair o domingo (11/10) e fechar a semana completa 05 a 11.
 
 ---
 
