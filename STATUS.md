@@ -1,22 +1,23 @@
 # STATUS DO PROJETO - DOMINO'S PIZZA (CAFÉ COM PWR)
 
 ## 📌 Último Status / Onde Parou
-- **Data/Hora**: 2026-10-11 12:05
+- **Data/Hora**: 2026-10-11 12:55
 - **O que foi feito**:
-  - Varredura de subida tardia (backfill) executada cobrindo 10 datas (01/10 a 10/10).
-  - 30 lojas que haviam subido vendas tardiamente foram recuperadas, somando 2.030 pedidos adicionais (destaque para a sexta-feira 09/10, onde 27 lojas recuperaram subidas, incluindo Cuiabá, Jaraguá BH e Taguatinga Norte de Murilo Porto).
-  - Novo relatório oficial do dia 10/10 (sábado) baixado do portal PWR (13.346 pedidos).
-  - Total da base ampliado para 55 dias analisados (17/08 a 10/10).
-  - Semanas atualizadas para: 14 a 20, 21 a 27, 28 a 04 e 05 a 10 (segunda a sábado de Outubro).
-  - Mês de Outubro consolidado com os primeiros 10 dias do mês.
-  - Cache-busting automático atualizado para v=202610111201 em todos os arquivos HTML.
+  - Investigado o ponto levantado pelo usuário sobre as lojas 19602 (Campo Grande) e 19693 (Jardim Botânico) estarem com dezenas de dias faltantes na aba Auditoria desde 24/08.
+  - Identificado que o relatório consolidado do PWR do usuário abrangia o período de 24/08 a 26/09/2026, e que essas vendas foram subidas tardiamente no PWR mas nunca haviam sido re-extraídas porque as varreduras anteriores focavam apenas em Outubro.
+  - Executada varredura profunda de 34 datas no PWR cobrindo todo o intervalo de 24/08 a 26/09/2026.
+  - Recuperadas 193 lojas com subidas tardias e 11.448 pedidos adicionais resgatados na rede inteira.
+  - Para a 19602 (Campo Grande): resgatadas 33 datas com 275 pedidos (dias faltantes caíram de 47 para apenas 14).
+  - Para a 19693 (Jardim Botânico): resgatadas todas as 34 datas com 2.053 pedidos (dias faltantes caíram de 41 para apenas 14).
+  - Total de dias ausentes do consultor Murilo no card de Auditoria despencou de 98 para 38 dias.
+  - Reconstruídos data.json e data.js com métricas semanais das semanas 14 a 20 e 21 a 27 atualizadas com os novos pedidos.
   - Arquivos sincronizados em franquias/, lojas-proprias/ e novo projeto/.
 - **Estado atual do código**:
-  - Base de dados 100% consistente e atualizada até 10/10/2026.
-  - Painéis de Franquias e Lojas Próprias prontos e validados.
+  - Base de dados 100% alinhada com o portal PWR para os períodos históricos e recentes.
+  - Painel online pronto para deploy.
 - **Qual é o próximo passo exato**:
   - Fazer commit e push para o repositório GitHub para publicação automática no Cloudflare Pages.
-  - Na segunda-feira (12/10), rodar varredura para extrair o domingo (11/10) e fechar a semana completa 05 a 11.
+  - Apresentar o comparativo antes x depois ao usuário com total transparência.
 
 ---
 
