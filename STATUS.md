@@ -1,20 +1,22 @@
 # STATUS DO PROJETO - DOMINO'S PIZZA (CAFÉ COM PWR)
 
 ## 📌 Último Status / Onde Parou
-- **Data/Hora**: 2026-10-12 10:30
+- **Data/Hora**: 2026-10-13 12:20
 - **O que foi feito**:
-  - Executada varredura de subida tardia (backfill) no portal PWR cobrindo 15 datas (27/09 a 11/10/2026).
-  - Extraídos e consolidados os dados do dia **11/10/2026 (Domingo)**, completando e fechando oficialmente a semana **`05 a 11`** (7 dias completos).
-  - Resgatadas **43 lojas** que subiram vendas tardiamente e **3.897 pedidos adicionais** incorporados na base de dados (destaque para sábado 10/10 com 34 lojas recuperadas, incluindo as lojas do escopo de Murilo Porto: 19551, 19553, 19730 e 19759).
-  - A base agora possui 56 dias consolidados (17/08 a 11/10) com as 4 semanas móveis perfeitamente fechadas: `14 a 20`, `21 a 27`, `28 a 04` e `05 a 11`.
+  - Atendendo à solicitação do usuário, não foi incluído o dia 12/10 para não queimar prematuramente a semana `14 a 20` por apenas 1 dia isolado. O ciclo semanal continuou mantendo as 4 semanas consolidadas: `14 a 20`, `21 a 27`, `28 a 04` e `05 a 11` (fechada).
+  - Executada varredura profunda de subida tardia (backfill) no portal PWR em 14 datas retroativas (`28/09` a `11/10/2026`).
+  - **Resultados expressivos da varredura**:
+    - **52 lojas recuperadas** que subiram vendas tardiamente (destaque para o domingo 11/10 com 39 lojas que haviam subido tarde no PWR, além de subidas resgatadas nos dias 05, 06, 07, 08, 09 e 10/10).
+    - **4.287 pedidos adicionais resgatados e incorporados** à base de dados.
+    - As pendências de backfill em Franquias caíram para 32 lojas.
   - Reconstruídos `data.json` e `data.js` para Franquias e Lojas Próprias com atualização de cache-busting nos arquivos HTML.
   - Sincronização completa realizada para `novo projeto/`.
 - **Estado atual do código**:
-  - Base de dados 100% atualizada e reconciliada até 11/10/2026.
-  - Painéis de Franquias e Lojas Próprias prontos para deploy.
+  - Base de dados totalmente reconciliada e robusta até 11/10/2026.
+  - Painéis de Franquias e Lojas Próprias prontos e alinhados para deploy.
 - **Qual é o próximo passo exato**:
   - Realizar commit e push para o repositório GitHub (`main`) para acionar o deploy automático no Cloudflare Pages.
-  - Informar ao usuário os resultados da varredura e o fechamento da semana.
+  - Na quarta-feira (amanhã ou pós-fechamento), avançar a nova semana (`12 a 18`) removendo a primeira semana (`14 a 20`) conforme combinado.
 
 ---
 
