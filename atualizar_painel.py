@@ -264,7 +264,7 @@ def gerar_painel(mapping, daily_data, backfill_list, is_corp=False):
         if 'set' not in monthly_data['months']:
             monthly_data['months'].append('set')
             
-    # 2. Consolidar Outubro em andamento (a partir do dia 01 de Outubro)
+    # 2. Consolidar Outubro completo (01 a 31 de Outubro)
     out_days = [d for d in ALL_DAYS if d.startswith('2026-10-')]
     if out_days:
         adt_out, exc_out = calcular_metricas_dias(target_ids, daily_data, out_days)
@@ -272,6 +272,15 @@ def gerar_painel(mapping, daily_data, backfill_list, is_corp=False):
         monthly_data['exceptions']['out'] = exc_out
         if 'out' not in monthly_data['months']:
             monthly_data['months'].append('out')
+
+    # 3. Consolidar Novembro em andamento (a partir do dia 01 de Novembro)
+    nov_days = [d for d in ALL_DAYS if d.startswith('2026-11-')]
+    if nov_days:
+        adt_nov, exc_nov = calcular_metricas_dias(target_ids, daily_data, nov_days)
+        monthly_data['adt']['nov'] = adt_nov
+        monthly_data['exceptions']['nov'] = exc_nov
+        if 'nov' not in monthly_data['months']:
+            monthly_data['months'].append('nov')
             
     # Salvar historico mensal atualizado
     with open(hist_file, 'w', encoding='utf-8') as f:
