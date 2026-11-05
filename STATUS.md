@@ -1,29 +1,29 @@
 # STATUS DO PROJETO - DOMINO'S PIZZA (CAFÉ COM PWR)
 
 ## 📌 Último Status / Onde Parou
-- **Data/Hora**: 2026-11-03 11:50
+- **Data/Hora**: 2026-11-05 12:15
 - **O que foi feito**:
-  - Executada extração de 3 novos dias e varredura profunda no portal PWR cobrindo 32 datas (01/10 a 01/11/2026).
+  - Executada extração de 3 novos dias e varredura profunda no portal PWR cobrindo os dias recentes (25/10 a 04/11/2026).
   - Extraídos e incorporados 3 novos dias:
-    - **30/10 (Sexta)**: **18.486 pedidos**.
-    - **31/10 (Sábado)**: **17.037 pedidos** (fechando Outubro completo).
-    - **01/11 (Domingo)**: **18.412 pedidos** (abrindo Novembro e fechando a 4ª semana).
-    - Total de **53.935 novos pedidos** adicionados à base.
-  - Fechamento da 4ª semana (`26 a 01`):
-    - A semana `26 a 01` agora está 100% fechada com os 7 dias completos (26/10 a 01/11).
-    - As 4 semanas do painel estão todas consolidadas com 7 dias: **`05 a 11`**, **`12 a 18`**, **`19 a 25`** e **`26 a 01`**.
-  - Executado backfill retroativo de subidas tardias:
-    - **44 lojas recuperadas** que haviam subido vendas tardiamente no PWR (destaque para 29/10 com 33 lojas recuperadas, 28/10 com 4 lojas, 27/10 com 3 lojas, 26/10 com 3 lojas e 20/10 com 1 loja).
-    - **2.184 pedidos adicionais resgatados e incorporados** à base de dados.
-    - Total de dias carregados na base subiu de 74 para **77 dias consolidados** (17/08 a 01/11).
-  - Atualizado `atualizar_painel.py` para consolidar o mês de Novembro (`nov`) em `monthly_history.json`, mantendo Outubro (`out`) fechado com 31 dias.
+    - **02/11 (Segunda)**: **16.449 pedidos**.
+    - **03/11 (Terça)**: **8.582 pedidos**.
+    - **04/11 (Quarta - ontem)**: **6.697 pedidos**.
+    - Total de **31.728 novos pedidos** adicionados à base.
+  - Realizada a rotação dinâmica das 4 semanas do painel:
+    - A semana mais antiga (`05 a 11`) deu espaço para a nova semana em andamento (`02 a 04`).
+    - As 4 semanas vigentes agora são: **`12 a 18`**, **`19 a 25`**, **`26 a 01`** (todas 100% fechadas com 7 dias) e **`02 a 04`** (em andamento, seg a qua).
+  - Executado backfill retroativo profundo de subidas tardias:
+    - **53 lojas recuperadas** que haviam subido vendas tardiamente no PWR (10 lojas no domingo 01/11, 7 lojas em 31/10, 7 lojas em 30/10, 6 lojas em 29/10, 6 lojas em 28/10, 6 lojas em 27/10, 6 lojas em 26/10 e 5 lojas em 25/10).
+    - **3.575 pedidos adicionais resgatados e incorporados** à base de dados.
+    - Total de dias carregados na base subiu de 77 para **80 dias consolidados** (17/08 a 04/11).
   - Reconstruídos `data.json` e `data.js` para Franquias e Lojas Próprias com atualização de cache-busting nos arquivos HTML.
   - Sincronização completa realizada para `novo projeto/`.
 - **Estado atual do código**:
-  - Base de dados 100% atualizada e reconciliada até 01/11/2026 (fim de Outubro e encerramento da semana no domingo 01/11).
-  - Commit e push concluídos com sucesso para o branch `main` (`5b16ae1`), com deploy automático no Cloudflare Pages acionado.
+  - Base de dados 100% atualizada e reconciliada até 04/11/2026.
+  - Painéis de Franquias e Lojas Próprias atualizados e prontos para deploy.
 - **Qual é o próximo passo exato**:
-  - Aguardar fechamento dos primeiros dias de Novembro (02/11 em diante) para a próxima varredura.
+  - Realizar commit e push para o repositório GitHub (`main`) para acionar o deploy automático no Cloudflare Pages.
+  - Apresentar o resumo da atualização ao usuário.
 
 ---
 
