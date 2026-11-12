@@ -156,383 +156,153 @@
     }
   },
   "weeks": [
-    "12 a 18",
     "19 a 25",
     "26 a 01",
-    "02 a 07"
+    "02 a 08",
+    "09 a 11"
   ],
   "adt": {
     "acumulado": [
       {
-        "storeId": "19512",
-        "adt": 23.06,
-        "extreme": 0.0061,
-        "orders": 563
-      },
-      {
-        "storeId": "19748",
-        "adt": 25.31,
-        "extreme": 0.048,
-        "orders": 607
-      },
-      {
-        "storeId": "19519",
-        "adt": 21.98,
-        "extreme": 0.0164,
-        "orders": 1443
-      },
-      {
-        "storeId": "19635",
-        "adt": 22.2,
-        "extreme": 0.0038,
-        "orders": 469
-      },
-      {
         "storeId": "19844",
         "adt": 21.96,
-        "extreme": 0.0225,
-        "orders": 499
-      },
-      {
-        "storeId": "19704",
-        "adt": 26.12,
-        "extreme": 0.0941,
-        "orders": 830
-      },
-      {
-        "storeId": "19509",
-        "adt": 30.98,
-        "extreme": 0.1909,
-        "orders": 794
-      },
-      {
-        "storeId": "19561",
-        "adt": 24.98,
-        "extreme": 0.0073,
-        "orders": 376
-      },
-      {
-        "storeId": "19508",
-        "adt": 23.16,
-        "extreme": 0.0032,
-        "orders": 517
-      },
-      {
-        "storeId": "19894",
-        "adt": 28.8,
-        "extreme": 0.1453,
-        "orders": 698
-      },
-      {
-        "storeId": "19714",
-        "adt": 23.52,
-        "extreme": 0.0765,
-        "orders": 657
-      },
-      {
-        "storeId": "19720",
-        "adt": 22.08,
-        "extreme": 0.0372,
-        "orders": 340
-      },
-      {
-        "storeId": "19504",
-        "adt": 26.39,
-        "extreme": 0.0993,
-        "orders": 605
-      },
-      {
-        "storeId": "19518",
-        "adt": 25.6,
-        "extreme": 0.065,
-        "orders": 972
-      },
-      {
-        "storeId": "19562",
-        "adt": 39.07,
-        "extreme": 0.2665,
-        "orders": 501
-      },
-      {
-        "storeId": "19511",
-        "adt": 23.84,
-        "extreme": 0.0518,
-        "orders": 709
-      },
-      {
-        "storeId": "19665",
-        "adt": 25.74,
-        "extreme": 0.0738,
-        "orders": 481
+        "extreme": 0.0148,
+        "orders": 751
       },
       {
         "storeId": "19515",
-        "adt": 32.75,
-        "extreme": 0.2134,
-        "orders": 746
+        "adt": 36.7,
+        "extreme": 0.2471,
+        "orders": 1120
+      },
+      {
+        "storeId": "19509",
+        "adt": 30.01,
+        "extreme": 0.1815,
+        "orders": 1181
       },
       {
         "storeId": "19526",
-        "adt": 26.34,
-        "extreme": 0.0612,
-        "orders": 409
+        "adt": 25.85,
+        "extreme": 0.0494,
+        "orders": 610
       },
       {
-        "storeId": "19505",
-        "adt": 23.72,
-        "extreme": 0.0353,
-        "orders": 599
+        "storeId": "19720",
+        "adt": 24.86,
+        "extreme": 0.0787,
+        "orders": 504
+      },
+      {
+        "storeId": "19748",
+        "adt": 25.02,
+        "extreme": 0.0456,
+        "orders": 858
+      },
+      {
+        "storeId": "19714",
+        "adt": 23.03,
+        "extreme": 0.05,
+        "orders": 1016
+      },
+      {
+        "storeId": "19894",
+        "adt": 28.58,
+        "extreme": 0.1352,
+        "orders": 1007
+      },
+      {
+        "storeId": "19507",
+        "adt": 26.42,
+        "extreme": 0.1074,
+        "orders": 1001
+      },
+      {
+        "storeId": "19562",
+        "adt": 35.97,
+        "extreme": 0.216,
+        "orders": 701
+      },
+      {
+        "storeId": "19635",
+        "adt": 21.88,
+        "extreme": 0.0105,
+        "orders": 679
+      },
+      {
+        "storeId": "19508",
+        "adt": 24.53,
+        "extreme": 0.013,
+        "orders": 759
+      },
+      {
+        "storeId": "19504",
+        "adt": 29.01,
+        "extreme": 0.1505,
+        "orders": 859
+      },
+      {
+        "storeId": "19561",
+        "adt": 25.27,
+        "extreme": 0.012,
+        "orders": 574
+      },
+      {
+        "storeId": "19704",
+        "adt": 24.88,
+        "extreme": 0.0693,
+        "orders": 1191
+      },
+      {
+        "storeId": "19519",
+        "adt": 22.59,
+        "extreme": 0.0408,
+        "orders": 2111
       },
       {
         "storeId": "19560",
-        "adt": 34.14,
-        "extreme": 0.2685,
-        "orders": 963
+        "adt": 33.3,
+        "extreme": 0.2635,
+        "orders": 1614
+      },
+      {
+        "storeId": "19512",
+        "adt": 23.26,
+        "extreme": 0.0034,
+        "orders": 848
+      },
+      {
+        "storeId": "19511",
+        "adt": 24.98,
+        "extreme": 0.1025,
+        "orders": 1036
+      },
+      {
+        "storeId": "19518",
+        "adt": 26.11,
+        "extreme": 0.0785,
+        "orders": 1468
+      },
+      {
+        "storeId": "19665",
+        "adt": 25.96,
+        "extreme": 0.078,
+        "orders": 646
+      },
+      {
+        "storeId": "19505",
+        "adt": 27.13,
+        "extreme": 0.1183,
+        "orders": 937
       }
     ],
     "weeks": {
-      "12 a 18": [
-        {
-          "storeId": "19512",
-          "adt": 23.42,
-          "extreme": 0.0104,
-          "orders": 546
-        },
-        {
-          "storeId": "19748",
-          "adt": 23.33,
-          "extreme": 0.0,
-          "orders": 554
-        },
-        {
-          "storeId": "19519",
-          "adt": 28.74,
-          "extreme": 0.0848,
-          "orders": 1467
-        },
-        {
-          "storeId": "19635",
-          "adt": 24.08,
-          "extreme": 0.0259,
-          "orders": 421
-        },
-        {
-          "storeId": "19844",
-          "adt": 20.21,
-          "extreme": 0.0021,
-          "orders": 571
-        },
-        {
-          "storeId": "19704",
-          "adt": 23.71,
-          "extreme": 0.0203,
-          "orders": 884
-        },
-        {
-          "storeId": "19509",
-          "adt": 29.72,
-          "extreme": 0.1193,
-          "orders": 743
-        },
-        {
-          "storeId": "19561",
-          "adt": 33.04,
-          "extreme": 0.211,
-          "orders": 399
-        },
-        {
-          "storeId": "19508",
-          "adt": 27.2,
-          "extreme": 0.0912,
-          "orders": 630
-        },
-        {
-          "storeId": "19894",
-          "adt": 22.84,
-          "extreme": 0.0089,
-          "orders": 608
-        },
-        {
-          "storeId": "19714",
-          "adt": 23.88,
-          "extreme": 0.0263,
-          "orders": 630
-        },
-        {
-          "storeId": "19507",
-          "adt": 27.67,
-          "extreme": 0.1474,
-          "orders": 881
-        },
-        {
-          "storeId": "19720",
-          "adt": 25.99,
-          "extreme": 0.0945,
-          "orders": 386
-        },
-        {
-          "storeId": "19504",
-          "adt": 25.05,
-          "extreme": 0.1235,
-          "orders": 673
-        },
-        {
-          "storeId": "19518",
-          "adt": 25.13,
-          "extreme": 0.0726,
-          "orders": 1125
-        },
-        {
-          "storeId": "19562",
-          "adt": 29.4,
-          "extreme": 0.1342,
-          "orders": 473
-        },
-        {
-          "storeId": "19511",
-          "adt": 26.47,
-          "extreme": 0.1191,
-          "orders": 715
-        },
-        {
-          "storeId": "19665",
-          "adt": 25.8,
-          "extreme": 0.0712,
-          "orders": 464
-        },
-        {
-          "storeId": "19515",
-          "adt": 41.14,
-          "extreme": 0.2769,
-          "orders": 686
-        },
-        {
-          "storeId": "19526",
-          "adt": 23.55,
-          "extreme": 0.0193,
-          "orders": 513
-        },
-        {
-          "storeId": "19505",
-          "adt": 24.52,
-          "extreme": 0.0478,
-          "orders": 676
-        },
-        {
-          "storeId": "19560",
-          "adt": 31.89,
-          "extreme": 0.2013,
-          "orders": 1057
-        }
-      ],
       "19 a 25": [
-        {
-          "storeId": "19512",
-          "adt": 22.24,
-          "extreme": 0.0025,
-          "orders": 572
-        },
-        {
-          "storeId": "19748",
-          "adt": 22.36,
-          "extreme": 0.0099,
-          "orders": 565
-        },
-        {
-          "storeId": "19519",
-          "adt": 24.6,
-          "extreme": 0.0528,
-          "orders": 1522
-        },
-        {
-          "storeId": "19635",
-          "adt": 24.17,
-          "extreme": 0.0401,
-          "orders": 429
-        },
         {
           "storeId": "19844",
           "adt": 26.38,
           "extreme": 0.0979,
           "orders": 525
-        },
-        {
-          "storeId": "19704",
-          "adt": 25.25,
-          "extreme": 0.0404,
-          "orders": 803
-        },
-        {
-          "storeId": "19509",
-          "adt": 28.52,
-          "extreme": 0.192,
-          "orders": 755
-        },
-        {
-          "storeId": "19561",
-          "adt": 31.31,
-          "extreme": 0.1616,
-          "orders": 309
-        },
-        {
-          "storeId": "19508",
-          "adt": 24.85,
-          "extreme": 0.0147,
-          "orders": 563
-        },
-        {
-          "storeId": "19894",
-          "adt": 24.75,
-          "extreme": 0.0223,
-          "orders": 615
-        },
-        {
-          "storeId": "19714",
-          "adt": 25.36,
-          "extreme": 0.0891,
-          "orders": 674
-        },
-        {
-          "storeId": "19507",
-          "adt": 26.11,
-          "extreme": 0.131,
-          "orders": 818
-        },
-        {
-          "storeId": "19720",
-          "adt": 20.97,
-          "extreme": 0.02,
-          "orders": 419
-        },
-        {
-          "storeId": "19504",
-          "adt": 21.45,
-          "extreme": 0.0097,
-          "orders": 590
-        },
-        {
-          "storeId": "19518",
-          "adt": 22.46,
-          "extreme": 0.0068,
-          "orders": 1014
-        },
-        {
-          "storeId": "19562",
-          "adt": 53.34,
-          "extreme": 0.2438,
-          "orders": 413
-        },
-        {
-          "storeId": "19511",
-          "adt": 23.95,
-          "extreme": 0.0605,
-          "orders": 690
-        },
-        {
-          "storeId": "19665",
-          "adt": 23.61,
-          "extreme": 0.0034,
-          "orders": 396
         },
         {
           "storeId": "19515",
@@ -541,126 +311,132 @@
           "orders": 748
         },
         {
+          "storeId": "19509",
+          "adt": 28.52,
+          "extreme": 0.192,
+          "orders": 755
+        },
+        {
           "storeId": "19526",
           "adt": 24.16,
           "extreme": 0.0461,
           "orders": 438
         },
         {
-          "storeId": "19505",
-          "adt": 23.74,
-          "extreme": 0.0463,
-          "orders": 649
+          "storeId": "19720",
+          "adt": 20.97,
+          "extreme": 0.02,
+          "orders": 419
+        },
+        {
+          "storeId": "19748",
+          "adt": 22.36,
+          "extreme": 0.0099,
+          "orders": 565
+        },
+        {
+          "storeId": "19714",
+          "adt": 25.36,
+          "extreme": 0.0891,
+          "orders": 674
+        },
+        {
+          "storeId": "19894",
+          "adt": 24.75,
+          "extreme": 0.0223,
+          "orders": 615
+        },
+        {
+          "storeId": "19507",
+          "adt": 26.11,
+          "extreme": 0.131,
+          "orders": 818
+        },
+        {
+          "storeId": "19562",
+          "adt": 53.34,
+          "extreme": 0.2438,
+          "orders": 413
+        },
+        {
+          "storeId": "19635",
+          "adt": 24.17,
+          "extreme": 0.0401,
+          "orders": 429
+        },
+        {
+          "storeId": "19508",
+          "adt": 24.85,
+          "extreme": 0.0147,
+          "orders": 563
+        },
+        {
+          "storeId": "19504",
+          "adt": 21.45,
+          "extreme": 0.0097,
+          "orders": 590
+        },
+        {
+          "storeId": "19561",
+          "adt": 31.31,
+          "extreme": 0.1616,
+          "orders": 309
+        },
+        {
+          "storeId": "19704",
+          "adt": 25.25,
+          "extreme": 0.0404,
+          "orders": 803
+        },
+        {
+          "storeId": "19519",
+          "adt": 24.6,
+          "extreme": 0.0528,
+          "orders": 1522
         },
         {
           "storeId": "19560",
           "adt": 31.06,
           "extreme": 0.2544,
           "orders": 1067
+        },
+        {
+          "storeId": "19512",
+          "adt": 22.24,
+          "extreme": 0.0025,
+          "orders": 572
+        },
+        {
+          "storeId": "19511",
+          "adt": 23.95,
+          "extreme": 0.0605,
+          "orders": 690
+        },
+        {
+          "storeId": "19518",
+          "adt": 22.46,
+          "extreme": 0.0068,
+          "orders": 1014
+        },
+        {
+          "storeId": "19665",
+          "adt": 23.61,
+          "extreme": 0.0034,
+          "orders": 396
+        },
+        {
+          "storeId": "19505",
+          "adt": 23.74,
+          "extreme": 0.0463,
+          "orders": 649
         }
       ],
       "26 a 01": [
-        {
-          "storeId": "19512",
-          "adt": 23.22,
-          "extreme": 0.019,
-          "orders": 531
-        },
-        {
-          "storeId": "19748",
-          "adt": 23.47,
-          "extreme": 0.0199,
-          "orders": 546
-        },
-        {
-          "storeId": "19519",
-          "adt": 21.76,
-          "extreme": 0.0077,
-          "orders": 1358
-        },
-        {
-          "storeId": "19635",
-          "adt": 24.75,
-          "extreme": 0.041,
-          "orders": 401
-        },
         {
           "storeId": "19844",
           "adt": 21.31,
           "extreme": 0.0053,
           "orders": 469
-        },
-        {
-          "storeId": "19704",
-          "adt": 23.56,
-          "extreme": 0.0062,
-          "orders": 789
-        },
-        {
-          "storeId": "19509",
-          "adt": 24.77,
-          "extreme": 0.0548,
-          "orders": 768
-        },
-        {
-          "storeId": "19561",
-          "adt": 25.9,
-          "extreme": 0.0707,
-          "orders": 391
-        },
-        {
-          "storeId": "19508",
-          "adt": 25.46,
-          "extreme": 0.0669,
-          "orders": 474
-        },
-        {
-          "storeId": "19894",
-          "adt": 25.4,
-          "extreme": 0.0179,
-          "orders": 590
-        },
-        {
-          "storeId": "19714",
-          "adt": 22.9,
-          "extreme": 0.0247,
-          "orders": 568
-        },
-        {
-          "storeId": "19720",
-          "adt": 20.45,
-          "extreme": 0.0314,
-          "orders": 346
-        },
-        {
-          "storeId": "19504",
-          "adt": 21.66,
-          "extreme": 0.0158,
-          "orders": 552
-        },
-        {
-          "storeId": "19518",
-          "adt": 23.25,
-          "extreme": 0.04,
-          "orders": 838
-        },
-        {
-          "storeId": "19562",
-          "adt": 30.8,
-          "extreme": 0.1903,
-          "orders": 428
-        },
-        {
-          "storeId": "19511",
-          "adt": 21.26,
-          "extreme": 0.0097,
-          "orders": 627
-        },
-        {
-          "storeId": "19665",
-          "adt": 23.98,
-          "extreme": 0.0302,
-          "orders": 377
         },
         {
           "storeId": "19515",
@@ -669,150 +445,392 @@
           "orders": 666
         },
         {
+          "storeId": "19509",
+          "adt": 24.77,
+          "extreme": 0.0548,
+          "orders": 768
+        },
+        {
           "storeId": "19526",
           "adt": 24.22,
           "extreme": 0.0408,
           "orders": 477
         },
         {
-          "storeId": "19505",
-          "adt": 21.92,
+          "storeId": "19720",
+          "adt": 20.45,
+          "extreme": 0.0314,
+          "orders": 346
+        },
+        {
+          "storeId": "19748",
+          "adt": 23.47,
+          "extreme": 0.0199,
+          "orders": 546
+        },
+        {
+          "storeId": "19714",
+          "adt": 22.9,
+          "extreme": 0.0247,
+          "orders": 568
+        },
+        {
+          "storeId": "19894",
+          "adt": 25.4,
+          "extreme": 0.0179,
+          "orders": 590
+        },
+        {
+          "storeId": "19507",
+          "adt": 22.73,
           "extreme": 0.0,
-          "orders": 550
+          "orders": 137
+        },
+        {
+          "storeId": "19562",
+          "adt": 30.8,
+          "extreme": 0.1903,
+          "orders": 428
+        },
+        {
+          "storeId": "19635",
+          "adt": 24.75,
+          "extreme": 0.041,
+          "orders": 401
+        },
+        {
+          "storeId": "19508",
+          "adt": 25.46,
+          "extreme": 0.0669,
+          "orders": 474
+        },
+        {
+          "storeId": "19504",
+          "adt": 21.66,
+          "extreme": 0.0158,
+          "orders": 552
+        },
+        {
+          "storeId": "19561",
+          "adt": 25.9,
+          "extreme": 0.0707,
+          "orders": 391
+        },
+        {
+          "storeId": "19704",
+          "adt": 23.56,
+          "extreme": 0.0062,
+          "orders": 789
+        },
+        {
+          "storeId": "19519",
+          "adt": 21.76,
+          "extreme": 0.0077,
+          "orders": 1358
         },
         {
           "storeId": "19560",
           "adt": 36.31,
           "extreme": 0.3018,
           "orders": 1032
-        }
-      ],
-      "02 a 07": [
+        },
         {
           "storeId": "19512",
-          "adt": 23.0,
-          "extreme": 0.008,
-          "orders": 450
-        },
-        {
-          "storeId": "19748",
-          "adt": 25.7,
-          "extreme": 0.0554,
-          "orders": 495
-        },
-        {
-          "storeId": "19519",
-          "adt": 21.66,
-          "extreme": 0.0133,
-          "orders": 1145
-        },
-        {
-          "storeId": "19635",
-          "adt": 22.41,
-          "extreme": 0.0048,
-          "orders": 373
-        },
-        {
-          "storeId": "19844",
-          "adt": 22.54,
-          "extreme": 0.0285,
-          "orders": 394
-        },
-        {
-          "storeId": "19704",
-          "adt": 27.17,
-          "extreme": 0.1166,
-          "orders": 677
-        },
-        {
-          "storeId": "19509",
-          "adt": 31.36,
-          "extreme": 0.193,
-          "orders": 633
-        },
-        {
-          "storeId": "19561",
-          "adt": 25.42,
-          "extreme": 0.0089,
-          "orders": 309
-        },
-        {
-          "storeId": "19508",
-          "adt": 22.9,
-          "extreme": 0.0039,
-          "orders": 430
-        },
-        {
-          "storeId": "19894",
-          "adt": 29.51,
-          "extreme": 0.1738,
-          "orders": 575
-        },
-        {
-          "storeId": "19714",
-          "adt": 24.15,
-          "extreme": 0.0935,
-          "orders": 538
-        },
-        {
-          "storeId": "19720",
-          "adt": 22.38,
-          "extreme": 0.037,
-          "orders": 278
-        },
-        {
-          "storeId": "19504",
-          "adt": 28.12,
-          "extreme": 0.1254,
-          "orders": 482
-        },
-        {
-          "storeId": "19518",
-          "adt": 25.92,
-          "extreme": 0.0759,
-          "orders": 811
-        },
-        {
-          "storeId": "19562",
-          "adt": 40.49,
-          "extreme": 0.2911,
-          "orders": 449
+          "adt": 23.22,
+          "extreme": 0.019,
+          "orders": 531
         },
         {
           "storeId": "19511",
-          "adt": 24.61,
-          "extreme": 0.063,
-          "orders": 575
+          "adt": 21.26,
+          "extreme": 0.0097,
+          "orders": 627
+        },
+        {
+          "storeId": "19518",
+          "adt": 23.25,
+          "extreme": 0.04,
+          "orders": 838
         },
         {
           "storeId": "19665",
-          "adt": 25.39,
-          "extreme": 0.0606,
-          "orders": 378
-        },
-        {
-          "storeId": "19515",
-          "adt": 32.92,
-          "extreme": 0.2164,
-          "orders": 617
-        },
-        {
-          "storeId": "19526",
-          "adt": 25.6,
-          "extreme": 0.0203,
-          "orders": 312
+          "adt": 23.98,
+          "extreme": 0.0302,
+          "orders": 377
         },
         {
           "storeId": "19505",
-          "adt": 24.28,
-          "extreme": 0.0436,
-          "orders": 484
+          "adt": 21.92,
+          "extreme": 0.0,
+          "orders": 550
+        }
+      ],
+      "02 a 08": [
+        {
+          "storeId": "19844",
+          "adt": 23.08,
+          "extreme": 0.0221,
+          "orders": 500
+        },
+        {
+          "storeId": "19515",
+          "adt": 39.9,
+          "extreme": 0.3048,
+          "orders": 768
+        },
+        {
+          "storeId": "19509",
+          "adt": 31.51,
+          "extreme": 0.216,
+          "orders": 796
+        },
+        {
+          "storeId": "19526",
+          "adt": 25.57,
+          "extreme": 0.0156,
+          "orders": 402
+        },
+        {
+          "storeId": "19720",
+          "adt": 24.5,
+          "extreme": 0.0769,
+          "orders": 349
+        },
+        {
+          "storeId": "19748",
+          "adt": 25.74,
+          "extreme": 0.056,
+          "orders": 606
+        },
+        {
+          "storeId": "19714",
+          "adt": 23.78,
+          "extreme": 0.0738,
+          "orders": 684
+        },
+        {
+          "storeId": "19894",
+          "adt": 29.69,
+          "extreme": 0.1711,
+          "orders": 704
+        },
+        {
+          "storeId": "19507",
+          "adt": 27.43,
+          "extreme": 0.1319,
+          "orders": 810
+        },
+        {
+          "storeId": "19562",
+          "adt": 38.93,
+          "extreme": 0.2656,
+          "orders": 507
+        },
+        {
+          "storeId": "19635",
+          "adt": 21.54,
+          "extreme": 0.0038,
+          "orders": 472
+        },
+        {
+          "storeId": "19508",
+          "adt": 24.4,
+          "extreme": 0.0147,
+          "orders": 540
+        },
+        {
+          "storeId": "19504",
+          "adt": 32.05,
+          "extreme": 0.2116,
+          "orders": 591
+        },
+        {
+          "storeId": "19561",
+          "adt": 25.26,
+          "extreme": 0.0068,
+          "orders": 395
+        },
+        {
+          "storeId": "19704",
+          "adt": 25.98,
+          "extreme": 0.0962,
+          "orders": 829
+        },
+        {
+          "storeId": "19519",
+          "adt": 23.21,
+          "extreme": 0.054,
+          "orders": 1400
         },
         {
           "storeId": "19560",
-          "adt": 35.8,
-          "extreme": 0.289,
-          "orders": 770
+          "adt": 35.61,
+          "extreme": 0.3068,
+          "orders": 998
+        },
+        {
+          "storeId": "19512",
+          "adt": 23.36,
+          "extreme": 0.005,
+          "orders": 565
+        },
+        {
+          "storeId": "19511",
+          "adt": 26.88,
+          "extreme": 0.1379,
+          "orders": 741
+        },
+        {
+          "storeId": "19518",
+          "adt": 27.05,
+          "extreme": 0.1069,
+          "orders": 990
+        },
+        {
+          "storeId": "19665",
+          "adt": 26.52,
+          "extreme": 0.0794,
+          "orders": 462
+        },
+        {
+          "storeId": "19505",
+          "adt": 29.27,
+          "extreme": 0.1705,
+          "orders": 634
+        }
+      ],
+      "09 a 11": [
+        {
+          "storeId": "19844",
+          "adt": 19.61,
+          "extreme": 0.0,
+          "orders": 146
+        },
+        {
+          "storeId": "19515",
+          "adt": 27.07,
+          "extreme": 0.0513,
+          "orders": 223
+        },
+        {
+          "storeId": "19509",
+          "adt": 23.97,
+          "extreme": 0.0303,
+          "orders": 224
+        },
+        {
+          "storeId": "19526",
+          "adt": 24.31,
+          "extreme": 0.0476,
+          "orders": 111
+        },
+        {
+          "storeId": "19720",
+          "adt": 30.27,
+          "extreme": 0.1245,
+          "orders": 93
+        },
+        {
+          "storeId": "19748",
+          "adt": 22.42,
+          "extreme": 0.0167,
+          "orders": 140
+        },
+        {
+          "storeId": "19714",
+          "adt": 21.9,
+          "extreme": 0.0,
+          "orders": 213
+        },
+        {
+          "storeId": "19894",
+          "adt": 26.12,
+          "extreme": 0.072,
+          "orders": 180
+        },
+        {
+          "storeId": "19507",
+          "adt": 20.44,
+          "extreme": 0.0,
+          "orders": 54
+        },
+        {
+          "storeId": "19562",
+          "adt": 27.27,
+          "extreme": 0.0741,
+          "orders": 142
+        },
+        {
+          "storeId": "19635",
+          "adt": 23.82,
+          "extreme": 0.0492,
+          "orders": 111
+        },
+        {
+          "storeId": "19508",
+          "adt": 25.55,
+          "extreme": 0.0164,
+          "orders": 132
+        },
+        {
+          "storeId": "19504",
+          "adt": 24.13,
+          "extreme": 0.0204,
+          "orders": 145
+        },
+        {
+          "storeId": "19561",
+          "adt": 26.87,
+          "extreme": 0.0411,
+          "orders": 112
+        },
+        {
+          "storeId": "19704",
+          "adt": 23.06,
+          "extreme": 0.0179,
+          "orders": 209
+        },
+        {
+          "storeId": "19519",
+          "adt": 19.63,
+          "extreme": 0.0,
+          "orders": 413
+        },
+        {
+          "storeId": "19560",
+          "adt": 30.03,
+          "extreme": 0.1861,
+          "orders": 423
+        },
+        {
+          "storeId": "19512",
+          "adt": 22.93,
+          "extreme": 0.0,
+          "orders": 170
+        },
+        {
+          "storeId": "19511",
+          "adt": 18.61,
+          "extreme": 0.0,
+          "orders": 161
+        },
+        {
+          "storeId": "19518",
+          "adt": 23.81,
+          "extreme": 0.0122,
+          "orders": 317
+        },
+        {
+          "storeId": "19665",
+          "adt": 20.46,
+          "extreme": 0.0,
+          "orders": 81
+        },
+        {
+          "storeId": "19505",
+          "adt": 22.88,
+          "extreme": 0.0,
+          "orders": 188
         }
       ]
     }
@@ -820,436 +838,168 @@
   "exceptions": {
     "acumulado": [
       {
-        "storeId": "19512",
-        "exceptions": 0.0215,
-        "exceptionsCount": 7,
-        "delvOrders": 326,
-        "totalOrders": 563
-      },
-      {
-        "storeId": "19748",
-        "exceptions": 0.033,
-        "exceptionsCount": 11,
-        "delvOrders": 333,
-        "totalOrders": 607
-      },
-      {
-        "storeId": "19519",
-        "exceptions": 0.2304,
-        "exceptionsCount": 197,
-        "delvOrders": 855,
-        "totalOrders": 1443
-      },
-      {
-        "storeId": "19635",
-        "exceptions": 0.0604,
-        "exceptionsCount": 16,
-        "delvOrders": 265,
-        "totalOrders": 469
-      },
-      {
         "storeId": "19844",
-        "exceptions": 0.0525,
-        "exceptionsCount": 21,
-        "delvOrders": 400,
-        "totalOrders": 499
-      },
-      {
-        "storeId": "19704",
-        "exceptions": 0.1104,
-        "exceptionsCount": 74,
-        "delvOrders": 670,
-        "totalOrders": 830
-      },
-      {
-        "storeId": "19509",
-        "exceptions": 0.1313,
-        "exceptionsCount": 75,
-        "delvOrders": 571,
-        "totalOrders": 794
-      },
-      {
-        "storeId": "19561",
-        "exceptions": 0.0509,
-        "exceptionsCount": 14,
-        "delvOrders": 275,
-        "totalOrders": 376
-      },
-      {
-        "storeId": "19508",
-        "exceptions": 0.1019,
-        "exceptionsCount": 32,
-        "delvOrders": 314,
-        "totalOrders": 517
-      },
-      {
-        "storeId": "19894",
-        "exceptions": 0.1589,
-        "exceptionsCount": 82,
-        "delvOrders": 516,
-        "totalOrders": 698
-      },
-      {
-        "storeId": "19714",
-        "exceptions": 0.088,
-        "exceptionsCount": 46,
-        "delvOrders": 523,
-        "totalOrders": 657
-      },
-      {
-        "storeId": "19720",
-        "exceptions": 0.2193,
-        "exceptionsCount": 59,
-        "delvOrders": 269,
-        "totalOrders": 340
-      },
-      {
-        "storeId": "19504",
-        "exceptions": 0.0716,
+        "exceptions": 0.051,
         "exceptionsCount": 31,
-        "delvOrders": 433,
-        "totalOrders": 605
-      },
-      {
-        "storeId": "19518",
-        "exceptions": 0.0911,
-        "exceptionsCount": 56,
-        "delvOrders": 615,
-        "totalOrders": 972
-      },
-      {
-        "storeId": "19562",
-        "exceptions": 0.0782,
-        "exceptionsCount": 32,
-        "delvOrders": 409,
-        "totalOrders": 501
-      },
-      {
-        "storeId": "19511",
-        "exceptions": 0.0795,
-        "exceptionsCount": 40,
-        "delvOrders": 503,
-        "totalOrders": 709
-      },
-      {
-        "storeId": "19665",
-        "exceptions": 0.0369,
-        "exceptionsCount": 12,
-        "delvOrders": 325,
-        "totalOrders": 481
+        "delvOrders": 608,
+        "totalOrders": 751
       },
       {
         "storeId": "19515",
-        "exceptions": 0.1464,
-        "exceptionsCount": 83,
-        "delvOrders": 567,
-        "totalOrders": 746
+        "exceptions": 0.1276,
+        "exceptionsCount": 109,
+        "delvOrders": 854,
+        "totalOrders": 1120
+      },
+      {
+        "storeId": "19509",
+        "exceptions": 0.1352,
+        "exceptionsCount": 111,
+        "delvOrders": 821,
+        "totalOrders": 1181
       },
       {
         "storeId": "19526",
-        "exceptions": 0.104,
-        "exceptionsCount": 34,
-        "delvOrders": 327,
-        "totalOrders": 409
+        "exceptions": 0.0947,
+        "exceptionsCount": 46,
+        "delvOrders": 486,
+        "totalOrders": 610
       },
       {
-        "storeId": "19505",
-        "exceptions": 0.0603,
-        "exceptionsCount": 29,
-        "delvOrders": 481,
-        "totalOrders": 599
+        "storeId": "19720",
+        "exceptions": 0.2422,
+        "exceptionsCount": 93,
+        "delvOrders": 384,
+        "totalOrders": 504
+      },
+      {
+        "storeId": "19748",
+        "exceptions": 0.0369,
+        "exceptionsCount": 17,
+        "delvOrders": 461,
+        "totalOrders": 858
+      },
+      {
+        "storeId": "19714",
+        "exceptions": 0.0862,
+        "exceptionsCount": 69,
+        "delvOrders": 800,
+        "totalOrders": 1016
+      },
+      {
+        "storeId": "19894",
+        "exceptions": 0.1606,
+        "exceptionsCount": 120,
+        "delvOrders": 747,
+        "totalOrders": 1007
+      },
+      {
+        "storeId": "19507",
+        "exceptions": 0.0639,
+        "exceptionsCount": 50,
+        "delvOrders": 782,
+        "totalOrders": 1001
+      },
+      {
+        "storeId": "19562",
+        "exceptions": 0.0744,
+        "exceptionsCount": 41,
+        "delvOrders": 551,
+        "totalOrders": 701
+      },
+      {
+        "storeId": "19635",
+        "exceptions": 0.0682,
+        "exceptionsCount": 26,
+        "delvOrders": 381,
+        "totalOrders": 679
+      },
+      {
+        "storeId": "19508",
+        "exceptions": 0.0998,
+        "exceptionsCount": 46,
+        "delvOrders": 461,
+        "totalOrders": 759
+      },
+      {
+        "storeId": "19504",
+        "exceptions": 0.0696,
+        "exceptionsCount": 43,
+        "delvOrders": 618,
+        "totalOrders": 859
+      },
+      {
+        "storeId": "19561",
+        "exceptions": 0.0502,
+        "exceptionsCount": 21,
+        "delvOrders": 418,
+        "totalOrders": 574
+      },
+      {
+        "storeId": "19704",
+        "exceptions": 0.1385,
+        "exceptionsCount": 132,
+        "delvOrders": 953,
+        "totalOrders": 1191
+      },
+      {
+        "storeId": "19519",
+        "exceptions": 0.2122,
+        "exceptionsCount": 260,
+        "delvOrders": 1225,
+        "totalOrders": 2111
       },
       {
         "storeId": "19560",
-        "exceptions": 0.3538,
-        "exceptionsCount": 253,
-        "delvOrders": 715,
-        "totalOrders": 963
+        "exceptions": 0.2549,
+        "exceptionsCount": 297,
+        "delvOrders": 1165,
+        "totalOrders": 1614
+      },
+      {
+        "storeId": "19512",
+        "exceptions": 0.0186,
+        "exceptionsCount": 11,
+        "delvOrders": 591,
+        "totalOrders": 848
+      },
+      {
+        "storeId": "19511",
+        "exceptions": 0.0886,
+        "exceptionsCount": 64,
+        "delvOrders": 722,
+        "totalOrders": 1036
+      },
+      {
+        "storeId": "19518",
+        "exceptions": 0.102,
+        "exceptionsCount": 91,
+        "delvOrders": 892,
+        "totalOrders": 1468
+      },
+      {
+        "storeId": "19665",
+        "exceptions": 0.0355,
+        "exceptionsCount": 15,
+        "delvOrders": 423,
+        "totalOrders": 646
+      },
+      {
+        "storeId": "19505",
+        "exceptions": 0.0672,
+        "exceptionsCount": 50,
+        "delvOrders": 744,
+        "totalOrders": 937
       }
     ],
     "weeks": {
-      "12 a 18": [
-        {
-          "storeId": "19512",
-          "exceptions": 0.0287,
-          "exceptionsCount": 11,
-          "delvOrders": 383,
-          "totalOrders": 546
-        },
-        {
-          "storeId": "19748",
-          "exceptions": 0.0185,
-          "exceptionsCount": 6,
-          "delvOrders": 324,
-          "totalOrders": 554
-        },
-        {
-          "storeId": "19519",
-          "exceptions": 0.2039,
-          "exceptionsCount": 178,
-          "delvOrders": 873,
-          "totalOrders": 1467
-        },
-        {
-          "storeId": "19635",
-          "exceptions": 0.056,
-          "exceptionsCount": 13,
-          "delvOrders": 232,
-          "totalOrders": 421
-        },
-        {
-          "storeId": "19844",
-          "exceptions": 0.0585,
-          "exceptionsCount": 28,
-          "delvOrders": 479,
-          "totalOrders": 571
-        },
-        {
-          "storeId": "19704",
-          "exceptions": 0.0216,
-          "exceptionsCount": 16,
-          "delvOrders": 740,
-          "totalOrders": 884
-        },
-        {
-          "storeId": "19509",
-          "exceptions": 0.0682,
-          "exceptionsCount": 36,
-          "delvOrders": 528,
-          "totalOrders": 743
-        },
-        {
-          "storeId": "19561",
-          "exceptions": 0.1107,
-          "exceptionsCount": 31,
-          "delvOrders": 280,
-          "totalOrders": 399
-        },
-        {
-          "storeId": "19508",
-          "exceptions": 0.0851,
-          "exceptionsCount": 28,
-          "delvOrders": 329,
-          "totalOrders": 630
-        },
-        {
-          "storeId": "19894",
-          "exceptions": 0.1091,
-          "exceptionsCount": 49,
-          "delvOrders": 449,
-          "totalOrders": 608
-        },
-        {
-          "storeId": "19714",
-          "exceptions": 0.0646,
-          "exceptionsCount": 32,
-          "delvOrders": 495,
-          "totalOrders": 630
-        },
-        {
-          "storeId": "19507",
-          "exceptions": 0.0515,
-          "exceptionsCount": 35,
-          "delvOrders": 679,
-          "totalOrders": 881
-        },
-        {
-          "storeId": "19720",
-          "exceptions": 0.0764,
-          "exceptionsCount": 21,
-          "delvOrders": 275,
-          "totalOrders": 386
-        },
-        {
-          "storeId": "19504",
-          "exceptions": 0.0473,
-          "exceptionsCount": 23,
-          "delvOrders": 486,
-          "totalOrders": 673
-        },
-        {
-          "storeId": "19518",
-          "exceptions": 0.104,
-          "exceptionsCount": 63,
-          "delvOrders": 606,
-          "totalOrders": 1125
-        },
-        {
-          "storeId": "19562",
-          "exceptions": 0.0986,
-          "exceptionsCount": 36,
-          "delvOrders": 365,
-          "totalOrders": 473
-        },
-        {
-          "storeId": "19511",
-          "exceptions": 0.0756,
-          "exceptionsCount": 40,
-          "delvOrders": 529,
-          "totalOrders": 715
-        },
-        {
-          "storeId": "19665",
-          "exceptions": 0.0271,
-          "exceptionsCount": 8,
-          "delvOrders": 295,
-          "totalOrders": 464
-        },
-        {
-          "storeId": "19515",
-          "exceptions": 0.1892,
-          "exceptionsCount": 95,
-          "delvOrders": 502,
-          "totalOrders": 686
-        },
-        {
-          "storeId": "19526",
-          "exceptions": 0.0604,
-          "exceptionsCount": 25,
-          "delvOrders": 414,
-          "totalOrders": 513
-        },
-        {
-          "storeId": "19505",
-          "exceptions": 0.0191,
-          "exceptionsCount": 10,
-          "delvOrders": 523,
-          "totalOrders": 676
-        },
-        {
-          "storeId": "19560",
-          "exceptions": 0.3261,
-          "exceptionsCount": 256,
-          "delvOrders": 785,
-          "totalOrders": 1057
-        }
-      ],
       "19 a 25": [
-        {
-          "storeId": "19512",
-          "exceptions": 0.0245,
-          "exceptionsCount": 10,
-          "delvOrders": 408,
-          "totalOrders": 572
-        },
-        {
-          "storeId": "19748",
-          "exceptions": 0.0325,
-          "exceptionsCount": 10,
-          "delvOrders": 308,
-          "totalOrders": 565
-        },
-        {
-          "storeId": "19519",
-          "exceptions": 0.2641,
-          "exceptionsCount": 220,
-          "delvOrders": 833,
-          "totalOrders": 1522
-        },
-        {
-          "storeId": "19635",
-          "exceptions": 0.123,
-          "exceptionsCount": 31,
-          "delvOrders": 252,
-          "totalOrders": 429
-        },
         {
           "storeId": "19844",
           "exceptions": 0.0159,
           "exceptionsCount": 7,
           "delvOrders": 439,
           "totalOrders": 525
-        },
-        {
-          "storeId": "19704",
-          "exceptions": 0.0607,
-          "exceptionsCount": 39,
-          "delvOrders": 643,
-          "totalOrders": 803
-        },
-        {
-          "storeId": "19509",
-          "exceptions": 0.1159,
-          "exceptionsCount": 64,
-          "delvOrders": 552,
-          "totalOrders": 755
-        },
-        {
-          "storeId": "19561",
-          "exceptions": 0.0393,
-          "exceptionsCount": 9,
-          "delvOrders": 229,
-          "totalOrders": 309
-        },
-        {
-          "storeId": "19508",
-          "exceptions": 0.0147,
-          "exceptionsCount": 5,
-          "delvOrders": 339,
-          "totalOrders": 563
-        },
-        {
-          "storeId": "19894",
-          "exceptions": 0.1875,
-          "exceptionsCount": 84,
-          "delvOrders": 448,
-          "totalOrders": 615
-        },
-        {
-          "storeId": "19714",
-          "exceptions": 0.0683,
-          "exceptionsCount": 34,
-          "delvOrders": 498,
-          "totalOrders": 674
-        },
-        {
-          "storeId": "19507",
-          "exceptions": 0.0735,
-          "exceptionsCount": 46,
-          "delvOrders": 626,
-          "totalOrders": 818
-        },
-        {
-          "storeId": "19720",
-          "exceptions": 0.19,
-          "exceptionsCount": 57,
-          "delvOrders": 300,
-          "totalOrders": 419
-        },
-        {
-          "storeId": "19504",
-          "exceptions": 0.085,
-          "exceptionsCount": 35,
-          "delvOrders": 412,
-          "totalOrders": 590
-        },
-        {
-          "storeId": "19518",
-          "exceptions": 0.1014,
-          "exceptionsCount": 60,
-          "delvOrders": 592,
-          "totalOrders": 1014
-        },
-        {
-          "storeId": "19562",
-          "exceptions": 0.265,
-          "exceptionsCount": 75,
-          "delvOrders": 283,
-          "totalOrders": 413
-        },
-        {
-          "storeId": "19511",
-          "exceptions": 0.0781,
-          "exceptionsCount": 40,
-          "delvOrders": 512,
-          "totalOrders": 690
-        },
-        {
-          "storeId": "19665",
-          "exceptions": 0.0274,
-          "exceptionsCount": 8,
-          "delvOrders": 292,
-          "totalOrders": 396
         },
         {
           "storeId": "19515",
@@ -1259,6 +1009,13 @@
           "totalOrders": 748
         },
         {
+          "storeId": "19509",
+          "exceptions": 0.1159,
+          "exceptionsCount": 64,
+          "delvOrders": 552,
+          "totalOrders": 755
+        },
+        {
           "storeId": "19526",
           "exceptions": 0.0346,
           "exceptionsCount": 12,
@@ -1266,11 +1023,88 @@
           "totalOrders": 438
         },
         {
-          "storeId": "19505",
-          "exceptions": 0.0299,
-          "exceptionsCount": 15,
-          "delvOrders": 502,
-          "totalOrders": 649
+          "storeId": "19720",
+          "exceptions": 0.19,
+          "exceptionsCount": 57,
+          "delvOrders": 300,
+          "totalOrders": 419
+        },
+        {
+          "storeId": "19748",
+          "exceptions": 0.0325,
+          "exceptionsCount": 10,
+          "delvOrders": 308,
+          "totalOrders": 565
+        },
+        {
+          "storeId": "19714",
+          "exceptions": 0.0683,
+          "exceptionsCount": 34,
+          "delvOrders": 498,
+          "totalOrders": 674
+        },
+        {
+          "storeId": "19894",
+          "exceptions": 0.1875,
+          "exceptionsCount": 84,
+          "delvOrders": 448,
+          "totalOrders": 615
+        },
+        {
+          "storeId": "19507",
+          "exceptions": 0.0735,
+          "exceptionsCount": 46,
+          "delvOrders": 626,
+          "totalOrders": 818
+        },
+        {
+          "storeId": "19562",
+          "exceptions": 0.265,
+          "exceptionsCount": 75,
+          "delvOrders": 283,
+          "totalOrders": 413
+        },
+        {
+          "storeId": "19635",
+          "exceptions": 0.123,
+          "exceptionsCount": 31,
+          "delvOrders": 252,
+          "totalOrders": 429
+        },
+        {
+          "storeId": "19508",
+          "exceptions": 0.0147,
+          "exceptionsCount": 5,
+          "delvOrders": 339,
+          "totalOrders": 563
+        },
+        {
+          "storeId": "19504",
+          "exceptions": 0.085,
+          "exceptionsCount": 35,
+          "delvOrders": 412,
+          "totalOrders": 590
+        },
+        {
+          "storeId": "19561",
+          "exceptions": 0.0393,
+          "exceptionsCount": 9,
+          "delvOrders": 229,
+          "totalOrders": 309
+        },
+        {
+          "storeId": "19704",
+          "exceptions": 0.0607,
+          "exceptionsCount": 39,
+          "delvOrders": 643,
+          "totalOrders": 803
+        },
+        {
+          "storeId": "19519",
+          "exceptions": 0.2641,
+          "exceptionsCount": 220,
+          "delvOrders": 833,
+          "totalOrders": 1522
         },
         {
           "storeId": "19560",
@@ -1278,127 +1112,50 @@
           "exceptionsCount": 242,
           "delvOrders": 802,
           "totalOrders": 1067
+        },
+        {
+          "storeId": "19512",
+          "exceptions": 0.0245,
+          "exceptionsCount": 10,
+          "delvOrders": 408,
+          "totalOrders": 572
+        },
+        {
+          "storeId": "19511",
+          "exceptions": 0.0781,
+          "exceptionsCount": 40,
+          "delvOrders": 512,
+          "totalOrders": 690
+        },
+        {
+          "storeId": "19518",
+          "exceptions": 0.1014,
+          "exceptionsCount": 60,
+          "delvOrders": 592,
+          "totalOrders": 1014
+        },
+        {
+          "storeId": "19665",
+          "exceptions": 0.0274,
+          "exceptionsCount": 8,
+          "delvOrders": 292,
+          "totalOrders": 396
+        },
+        {
+          "storeId": "19505",
+          "exceptions": 0.0299,
+          "exceptionsCount": 15,
+          "delvOrders": 502,
+          "totalOrders": 649
         }
       ],
       "26 a 01": [
-        {
-          "storeId": "19512",
-          "exceptions": 0.0217,
-          "exceptionsCount": 8,
-          "delvOrders": 369,
-          "totalOrders": 531
-        },
-        {
-          "storeId": "19748",
-          "exceptions": 0.0432,
-          "exceptionsCount": 13,
-          "delvOrders": 301,
-          "totalOrders": 546
-        },
-        {
-          "storeId": "19519",
-          "exceptions": 0.1645,
-          "exceptionsCount": 128,
-          "delvOrders": 778,
-          "totalOrders": 1358
-        },
-        {
-          "storeId": "19635",
-          "exceptions": 0.0779,
-          "exceptionsCount": 19,
-          "delvOrders": 244,
-          "totalOrders": 401
-        },
         {
           "storeId": "19844",
           "exceptions": 0.0316,
           "exceptionsCount": 12,
           "delvOrders": 380,
           "totalOrders": 469
-        },
-        {
-          "storeId": "19704",
-          "exceptions": 0.0463,
-          "exceptionsCount": 30,
-          "delvOrders": 648,
-          "totalOrders": 789
-        },
-        {
-          "storeId": "19509",
-          "exceptions": 0.106,
-          "exceptionsCount": 58,
-          "delvOrders": 547,
-          "totalOrders": 768
-        },
-        {
-          "storeId": "19561",
-          "exceptions": 0.0989,
-          "exceptionsCount": 28,
-          "delvOrders": 283,
-          "totalOrders": 391
-        },
-        {
-          "storeId": "19508",
-          "exceptions": 0.0423,
-          "exceptionsCount": 12,
-          "delvOrders": 284,
-          "totalOrders": 474
-        },
-        {
-          "storeId": "19894",
-          "exceptions": 0.1166,
-          "exceptionsCount": 52,
-          "delvOrders": 446,
-          "totalOrders": 590
-        },
-        {
-          "storeId": "19714",
-          "exceptions": 0.0538,
-          "exceptionsCount": 24,
-          "delvOrders": 446,
-          "totalOrders": 568
-        },
-        {
-          "storeId": "19720",
-          "exceptions": 0.1569,
-          "exceptionsCount": 40,
-          "delvOrders": 255,
-          "totalOrders": 346
-        },
-        {
-          "storeId": "19504",
-          "exceptions": 0.089,
-          "exceptionsCount": 34,
-          "delvOrders": 382,
-          "totalOrders": 552
-        },
-        {
-          "storeId": "19518",
-          "exceptions": 0.11,
-          "exceptionsCount": 55,
-          "delvOrders": 500,
-          "totalOrders": 838
-        },
-        {
-          "storeId": "19562",
-          "exceptions": 0.096,
-          "exceptionsCount": 31,
-          "delvOrders": 323,
-          "totalOrders": 428
-        },
-        {
-          "storeId": "19511",
-          "exceptions": 0.085,
-          "exceptionsCount": 35,
-          "delvOrders": 412,
-          "totalOrders": 627
-        },
-        {
-          "storeId": "19665",
-          "exceptions": 0.0377,
-          "exceptionsCount": 10,
-          "delvOrders": 265,
-          "totalOrders": 377
         },
         {
           "storeId": "19515",
@@ -1408,6 +1165,13 @@
           "totalOrders": 666
         },
         {
+          "storeId": "19509",
+          "exceptions": 0.106,
+          "exceptionsCount": 58,
+          "delvOrders": 547,
+          "totalOrders": 768
+        },
+        {
           "storeId": "19526",
           "exceptions": 0.0516,
           "exceptionsCount": 19,
@@ -1415,11 +1179,88 @@
           "totalOrders": 477
         },
         {
-          "storeId": "19505",
-          "exceptions": 0.0302,
+          "storeId": "19720",
+          "exceptions": 0.1569,
+          "exceptionsCount": 40,
+          "delvOrders": 255,
+          "totalOrders": 346
+        },
+        {
+          "storeId": "19748",
+          "exceptions": 0.0432,
+          "exceptionsCount": 13,
+          "delvOrders": 301,
+          "totalOrders": 546
+        },
+        {
+          "storeId": "19714",
+          "exceptions": 0.0538,
+          "exceptionsCount": 24,
+          "delvOrders": 446,
+          "totalOrders": 568
+        },
+        {
+          "storeId": "19894",
+          "exceptions": 0.1166,
+          "exceptionsCount": 52,
+          "delvOrders": 446,
+          "totalOrders": 590
+        },
+        {
+          "storeId": "19507",
+          "exceptions": 0.0303,
+          "exceptionsCount": 3,
+          "delvOrders": 99,
+          "totalOrders": 137
+        },
+        {
+          "storeId": "19562",
+          "exceptions": 0.096,
+          "exceptionsCount": 31,
+          "delvOrders": 323,
+          "totalOrders": 428
+        },
+        {
+          "storeId": "19635",
+          "exceptions": 0.0779,
+          "exceptionsCount": 19,
+          "delvOrders": 244,
+          "totalOrders": 401
+        },
+        {
+          "storeId": "19508",
+          "exceptions": 0.0423,
           "exceptionsCount": 12,
-          "delvOrders": 397,
-          "totalOrders": 550
+          "delvOrders": 284,
+          "totalOrders": 474
+        },
+        {
+          "storeId": "19504",
+          "exceptions": 0.089,
+          "exceptionsCount": 34,
+          "delvOrders": 382,
+          "totalOrders": 552
+        },
+        {
+          "storeId": "19561",
+          "exceptions": 0.0989,
+          "exceptionsCount": 28,
+          "delvOrders": 283,
+          "totalOrders": 391
+        },
+        {
+          "storeId": "19704",
+          "exceptions": 0.0463,
+          "exceptionsCount": 30,
+          "delvOrders": 648,
+          "totalOrders": 789
+        },
+        {
+          "storeId": "19519",
+          "exceptions": 0.1645,
+          "exceptionsCount": 128,
+          "delvOrders": 778,
+          "totalOrders": 1358
         },
         {
           "storeId": "19560",
@@ -1427,155 +1268,353 @@
           "exceptionsCount": 239,
           "delvOrders": 779,
           "totalOrders": 1032
-        }
-      ],
-      "02 a 07": [
+        },
         {
           "storeId": "19512",
-          "exceptions": 0.028,
-          "exceptionsCount": 7,
-          "delvOrders": 250,
-          "totalOrders": 450
-        },
-        {
-          "storeId": "19748",
-          "exceptions": 0.0332,
-          "exceptionsCount": 9,
-          "delvOrders": 271,
-          "totalOrders": 495
-        },
-        {
-          "storeId": "19519",
-          "exceptions": 0.2311,
-          "exceptionsCount": 156,
-          "delvOrders": 675,
-          "totalOrders": 1145
-        },
-        {
-          "storeId": "19635",
-          "exceptions": 0.067,
-          "exceptionsCount": 14,
-          "delvOrders": 209,
-          "totalOrders": 373
-        },
-        {
-          "storeId": "19844",
-          "exceptions": 0.057,
-          "exceptionsCount": 18,
-          "delvOrders": 316,
-          "totalOrders": 394
-        },
-        {
-          "storeId": "19704",
-          "exceptions": 0.1275,
-          "exceptionsCount": 69,
-          "delvOrders": 541,
-          "totalOrders": 677
-        },
-        {
-          "storeId": "19509",
-          "exceptions": 0.136,
-          "exceptionsCount": 62,
-          "delvOrders": 456,
-          "totalOrders": 633
-        },
-        {
-          "storeId": "19561",
-          "exceptions": 0.04,
-          "exceptionsCount": 9,
-          "delvOrders": 225,
-          "totalOrders": 309
-        },
-        {
-          "storeId": "19508",
-          "exceptions": 0.122,
-          "exceptionsCount": 31,
-          "delvOrders": 254,
-          "totalOrders": 430
-        },
-        {
-          "storeId": "19894",
-          "exceptions": 0.1595,
-          "exceptionsCount": 67,
-          "delvOrders": 420,
-          "totalOrders": 575
-        },
-        {
-          "storeId": "19714",
-          "exceptions": 0.0935,
-          "exceptionsCount": 40,
-          "delvOrders": 428,
-          "totalOrders": 538
-        },
-        {
-          "storeId": "19720",
-          "exceptions": 0.2222,
-          "exceptionsCount": 48,
-          "delvOrders": 216,
-          "totalOrders": 278
-        },
-        {
-          "storeId": "19504",
-          "exceptions": 0.0671,
-          "exceptionsCount": 23,
-          "delvOrders": 343,
-          "totalOrders": 482
-        },
-        {
-          "storeId": "19518",
-          "exceptions": 0.0856,
-          "exceptionsCount": 44,
-          "delvOrders": 514,
-          "totalOrders": 811
-        },
-        {
-          "storeId": "19562",
-          "exceptions": 0.0782,
-          "exceptionsCount": 29,
-          "delvOrders": 371,
-          "totalOrders": 449
+          "exceptions": 0.0217,
+          "exceptionsCount": 8,
+          "delvOrders": 369,
+          "totalOrders": 531
         },
         {
           "storeId": "19511",
-          "exceptions": 0.0775,
-          "exceptionsCount": 32,
-          "delvOrders": 413,
-          "totalOrders": 575
+          "exceptions": 0.085,
+          "exceptionsCount": 35,
+          "delvOrders": 412,
+          "totalOrders": 627
+        },
+        {
+          "storeId": "19518",
+          "exceptions": 0.11,
+          "exceptionsCount": 55,
+          "delvOrders": 500,
+          "totalOrders": 838
         },
         {
           "storeId": "19665",
-          "exceptions": 0.0379,
+          "exceptions": 0.0377,
           "exceptionsCount": 10,
-          "delvOrders": 264,
-          "totalOrders": 378
-        },
-        {
-          "storeId": "19515",
-          "exceptions": 0.1597,
-          "exceptionsCount": 76,
-          "delvOrders": 476,
-          "totalOrders": 617
-        },
-        {
-          "storeId": "19526",
-          "exceptions": 0.1098,
-          "exceptionsCount": 27,
-          "delvOrders": 246,
-          "totalOrders": 312
+          "delvOrders": 265,
+          "totalOrders": 377
         },
         {
           "storeId": "19505",
-          "exceptions": 0.0667,
+          "exceptions": 0.0302,
+          "exceptionsCount": 12,
+          "delvOrders": 397,
+          "totalOrders": 550
+        }
+      ],
+      "02 a 08": [
+        {
+          "storeId": "19844",
+          "exceptions": 0.0466,
+          "exceptionsCount": 19,
+          "delvOrders": 408,
+          "totalOrders": 500
+        },
+        {
+          "storeId": "19515",
+          "exceptions": 0.1516,
+          "exceptionsCount": 92,
+          "delvOrders": 607,
+          "totalOrders": 768
+        },
+        {
+          "storeId": "19509",
+          "exceptions": 0.1568,
+          "exceptionsCount": 90,
+          "delvOrders": 574,
+          "totalOrders": 796
+        },
+        {
+          "storeId": "19526",
+          "exceptions": 0.1059,
+          "exceptionsCount": 34,
+          "delvOrders": 321,
+          "totalOrders": 402
+        },
+        {
+          "storeId": "19720",
+          "exceptions": 0.2674,
+          "exceptionsCount": 73,
+          "delvOrders": 273,
+          "totalOrders": 349
+        },
+        {
+          "storeId": "19748",
+          "exceptions": 0.0324,
+          "exceptionsCount": 11,
+          "delvOrders": 339,
+          "totalOrders": 606
+        },
+        {
+          "storeId": "19714",
+          "exceptions": 0.0959,
+          "exceptionsCount": 52,
+          "delvOrders": 542,
+          "totalOrders": 684
+        },
+        {
+          "storeId": "19894",
+          "exceptions": 0.1692,
+          "exceptionsCount": 89,
+          "delvOrders": 526,
+          "totalOrders": 704
+        },
+        {
+          "storeId": "19507",
+          "exceptions": 0.0706,
+          "exceptionsCount": 45,
+          "delvOrders": 637,
+          "totalOrders": 810
+        },
+        {
+          "storeId": "19562",
+          "exceptions": 0.0766,
+          "exceptionsCount": 32,
+          "delvOrders": 418,
+          "totalOrders": 507
+        },
+        {
+          "storeId": "19635",
+          "exceptions": 0.0758,
+          "exceptionsCount": 20,
+          "delvOrders": 264,
+          "totalOrders": 472
+        },
+        {
+          "storeId": "19508",
+          "exceptions": 0.1147,
+          "exceptionsCount": 39,
+          "delvOrders": 340,
+          "totalOrders": 540
+        },
+        {
+          "storeId": "19504",
+          "exceptions": 0.0605,
           "exceptionsCount": 26,
-          "delvOrders": 390,
-          "totalOrders": 484
+          "delvOrders": 430,
+          "totalOrders": 591
+        },
+        {
+          "storeId": "19561",
+          "exceptions": 0.0373,
+          "exceptionsCount": 11,
+          "delvOrders": 295,
+          "totalOrders": 395
+        },
+        {
+          "storeId": "19704",
+          "exceptions": 0.154,
+          "exceptionsCount": 101,
+          "delvOrders": 656,
+          "totalOrders": 829
+        },
+        {
+          "storeId": "19519",
+          "exceptions": 0.2218,
+          "exceptionsCount": 185,
+          "delvOrders": 834,
+          "totalOrders": 1400
         },
         {
           "storeId": "19560",
-          "exceptions": 0.3387,
-          "exceptionsCount": 191,
-          "delvOrders": 564,
-          "totalOrders": 770
+          "exceptions": 0.2932,
+          "exceptionsCount": 217,
+          "delvOrders": 740,
+          "totalOrders": 998
+        },
+        {
+          "storeId": "19512",
+          "exceptions": 0.0248,
+          "exceptionsCount": 10,
+          "delvOrders": 403,
+          "totalOrders": 565
+        },
+        {
+          "storeId": "19511",
+          "exceptions": 0.0726,
+          "exceptionsCount": 39,
+          "delvOrders": 537,
+          "totalOrders": 741
+        },
+        {
+          "storeId": "19518",
+          "exceptions": 0.0989,
+          "exceptionsCount": 62,
+          "delvOrders": 627,
+          "totalOrders": 990
+        },
+        {
+          "storeId": "19665",
+          "exceptions": 0.0381,
+          "exceptionsCount": 12,
+          "delvOrders": 315,
+          "totalOrders": 462
+        },
+        {
+          "storeId": "19505",
+          "exceptions": 0.0795,
+          "exceptionsCount": 41,
+          "delvOrders": 516,
+          "totalOrders": 634
+        }
+      ],
+      "09 a 11": [
+        {
+          "storeId": "19844",
+          "exceptions": 0.0776,
+          "exceptionsCount": 9,
+          "delvOrders": 116,
+          "totalOrders": 146
+        },
+        {
+          "storeId": "19515",
+          "exceptions": 0.0641,
+          "exceptionsCount": 10,
+          "delvOrders": 156,
+          "totalOrders": 223
+        },
+        {
+          "storeId": "19509",
+          "exceptions": 0.0606,
+          "exceptionsCount": 8,
+          "delvOrders": 132,
+          "totalOrders": 224
+        },
+        {
+          "storeId": "19526",
+          "exceptions": 0.0595,
+          "exceptionsCount": 5,
+          "delvOrders": 84,
+          "totalOrders": 111
+        },
+        {
+          "storeId": "19720",
+          "exceptions": 0.1552,
+          "exceptionsCount": 9,
+          "delvOrders": 58,
+          "totalOrders": 93
+        },
+        {
+          "storeId": "19748",
+          "exceptions": 0.0667,
+          "exceptionsCount": 4,
+          "delvOrders": 60,
+          "totalOrders": 140
+        },
+        {
+          "storeId": "19714",
+          "exceptions": 0.0675,
+          "exceptionsCount": 11,
+          "delvOrders": 163,
+          "totalOrders": 213
+        },
+        {
+          "storeId": "19894",
+          "exceptions": 0.128,
+          "exceptionsCount": 16,
+          "delvOrders": 125,
+          "totalOrders": 180
+        },
+        {
+          "storeId": "19507",
+          "exceptions": 0.0435,
+          "exceptionsCount": 2,
+          "delvOrders": 46,
+          "totalOrders": 54
+        },
+        {
+          "storeId": "19562",
+          "exceptions": 0.0632,
+          "exceptionsCount": 6,
+          "delvOrders": 95,
+          "totalOrders": 142
+        },
+        {
+          "storeId": "19635",
+          "exceptions": 0.0656,
+          "exceptionsCount": 4,
+          "delvOrders": 61,
+          "totalOrders": 111
+        },
+        {
+          "storeId": "19508",
+          "exceptions": 0.0984,
+          "exceptionsCount": 6,
+          "delvOrders": 61,
+          "totalOrders": 132
+        },
+        {
+          "storeId": "19504",
+          "exceptions": 0.0918,
+          "exceptionsCount": 9,
+          "delvOrders": 98,
+          "totalOrders": 145
+        },
+        {
+          "storeId": "19561",
+          "exceptions": 0.0685,
+          "exceptionsCount": 5,
+          "delvOrders": 73,
+          "totalOrders": 112
+        },
+        {
+          "storeId": "19704",
+          "exceptions": 0.1548,
+          "exceptionsCount": 26,
+          "delvOrders": 168,
+          "totalOrders": 209
+        },
+        {
+          "storeId": "19519",
+          "exceptions": 0.1611,
+          "exceptionsCount": 34,
+          "delvOrders": 211,
+          "totalOrders": 413
+        },
+        {
+          "storeId": "19560",
+          "exceptions": 0.0657,
+          "exceptionsCount": 18,
+          "delvOrders": 274,
+          "totalOrders": 423
+        },
+        {
+          "storeId": "19512",
+          "exceptions": 0.0089,
+          "exceptionsCount": 1,
+          "delvOrders": 112,
+          "totalOrders": 170
+        },
+        {
+          "storeId": "19511",
+          "exceptions": 0.1789,
+          "exceptionsCount": 17,
+          "delvOrders": 95,
+          "totalOrders": 161
+        },
+        {
+          "storeId": "19518",
+          "exceptions": 0.1037,
+          "exceptionsCount": 17,
+          "delvOrders": 164,
+          "totalOrders": 317
+        },
+        {
+          "storeId": "19665",
+          "exceptions": 0.0213,
+          "exceptionsCount": 1,
+          "delvOrders": 47,
+          "totalOrders": 81
+        },
+        {
+          "storeId": "19505",
+          "exceptions": 0.0438,
+          "exceptionsCount": 6,
+          "delvOrders": 137,
+          "totalOrders": 188
         }
       ]
     }
@@ -2845,130 +2884,11 @@
       ],
       "set": [
         {
-          "storeId": "19512",
-          "exceptions": 0.0728,
-          "exceptionsCount": 109,
-          "delvOrders": 1497,
-          "totalOrders": 2186
-        },
-        {
-          "storeId": "19748",
-          "exceptions": 0.0273,
-          "exceptionsCount": 28,
-          "delvOrders": 1027,
-          "totalOrders": 1988
-        },
-        {
-          "storeId": "19519",
-          "exceptions": 0.182,
-          "exceptionsCount": 649,
-          "delvOrders": 3565,
-          "totalOrders": 6206
-        },
-        {
-          "storeId": "19635",
-          "exceptions": 0.1592,
-          "exceptionsCount": 174,
-          "delvOrders": 1093,
-          "totalOrders": 1805
-        },
-        {
           "storeId": "19844",
           "exceptions": 0.0469,
           "exceptionsCount": 80,
           "delvOrders": 1704,
           "totalOrders": 2102
-        },
-        {
-          "storeId": "19704",
-          "exceptions": 0.0968,
-          "exceptionsCount": 238,
-          "delvOrders": 2459,
-          "totalOrders": 3104
-        },
-        {
-          "storeId": "19509",
-          "exceptions": 0.1764,
-          "exceptionsCount": 364,
-          "delvOrders": 2064,
-          "totalOrders": 2821
-        },
-        {
-          "storeId": "19561",
-          "exceptions": 0.0918,
-          "exceptionsCount": 96,
-          "delvOrders": 1046,
-          "totalOrders": 1448
-        },
-        {
-          "storeId": "19508",
-          "exceptions": 0.0689,
-          "exceptionsCount": 102,
-          "delvOrders": 1481,
-          "totalOrders": 2576
-        },
-        {
-          "storeId": "19894",
-          "exceptions": 0.1461,
-          "exceptionsCount": 265,
-          "delvOrders": 1814,
-          "totalOrders": 2456
-        },
-        {
-          "storeId": "19714",
-          "exceptions": 0.092,
-          "exceptionsCount": 188,
-          "delvOrders": 2044,
-          "totalOrders": 2662
-        },
-        {
-          "storeId": "19507",
-          "exceptions": 0.0767,
-          "exceptionsCount": 173,
-          "delvOrders": 2256,
-          "totalOrders": 3668
-        },
-        {
-          "storeId": "19720",
-          "exceptions": 0.1713,
-          "exceptionsCount": 202,
-          "delvOrders": 1179,
-          "totalOrders": 1558
-        },
-        {
-          "storeId": "19504",
-          "exceptions": 0.09,
-          "exceptionsCount": 184,
-          "delvOrders": 2045,
-          "totalOrders": 2717
-        },
-        {
-          "storeId": "19518",
-          "exceptions": 0.0694,
-          "exceptionsCount": 184,
-          "delvOrders": 2652,
-          "totalOrders": 4235
-        },
-        {
-          "storeId": "19562",
-          "exceptions": 0.1457,
-          "exceptionsCount": 119,
-          "delvOrders": 817,
-          "totalOrders": 1825
-        },
-        {
-          "storeId": "19511",
-          "exceptions": 0.1045,
-          "exceptionsCount": 205,
-          "delvOrders": 1962,
-          "totalOrders": 2744
-        },
-        {
-          "storeId": "19665",
-          "exceptions": 0.0764,
-          "exceptionsCount": 103,
-          "delvOrders": 1348,
-          "totalOrders": 1881
         },
         {
           "storeId": "19515",
@@ -2978,6 +2898,13 @@
           "totalOrders": 3055
         },
         {
+          "storeId": "19509",
+          "exceptions": 0.1764,
+          "exceptionsCount": 364,
+          "delvOrders": 2064,
+          "totalOrders": 2821
+        },
+        {
           "storeId": "19526",
           "exceptions": 0.0746,
           "exceptionsCount": 102,
@@ -2985,11 +2912,88 @@
           "totalOrders": 1804
         },
         {
-          "storeId": "19505",
-          "exceptions": 0.049,
-          "exceptionsCount": 91,
-          "delvOrders": 1857,
-          "totalOrders": 2523
+          "storeId": "19720",
+          "exceptions": 0.1713,
+          "exceptionsCount": 202,
+          "delvOrders": 1179,
+          "totalOrders": 1558
+        },
+        {
+          "storeId": "19748",
+          "exceptions": 0.0273,
+          "exceptionsCount": 28,
+          "delvOrders": 1027,
+          "totalOrders": 1988
+        },
+        {
+          "storeId": "19714",
+          "exceptions": 0.092,
+          "exceptionsCount": 188,
+          "delvOrders": 2044,
+          "totalOrders": 2662
+        },
+        {
+          "storeId": "19894",
+          "exceptions": 0.1461,
+          "exceptionsCount": 265,
+          "delvOrders": 1814,
+          "totalOrders": 2456
+        },
+        {
+          "storeId": "19507",
+          "exceptions": 0.0767,
+          "exceptionsCount": 173,
+          "delvOrders": 2256,
+          "totalOrders": 3668
+        },
+        {
+          "storeId": "19562",
+          "exceptions": 0.1457,
+          "exceptionsCount": 119,
+          "delvOrders": 817,
+          "totalOrders": 1825
+        },
+        {
+          "storeId": "19635",
+          "exceptions": 0.1592,
+          "exceptionsCount": 174,
+          "delvOrders": 1093,
+          "totalOrders": 1805
+        },
+        {
+          "storeId": "19508",
+          "exceptions": 0.0689,
+          "exceptionsCount": 102,
+          "delvOrders": 1481,
+          "totalOrders": 2576
+        },
+        {
+          "storeId": "19504",
+          "exceptions": 0.09,
+          "exceptionsCount": 184,
+          "delvOrders": 2045,
+          "totalOrders": 2717
+        },
+        {
+          "storeId": "19561",
+          "exceptions": 0.0918,
+          "exceptionsCount": 96,
+          "delvOrders": 1046,
+          "totalOrders": 1448
+        },
+        {
+          "storeId": "19704",
+          "exceptions": 0.0968,
+          "exceptionsCount": 238,
+          "delvOrders": 2459,
+          "totalOrders": 3104
+        },
+        {
+          "storeId": "19519",
+          "exceptions": 0.182,
+          "exceptionsCount": 649,
+          "delvOrders": 3565,
+          "totalOrders": 6206
         },
         {
           "storeId": "19560",
@@ -2997,134 +3001,50 @@
           "exceptionsCount": 1311,
           "delvOrders": 3001,
           "totalOrders": 4023
+        },
+        {
+          "storeId": "19512",
+          "exceptions": 0.0728,
+          "exceptionsCount": 109,
+          "delvOrders": 1497,
+          "totalOrders": 2186
+        },
+        {
+          "storeId": "19511",
+          "exceptions": 0.1045,
+          "exceptionsCount": 205,
+          "delvOrders": 1962,
+          "totalOrders": 2744
+        },
+        {
+          "storeId": "19518",
+          "exceptions": 0.0694,
+          "exceptionsCount": 184,
+          "delvOrders": 2652,
+          "totalOrders": 4235
+        },
+        {
+          "storeId": "19665",
+          "exceptions": 0.0764,
+          "exceptionsCount": 103,
+          "delvOrders": 1348,
+          "totalOrders": 1881
+        },
+        {
+          "storeId": "19505",
+          "exceptions": 0.049,
+          "exceptionsCount": 91,
+          "delvOrders": 1857,
+          "totalOrders": 2523
         }
       ],
       "out": [
-        {
-          "storeId": "19512",
-          "exceptions": 0.0295,
-          "exceptionsCount": 50,
-          "delvOrders": 1693,
-          "totalOrders": 2422
-        },
-        {
-          "storeId": "19748",
-          "exceptions": 0.0245,
-          "exceptionsCount": 32,
-          "delvOrders": 1307,
-          "totalOrders": 2413
-        },
-        {
-          "storeId": "19519",
-          "exceptions": 0.195,
-          "exceptionsCount": 703,
-          "delvOrders": 3606,
-          "totalOrders": 6238
-        },
-        {
-          "storeId": "19635",
-          "exceptions": 0.0961,
-          "exceptionsCount": 107,
-          "delvOrders": 1114,
-          "totalOrders": 1907
-        },
         {
           "storeId": "19844",
           "exceptions": 0.0559,
           "exceptionsCount": 107,
           "delvOrders": 1913,
           "totalOrders": 2319
-        },
-        {
-          "storeId": "19704",
-          "exceptions": 0.0949,
-          "exceptionsCount": 276,
-          "delvOrders": 2909,
-          "totalOrders": 3605
-        },
-        {
-          "storeId": "19509",
-          "exceptions": 0.121,
-          "exceptionsCount": 286,
-          "delvOrders": 2363,
-          "totalOrders": 3268
-        },
-        {
-          "storeId": "19561",
-          "exceptions": 0.0778,
-          "exceptionsCount": 91,
-          "delvOrders": 1169,
-          "totalOrders": 1625
-        },
-        {
-          "storeId": "19508",
-          "exceptions": 0.0524,
-          "exceptionsCount": 75,
-          "delvOrders": 1432,
-          "totalOrders": 2547
-        },
-        {
-          "storeId": "19894",
-          "exceptions": 0.1383,
-          "exceptionsCount": 279,
-          "delvOrders": 2017,
-          "totalOrders": 2746
-        },
-        {
-          "storeId": "19714",
-          "exceptions": 0.0732,
-          "exceptionsCount": 154,
-          "delvOrders": 2105,
-          "totalOrders": 2716
-        },
-        {
-          "storeId": "19507",
-          "exceptions": 0.0535,
-          "exceptionsCount": 122,
-          "delvOrders": 2282,
-          "totalOrders": 2978
-        },
-        {
-          "storeId": "19720",
-          "exceptions": 0.1182,
-          "exceptionsCount": 147,
-          "delvOrders": 1244,
-          "totalOrders": 1717
-        },
-        {
-          "storeId": "19504",
-          "exceptions": 0.0814,
-          "exceptionsCount": 158,
-          "delvOrders": 1942,
-          "totalOrders": 2758
-        },
-        {
-          "storeId": "19518",
-          "exceptions": 0.0913,
-          "exceptionsCount": 242,
-          "delvOrders": 2650,
-          "totalOrders": 4463
-        },
-        {
-          "storeId": "19562",
-          "exceptions": 0.1348,
-          "exceptionsCount": 202,
-          "delvOrders": 1498,
-          "totalOrders": 2029
-        },
-        {
-          "storeId": "19511",
-          "exceptions": 0.0908,
-          "exceptionsCount": 193,
-          "delvOrders": 2126,
-          "totalOrders": 2951
-        },
-        {
-          "storeId": "19665",
-          "exceptions": 0.0313,
-          "exceptionsCount": 39,
-          "delvOrders": 1246,
-          "totalOrders": 1808
         },
         {
           "storeId": "19515",
@@ -3134,6 +3054,13 @@
           "totalOrders": 3215
         },
         {
+          "storeId": "19509",
+          "exceptions": 0.121,
+          "exceptionsCount": 286,
+          "delvOrders": 2363,
+          "totalOrders": 3268
+        },
+        {
           "storeId": "19526",
           "exceptions": 0.0523,
           "exceptionsCount": 82,
@@ -3141,11 +3068,88 @@
           "totalOrders": 2018
         },
         {
-          "storeId": "19505",
-          "exceptions": 0.0311,
-          "exceptionsCount": 66,
-          "delvOrders": 2119,
-          "totalOrders": 2784
+          "storeId": "19720",
+          "exceptions": 0.1182,
+          "exceptionsCount": 147,
+          "delvOrders": 1244,
+          "totalOrders": 1717
+        },
+        {
+          "storeId": "19748",
+          "exceptions": 0.0245,
+          "exceptionsCount": 32,
+          "delvOrders": 1307,
+          "totalOrders": 2413
+        },
+        {
+          "storeId": "19714",
+          "exceptions": 0.0732,
+          "exceptionsCount": 154,
+          "delvOrders": 2105,
+          "totalOrders": 2716
+        },
+        {
+          "storeId": "19894",
+          "exceptions": 0.1383,
+          "exceptionsCount": 279,
+          "delvOrders": 2017,
+          "totalOrders": 2746
+        },
+        {
+          "storeId": "19507",
+          "exceptions": 0.0535,
+          "exceptionsCount": 122,
+          "delvOrders": 2282,
+          "totalOrders": 2978
+        },
+        {
+          "storeId": "19562",
+          "exceptions": 0.1348,
+          "exceptionsCount": 202,
+          "delvOrders": 1498,
+          "totalOrders": 2029
+        },
+        {
+          "storeId": "19635",
+          "exceptions": 0.0961,
+          "exceptionsCount": 107,
+          "delvOrders": 1114,
+          "totalOrders": 1907
+        },
+        {
+          "storeId": "19508",
+          "exceptions": 0.0524,
+          "exceptionsCount": 75,
+          "delvOrders": 1432,
+          "totalOrders": 2547
+        },
+        {
+          "storeId": "19504",
+          "exceptions": 0.0814,
+          "exceptionsCount": 158,
+          "delvOrders": 1942,
+          "totalOrders": 2758
+        },
+        {
+          "storeId": "19561",
+          "exceptions": 0.0778,
+          "exceptionsCount": 91,
+          "delvOrders": 1169,
+          "totalOrders": 1625
+        },
+        {
+          "storeId": "19704",
+          "exceptions": 0.0949,
+          "exceptionsCount": 276,
+          "delvOrders": 2909,
+          "totalOrders": 3605
+        },
+        {
+          "storeId": "19519",
+          "exceptions": 0.195,
+          "exceptionsCount": 703,
+          "delvOrders": 3606,
+          "totalOrders": 6238
         },
         {
           "storeId": "19560",
@@ -3153,155 +3157,197 @@
           "exceptionsCount": 1071,
           "delvOrders": 3304,
           "totalOrders": 4465
+        },
+        {
+          "storeId": "19512",
+          "exceptions": 0.0295,
+          "exceptionsCount": 50,
+          "delvOrders": 1693,
+          "totalOrders": 2422
+        },
+        {
+          "storeId": "19511",
+          "exceptions": 0.0908,
+          "exceptionsCount": 193,
+          "delvOrders": 2126,
+          "totalOrders": 2951
+        },
+        {
+          "storeId": "19518",
+          "exceptions": 0.0913,
+          "exceptionsCount": 242,
+          "delvOrders": 2650,
+          "totalOrders": 4463
+        },
+        {
+          "storeId": "19665",
+          "exceptions": 0.0313,
+          "exceptionsCount": 39,
+          "delvOrders": 1246,
+          "totalOrders": 1808
+        },
+        {
+          "storeId": "19505",
+          "exceptions": 0.0311,
+          "exceptionsCount": 66,
+          "delvOrders": 2119,
+          "totalOrders": 2784
         }
       ],
       "nov": [
         {
-          "storeId": "19512",
-          "exceptions": 0.0215,
-          "exceptionsCount": 7,
-          "delvOrders": 326,
-          "totalOrders": 563
-        },
-        {
-          "storeId": "19748",
-          "exceptions": 0.033,
-          "exceptionsCount": 11,
-          "delvOrders": 333,
-          "totalOrders": 607
-        },
-        {
-          "storeId": "19519",
-          "exceptions": 0.2304,
-          "exceptionsCount": 197,
-          "delvOrders": 855,
-          "totalOrders": 1443
-        },
-        {
-          "storeId": "19635",
-          "exceptions": 0.0604,
-          "exceptionsCount": 16,
-          "delvOrders": 265,
-          "totalOrders": 469
-        },
-        {
           "storeId": "19844",
-          "exceptions": 0.0525,
-          "exceptionsCount": 21,
-          "delvOrders": 400,
-          "totalOrders": 499
-        },
-        {
-          "storeId": "19704",
-          "exceptions": 0.1104,
-          "exceptionsCount": 74,
-          "delvOrders": 670,
-          "totalOrders": 830
-        },
-        {
-          "storeId": "19509",
-          "exceptions": 0.1313,
-          "exceptionsCount": 75,
-          "delvOrders": 571,
-          "totalOrders": 794
-        },
-        {
-          "storeId": "19561",
-          "exceptions": 0.0509,
-          "exceptionsCount": 14,
-          "delvOrders": 275,
-          "totalOrders": 376
-        },
-        {
-          "storeId": "19508",
-          "exceptions": 0.1019,
-          "exceptionsCount": 32,
-          "delvOrders": 314,
-          "totalOrders": 517
-        },
-        {
-          "storeId": "19894",
-          "exceptions": 0.1589,
-          "exceptionsCount": 82,
-          "delvOrders": 516,
-          "totalOrders": 698
-        },
-        {
-          "storeId": "19714",
-          "exceptions": 0.088,
-          "exceptionsCount": 46,
-          "delvOrders": 523,
-          "totalOrders": 657
-        },
-        {
-          "storeId": "19720",
-          "exceptions": 0.2193,
-          "exceptionsCount": 59,
-          "delvOrders": 269,
-          "totalOrders": 340
-        },
-        {
-          "storeId": "19504",
-          "exceptions": 0.0716,
+          "exceptions": 0.051,
           "exceptionsCount": 31,
-          "delvOrders": 433,
-          "totalOrders": 605
-        },
-        {
-          "storeId": "19518",
-          "exceptions": 0.0911,
-          "exceptionsCount": 56,
-          "delvOrders": 615,
-          "totalOrders": 972
-        },
-        {
-          "storeId": "19562",
-          "exceptions": 0.0782,
-          "exceptionsCount": 32,
-          "delvOrders": 409,
-          "totalOrders": 501
-        },
-        {
-          "storeId": "19511",
-          "exceptions": 0.0795,
-          "exceptionsCount": 40,
-          "delvOrders": 503,
-          "totalOrders": 709
-        },
-        {
-          "storeId": "19665",
-          "exceptions": 0.0369,
-          "exceptionsCount": 12,
-          "delvOrders": 325,
-          "totalOrders": 481
+          "delvOrders": 608,
+          "totalOrders": 751
         },
         {
           "storeId": "19515",
-          "exceptions": 0.1464,
-          "exceptionsCount": 83,
-          "delvOrders": 567,
-          "totalOrders": 746
+          "exceptions": 0.1276,
+          "exceptionsCount": 109,
+          "delvOrders": 854,
+          "totalOrders": 1120
+        },
+        {
+          "storeId": "19509",
+          "exceptions": 0.1352,
+          "exceptionsCount": 111,
+          "delvOrders": 821,
+          "totalOrders": 1181
         },
         {
           "storeId": "19526",
-          "exceptions": 0.104,
-          "exceptionsCount": 34,
-          "delvOrders": 327,
-          "totalOrders": 409
+          "exceptions": 0.0947,
+          "exceptionsCount": 46,
+          "delvOrders": 486,
+          "totalOrders": 610
         },
         {
-          "storeId": "19505",
-          "exceptions": 0.0603,
-          "exceptionsCount": 29,
-          "delvOrders": 481,
-          "totalOrders": 599
+          "storeId": "19720",
+          "exceptions": 0.2422,
+          "exceptionsCount": 93,
+          "delvOrders": 384,
+          "totalOrders": 504
+        },
+        {
+          "storeId": "19748",
+          "exceptions": 0.0369,
+          "exceptionsCount": 17,
+          "delvOrders": 461,
+          "totalOrders": 858
+        },
+        {
+          "storeId": "19714",
+          "exceptions": 0.0862,
+          "exceptionsCount": 69,
+          "delvOrders": 800,
+          "totalOrders": 1016
+        },
+        {
+          "storeId": "19894",
+          "exceptions": 0.1606,
+          "exceptionsCount": 120,
+          "delvOrders": 747,
+          "totalOrders": 1007
+        },
+        {
+          "storeId": "19507",
+          "exceptions": 0.0639,
+          "exceptionsCount": 50,
+          "delvOrders": 782,
+          "totalOrders": 1001
+        },
+        {
+          "storeId": "19562",
+          "exceptions": 0.0744,
+          "exceptionsCount": 41,
+          "delvOrders": 551,
+          "totalOrders": 701
+        },
+        {
+          "storeId": "19635",
+          "exceptions": 0.0682,
+          "exceptionsCount": 26,
+          "delvOrders": 381,
+          "totalOrders": 679
+        },
+        {
+          "storeId": "19508",
+          "exceptions": 0.0998,
+          "exceptionsCount": 46,
+          "delvOrders": 461,
+          "totalOrders": 759
+        },
+        {
+          "storeId": "19504",
+          "exceptions": 0.0696,
+          "exceptionsCount": 43,
+          "delvOrders": 618,
+          "totalOrders": 859
+        },
+        {
+          "storeId": "19561",
+          "exceptions": 0.0502,
+          "exceptionsCount": 21,
+          "delvOrders": 418,
+          "totalOrders": 574
+        },
+        {
+          "storeId": "19704",
+          "exceptions": 0.1385,
+          "exceptionsCount": 132,
+          "delvOrders": 953,
+          "totalOrders": 1191
+        },
+        {
+          "storeId": "19519",
+          "exceptions": 0.2122,
+          "exceptionsCount": 260,
+          "delvOrders": 1225,
+          "totalOrders": 2111
         },
         {
           "storeId": "19560",
-          "exceptions": 0.3538,
-          "exceptionsCount": 253,
-          "delvOrders": 715,
-          "totalOrders": 963
+          "exceptions": 0.2549,
+          "exceptionsCount": 297,
+          "delvOrders": 1165,
+          "totalOrders": 1614
+        },
+        {
+          "storeId": "19512",
+          "exceptions": 0.0186,
+          "exceptionsCount": 11,
+          "delvOrders": 591,
+          "totalOrders": 848
+        },
+        {
+          "storeId": "19511",
+          "exceptions": 0.0886,
+          "exceptionsCount": 64,
+          "delvOrders": 722,
+          "totalOrders": 1036
+        },
+        {
+          "storeId": "19518",
+          "exceptions": 0.102,
+          "exceptionsCount": 91,
+          "delvOrders": 892,
+          "totalOrders": 1468
+        },
+        {
+          "storeId": "19665",
+          "exceptions": 0.0355,
+          "exceptionsCount": 15,
+          "delvOrders": 423,
+          "totalOrders": 646
+        },
+        {
+          "storeId": "19505",
+          "exceptions": 0.0672,
+          "exceptionsCount": 50,
+          "delvOrders": 744,
+          "totalOrders": 937
         }
       ]
     },
@@ -4380,112 +4426,10 @@
       ],
       "set": [
         {
-          "storeId": "19512",
-          "adt": 23.55,
-          "extreme": 0.0114,
-          "orders": 2186
-        },
-        {
-          "storeId": "19748",
-          "adt": 22.92,
-          "extreme": 0.0156,
-          "orders": 1988
-        },
-        {
-          "storeId": "19519",
-          "adt": 25.75,
-          "extreme": 0.0749,
-          "orders": 6206
-        },
-        {
-          "storeId": "19635",
-          "adt": 23.67,
-          "extreme": 0.0247,
-          "orders": 1805
-        },
-        {
           "storeId": "19844",
           "adt": 21.47,
           "extreme": 0.0053,
           "orders": 2102
-        },
-        {
-          "storeId": "19704",
-          "adt": 22.1,
-          "extreme": 0.0077,
-          "orders": 3104
-        },
-        {
-          "storeId": "19509",
-          "adt": 28.33,
-          "extreme": 0.1628,
-          "orders": 2821
-        },
-        {
-          "storeId": "19561",
-          "adt": 33.48,
-          "extreme": 0.2001,
-          "orders": 1448
-        },
-        {
-          "storeId": "19508",
-          "adt": 25.85,
-          "extreme": 0.0311,
-          "orders": 2576
-        },
-        {
-          "storeId": "19894",
-          "adt": 24.56,
-          "extreme": 0.0386,
-          "orders": 2456
-        },
-        {
-          "storeId": "19714",
-          "adt": 26.2,
-          "extreme": 0.0627,
-          "orders": 2662
-        },
-        {
-          "storeId": "19507",
-          "adt": 23.52,
-          "extreme": 0.0147,
-          "orders": 3668
-        },
-        {
-          "storeId": "19720",
-          "adt": 30.76,
-          "extreme": 0.1595,
-          "orders": 1558
-        },
-        {
-          "storeId": "19504",
-          "adt": 22.17,
-          "extreme": 0.0347,
-          "orders": 2717
-        },
-        {
-          "storeId": "19518",
-          "adt": 26.59,
-          "extreme": 0.0675,
-          "orders": 4235
-        },
-        {
-          "storeId": "19562",
-          "adt": 30.79,
-          "extreme": 0.1763,
-          "orders": 1825
-        },
-        {
-          "storeId": "19511",
-          "adt": 22.86,
-          "extreme": 0.0245,
-          "orders": 2744
-        },
-        {
-          "storeId": "19665",
-          "adt": 28.02,
-          "extreme": 0.1306,
-          "orders": 1881
         },
         {
           "storeId": "19515",
@@ -4494,132 +4438,132 @@
           "orders": 3055
         },
         {
+          "storeId": "19509",
+          "adt": 28.33,
+          "extreme": 0.1628,
+          "orders": 2821
+        },
+        {
           "storeId": "19526",
           "adt": 22.42,
           "extreme": 0.0095,
           "orders": 1804
         },
         {
-          "storeId": "19505",
-          "adt": 23.68,
-          "extreme": 0.0345,
-          "orders": 2523
+          "storeId": "19720",
+          "adt": 30.76,
+          "extreme": 0.1595,
+          "orders": 1558
+        },
+        {
+          "storeId": "19748",
+          "adt": 22.92,
+          "extreme": 0.0156,
+          "orders": 1988
+        },
+        {
+          "storeId": "19714",
+          "adt": 26.2,
+          "extreme": 0.0627,
+          "orders": 2662
+        },
+        {
+          "storeId": "19894",
+          "adt": 24.56,
+          "extreme": 0.0386,
+          "orders": 2456
+        },
+        {
+          "storeId": "19507",
+          "adt": 23.52,
+          "extreme": 0.0147,
+          "orders": 3668
+        },
+        {
+          "storeId": "19562",
+          "adt": 30.79,
+          "extreme": 0.1763,
+          "orders": 1825
+        },
+        {
+          "storeId": "19635",
+          "adt": 23.67,
+          "extreme": 0.0247,
+          "orders": 1805
+        },
+        {
+          "storeId": "19508",
+          "adt": 25.85,
+          "extreme": 0.0311,
+          "orders": 2576
+        },
+        {
+          "storeId": "19504",
+          "adt": 22.17,
+          "extreme": 0.0347,
+          "orders": 2717
+        },
+        {
+          "storeId": "19561",
+          "adt": 33.48,
+          "extreme": 0.2001,
+          "orders": 1448
+        },
+        {
+          "storeId": "19704",
+          "adt": 22.1,
+          "extreme": 0.0077,
+          "orders": 3104
+        },
+        {
+          "storeId": "19519",
+          "adt": 25.75,
+          "extreme": 0.0749,
+          "orders": 6206
         },
         {
           "storeId": "19560",
           "adt": 23.69,
           "extreme": 0.0643,
           "orders": 4023
+        },
+        {
+          "storeId": "19512",
+          "adt": 23.55,
+          "extreme": 0.0114,
+          "orders": 2186
+        },
+        {
+          "storeId": "19511",
+          "adt": 22.86,
+          "extreme": 0.0245,
+          "orders": 2744
+        },
+        {
+          "storeId": "19518",
+          "adt": 26.59,
+          "extreme": 0.0675,
+          "orders": 4235
+        },
+        {
+          "storeId": "19665",
+          "adt": 28.02,
+          "extreme": 0.1306,
+          "orders": 1881
+        },
+        {
+          "storeId": "19505",
+          "adt": 23.68,
+          "extreme": 0.0345,
+          "orders": 2523
         }
       ],
       "out": [
-        {
-          "storeId": "19512",
-          "adt": 23.2,
-          "extreme": 0.01,
-          "orders": 2422
-        },
-        {
-          "storeId": "19748",
-          "adt": 23.21,
-          "extreme": 0.023,
-          "orders": 2413
-        },
-        {
-          "storeId": "19519",
-          "adt": 24.65,
-          "extreme": 0.0399,
-          "orders": 6238
-        },
-        {
-          "storeId": "19635",
-          "adt": 23.91,
-          "extreme": 0.0315,
-          "orders": 1907
-        },
         {
           "storeId": "19844",
           "adt": 21.91,
           "extreme": 0.0241,
           "orders": 2319
-        },
-        {
-          "storeId": "19704",
-          "adt": 24.05,
-          "extreme": 0.0254,
-          "orders": 3605
-        },
-        {
-          "storeId": "19509",
-          "adt": 26.44,
-          "extreme": 0.0927,
-          "orders": 3268
-        },
-        {
-          "storeId": "19561",
-          "adt": 28.87,
-          "extreme": 0.1155,
-          "orders": 1625
-        },
-        {
-          "storeId": "19508",
-          "adt": 26.47,
-          "extreme": 0.0609,
-          "orders": 2547
-        },
-        {
-          "storeId": "19894",
-          "adt": 24.28,
-          "extreme": 0.0233,
-          "orders": 2746
-        },
-        {
-          "storeId": "19714",
-          "adt": 25.14,
-          "extreme": 0.0719,
-          "orders": 2716
-        },
-        {
-          "storeId": "19507",
-          "adt": 25.12,
-          "extreme": 0.0885,
-          "orders": 2978
-        },
-        {
-          "storeId": "19720",
-          "adt": 25.28,
-          "extreme": 0.0844,
-          "orders": 1717
-        },
-        {
-          "storeId": "19504",
-          "adt": 22.97,
-          "extreme": 0.0505,
-          "orders": 2758
-        },
-        {
-          "storeId": "19518",
-          "adt": 24.39,
-          "extreme": 0.054,
-          "orders": 4463
-        },
-        {
-          "storeId": "19562",
-          "adt": 36.71,
-          "extreme": 0.2179,
-          "orders": 2029
-        },
-        {
-          "storeId": "19511",
-          "adt": 23.8,
-          "extreme": 0.0602,
-          "orders": 2951
-        },
-        {
-          "storeId": "19665",
-          "adt": 24.54,
-          "extreme": 0.0265,
-          "orders": 1808
         },
         {
           "storeId": "19515",
@@ -4628,155 +4572,263 @@
           "orders": 3215
         },
         {
+          "storeId": "19509",
+          "adt": 26.44,
+          "extreme": 0.0927,
+          "orders": 3268
+        },
+        {
           "storeId": "19526",
           "adt": 23.23,
           "extreme": 0.0185,
           "orders": 2018
         },
         {
-          "storeId": "19505",
-          "adt": 24.11,
-          "extreme": 0.0402,
-          "orders": 2784
+          "storeId": "19720",
+          "adt": 25.28,
+          "extreme": 0.0844,
+          "orders": 1717
+        },
+        {
+          "storeId": "19748",
+          "adt": 23.21,
+          "extreme": 0.023,
+          "orders": 2413
+        },
+        {
+          "storeId": "19714",
+          "adt": 25.14,
+          "extreme": 0.0719,
+          "orders": 2716
+        },
+        {
+          "storeId": "19894",
+          "adt": 24.28,
+          "extreme": 0.0233,
+          "orders": 2746
+        },
+        {
+          "storeId": "19507",
+          "adt": 25.12,
+          "extreme": 0.0885,
+          "orders": 2978
+        },
+        {
+          "storeId": "19562",
+          "adt": 36.71,
+          "extreme": 0.2179,
+          "orders": 2029
+        },
+        {
+          "storeId": "19635",
+          "adt": 23.91,
+          "extreme": 0.0315,
+          "orders": 1907
+        },
+        {
+          "storeId": "19508",
+          "adt": 26.47,
+          "extreme": 0.0609,
+          "orders": 2547
+        },
+        {
+          "storeId": "19504",
+          "adt": 22.97,
+          "extreme": 0.0505,
+          "orders": 2758
+        },
+        {
+          "storeId": "19561",
+          "adt": 28.87,
+          "extreme": 0.1155,
+          "orders": 1625
+        },
+        {
+          "storeId": "19704",
+          "adt": 24.05,
+          "extreme": 0.0254,
+          "orders": 3605
+        },
+        {
+          "storeId": "19519",
+          "adt": 24.65,
+          "extreme": 0.0399,
+          "orders": 6238
         },
         {
           "storeId": "19560",
           "adt": 31.62,
           "extreme": 0.2383,
           "orders": 4465
+        },
+        {
+          "storeId": "19512",
+          "adt": 23.2,
+          "extreme": 0.01,
+          "orders": 2422
+        },
+        {
+          "storeId": "19511",
+          "adt": 23.8,
+          "extreme": 0.0602,
+          "orders": 2951
+        },
+        {
+          "storeId": "19518",
+          "adt": 24.39,
+          "extreme": 0.054,
+          "orders": 4463
+        },
+        {
+          "storeId": "19665",
+          "adt": 24.54,
+          "extreme": 0.0265,
+          "orders": 1808
+        },
+        {
+          "storeId": "19505",
+          "adt": 24.11,
+          "extreme": 0.0402,
+          "orders": 2784
         }
       ],
       "nov": [
         {
-          "storeId": "19512",
-          "adt": 23.06,
-          "extreme": 0.0061,
-          "orders": 563
-        },
-        {
-          "storeId": "19748",
-          "adt": 25.31,
-          "extreme": 0.048,
-          "orders": 607
-        },
-        {
-          "storeId": "19519",
-          "adt": 21.98,
-          "extreme": 0.0164,
-          "orders": 1443
-        },
-        {
-          "storeId": "19635",
-          "adt": 22.2,
-          "extreme": 0.0038,
-          "orders": 469
-        },
-        {
           "storeId": "19844",
           "adt": 21.96,
-          "extreme": 0.0225,
-          "orders": 499
-        },
-        {
-          "storeId": "19704",
-          "adt": 26.12,
-          "extreme": 0.0941,
-          "orders": 830
-        },
-        {
-          "storeId": "19509",
-          "adt": 30.98,
-          "extreme": 0.1909,
-          "orders": 794
-        },
-        {
-          "storeId": "19561",
-          "adt": 24.98,
-          "extreme": 0.0073,
-          "orders": 376
-        },
-        {
-          "storeId": "19508",
-          "adt": 23.16,
-          "extreme": 0.0032,
-          "orders": 517
-        },
-        {
-          "storeId": "19894",
-          "adt": 28.8,
-          "extreme": 0.1453,
-          "orders": 698
-        },
-        {
-          "storeId": "19714",
-          "adt": 23.52,
-          "extreme": 0.0765,
-          "orders": 657
-        },
-        {
-          "storeId": "19720",
-          "adt": 22.08,
-          "extreme": 0.0372,
-          "orders": 340
-        },
-        {
-          "storeId": "19504",
-          "adt": 26.39,
-          "extreme": 0.0993,
-          "orders": 605
-        },
-        {
-          "storeId": "19518",
-          "adt": 25.6,
-          "extreme": 0.065,
-          "orders": 972
-        },
-        {
-          "storeId": "19562",
-          "adt": 39.07,
-          "extreme": 0.2665,
-          "orders": 501
-        },
-        {
-          "storeId": "19511",
-          "adt": 23.84,
-          "extreme": 0.0518,
-          "orders": 709
-        },
-        {
-          "storeId": "19665",
-          "adt": 25.74,
-          "extreme": 0.0738,
-          "orders": 481
+          "extreme": 0.0148,
+          "orders": 751
         },
         {
           "storeId": "19515",
-          "adt": 32.75,
-          "extreme": 0.2134,
-          "orders": 746
+          "adt": 36.7,
+          "extreme": 0.2471,
+          "orders": 1120
+        },
+        {
+          "storeId": "19509",
+          "adt": 30.01,
+          "extreme": 0.1815,
+          "orders": 1181
         },
         {
           "storeId": "19526",
-          "adt": 26.34,
-          "extreme": 0.0612,
-          "orders": 409
+          "adt": 25.85,
+          "extreme": 0.0494,
+          "orders": 610
         },
         {
-          "storeId": "19505",
-          "adt": 23.72,
-          "extreme": 0.0353,
-          "orders": 599
+          "storeId": "19720",
+          "adt": 24.86,
+          "extreme": 0.0787,
+          "orders": 504
+        },
+        {
+          "storeId": "19748",
+          "adt": 25.02,
+          "extreme": 0.0456,
+          "orders": 858
+        },
+        {
+          "storeId": "19714",
+          "adt": 23.03,
+          "extreme": 0.05,
+          "orders": 1016
+        },
+        {
+          "storeId": "19894",
+          "adt": 28.58,
+          "extreme": 0.1352,
+          "orders": 1007
+        },
+        {
+          "storeId": "19507",
+          "adt": 26.42,
+          "extreme": 0.1074,
+          "orders": 1001
+        },
+        {
+          "storeId": "19562",
+          "adt": 35.97,
+          "extreme": 0.216,
+          "orders": 701
+        },
+        {
+          "storeId": "19635",
+          "adt": 21.88,
+          "extreme": 0.0105,
+          "orders": 679
+        },
+        {
+          "storeId": "19508",
+          "adt": 24.53,
+          "extreme": 0.013,
+          "orders": 759
+        },
+        {
+          "storeId": "19504",
+          "adt": 29.01,
+          "extreme": 0.1505,
+          "orders": 859
+        },
+        {
+          "storeId": "19561",
+          "adt": 25.27,
+          "extreme": 0.012,
+          "orders": 574
+        },
+        {
+          "storeId": "19704",
+          "adt": 24.88,
+          "extreme": 0.0693,
+          "orders": 1191
+        },
+        {
+          "storeId": "19519",
+          "adt": 22.59,
+          "extreme": 0.0408,
+          "orders": 2111
         },
         {
           "storeId": "19560",
-          "adt": 34.14,
-          "extreme": 0.2685,
-          "orders": 963
+          "adt": 33.3,
+          "extreme": 0.2635,
+          "orders": 1614
+        },
+        {
+          "storeId": "19512",
+          "adt": 23.26,
+          "extreme": 0.0034,
+          "orders": 848
+        },
+        {
+          "storeId": "19511",
+          "adt": 24.98,
+          "extreme": 0.1025,
+          "orders": 1036
+        },
+        {
+          "storeId": "19518",
+          "adt": 26.11,
+          "extreme": 0.0785,
+          "orders": 1468
+        },
+        {
+          "storeId": "19665",
+          "adt": 25.96,
+          "extreme": 0.078,
+          "orders": 646
+        },
+        {
+          "storeId": "19505",
+          "adt": 27.13,
+          "extreme": 0.1183,
+          "orders": 937
         }
       ]
     }
   },
-  "updatedAt": "2026-11-08 22:16:24",
+  "updatedAt": "2026-11-12 17:07:42",
   "backfill": [
     {
       "storeId": "19507",
@@ -4784,7 +4836,7 @@
       "consultant": "Erick",
       "franchisee": "Domino's",
       "type": "C",
-      "missingCount": 13,
+      "missingCount": 8,
       "missingDays": [
         "2026-10-26",
         "2026-10-27",
@@ -4792,13 +4844,8 @@
         "2026-10-29",
         "2026-10-30",
         "2026-10-31",
-        "2026-11-01",
-        "2026-11-02",
-        "2026-11-03",
-        "2026-11-04",
-        "2026-11-05",
-        "2026-11-06",
-        "2026-11-07"
+        "2026-11-10",
+        "2026-11-11"
       ],
       "formattedDays": [
         "26/10",
@@ -4807,13 +4854,8 @@
         "29/10",
         "30/10",
         "31/10",
-        "01/11",
-        "02/11",
-        "03/11",
-        "04/11",
-        "05/11",
-        "06/11",
-        "07/11"
+        "10/11",
+        "11/11"
       ]
     },
     {
@@ -4843,6 +4885,20 @@
       ]
     },
     {
+      "storeId": "19508",
+      "name": "DOWNTOWN",
+      "consultant": "Erick",
+      "franchisee": "Domino's",
+      "type": "C",
+      "missingCount": 1,
+      "missingDays": [
+        "2026-11-11"
+      ],
+      "formattedDays": [
+        "11/11"
+      ]
+    },
+    {
       "storeId": "19509",
       "name": "VILA ISABEL",
       "consultant": "Erick",
@@ -4859,10 +4915,10 @@
   ],
   "backfillPeriod": {
     "startDate": "2026-08-17",
-    "endDate": "2026-11-07",
+    "endDate": "2026-11-11",
     "startFormatted": "17/08",
-    "endFormatted": "07/11",
-    "totalDays": 83,
-    "latestDate": "2026-11-07"
+    "endFormatted": "11/11",
+    "totalDays": 87,
+    "latestDate": "2026-11-11"
   }
 }
