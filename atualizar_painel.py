@@ -184,6 +184,7 @@ def calcular_metricas_dias(target_ids, daily_data, days_list):
     for sid in target_ids:
         tot_total_orders = 0
         tot_delv_orders = 0
+        tot_adt_weight_orders = 0
         sum_adt_weight = 0.0
         sum_ext_weight = 0.0
         tot_exc_count = 0
@@ -200,15 +201,22 @@ def calcular_metricas_dias(target_ids, daily_data, days_list):
                     
                 tot_total_orders += tot_ord
                 tot_delv_orders += delv_ord
-                sum_adt_weight += row['adt'] * delv_ord
-                sum_ext_weight += row['extreme'] * delv_ord
+                
+                # Peso para ADT/Extreme: no PWR a ponderação é por pedidos de entrega.
+                # Se uma loja possuir eADT válido (> 0) mas o relatório Service Exceptions
+                # não trouxe Delv Order Count (valor 0 ou NaN na planilha PWR), usamos
+                # tot_ord como peso de entrega para não zerar a loja indevidamente.
+                w_orders = delv_ord if delv_ord > 0 else (tot_ord if row['adt'] > 0 else 0)
+                tot_adt_weight_orders += w_orders
+                sum_adt_weight += row['adt'] * w_orders
+                sum_ext_weight += row['extreme'] * w_orders
                 tot_exc_count += row['exceptions_count']
                 
         if not has_data:
             continue
             
-        adt_avg = (sum_adt_weight / tot_delv_orders) if tot_delv_orders > 0 else 0.0
-        ext_avg = (sum_ext_weight / tot_delv_orders) if tot_delv_orders > 0 else 0.0
+        adt_avg = (sum_adt_weight / tot_adt_weight_orders) if tot_adt_weight_orders > 0 else 0.0
+        ext_avg = (sum_ext_weight / tot_adt_weight_orders) if tot_adt_weight_orders > 0 else 0.0
         exc_pct = (tot_exc_count / tot_delv_orders) if tot_delv_orders > 0 else 0.0
         
         adt_entries.append({
