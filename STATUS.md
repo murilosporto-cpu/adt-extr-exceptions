@@ -23,11 +23,10 @@
   - Sincronização completa realizada para `novo projeto/`.
 - **Estado atual do código**:
   - Base de dados 100% atualizada e reconciliada até 13/11/2026.
-  - Loja Jardim Botânico (19693) com dados históricos e semanais totalmente exibidos.
-  - Painéis de Franquias e Lojas Próprias atualizados e prontos para deploy.
+  - Loja Jardim Botânico (19693) com dados históricos e semanais totalmente recuperados e exibidos.
+  - Commit e push concluídos com sucesso para o branch `main` (`c422584`), com deploy automático no Cloudflare Pages acionado.
 - **Qual é o próximo passo exato**:
-  - Realizar commit e push para o repositório GitHub (`main`) para acionar o deploy automático no Cloudflare Pages.
-  - Apresentar o resumo da atualização ao usuário.
+  - Aguardar fechamento dos próximos dias da semana (14 e 15/11) para concluir a semana `09 a 15` na próxima varredura.
 
 ---
 
