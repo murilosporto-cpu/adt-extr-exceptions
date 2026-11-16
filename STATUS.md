@@ -21,10 +21,9 @@
 - **Estado atual do código**:
   - Base de dados 100% atualizada e reconciliada até 15/11/2026.
   - As 4 semanas vigentes estão 100% fechadas com 7 dias cada.
-  - Painéis de Franquias e Lojas Próprias atualizados e prontos para deploy.
+  - Commit e push concluídos com sucesso para o branch `main` (`8eb0f29`), com deploy automático no Cloudflare Pages acionado.
 - **Qual é o próximo passo exato**:
-  - Realizar commit e push para o repositório GitHub (`main`) para acionar o deploy automático no Cloudflare Pages.
-  - Apresentar o resumo da atualização ao usuário.
+  - Aguardar fechamento dos primeiros dias da nova semana (16/11 em diante) para a próxima varredura.
 
 ---
 
