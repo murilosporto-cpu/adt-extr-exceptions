@@ -1,30 +1,26 @@
 # STATUS DO PROJETO - DOMINO'S PIZZA (CAFÉ COM PWR)
 
 ## 📌 Último Status / Onde Parou
-- **Data/Hora**: 2026-11-19 15:15
+- **Data/Hora**: 2026-11-20 15:47
 - **O que foi feito**:
-  - Executada extração de 3 novos dias e varredura profunda no portal PWR cobrindo os últimos 10 dias (09/11 a 18/11/2026).
-  - Extraídos e incorporados 3 novos dias:
-    - **16/11 (Segunda)**: **9.547 pedidos**.
-    - **17/11 (Terça)**: **12.275 pedidos**.
-    - **18/11 (Quarta - ontem)**: **7.863 pedidos**.
-    - Total de **29.685 novos pedidos** adicionados à base.
-  - Avanço da janela móvel de 4 semanas do painel:
-    - A semana mais antiga (`19 a 25`) saiu do painel.
-    - Nova semana em andamento adicionada: **`16 a 18`** (Segunda a Quarta).
-    - As 4 semanas do painel agora são: **`26 a 01`** (7 dias), **`02 a 08`** (7 dias), **`09 a 15`** (7 dias) e **`16 a 18`** (em andamento, 3 dias).
-  - Executado backfill retroativo profundo de subidas tardias (10 datas analisadas: 09/11 a 18/11):
-    - **69 lojas recuperadas** que haviam subido dados tardiamente no PWR (destaque para 39 lojas em 15/11, 7 lojas em 14/11, 6 lojas em 13/11, 6 lojas em 12/11, 5 lojas em 11/11, 3 lojas em 10/11 e 3 lojas em 09/11).
-    - **5.885 pedidos adicionais resgatados e incorporados** à base de dados.
-    - Base total expandida de 91 para **94 dias consolidados** (17/08 a 18/11/2026).
+  - Extraído o novo dia **19/11 (Quinta - ontem)** com **12.162 pedidos**.
+  - Executada varredura retroativa profunda nos últimos 10 dias (10/11 a 19/11):
+    - **33 lojas recuperadas** com subidas tardias resgatadas (30 lojas em 18/11 e 3 lojas em 17/11).
+    - **1.743 pedidos adicionais resgatados e incorporados** à base de dados.
+  - Janela móvel de 4 semanas atualizada:
+    - **`26 a 01`** (7 dias fechados)
+    - **`02 a 08`** (7 dias fechados)
+    - **`09 a 15`** (7 dias fechados)
+    - **`16 a 19`** (em andamento, Segunda a Quinta com 4 dias)
+  - Base total expandida de 94 para **95 dias consolidados** (17/08 a 19/11/2026).
   - Reconstruídos `data.json` e `data.js` para Franquias e Lojas Próprias com atualização de cache-busting nos arquivos HTML.
   - Sincronização completa realizada para `novo projeto/`.
 - **Estado atual do código**:
-  - Base de dados 100% atualizada e reconciliada até 18/11/2026.
-  - Janela móvel de 4 semanas atualizada (`26 a 01`, `02 a 08`, `09 a 15` e `16 a 18`).
+  - Base de dados 100% atualizada e reconciliada até 19/11/2026.
+  - Janela móvel de 4 semanas atualizada (`26 a 01`, `02 a 08`, `09 a 15` e `16 a 19`).
   - Painéis sincronizados, com cache-busting renovado.
 - **Qual é o próximo passo exato**:
-  - Aguardar fechamento dos próximos dias (19/11 em diante) para a próxima varredura de rotina.
+  - Aguardar fechamento da sexta-feira 20/11 e fim de semana para a próxima varredura de rotina.
 
 ---
 
