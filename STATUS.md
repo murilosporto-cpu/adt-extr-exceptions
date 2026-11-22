@@ -1,27 +1,29 @@
 # STATUS DO PROJETO - DOMINO'S PIZZA (CAFÉ COM PWR)
 
 ## 📌 Último Status / Onde Parou
-- **Data/Hora**: 2026-11-20 15:47
+- **Data/Hora**: 2026-11-22 13:45
 - **O que foi feito**:
-  - Extraído o novo dia **19/11 (Quinta - ontem)** com **12.162 pedidos**.
-  - Executada varredura retroativa profunda nos últimos 10 dias (10/11 a 19/11):
-    - **33 lojas recuperadas** com subidas tardias resgatadas (30 lojas em 18/11 e 3 lojas em 17/11).
-    - **1.743 pedidos adicionais resgatados e incorporados** à base de dados.
+  - Extraídos 2 novos dias do portal PWR:
+    - **20/11 (Sexta-feira)**: **17.839 pedidos**.
+    - **21/11 (Sábado - ontem)**: **16.225 pedidos**.
+    - Total de novos pedidos adicionados: **34.064 pedidos**.
+  - Executada varredura retroativa profunda nos últimos 10 dias (12/11 a 21/11):
+    - **50 lojas recuperadas** com subidas tardias resgatadas (40 lojas em 19/11, 7 lojas em 18/11 e 3 lojas em 17/11).
+    - **3.016 pedidos adicionais resgatados e incorporados** à base de dados.
   - Janela móvel de 4 semanas atualizada:
     - **`26 a 01`** (7 dias fechados)
     - **`02 a 08`** (7 dias fechados)
     - **`09 a 15`** (7 dias fechados)
-    - **`16 a 19`** (em andamento, Segunda a Quinta com 4 dias)
-  - Base total expandida de 94 para **95 dias consolidados** (17/08 a 19/11/2026).
+    - **`16 a 21`** (em andamento, Segunda a Sábado com 6 dias completos)
+  - Base total expandida de 95 para **97 dias consolidados** (17/08 a 21/11/2026).
   - Reconstruídos `data.json` e `data.js` para Franquias e Lojas Próprias com atualização de cache-busting nos arquivos HTML.
   - Sincronização completa realizada para `novo projeto/`.
 - **Estado atual do código**:
-  - Base de dados 100% atualizada e reconciliada até 19/11/2026.
-  - Janela móvel de 4 semanas atualizada (`26 a 01`, `02 a 08`, `09 a 15` e `16 a 19`).
+  - Base de dados 100% atualizada e reconciliada até 21/11/2026.
+  - Janela móvel de 4 semanas atualizada (`26 a 01`, `02 a 08`, `09 a 15` e `16 a 21`).
   - Painéis sincronizados, com cache-busting renovado.
-  - Commit e push concluídos com sucesso para a branch `main` (`35481e7`), com autenticação PAT definitiva e deploy automático no Cloudflare Pages em produção.
 - **Qual é o próximo passo exato**:
-  - Aguardar fechamento da sexta-feira 20/11 e fim de semana para a próxima varredura de rotina.
+  - Aguardar fechamento do domingo 22/11 para fechar a semana `16 a 22` com 7 dias completos na próxima varredura de rotina.
 
 ---
 
