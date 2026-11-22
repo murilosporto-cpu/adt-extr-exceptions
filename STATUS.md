@@ -22,6 +22,7 @@
   - Base de dados 100% atualizada e reconciliada até 21/11/2026.
   - Janela móvel de 4 semanas atualizada (`26 a 01`, `02 a 08`, `09 a 15` e `16 a 21`).
   - Painéis sincronizados, com cache-busting renovado.
+  - Commit e push concluídos com sucesso para a branch `main` (`35e2c19`), com deploy automático no Cloudflare Pages em produção.
 - **Qual é o próximo passo exato**:
   - Aguardar fechamento do domingo 22/11 para fechar a semana `16 a 22` com 7 dias completos na próxima varredura de rotina.
 
