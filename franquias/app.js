@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         try {
-            const response = await fetch('data.json');
+            const response = await fetch(`data.json?t=${Date.now()}`);
             if (!response.ok) throw new Error('Não foi possível ler data.json');
             rawData = await response.json();
             

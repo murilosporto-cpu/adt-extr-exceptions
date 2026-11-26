@@ -1,0 +1,8 @@
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/franquias/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/lojas-proprias/*
+  Cache-Control: public, max-age=0, must-revalidate
