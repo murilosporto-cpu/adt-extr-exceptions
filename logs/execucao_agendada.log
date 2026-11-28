@@ -1,0 +1,333 @@
+============================================================ 
+[INICIO_WRAPPER] 27/11/2026 22:00:01,10 
+[2026-11-27 22:00:01] ====================================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:01]   INICIANDO ROTINA DIARIA AUTOMATICA DE VARREDURA PWR E ATUALIZACAO
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:01] ====================================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:01] --- ETAPA 1: Sincronizando com o Git remoto (git pull) ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:01] Iniciando: Git Pull Rebase...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:03]   [STDOUT] Already up to date.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:03]   [STDERR] From https://github.com/murilosporto-cpu/adt-extr-exceptions
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:03]   [STDERR]  * branch            main       -> FETCH_HEAD
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:03] [CONCLUIDO] Git Pull Rebase
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:05] Ontem: 2026-11-26
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:05] Datas selecionadas para varredura/backfill (10 datas): ['2026-11-26', '2026-11-25', '2026-11-24', '2026-11-23', '2026-11-22', '2026-11-21', '2026-11-20', '2026-11-19', '2026-11-18', '2026-11-17']
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:05] --- ETAPA 2: Executando varredura retroativa e extracao PWR ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:00:05] Iniciando: Varredura PWR para 10 datas...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:05] 
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] --- RECONCILIANDO ARQUIVOS (.new.xlsx) ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:05] Nenhum arquivo .new.xlsx pendente de reconciliacao.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:05] === INICIANDO VARREDURA DE SUBIDA TARDIA NO PWR ===
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:05] Datas alvo: 10 datas (2026-11-26, 2026-11-25, 2026-11-24, 2026-11-23, 2026-11-22, 2026-11-21, 2026-11-20, 2026-11-19, 2026-11-18, 2026-11-17)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:13] 1. Acessando portal PWR e autenticando...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:25] Login realizado com sucesso!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:25] Selecionando escopo 'All Stores (Stores)'...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:33] Confirmado escopo ativo: All Stores (Stores)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:33] 
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] --- VERIFICANDO KEYS SUMMARY ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:33] Navegando para Keys Summary...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:41] [1/10] Verificando Keys Summary para 2026-11-26...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:50]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-26).new.xlsx (67,505 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:00:51] [2/10] Verificando Keys Summary para 2026-11-25...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:01]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-25).new.xlsx (71,355 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:02] [3/10] Verificando Keys Summary para 2026-11-24...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:12]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-24).new.xlsx (71,423 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:13] [4/10] Verificando Keys Summary para 2026-11-23...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:25]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-23).new.xlsx (70,224 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:26] [5/10] Verificando Keys Summary para 2026-11-22...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:36]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-22).new.xlsx (73,228 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:37] [6/10] Verificando Keys Summary para 2026-11-21...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:46]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-21).new.xlsx (73,590 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:47] [7/10] Verificando Keys Summary para 2026-11-20...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:58]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-20).new.xlsx (73,576 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:01:59] [8/10] Verificando Keys Summary para 2026-11-19...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:02:09]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-19).new.xlsx (73,441 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:02:10] [9/10] Verificando Keys Summary para 2026-11-18...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:02:20]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-18).new.xlsx (72,426 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:02:21] [10/10] Verificando Keys Summary para 2026-11-17...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:02:31]   -> Salvo: Keys Summary - All Stores (Stores) (2026-11-17).new.xlsx (72,929 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:02:32] 
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] --- VERIFICANDO KEYS SERVICE EXCEPTIONS ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:02:32] Navegando para Service Exceptions...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:02:43] [1/10] Verificando Service Exceptions para 2026-11-26...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:00]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-26).new.xlsx (60,838 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:01] [2/10] Verificando Service Exceptions para 2026-11-25...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:11]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-25).new.xlsx (61,872 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:12] [3/10] Verificando Service Exceptions para 2026-11-24...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:20]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-24).new.xlsx (61,630 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:21] [4/10] Verificando Service Exceptions para 2026-11-23...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:31]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-23).new.xlsx (60,288 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:32] [5/10] Verificando Service Exceptions para 2026-11-22...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:40]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-22).new.xlsx (63,798 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:41] [6/10] Verificando Service Exceptions para 2026-11-21...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:51]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-21).new.xlsx (64,629 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:03:52] [7/10] Verificando Service Exceptions para 2026-11-20...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:01]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-20).new.xlsx (64,401 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:02] [8/10] Verificando Service Exceptions para 2026-11-19...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:10]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-19).new.xlsx (63,563 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:11] [9/10] Verificando Service Exceptions para 2026-11-18...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:21]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-18).new.xlsx (62,011 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:22] [10/10] Verificando Service Exceptions para 2026-11-17...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:31]   -> Salvo: KEYS Service Exceptions - All Stores (Stores) (2026-11-17).new.xlsx (62,960 bytes)
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:32] Navegador finalizado com sucesso.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:32] 
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] --- RECONCILIANDO ARQUIVOS (.new.xlsx) ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:32] Encontradas 10 datas com arquivos temporarios: 2026-11-17, 2026-11-18, 2026-11-19, 2026-11-20, 2026-11-21, 2026-11-22, 2026-11-23, 2026-11-24, 2026-11-25, 2026-11-26
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:33] [2026-11-17] Nenhuma alteracao (mesmos dados). Descartando temporario.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:33] [2026-11-18] Nenhuma alteracao (mesmos dados). Descartando temporario.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:33] [2026-11-19] Nenhuma alteracao (mesmos dados). Descartando temporario.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:34] [2026-11-20] Nenhuma alteracao (mesmos dados). Descartando temporario.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:34] [2026-11-21] Nenhuma alteracao (mesmos dados). Descartando temporario.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:34] [2026-11-22] Nenhuma alteracao (mesmos dados). Descartando temporario.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:34] [2026-11-23] Nenhuma alteracao (mesmos dados). Descartando temporario.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:34] [2026-11-24] Nenhuma alteracao (mesmos dados). Descartando temporario.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35] [2026-11-25] RECUPERADAS 30 LOJAS que subiram vendas:
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19514: 78 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19520: 22 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19538: 1 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19545: 37 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19595: 86 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19601: 62 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19615: 58 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19649: 88 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19657: 52 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19685: 27 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19708: 57 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19715: 55 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19756: 75 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19759: 21 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19762: 15 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19785: 41 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19872: 48 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19877: 64 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19927: 18 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19930: 61 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19931: 36 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19947: 55 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19951: 36 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19954: 19 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19959: 23 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19961: 18 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19962: 31 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19973: 18 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 19976: 38 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]    -> Loja 215
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] 167: 53 pedidos recuperados!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35]   -> Arquivos de 2026-11-25 atualizados na base!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35] [2026-11-26] NOVO DIA adicionado a base com sucesso (9,596 pedidos)!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35] 
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] === RESUMO GERAL DA VARREDURA ===
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35] Total de lojas que subiram vendas tardiamente: 31
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35] Total de pedidos adicionais recuperados: 1293
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:35] 
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] Reconstruindo data.json e data.js com os novos dados...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] ===========================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT]        ATUALIZACAO DE PAINEIS PWR - DOMINOS PIZZA
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] ===========================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] 1. Carregando mapeamentos de lojas...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT]    -> Franquias: 195 lojas | Lojas Proprias: 22 lojas
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] 2. Lendo planilhas de relatorios diarios em dados_all_stores/...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT]    -> Carregados 102 dias com sucesso.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] 3. Auditando lojas com dias faltantes (Backfill)...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT]    -> Pendencias: 79 Franquias | 5 Lojas Proprias
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] 4. Consolidando metricas e gerando data.json / data.js...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] 
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] ===========================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT]   [SUCESSO] PAINEIS ATUALIZADOS COM SUCESSO!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT]   - Franquias:      franquias/index.html
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT]   - Lojas Proprias: lojas-proprias/index.html
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT]   - Portal Geral:   index.html
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] ===========================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55]   [STDOUT] [22:04:55] Paineis Franquias e Lojas Proprias atualizados com sucesso!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55] [CONCLUIDO] Varredura PWR para 10 datas
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55] --- ETAPA 3: Reconstruindo paineis e consolidando metricas ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:04:55] Iniciando: Atualizacao dos Paineis PWR...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] ===========================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT]        ATUALIZACAO DE PAINEIS PWR - DOMINOS PIZZA
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] ===========================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] 1. Carregando mapeamentos de lojas...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT]    -> Franquias: 195 lojas | Lojas Proprias: 22 lojas
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] 2. Lendo planilhas de relatorios diarios em dados_all_stores/...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT]    -> Carregados 102 dias com sucesso.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] 3. Auditando lojas com dias faltantes (Backfill)...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT]    -> Pendencias: 79 Franquias | 5 Lojas Proprias
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] 4. Consolidando metricas e gerando data.json / data.js...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] 
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] ===========================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT]   [SUCESSO] PAINEIS ATUALIZADOS COM SUCESSO!
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT]   - Franquias:      franquias/index.html
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT]   - Lojas Proprias: lojas-proprias/index.html
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT]   - Portal Geral:   index.html
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15]   [STDOUT] ===========================================================
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15] [CONCLUIDO] Atualizacao dos Paineis PWR
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15] --- ETAPA 4: Sincronizando espelho do projeto ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15] Sincronizando arquivos de dados com a pasta novo projeto/...
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15] [CONCLUIDO] Sincronizacao com novo projeto/ realizada com sucesso.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15] --- ETAPA 5: Atualizando STATUS.md de continuidade ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15] [CONCLUIDO] STATUS.md atualizado com sucesso.
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15] --- ETAPA 6: Publicando atualizacoes no GitHub e Cloudflare Pages ---
+Erro ao gravar log: [Errno 13] Permission denied: 'c:\\Users\\muril\\OneDrive\\FRANQUIAS\\master mind\\cafe-com-pwr\\logs\\execucao_agendada.log'
+[2026-11-27 22:05:15] Iniciando: Git Add All...
